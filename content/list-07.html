@@ -1,0 +1,2288 @@
+<!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+    <meta charset="UTF-8">
+    <title>红宝书 List 07 全景深度特训讲义</title>
+    <style>
+      @page {
+        size: A4 portrait;
+        margin: 10mm 11mm 10mm 11mm;
+        @bottom-center {
+          content: counter(page);
+          font-size: 8pt;
+          color: #94a3b8;
+        }
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+        color: #1e293b;
+        background-color: #ffffff;
+        line-height: 1.48;
+        font-size: 9pt;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Cover Page */
+      .cover-page {
+        page-break-after: always;
+        break-after: page;
+      }
+      .header-banner {
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        color: #ffffff;
+        padding: 13px 18px;
+        border-radius: 8px;
+        margin-bottom: 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(37,99,235,0.15);
+      }
+      .header-left h1 {
+        margin: 0 0 3px 0;
+        font-size: 16pt;
+        font-weight: 800;
+        letter-spacing: -0.3px;
+      }
+      .header-left .subtitle {
+        font-size: 8.5pt;
+        opacity: 0.92;
+      }
+      .header-badge {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 5px 12px;
+        border-radius: 6px;
+        font-size: 8pt;
+        text-align: right;
+        line-height: 1.4;
+      }
+
+      .intro-box {
+        background: #f8fafc;
+        border-left: 3.5px solid #3b82f6;
+        padding: 7px 12px;
+        border-radius: 0 6px 6px 0;
+        font-size: 8.3pt;
+        color: #334155;
+        margin-bottom: 9px;
+        line-height: 1.45;
+      }
+
+      /* Batch Navigation Cards */
+      .batch-nav-container {
+        margin-bottom: 9px;
+      }
+      .batch-nav-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+      }
+      .batch-nav-card {
+        border: 1px solid #e2e8f0;
+        border-left: 4px solid #2563eb;
+        border-radius: 6px;
+        padding: 7px 10px;
+        background: #f8fafc;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      .batch-nav-title {
+        font-size: 9pt;
+        font-weight: 700;
+        color: #1e40af;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .batch-nav-desc {
+        font-size: 7.5pt;
+        color: #64748b;
+        margin-top: 2px;
+      }
+
+      /* 4-Column Structured Batch Word Matrix */
+      .matrix-container {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 9px 12px;
+        margin-bottom: 9px;
+      }
+      .matrix-header {
+        font-size: 9.8pt;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 4px;
+      }
+      .matrix-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+      .matrix-col {
+        background: #f8fafc;
+        border: 1px solid #f1f5f9;
+        border-radius: 6px;
+        padding: 6px 6px 4px 6px;
+      }
+      .matrix-col-header {
+        font-size: 7.8pt;
+        font-weight: 700;
+        color: #1e40af;
+        text-align: center;
+        padding-bottom: 3.5px;
+        margin-bottom: 3.5px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .matrix-col-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2px;
+      }
+      .matrix-item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 2px 4.5px;
+        border-radius: 4px;
+        font-size: 7.6pt;
+        border: 1px solid transparent;
+      }
+      .matrix-item .chk {
+        font-size: 8pt;
+        color: #94a3b8;
+        margin-right: 3.5px;
+      }
+      .matrix-item .num {
+        font-size: 7.2pt;
+        font-weight: 700;
+        margin-right: 3.5px;
+        min-width: 14px;
+      }
+      .matrix-item .name {
+        font-weight: 600;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .matrix-item.reading {
+        background: #fef2f2;
+        color: #991b1b;
+        border-color: #fee2e2;
+      }
+      .matrix-item.reading .num { color: #dc2626; }
+      .matrix-item.writing {
+        background: #eff6ff;
+        color: #1e40af;
+        border-color: #dbeafe;
+      }
+      .matrix-item.writing .num { color: #2563eb; }
+
+      /* Cover Bottom Guide & Tracker */
+      .tracker-container {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 8px 12px;
+      }
+      .tracker-title {
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: #0f172a;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 3.5px;
+      }
+      .tracker-milestones {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 5px;
+      }
+      .milestone-box {
+        background: #ffffff;
+        border: 1px dashed #cbd5e1;
+        border-radius: 5px;
+        padding: 4px 6px;
+        text-align: center;
+        font-size: 7.5pt;
+        color: #475569;
+      }
+      .milestone-box strong {
+        display: block;
+        color: #0f172a;
+        font-size: 7.8pt;
+        margin-bottom: 1.5px;
+      }
+      .tracker-tips {
+        font-size: 7.3pt;
+        color: #64748b;
+        line-height: 1.4;
+        background: #ffffff;
+        border-radius: 4px;
+        padding: 4px 8px;
+        border: 1px solid #f1f5f9;
+      }
+
+      /* Batch Header */
+      .batch-wrapper {
+        page-break-before: always;
+        break-before: page;
+      }
+      .batch-header-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        padding: 7px 12px;
+        border-radius: 6px;
+        margin: 0 0 8px 0;
+        page-break-after: avoid;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+      .batch-header-link h2 {
+        margin: 0;
+        font-size: 11pt;
+        font-weight: 700;
+      }
+      .return-pill {
+        font-size: 7.5pt;
+        font-weight: 700;
+        background: rgba(255,255,255,0.2);
+        border: 1px solid rgba(255,255,255,0.4);
+        padding: 2px 7px;
+        border-radius: 12px;
+        color: #ffffff;
+      }
+
+      /* Phase Headers */
+      .phase-header {
+        font-size: 9pt;
+        font-weight: 700;
+        margin: 7px 0 6px 0;
+        padding: 3px 8px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        page-break-after: avoid;
+      }
+      .phase-header.reading {
+        background: #fef2f2;
+        color: #991b1b;
+        border-left: 3.5px solid #dc2626;
+      }
+      .phase-header.writing {
+        background: #eff6ff;
+        color: #1e40af;
+        border-left: 3.5px solid #2563eb;
+      }
+
+      /* Word Card - Spacious & Distinct */
+      .word-card {
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        margin-bottom: 8.5px;
+        background: #ffffff;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        box-shadow: 0 1.5px 3px rgba(15, 23, 42, 0.03);
+        overflow: hidden;
+      }
+      .word-card.reading-card {
+        border-left: 3.8px solid #ef4444;
+      }
+      .word-card.writing-card {
+        border-left: 3.8px solid #3b82f6;
+      }
+
+      .card-header-link {
+        background: #f8fafc;
+        padding: 4px 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f1f5f9;
+        text-decoration: none;
+        color: inherit;
+      }
+      .word-title-box {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .word-no {
+        font-size: 8pt;
+        font-weight: 700;
+        color: #475569;
+        background: #e2e8f0;
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+      .word-name {
+        font-size: 10.8pt;
+        font-weight: 800;
+        color: #0f172a;
+        letter-spacing: -0.2px;
+      }
+      .word-pos {
+        font-size: 8.3pt;
+        font-weight: 600;
+        color: #64748b;
+        font-style: italic;
+      }
+      .attitude-pill {
+        font-size: 7.2pt;
+        font-weight: 600;
+        padding: 1px 6px;
+        border-radius: 10px;
+        margin-left: 3px;
+      }
+      .attitude-pill.pos { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+      .attitude-pill.neg { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+      .attitude-pill.warn { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+      .attitude-pill.neu { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+
+      .card-top-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .type-badge {
+        font-size: 7.2pt;
+        font-weight: 700;
+        padding: 1.5px 5px;
+        border-radius: 3px;
+      }
+      .type-badge.reading { background: #fee2e2; color: #991b1b; }
+      .type-badge.writing { background: #dbeafe; color: #1e40af; }
+      .return-chip {
+        font-size: 7.2pt;
+        font-weight: 600;
+        color: #64748b;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+
+      /* Card Body */
+      .word-body {
+        padding: 5px 9px 6px 9px;
+      }
+      .field-row {
+        margin-bottom: 2.5px;
+        display: flex;
+        font-size: 8.5pt;
+        line-height: 1.45;
+      }
+      .field-row:last-child {
+        margin-bottom: 0;
+      }
+      .field-label {
+        flex-shrink: 0;
+        font-weight: 700;
+        width: 78px;
+        color: #475569;
+      }
+      .field-val {
+        flex: 1;
+        color: #1e293b;
+      }
+
+      /* Highlights */
+      .collocation-box {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 3px;
+        padding: 1px 5px;
+        display: inline-block;
+        color: #1d4ed8;
+        font-weight: 700;
+        font-family: Consolas, monospace;
+        font-size: 8.5pt;
+      }
+      .synonym-pill {
+        background: #f1f5f9;
+        color: #475569;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 8pt;
+        margin-right: 3px;
+        border: 1px solid #e2e8f0;
+      }
+      
+      /* 自然流体同义替换样式 */
+      .synonym-flow-item {
+        margin: 2.5px 0;
+        line-height: 1.5;
+        font-size: 8.5pt;
+      }
+      .syn-lead-badge {
+        color: #0369a1;
+        background: #e0f2fe;
+        border: 1px solid #bae6fd;
+        padding: 0.5px 5px;
+        border-radius: 3px;
+        font-family: Consolas, monospace;
+        font-weight: 700;
+        font-size: 8.5pt;
+        display: inline-block;
+      }
+      .syn-desc-text {
+        color: #334155;
+      }
+
+      .cross-tag {
+        background: #dbeafe;
+        color: #1d4ed8;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: 8pt;
+        margin-right: 3px;
+        border: 1px solid #bfdbfe;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Example Container */
+      .example-container {
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-top: 3.5px;
+      }
+      .scenario-tag {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #0369a1;
+        margin-bottom: 1.5px;
+      }
+      .example-en {
+        color: #0f172a;
+        font-size: 8.5pt;
+        font-weight: 500;
+        margin-bottom: 1.5px;
+        line-height: 1.42;
+      }
+      .example-en strong {
+        color: #1d4ed8;
+      }
+      .example-zh {
+        color: #64748b;
+        font-size: 8pt;
+        line-height: 1.38;
+      }
+
+      /* Trap Box */
+      .trap-box {
+        background: #fffbeb;
+        border: 1px solid #fef3c7;
+        border-left: 3.5px solid #f59e0b;
+        border-radius: 4px;
+        padding: 3.5px 7px;
+        font-size: 8pt;
+        color: #92400e;
+        margin-top: 3.5px;
+        line-height: 1.42;
+      }
+
+      /* Backlinks */
+      .backlink-tag {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #475569;
+        padding: 1px 5px;
+        border-radius: 3px;
+        border: 1px solid #cbd5e1;
+        text-decoration: none;
+        font-size: 7.2pt;
+        font-weight: 600;
+        margin-right: 3px;
+      }
+
+      /* Batch Footer */
+      .batch-footer {
+        text-align: right;
+        font-size: 7.5pt;
+        color: #64748b;
+        margin: 6px 0 8px 0;
+      }
+      .batch-footer a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
+    </head>
+    <body>
+    <div id="table-of-contents"></div>
+
+    <div class="cover-page">
+      <div class="header-banner">
+        <div class="header-left">
+          <h1>红宝书 List 07 全景深度特训讲义</h1>
+          <div class="subtitle">2027 考研英语官方大纲 60 词全案精排版</div>
+        </div>
+        <div class="header-badge">
+          <div>单元编号：<strong>List 07</strong></div>
+          <div>全案收录：<strong>4 批次</strong> ｜ <strong>60 词</strong></div>
+        </div>
+      </div>
+
+      <div class="intro-box">
+        <div style="margin-bottom:3px;"><strong>💡 双向跳转交互指引：</strong> 点击下方任意 <strong>Batch</strong> 或 <strong>单词自测条目</strong> 直达目标；点击词头随时反向返回目录。</div>
+        <div style="font-size:7.8pt; color:#475569; display:flex; gap:10px; align-items:center; margin-top:3px; border-top:1px dashed #cbd5e1; padding-top:3px;">
+          <span>🛰️ <strong>专项穿梭：</strong></span>
+          <a href="红宝书全景话题特训讲义_精排版.pdf" style="color:#0284c7; text-decoration:none; font-weight:700;">📚 穿梭至《全景话题特训讲义》（大作文母题）↗</a>
+          <span>｜</span>
+          <a href="红宝书阅读情感态度全景特训讲义_精排版.pdf" style="color:#be123c; text-decoration:none; font-weight:700;">🎯 穿梭至《阅读情感态度特训讲义》（极性秒杀）↗</a>
+        </div>
+      </div>
+
+      <div class="batch-nav-container">
+        <div class="batch-nav-grid">
+          <a href="#batch-1" class="batch-nav-card">
+            <div class="batch-nav-title">
+              <span>🚩 Batch 1 (NO.01 - NO.15)</span>
+              <span>👉 直达本批</span>
+            </div>
+            <div class="batch-nav-desc">基础设施与网络流通 · 枢纽 / 连通 / 物质流通 ｜ 阅读 5 词 ＋ 写译 10 词</div>
+          </a>
+      <a href="#batch-2" class="batch-nav-card">
+            <div class="batch-nav-title">
+              <span>🚩 Batch 2 (NO.16 - NO.30)</span>
+              <span>👉 直达本批</span>
+            </div>
+            <div class="batch-nav-desc">资源调配与产业运转 · 配置 / 调度 / 效能提升 ｜ 阅读 15 词 ＋ 写译 0 词</div>
+          </a>
+      <a href="#batch-3" class="batch-nav-card">
+            <div class="batch-nav-title">
+              <span>🚩 Batch 3 (NO.31 - NO.45)</span>
+              <span>👉 直达本批</span>
+            </div>
+            <div class="batch-nav-desc">交通网络与运输载体 · 轨迹 / 动脉 / 体系演进 ｜ 阅读 8 词 ＋ 写译 7 词</div>
+          </a>
+      <a href="#batch-4" class="batch-nav-card">
+            <div class="batch-nav-title">
+              <span>🚩 Batch 4 (NO.46 - NO.60)</span>
+              <span>👉 直达本批</span>
+            </div>
+            <div class="batch-nav-desc">立场对立与利益博弈 · 抗衡 / 争辩 / 矛盾化解 ｜ 阅读 8 词 ＋ 写译 7 词</div>
+          </a>
+    </div>
+      </div>
+
+      <div class="matrix-container">
+        <div class="matrix-header">
+          <span>🔤 List 07 全景 60 词自测与直达矩阵</span>
+          <span style="font-size:7.5pt; color:#64748b;">🔴 红标=阅读识记 ｜ 🔵 蓝标=写译核心 ｜ ☐ 考前打卡自测</span>
+        </div>
+        <div class="matrix-grid">
+          <div class="matrix-col">
+            <div class="matrix-col-header">Batch 1 (NO.01 - NO.15)</div>
+            <div class="matrix-col-list">
+              <a href="#w-particle" class="matrix-item reading" title="点击跳转至 particle">
+                <span class="chk">☐</span>
+                <span class="num">01</span>
+                <span class="name">particle</span>
+              </a>
+          <a href="#w-particular" class="matrix-item writing" title="点击跳转至 particular">
+                <span class="chk">☐</span>
+                <span class="num">02</span>
+                <span class="name">particular</span>
+              </a>
+          <a href="#w-partly" class="matrix-item writing" title="点击跳转至 partly">
+                <span class="chk">☐</span>
+                <span class="num">03</span>
+                <span class="name">partly</span>
+              </a>
+          <a href="#w-partner" class="matrix-item reading" title="点击跳转至 partner">
+                <span class="chk">☐</span>
+                <span class="num">04</span>
+                <span class="name">partner</span>
+              </a>
+          <a href="#w-passion" class="matrix-item writing" title="点击跳转至 passion">
+                <span class="chk">☐</span>
+                <span class="num">05</span>
+                <span class="name">passion</span>
+              </a>
+          <a href="#w-passive" class="matrix-item writing" title="点击跳转至 passive">
+                <span class="chk">☐</span>
+                <span class="num">06</span>
+                <span class="name">passive</span>
+              </a>
+          <a href="#w-quick" class="matrix-item reading" title="点击跳转至 quick">
+                <span class="chk">☐</span>
+                <span class="num">07</span>
+                <span class="name">quick</span>
+              </a>
+          <a href="#w-quit" class="matrix-item writing" title="点击跳转至 quit">
+                <span class="chk">☐</span>
+                <span class="num">08</span>
+                <span class="name">quit</span>
+              </a>
+          <a href="#w-quest" class="matrix-item writing" title="点击跳转至 quest">
+                <span class="chk">☐</span>
+                <span class="num">09</span>
+                <span class="name">quest</span>
+              </a>
+          <a href="#w-questionnaire" class="matrix-item reading" title="点击跳转至 questionnaire">
+                <span class="chk">☐</span>
+                <span class="num">10</span>
+                <span class="name">questionnaire</span>
+              </a>
+          <a href="#w-quote" class="matrix-item writing" title="点击跳转至 quote">
+                <span class="chk">☐</span>
+                <span class="num">11</span>
+                <span class="name">quote</span>
+              </a>
+          <a href="#w-span" class="matrix-item writing" title="点击跳转至 span">
+                <span class="chk">☐</span>
+                <span class="num">12</span>
+                <span class="name">span</span>
+              </a>
+          <a href="#w-spare" class="matrix-item writing" title="点击跳转至 spare">
+                <span class="chk">☐</span>
+                <span class="num">13</span>
+                <span class="name">spare</span>
+              </a>
+          <a href="#w-schedule" class="matrix-item writing" title="点击跳转至 schedule">
+                <span class="chk">☐</span>
+                <span class="num">14</span>
+                <span class="name">schedule</span>
+              </a>
+          <a href="#w-scheme" class="matrix-item reading" title="点击跳转至 scheme">
+                <span class="chk">☐</span>
+                <span class="num">15</span>
+                <span class="name">scheme</span>
+              </a>
+        </div>
+          </div>
+      <div class="matrix-col">
+            <div class="matrix-col-header">Batch 2 (NO.16 - NO.30)</div>
+            <div class="matrix-col-list">
+              <a href="#w-science" class="matrix-item reading" title="点击跳转至 science">
+                <span class="chk">☐</span>
+                <span class="num">16</span>
+                <span class="name">science</span>
+              </a>
+          <a href="#w-scientific" class="matrix-item reading" title="点击跳转至 scientific">
+                <span class="chk">☐</span>
+                <span class="num">17</span>
+                <span class="name">scientific</span>
+              </a>
+          <a href="#w-scientist" class="matrix-item reading" title="点击跳转至 scientist">
+                <span class="chk">☐</span>
+                <span class="num">18</span>
+                <span class="name">scientist</span>
+              </a>
+          <a href="#w-patch" class="matrix-item reading" title="点击跳转至 patch">
+                <span class="chk">☐</span>
+                <span class="num">19</span>
+                <span class="name">patch</span>
+              </a>
+          <a href="#w-patent" class="matrix-item reading" title="点击跳转至 patent">
+                <span class="chk">☐</span>
+                <span class="num">20</span>
+                <span class="name">patent</span>
+              </a>
+          <a href="#w-pattern" class="matrix-item reading" title="点击跳转至 pattern">
+                <span class="chk">☐</span>
+                <span class="num">21</span>
+                <span class="name">pattern</span>
+              </a>
+          <a href="#w-pay" class="matrix-item reading" title="点击跳转至 pay">
+                <span class="chk">☐</span>
+                <span class="num">22</span>
+                <span class="name">pay</span>
+              </a>
+          <a href="#w-payment" class="matrix-item reading" title="点击跳转至 payment">
+                <span class="chk">☐</span>
+                <span class="num">23</span>
+                <span class="name">payment</span>
+              </a>
+          <a href="#w-peculiar" class="matrix-item reading" title="点击跳转至 peculiar">
+                <span class="chk">☐</span>
+                <span class="num">24</span>
+                <span class="name">peculiar</span>
+              </a>
+          <a href="#w-peer" class="matrix-item reading" title="点击跳转至 peer">
+                <span class="chk">☐</span>
+                <span class="num">25</span>
+                <span class="name">peer</span>
+              </a>
+          <a href="#w-per" class="matrix-item reading" title="点击跳转至 per">
+                <span class="chk">☐</span>
+                <span class="num">26</span>
+                <span class="name">per</span>
+              </a>
+          <a href="#w-perceive" class="matrix-item reading" title="点击跳转至 perceive">
+                <span class="chk">☐</span>
+                <span class="num">27</span>
+                <span class="name">perceive</span>
+              </a>
+          <a href="#w-percentage" class="matrix-item reading" title="点击跳转至 percentage">
+                <span class="chk">☐</span>
+                <span class="num">28</span>
+                <span class="name">percentage</span>
+              </a>
+          <a href="#w-perfect" class="matrix-item reading" title="点击跳转至 perfect">
+                <span class="chk">☐</span>
+                <span class="num">29</span>
+                <span class="name">perfect</span>
+              </a>
+          <a href="#w-rail" class="matrix-item reading" title="点击跳转至 rail">
+                <span class="chk">☐</span>
+                <span class="num">30</span>
+                <span class="name">rail</span>
+              </a>
+        </div>
+          </div>
+      <div class="matrix-col">
+            <div class="matrix-col-header">Batch 3 (NO.31 - NO.45)</div>
+            <div class="matrix-col-list">
+              <a href="#w-railroad" class="matrix-item reading" title="点击跳转至 railroad">
+                <span class="chk">☐</span>
+                <span class="num">31</span>
+                <span class="name">railroad</span>
+              </a>
+          <a href="#w-railway" class="matrix-item reading" title="点击跳转至 railway">
+                <span class="chk">☐</span>
+                <span class="num">32</span>
+                <span class="name">railway</span>
+              </a>
+          <a href="#w-raise" class="matrix-item writing" title="点击跳转至 raise">
+                <span class="chk">☐</span>
+                <span class="num">33</span>
+                <span class="name">raise</span>
+              </a>
+          <a href="#w-rally" class="matrix-item reading" title="点击跳转至 rally">
+                <span class="chk">☐</span>
+                <span class="num">34</span>
+                <span class="name">rally</span>
+              </a>
+          <a href="#w-random" class="matrix-item reading" title="点击跳转至 random">
+                <span class="chk">☐</span>
+                <span class="num">35</span>
+                <span class="name">random</span>
+              </a>
+          <a href="#w-range" class="matrix-item reading" title="点击跳转至 range">
+                <span class="chk">☐</span>
+                <span class="num">36</span>
+                <span class="name">range</span>
+              </a>
+          <a href="#w-rank" class="matrix-item writing" title="点击跳转至 rank">
+                <span class="chk">☐</span>
+                <span class="num">37</span>
+                <span class="name">rank</span>
+              </a>
+          <a href="#w-master" class="matrix-item writing" title="点击跳转至 master">
+                <span class="chk">☐</span>
+                <span class="num">38</span>
+                <span class="name">master</span>
+              </a>
+          <a href="#w-masterpiece" class="matrix-item reading" title="点击跳转至 masterpiece">
+                <span class="chk">☐</span>
+                <span class="num">39</span>
+                <span class="name">masterpiece</span>
+              </a>
+          <a href="#w-mate" class="matrix-item reading" title="点击跳转至 mate">
+                <span class="chk">☐</span>
+                <span class="num">40</span>
+                <span class="name">mate</span>
+              </a>
+          <a href="#w-material" class="matrix-item writing" title="点击跳转至 material">
+                <span class="chk">☐</span>
+                <span class="num">41</span>
+                <span class="name">material</span>
+              </a>
+          <a href="#w-mathematical" class="matrix-item reading" title="点击跳转至 mathematical">
+                <span class="chk">☐</span>
+                <span class="num">42</span>
+                <span class="name">mathematical</span>
+              </a>
+          <a href="#w-mature" class="matrix-item writing" title="点击跳转至 mature">
+                <span class="chk">☐</span>
+                <span class="num">43</span>
+                <span class="name">mature</span>
+              </a>
+          <a href="#w-maximum" class="matrix-item writing" title="点击跳转至 maximum">
+                <span class="chk">☐</span>
+                <span class="num">44</span>
+                <span class="name">maximum</span>
+              </a>
+          <a href="#w-mean" class="matrix-item writing" title="点击跳转至 mean">
+                <span class="chk">☐</span>
+                <span class="num">45</span>
+                <span class="name">mean</span>
+              </a>
+        </div>
+          </div>
+      <div class="matrix-col">
+            <div class="matrix-col-header">Batch 4 (NO.46 - NO.60)</div>
+            <div class="matrix-col-list">
+              <a href="#w-meaning" class="matrix-item reading" title="点击跳转至 meaning">
+                <span class="chk">☐</span>
+                <span class="num">46</span>
+                <span class="name">meaning</span>
+              </a>
+          <a href="#w-means" class="matrix-item writing" title="点击跳转至 means">
+                <span class="chk">☐</span>
+                <span class="num">47</span>
+                <span class="name">means</span>
+              </a>
+          <a href="#w-meantime" class="matrix-item reading" title="点击跳转至 meantime">
+                <span class="chk">☐</span>
+                <span class="num">48</span>
+                <span class="name">meantime</span>
+              </a>
+          <a href="#w-meanwhile" class="matrix-item writing" title="点击跳转至 meanwhile">
+                <span class="chk">☐</span>
+                <span class="num">49</span>
+                <span class="name">meanwhile</span>
+              </a>
+          <a href="#w-measure" class="matrix-item writing" title="点击跳转至 measure">
+                <span class="chk">☐</span>
+                <span class="num">50</span>
+                <span class="name">measure</span>
+              </a>
+          <a href="#w-opening" class="matrix-item reading" title="点击跳转至 opening">
+                <span class="chk">☐</span>
+                <span class="num">51</span>
+                <span class="name">opening</span>
+              </a>
+          <a href="#w-opera" class="matrix-item reading" title="点击跳转至 opera">
+                <span class="chk">☐</span>
+                <span class="num">52</span>
+                <span class="name">opera</span>
+              </a>
+          <a href="#w-operate" class="matrix-item writing" title="点击跳转至 operate">
+                <span class="chk">☐</span>
+                <span class="num">53</span>
+                <span class="name">operate</span>
+              </a>
+          <a href="#w-operation" class="matrix-item reading" title="点击跳转至 operation">
+                <span class="chk">☐</span>
+                <span class="num">54</span>
+                <span class="name">operation</span>
+              </a>
+          <a href="#w-operational" class="matrix-item reading" title="点击跳转至 operational">
+                <span class="chk">☐</span>
+                <span class="num">55</span>
+                <span class="name">operational</span>
+              </a>
+          <a href="#w-operator" class="matrix-item reading" title="点击跳转至 operator">
+                <span class="chk">☐</span>
+                <span class="num">56</span>
+                <span class="name">operator</span>
+              </a>
+          <a href="#w-opinion" class="matrix-item writing" title="点击跳转至 opinion">
+                <span class="chk">☐</span>
+                <span class="num">57</span>
+                <span class="name">opinion</span>
+              </a>
+          <a href="#w-opportunity" class="matrix-item writing" title="点击跳转至 opportunity">
+                <span class="chk">☐</span>
+                <span class="num">58</span>
+                <span class="name">opportunity</span>
+              </a>
+          <a href="#w-opponent" class="matrix-item reading" title="点击跳转至 opponent">
+                <span class="chk">☐</span>
+                <span class="num">59</span>
+                <span class="name">opponent</span>
+              </a>
+          <a href="#w-oppose" class="matrix-item writing" title="点击跳转至 oppose">
+                <span class="chk">☐</span>
+                <span class="num">60</span>
+                <span class="name">oppose</span>
+              </a>
+        </div>
+          </div>
+    </div>
+      </div>
+
+      <div class="tracker-container">
+        <div class="tracker-title">
+          <span>🎯 2027 考研词汇备考全景档案与复习通关规划</span>
+          <span style="font-weight:normal; font-size:7.5pt; color:#64748b;">建议复习周期：3 轮循环强化</span>
+        </div>
+        <div class="tracker-milestones">
+          <div class="milestone-box">
+            <strong>1️⃣ 阶段一 · 识记辨义自测</strong>
+            <div>计划完成：📅 ____月____日</div>
+          </div>
+          <div class="milestone-box">
+            <strong>2️⃣ 阶段二 · 核心词链默写</strong>
+            <div>计划完成：📅 ____月____日</div>
+          </div>
+          <div class="milestone-box">
+            <strong>3️⃣ 阶段三 · 真题场景通关</strong>
+            <div>计划完成：📅 ____月____日</div>
+          </div>
+        </div>
+        <div class="tracker-tips">
+          <strong>📌 提分背诵心法：</strong> 
+          <strong>🔴 阅读识记词：</strong>抓词根推导 + 辨情感色彩（🟢正向/🔴负向/⚠️警惕/⚪中立） + 破命题陷阱，秒杀阅读态度题与细节考点；
+          <strong>🔵 写译核心词：</strong>背诵高分核心词链 + 掌握同义替换词库 + 仿写高级长难句例句，赋能小作文、大作文与英译汉。
+        </div>
+      </div>
+    </div>
+    
+    <div class="batch-wrapper">
+      <div id="batch-1"></div>
+      <a href="#table-of-contents" class="batch-header-link" title="点击返回主目录">
+        <h2>🚩 Batch 1：基础设施与网络流通 · 枢纽 / 连通 / 物质流通 (NO.01 - NO.15)</h2>
+        <span class="return-pill">🔄 点此回目录</span>
+      </a>
+      <div class="phase-header reading">
+        <span>🔴 第一阶段：阅读识记词特训 (5 词)</span>
+        <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
+      </div>  <div id="w-particle" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">01</span>
+            <span class="word-name">particle</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.01</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 part- (部分，分开) + 指小后缀 -icle (微小物体) → 微小的部分 → 微粒；粒子 。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>微粒;粒子</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 在科普类（如环境科学、纳米技术）文章中常作为核心术语。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>（细节题）： 选项常利用极小这一特征进行 程度偷换。 例如，原文说particle of evidence（极细微的证据），选项可能偷换为substantial evidence（充分的证据），利用正反逻辑干扰考生。</div>
+          
+        </div>
+      </div>  <div id="w-partner" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">04</span>
+            <span class="word-name">partner</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.04</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源于 part- (部分) + -ner (人)。底层含义是共同分享（利润或责任）的一份子 → 合伙人；搭档 。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>合伙人;搭挡</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 常出现在商业管理（Business）或社会学文章中，指代利益相关者（Stakeholders）。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>（推理题）： 真题中常考查战略伙伴关系的内涵。若文中提到partner，命题人可能在选项中设置equal contribution（均等贡献）的 过度推断 项。实际上，partner 在法律或商业语境下并不一定意味着贡献或权力均等。</div>
+          
+        </div>
+      </div>  <div id="w-quick" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">07</span>
+            <span class="word-name">quick</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.07</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原生词。联想记忆：Quick（快的）与 Quiet（静的）对比，动作迅速往往伴随敏捷。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>快的;迅速的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 常出现在描述快速解决方案或突发反应的语境中。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>注意 quick fix 这一固定短语。真题中常用来指代权宜之计或治标不治本的方法。命题人可能在语义题中问其含义，干扰项通常会给出一个正面的、彻底的solution，考生需识别其带有负面评价色彩（即：快但不持久）。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-efficiency" class="backlink-tag">🔙 来源: efficiency (List 05)</a> <a href="红宝书 List 09 全景深度特训讲义_精排版.html#w-brisk" class="backlink-tag">🔙 来源: brisk (List 09)</a> </div></div>
+        </div>
+      </div>  <div id="w-questionnaire" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">10</span>
+            <span class="word-name">questionnaire</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.10</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">question (问题) + 后缀 -naire (表示......的集合或人员)。即问题的集合体 → 调查问卷 。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>调查问卷;调查表</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 英语二阅读中大量文章基于社会实验或统计数据，该词常作为论据来源的定位词。 - 例证题陷阱： 文中提到questionnaire是为了证明某个观点。干扰项常会 范围扩大 ，将特定问卷的结论推广至universal truth（普遍真理），考生应锁定问卷所限定的具体人群或范畴。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-scheme" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">15</span>
+            <span class="word-name">scheme</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.15</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来源于希腊语 schema (形状，计划)。在现代英语中，它带有一种精密的结构化安排的画面感。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>阴谋;计划;v. 密谋;策划</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题标志： 该词在考研阅读中常带有 贬义色彩 （阴谋、诡计）。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>（语义偷换）： 当文章使用 scheme 时，可能暗示该计划是不正当的。若选项将其替换为中性词plan或program，需警惕是否漏掉了作者的批判性态度。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-design" class="backlink-tag">🔙 来源: design (List 16)</a> </div></div>
+        </div>
+      </div>  <div class="phase-header writing">
+        <span>🔵 第二阶段：写译核心词特训 (10 词)</span>
+        <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-particular" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">02</span>
+            <span class="word-name">particular</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.02</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来源于 particle (微粒)。底层画面：从一堆微粒中拎出特定的那一个。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">pay particular attention to...</span> (特别关注......)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-specific" class="cross-tag" title="直达 List 11">specific (List 11) ↗</a> <span class="synonym-pill">unique (白话词 special -> 提分词 particular )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文趋势描述。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The <strong>particular</strong> reason for this dramatic surge in the number of part-time students is worth analyzing.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-specific" class="backlink-tag">🔙 来源: specific (List 11)</a> </div></div>
+        </div>
+      </div>  <div id="w-partly" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">03</span>
+            <span class="word-name">partly</span>
+            <span class="word-pos">adv.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.03</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">part + -ly。 画面感：拼图只完成了一部分，不完整。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be partly due to...</span> (部分归因于......)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">partially</span> <span class="synonym-pill">to some extent (白话词 part -> 提分词 partly )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文原因分析（多因一果）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>This phenomenon is <strong>partly</strong> attributed to the fierce competition in the domestic job market.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-passion" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">05</span>
+            <span class="word-name">passion</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.05</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 pass- (感受，痛苦)。底层画面：内心无法抑制的强烈情感波动。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">cultivate one's passion for...</span> (培养对......的热情)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">enthusiasm</span> <span class="synonym-pill">zeal (白话词 love</span> <span class="synonym-pill">interest -> 提分词 passion )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文成因分析（涉及个人兴趣）或书信作文。</div>
+            <div class="example-en"><strong>高质量例句：</strong>An increasing number of youngsters have developed a lifelong <strong>passion</strong> for traditional culture.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-passive" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">06</span>
+            <span class="word-name">passive</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.06</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">与 passion 同源（被动感受）。画面感：任由外力推动，自身不发力。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a passive role in...</span> (在......中扮演消极角色)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">inactive</span> <span class="synonym-pill">unresponsive (白话词 negative -> 提分词 passive )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文负面现象评论（如：过度依赖手机）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Excessive reliance on digital devices makes students <strong>passive</strong> learners rather than active thinkers.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-quit" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">08</span>
+            <span class="word-name">quit</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.08</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源于 quiet (安静)。底层画面：结清账目，抽身离开，归于平静。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">quit one's job for further study</span> (辞职深造)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">resign</span> <span class="synonym-pill">abandon (白话词 stop</span> <span class="synonym-pill">leave -> 提分词 quit )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：职场类图表分析或建议信。</div>
+            <div class="example-en"><strong>高质量例句：</strong>A significant proportion of employees chose to <strong>quit</strong> their stable positions in pursuit of self-realization.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-quest" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">09</span>
+            <span class="word-name">quest</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.09</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来源于 question。 底层画面：像探险家搜寻宝藏一样去寻找答案。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">in quest of a better career</span> (追求更好的职业发展)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">pursuit</span> <span class="synonym-pill">exploration (白话词 search -> 提分词 quest )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：成功/梦想类图表作文评论。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Humanity's eternal <strong>quest</strong> for knowledge has driven the continuous progress of our society.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-quote" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">11</span>
+            <span class="word-name">quote</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.11</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原意指标记页码。底层画面：精确指明信息的原始出处。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">quote the figures from the survey</span> (引用调查中的数据)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-cite" class="cross-tag" title="直达 List 12">cite (List 12) ↗</a> <span class="synonym-pill">excerpt (白话词 say -> 提分词 quote)</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文首段描述。</div>
+            <div class="example-en"><strong>高质量例句：</strong>As is <strong>quoted</strong> from the data provided by the chart, the satisfaction level has reached its peak.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-cite" class="backlink-tag">🔙 来源: cite (List 12)</a> </div></div>
+        </div>
+      </div>  <div id="w-span" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">12</span>
+            <span class="word-name">span</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.12</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层含义是两手撑开的距离。底层画面：跨越两点之间的桥梁。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">span a period of several years</span> (持续数年之久)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 21 全景深度特训讲义_精排版.html#w-stretch" class="cross-tag" title="直达 List 21">stretch (List 21) ↗</a> <span class="synonym-pill">extend (白话词 time</span> <span class="synonym-pill">last -> 提分词 span )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表作文趋势描述（时间跨度）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The survey, spanning over a decade, reveals a fundamental shift in people's consumption habits.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 17 全景深度特训讲义_精排版.html#w-reach" class="backlink-tag">🔙 来源: reach (List 17)</a> </div></div>
+        </div>
+      </div>  <div id="w-spare" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">13</span>
+            <span class="word-name">spare</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.13</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来源于多出来的。底层画面：主餐之外剩下的余粮。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">devote one's spare time to doing...</span> (利用空闲时间做......)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">extra</span> <span class="synonym-pill">vacant (白话词 free -> 提分词 spare)</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：小作文通知（Notice）或大学生兼职情况图表分析。</div>
+            <div class="example-en"><strong>高质量例句：</strong>College students are encouraged to engage in social practices during their <strong>spare</strong> time.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-schedule" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">14</span>
+            <span class="word-name">schedule</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.14</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原意指纸条。底层画面：写满待办事项的一张清单。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be ahead of / behind schedule</span> (提前/落后于计划)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">agenda</span> <span class="synonym-pill">timetable (白话词 plan</span> <span class="synonym-pill">time -> 提分词 schedule )</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：小作文（如邀请信中的行程安排）或学习计划类文章。</div>
+            <div class="example-en"><strong>高质量例句：</strong>To ensure efficiency, we should maintain a well-organized daily <strong>schedule</strong> .</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-advance" class="backlink-tag">🔙 来源: advance (List 14)</a> </div></div>
+        </div>
+      </div>  <div class="batch-footer">
+        <span>（Batch 1 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
+      </div>
+    </div>
+    
+    <div class="batch-wrapper">
+      <div id="batch-2"></div>
+      <a href="#table-of-contents" class="batch-header-link" title="点击返回主目录">
+        <h2>🚩 Batch 2：资源调配与产业运转 · 配置 / 调度 / 效能提升 (NO.16 - NO.30)</h2>
+        <span class="return-pill">🔄 点此回目录</span>
+      </a>
+      <div class="phase-header reading">
+        <span>🔴 第一阶段：阅读识记词特训 (15 词)</span>
+        <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
+      </div>  <div id="w-science" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">16</span>
+            <span class="word-name">science</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.16</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 sci- 源自原始印欧语，意为切开、辨别，引申为知晓。科学即通过切分事物来获取严谨知识的学科。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>科学</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-scientific" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">17</span>
+            <span class="word-name">scientific</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.17</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 scientific，经学术语境历史演进，直击考研核心概念：科学的。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>科学的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【细节题】命题常将文中scientific methods（科学方法）等同于选项中的absolute authority（绝对权威）。注意：科学性强调过程的严谨，而非结论的不可质疑，选项若出现科学证明了其绝对正确通常是过度推断的陷阱。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-scientist" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">18</span>
+            <span class="word-name">scientist</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.18</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">science + -ist （专家、从业者）。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>科学家</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【推理题】该词是典型的观点锚点。在英二推理题中，scientist 常作为引用专家意见的信号词。若文中出现多个科学家，需区分谁代表作者立场。作者通常引用科学家来增加论证的客观性，其研究结论往往即为正确选项的改写来源。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-patch" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">19</span>
+            <span class="word-name">patch</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.19</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理画面为一小块补缀用的布料。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>补丁;一小片;小快地;v. 打补丁;缝补</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【词汇语义题】重点识别其作为动词的局部修正含义。英二常在科技或社会政策类文章中考查 patch up，干扰项常设为全面更换（replace/overhaul）或彻底删除（delete）。需牢记其底层语义是基于原物的修补而非重造。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-patent" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">20</span>
+            <span class="word-name">patent</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.20</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源 patere 意为张开、躺平。其物理画面是公开的信件，指政府公开授予的权利，以此换取发明者对技术的公开，防止秘而不宣。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>专利;专利权;专利证书;adj. 有专利的;受专利保护的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-pattern" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">21</span>
+            <span class="word-name">pattern</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.21</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理画面为模版、样板。引申为事物循环出现的规律性特征。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>模式;图案;样式;v. 形成图案;仿造</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-pay" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">22</span>
+            <span class="word-name">pay</span>
+            <span class="word-pos">v.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.22</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pay（支付）+ -ment （名词后缀）。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>支付;付出代价;n. 工资</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【细节题】注意报酬范畴的同义替换。文中提到 payment 时，选项常以income/revenue（收入）或bonus（奖金）设陷。需结合语境判定是债务清偿还是劳务所得，防止同义替换时范畴扩大。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-payment" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">23</span>
+            <span class="word-name">payment</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.23</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 payment，经学术语境历史演进，直击考研核心概念：支付;报酬。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>支付;报酬</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-deposit" class="backlink-tag">🔙 来源: deposit (List 11)</a> </div></div>
+        </div>
+      </div>  <div id="w-peculiar" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">24</span>
+            <span class="word-name">peculiar</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.24</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自拉丁语 peculium， 本指私人拥有的牲畜（cattle），后引申为私产。由于私产是个人独有的，进而演变为独特的，并在他人眼中显得奇怪的。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>奇怪的;独特的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【态度题】在态度题场景下，peculiar 具有双刃剑特征：若描述研究发现，通常为中性词独特的；若描述他人行为，常暗示偏离常规，带有微弱的负向评价。需警惕干扰项将其简单等同于正向的special。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-peer" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">25</span>
+            <span class="word-name">peer</span>
+            <span class="word-pos">v.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.25</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">对等、平级。原指身份地位相同的人。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>凝视;盯着看;与...同等;n. 同等的人;同辈;贵族</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-per" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">26</span>
+            <span class="word-name">per</span>
+            <span class="word-pos">prep.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.26</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">核心语义为每一。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>每;每一</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【细节题/图表定位】在英二科普或经济类文章中，该词常出现在比例数据中（如 per capita 人均）。命题点在于考查对比率的理解。若文中是per capita income，选项若表述为total income，则是典型的偷换概念陷阱。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-perceive" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">27</span>
+            <span class="word-name">perceive</span>
+            <span class="word-pos">v.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.27</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">per- (彻底) + -ceive (抓取)。物理画面为通过感官彻底抓取并内化信息。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>察觉;理解;发觉</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-recognise" class="backlink-tag">🔙 来源: recognise (List 14)</a> <a href="红宝书 List 18 全景深度特训讲义_精排版.html#w-sense" class="backlink-tag">🔙 来源: sense (List 18)</a> <a href="红宝书 List 20 全景深度特训讲义_精排版.html#w-view" class="backlink-tag">🔙 来源: view (List 20)</a> </div></div>
+        </div>
+      </div>  <div id="w-percentage" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">28</span>
+            <span class="word-name">percentage</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.28</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">每一百份中的部分，强调比例的精确性。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>百分比;百分率</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 17 全景深度特训讲义_精排版.html#w-ratio" class="backlink-tag">🔙 来源: ratio (List 17)</a> </div></div>
+        </div>
+      </div>  <div id="w-perfect" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">29</span>
+            <span class="word-name">perfect</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.29</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">per- (彻底) + -fect (做)。物理画面为彻底做完、不留遗憾。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>宪备的;完美的;v. 使完美</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-rail" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">30</span>
+            <span class="word-name">rail</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.30</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原指木栅栏或铁轨。动词含义源于依靠在栏杆上大声责骂的物理画面。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>撬杆;铁轨;v. 咒骂;责备;抱怨;以横木围拦 2027考研英语词汇红宝书</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【态度题】 重点锁定 rail against 短语 。在真题中，该短语表达的是极度激烈的批判情绪。 - 专家笔记： 若文中出现 rail against，对应的正确项通常是 condemn 或 denounce （强烈谴责）。命题人常设置 mild dissatisfaction （轻微不满）或 objective objection （客观反对）作为干扰项，意在弱化其剧烈的批判程度。 二、 写译核心词模块 (Writing & Translation Core Words) 本模块旨在通过底层语义还原实现高阶词汇产出，助力英二写作与翻译提分。 - scientific (adj.) - 底层语义： 使具备系统知识的，引申为严谨、符合逻辑。 - 核心高分词链： scientific rigor (科学严谨性); scientific approaches (科学方法)。 - 真题对齐替换： From true/useful to scientific (提升论证的可信度)。 - 英二专属场景： 【图表作文·成因分析】用于论证结论的严谨性。 - 例句： It is scientific to conclude that the surge in mobile subscriptions is driven by technical innovation.</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div class="batch-footer">
+        <span>（Batch 2 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
+      </div>
+    </div>
+    
+    <div class="batch-wrapper">
+      <div id="batch-3"></div>
+      <a href="#table-of-contents" class="batch-header-link" title="点击返回主目录">
+        <h2>🚩 Batch 3：交通网络与运输载体 · 轨迹 / 动脉 / 体系演进 (NO.31 - NO.45)</h2>
+        <span class="return-pill">🔄 点此回目录</span>
+      </a>
+      <div class="phase-header reading">
+        <span>🔴 第一阶段：阅读识记词特训 (8 词)</span>
+        <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
+      </div>  <div id="w-railroad" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">31</span>
+            <span class="word-name">railroad</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.31</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 railroad，经学术语境历史演进，直击考研核心概念：铁路;v.由铁路运输;迫使。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>铁路;v.由铁路运输;迫使</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-railway" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">32</span>
+            <span class="word-name">railway</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.32</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">railroad : rail (横木/铁轨) + road (道路)。 - railway : rail (铁轨) + way (路)。 - 助记 ：两者核心均在 rail（轨道）。在考研语境下，railroad 的动词含义更具杀伤力，意为迫使某人草率行事或草率通过。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>铁路</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义题标志： 若出现在阅读中，考察其动词含义（迫使/草率处理）的可能性极高。 - 干扰项特征： 命题人常利用其铁路的名词本义设置干扰项，掩盖其在文中表达强迫（force）或不当处理的逻辑。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-rally" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">34</span>
+            <span class="word-name">rally</span>
+            <span class="word-pos">v.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.34</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自古法语 rallier，re- (重新) + allier (结合/盟友)。 - 科学挂钩 ：与 ally (盟友) 同族。想象盟友再次重新聚首，即集合。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>集合起来;振作;复苏;n.集会</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题定位 ：常出现在描述经济形势或社会运动的段落。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>注意复苏/反弹这一含义。在英二经济类文章中，若选项说经济下滑，而原文用 rally 表述，则属于 正反混淆 。</div>
+          
+        </div>
+      </div>  <div id="w-random" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">35</span>
+            <span class="word-name">random</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.35</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自古法语 randon（急奔/无目标）。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>随意的;任意的;n.随意;任意</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-range" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">36</span>
+            <span class="word-name">range</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.36</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 range，经学术语境历史演进，直击考研核心概念：(变化)范围;一系列;山脉;v.包括(各种不同的人或物);(在某范围内)变化。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>(变化)范围;一系列;山脉;v.包括(各种不同的人或物);(在某范围内)变化</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题标志 ：常出现在科学实验描述中（如 random sampling 随机抽样）。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>命题人常在选项中将随机/随意偷换为有目的的（purposeful）或预设好的，以此考察对实验严谨性的理解。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 08 全景深度特训讲义_精排版.html#w-scope" class="backlink-tag">🔙 来源: scope (List 08)</a> <a href="红宝书 List 17 全景深度特训讲义_精排版.html#w-reach" class="backlink-tag">🔙 来源: reach (List 17)</a> <a href="红宝书 List 19 全景深度特训讲义_精排版.html#w-array" class="backlink-tag">🔙 来源: array (List 19)</a> </div></div>
+        </div>
+      </div>  <div id="w-masterpiece" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">39</span>
+            <span class="word-name">masterpiece</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.39</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">master (大师/主人) + piece (作品)。大师级的作品。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>杰作;名著</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题标志 ：作者使用该词通常表达强烈的 正向褒义 。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>在主旨题中，若文章仅提到某作品的一个片段，选项将其拔高为 masterpiece，可能构成 过度推断 。</div>
+          
+        </div>
+      </div>  <div id="w-mate" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">40</span>
+            <span class="word-name">mate</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.40</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源于古低地德语，原意为一起吃饭的人。与 meat (肉) 谐音，想象一起吃肉的人就是伙伴。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>伙伴;伴侣;v.使...配对;交配</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题标志 ：在生物学或社会心理学文章中常考配对逻辑。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>注意其名词与动词的转换。选项中可能用 partner 替换名词含义，或用 reproduce 间接对应其动词含义。</div>
+          
+        </div>
+      </div>  <div id="w-mathematical" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">42</span>
+            <span class="word-name">mathematical</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.42</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">mathematics (数学) + -ical (形容词后缀)。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>数学的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义题/细节题 ：考研中常引申为极度精确的。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>若原文强调 mathematical precision，选项若改为 rough estimation (粗略估计)，则属于 正反混淆 。</div>
+          
+        </div>
+      </div>  <div class="phase-header writing">
+        <span>🔵 第二阶段：写译核心词特训 (7 词)</span>
+        <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-raise" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">33</span>
+            <span class="word-name">raise</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.33</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 由低向高的垂直位移。 由物理的提起引申至抽象的养育或提高。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">raise public awareness of... 提高公众对...的意识。 - raise funds for charity 为慈善筹集资金。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">lift -> elevate (提分词) - increase -> enhance (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型： 英二图表作文（描述上升趋势）、书信小作文（请求加薪或建议）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The data in the table clearly show that the number of mobile-phone subscriptions has <strong>raised</strong> significantly over the past decade.</div>
+            <div class="example-zh"><strong>中文对照：</strong>表中的数据清晰地显示，在过去的十年里，移动电话的用户数量显著增加。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-rank" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">37</span>
+            <span class="word-name">rank</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.37</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 按等级排列的横排 。核心在于层级与地位。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">rank among the top... 位列前茅。 - social rank 社会地位。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">status -> prestige (提分词) - position -> hierarchy (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（描述排名情况）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>It is noteworthy that the part-time job experience <strong>ranks</strong> first among all the concerns of college students.</div>
+            <div class="example-zh"><strong>中文对照：</strong>值得注意的是，兼职经历在大学生所有的关注点中排名第一。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-master" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">38</span>
+            <span class="word-name">master</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.38</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 具备绝对支配权的主人 。引申为对技能的深度掌控。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">master a complex skill 掌握一项复杂的技能。 - be the master of one's own fate 做自己命运的主人。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">learn -> grasp (提分词) - expert -> proficient (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：书信小作文（个人简历/自我推荐）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>During my four years in college, I have <strong>mastered</strong> a solid foundation of theoretical knowledge and practical skills.</div>
+            <div class="example-zh"><strong>中文对照：</strong>在大学四年里，我掌握了扎实的理论知识基础和实践技能。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-material" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">41</span>
+            <span class="word-name">material</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.41</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 构成事物的基本物质/木材。 引申为物质需求与精神需求的对立。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">material wealth 物质财富。 - raw material 原材料。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">stuff -> substance (提分词) - physical -> tangible (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：英二价值观类作文（物质生活与精神生活的权衡）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>While pursuing <strong>material</strong> comfort, we should never ignore the importance of spiritual fulfillment.</div>
+            <div class="example-zh"><strong>中文对照：</strong>在追求物质舒适的同时，我们绝不应忽视精神充实的重要性。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-mature" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">43</span>
+            <span class="word-name">mature</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.43</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 庄稼成熟可以收割的状态 。引申为心智的完备或合同到期。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">a mature approach to... 处理某事的成熟方法。 - mature beyond one's years 少年老成。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">adult -> sophisticated (提分词) - ripe -> mellow (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（描述大学生心智成长/就业心态）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Part-time jobs help students develop a more <strong>mature</strong> outlook on their future career paths.</div>
+            <div class="example-zh"><strong>中文对照：</strong>兼职工作有助于学生对未来的职业道路形成更成熟的看法。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-maximum" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">44</span>
+            <span class="word-name">maximum</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.44</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 容器所能容纳的最高点（天花板） 。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">reach the maximum capacity 达到最大容量。 - with maximum effort 尽最大努力。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">most -> utmost (提分词) - peak -> zenith (提分词) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（描述峰值数据）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The expenditure on research and development reached its <strong>maximum</strong> in 2023.</div>
+            <div class="example-zh"><strong>中文对照：</strong>研发支出在2023年达到了最高值。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-mean" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">45</span>
+            <span class="word-name">mean</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.45</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面： 连接符号与其所指代之物的纽带（动词）/ 社会等级低微（形容词） 。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">mean to do sth. 打算做某事。 - be mean to sb. 对某人刻薄。</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">imply -> signify (提分词) - stingy -> frugal (中性</span> <span class="synonym-pill">褒义替换) - 🎬 英二专属写译场景适配</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（阐释数据背后的深层含义）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The upward trend in online consumption <strong>means</strong> that the digital economy is reshaping our daily lives.</div>
+            <div class="example-zh"><strong>中文对照：</strong>在线消费的上升趋势意味着数字经济正在重塑我们的日常生活。专家提示： Batch 3 的词汇在英二中呈现明显的两极分化------名词多用于图表定位（如 railroad, material ），动词则深度参与逻辑表达（如 raise, mean, master ）。请务必精准掌握 mean 的形容词含义（吝啬/刻薄），这是翻译题中的高频陷阱。</div>
+          </div>
+          
+        </div>
+      </div>  <div class="batch-footer">
+        <span>（Batch 3 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
+      </div>
+    </div>
+    
+    <div class="batch-wrapper">
+      <div id="batch-4"></div>
+      <a href="#table-of-contents" class="batch-header-link" title="点击返回主目录">
+        <h2>🚩 Batch 4：立场对立与利益博弈 · 抗衡 / 争辩 / 矛盾化解 (NO.46 - NO.60)</h2>
+        <span class="return-pill">🔄 点此回目录</span>
+      </a>
+      <div class="phase-header reading">
+        <span>🔴 第一阶段：阅读识记词特训 (8 词)</span>
+        <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
+      </div>  <div id="w-meaning" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">46</span>
+            <span class="word-name">meaning</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.46</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自动词 mean (意指) + -ing (名词后缀)。其本质是心中所指代的事物。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>意思;意义;v.意思是;表示...的意思;"mean"的现在分词</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在\语义题（词汇题）\中，若考查对某生僻词或代词的理解，meaning 常出现在题干中。 - 陷阱： 注意区分literal meaning（字面意思）与implied meaning（隐含意义）。考研阅读往往在选项中设置字面意思作为强干扰项，而正确答案通常需要结合语境进行二次推理。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 21 全景深度特训讲义_精排版.html#w-content" class="backlink-tag">🔙 来源: content (List 21)</a> </div></div>
+        </div>
+      </div>  <div id="w-meantime" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">48</span>
+            <span class="word-name">meantime</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.48</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">mean (中间的) + time (时间)。物理画面为处于两个事件中间的时间段。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>期间;与此同时</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题/逻辑题定位标志： 该词常作为时间对比的信号。 - 陷阱： 命题人常利用时间差进行 正反混淆。 例如：文章描述过去（before）某状况，meantime 描述当下转变，选项若将过去的状态嫁接到与此同时的现状上，即为错误项。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-opening" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">51</span>
+            <span class="word-name">opening</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.51</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">动词 open (打开) 的分词形式名词化。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>开始;开口;空缺职位;adj.开始的;v.打开;"open"的现在分词</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题定位词： 在涉及就业、招聘或劳动力市场的文章中，job openings 几乎等同于 vacancies。 - 陷阱： 词义偷换。 命题人可能利用其开始的含义干扰其空缺职位的含义。如果文章讲job openings，选项出现start of a project，则属于范围扩大或语义偏移。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-opera" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">52</span>
+            <span class="word-name">opera</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.52</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自拉丁语 opus （作品），原指一系列作品的集合。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>歌剧</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">常出现在文化、艺术或社会福利（如政府对艺术的资助）相关的背景文章中。 - 语义题干扰： 需识别 soap opera（肥皂剧）这一固定表达，其在真题中常带有平民化、大众娱乐的色彩，与高雅艺术的 opera 形成对比。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-operation" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">54</span>
+            <span class="word-name">operation</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.54</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">oper (工作/操作) + -ation (名词后缀)。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>操作;运行;手术</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">主旨/细节题： 在商业科技类文章中，多指公司运营/业务；在医疗类文章中指手术。 - 陷阱： 过度推断 。若文章提及business operation，选项中出现surgical success，利用词汇的多义性设置跨领域干扰。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-operational" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">55</span>
+            <span class="word-name">operational</span>
+            <span class="word-pos">adj.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.55</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">operation + -al (形容词后缀)。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>操作的;运作的</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">常出现在科技进步或系统投入使用的描述中。在逻辑推理题中，常与 theoretical（理论上的）形成 对立统一 关系。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-operator" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">56</span>
+            <span class="word-name">operator</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.56</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">oper (工作) + -ator (人/物)。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>操作员;接线员</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在互联网或工业自动化文章中，注意其指代对象。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div id="w-opponent" class="word-card reading-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">59</span>
+            <span class="word-name">opponent</span>
+            <span class="word-pos">n.</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge reading">🔴 阅读识记 · NO.59</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 opponent，经学术语境历史演进，直击考研核心概念：对手;反对者;敌手。</div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>对手;反对者;敌手</strong></div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div class="phase-header writing">
+        <span>🔵 第二阶段：写译核心词特训 (7 词)</span>
+        <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-means" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">47</span>
+            <span class="word-name">means</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.47</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理画面是连接起点与终点的中介路径。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">by means of  ｜  a primary means of communication  ｜  effective means of transportation</span> (by means of (凭借/通过...手段)  ｜  a primary means of communication (一种主要的沟通手段)  ｜  effective means of transportation (有效的交通工具))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">way (白话词) -> approach</span> <span class="synonym-pill">vehicle</span> <span class="synonym-pill">channel (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：英二图表大作文（描写数据变化的手段、交通/沟通方式调研）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>As illustrated in the chart, the Internet has emerged as a primary <strong>means</strong> of obtaining information among the younger generation.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-meanwhile" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">49</span>
+            <span class="word-name">meanwhile</span>
+            <span class="word-pos">adv.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.49</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">表示两个动作在同一时间轴上并行，常用于逻辑转折。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">meanwhile, the opposite is true</span> (与此同时，情况恰恰相反)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">at the same time (白话词) -> simultaneously</span> <span class="synonym-pill">in the interim (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表大作文对比段。当描述两个群体（如城乡、男女性别）截然不同的趋势时使用。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The percentage of rural students increased significantly; <strong>meanwhile</strong> , that of their urban counterparts witnessed a slight decline.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-measure" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">50</span>
+            <span class="word-name">measure</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.50</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理画面是用标尺去量度或规范事物，引申为应对措施。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">take effective measures to do sth.  ｜  a measure of success</span> (take effective measures to do sth. (采取有效措施做某事)  ｜  a measure of success (衡量成功的标准))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">action (白话词) -> step</span> <a href="红宝书 List 19 全景深度特训讲义_精排版.html#w-strategy" class="cross-tag" title="直达 List 19">strategy (List 19) ↗</a> <span class="synonym-pill">countermeasure (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：大作文末段建议/对策段。</div>
+            <div class="example-en"><strong>高质量例句：</strong>It is high time that we took feasible <strong>measures</strong> to address this thorny issue.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-operate" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">53</span>
+            <span class="word-name">operate</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.53</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面是投入能量使机器或系统运转。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">operate efficiently  ｜  operate on a large scale</span> (operate efficiently (高效运作)  ｜  operate on a large scale (大规模运营))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">run</span> <span class="synonym-pill">work (白话词) -> function</span> <span class="synonym-pill">perform (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：大作文原因分析（分析社会/企业系统如何运作）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>This mechanism <strong>operates</strong> on the principle of mutual benefit and cooperation.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-opinion" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">57</span>
+            <span class="word-name">opinion</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.57</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 opine (思考)，指个人主观的见解。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">in my humble opinion  ｜  public opinion  ｜  voice one's opinion</span> (in my humble opinion (依我拙见 ------ 书信提分)  ｜  public opinion (公众舆论)  ｜  voice one's opinion (表达某人的意见))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">thought (白话词) -> perspective</span> <span class="synonym-pill">standpoint</span> <span class="synonym-pill">viewpoint (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：小作文（建议信/投诉信/告示）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>I am writing to voice my <strong>opinions</strong> concerning the current library services on campus.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-opportunity" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">58</span>
+            <span class="word-name">opportunity</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.58</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ob- (朝向) + port (港口)。原指船只等待顺风进入港口的时机。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">seize/grab the opportunity  ｜  provide equal opportunities  ｜  unprecedented opportunity</span> (seize/grab the opportunity (抓住机会)  ｜  provide equal opportunities (提供平等机会)  ｜  unprecedented opportunity (前所未有的机遇))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">chance (白话词) -> prospect</span> <span class="synonym-pill">opening (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表大作文（个人成长、教育公平、兼职情况分析）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Higher education offers students unprecedented opportunities to explore their hidden potential.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-oppose" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">60</span>
+            <span class="word-name">oppose</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.60</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ob- (反) + pos (放)。物理画面是把某物放在你的对立面。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be firmly opposed to sth.  ｜  oppose the idea of...</span> (be firmly opposed to sth. (坚定反对某事)  ｜  oppose the idea of... (反对...的想法))</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">disagree (白话词) -> object to</span> <span class="synonym-pill">resist</span> <span class="synonym-pill">counteract (提分词)。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：社会争议话题类大作文（如分析某些社会现象的负面影响及表态）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Many critics are firmly <strong>opposed</strong> to the commercialization of traditional culture.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div class="batch-footer">
+        <span>（Batch 4 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
+      </div>
+    </div>
+    </body>
+    </html>

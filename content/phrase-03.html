@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四六级常考词组 List 03 深度特训讲义</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+  --primary-blue: #1e3a8a;
+  --secondary-blue: #2563eb;
+  --light-blue: #eff6ff;
+  --accent-red: #dc2626;
+  --light-red: #fef2f2;
+  --dark-slate: #0f172a;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-sub: #475569;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text-main);
+  background-color: #f8fafc;
+  line-height: 1.55;
+  font-size: 13.5px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: A4;
+  margin: 11mm 12mm 11mm 12mm;
+}
+
+.cover-page {
+  page-break-after: always;
+  break-after: page;
+}
+
+.batch-wrapper {
+  page-break-before: always;
+  break-before: page;
+}
+
+.phrase-card {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cover-container { padding: 10px 0; }
+
+.header-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 24px 26px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.25);
+  margin-bottom: 20px;
+}
+
+.header-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-title {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.matrix-section {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 18px 20px;
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
+}
+
+.section-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.section-caption h2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.batch-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.batch-box-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.phrase-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 11.5px;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.phrase-pill:hover {
+  border-color: var(--secondary-blue);
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  transform: translateY(-1px);
+}
+
+.phrase-pill.reading {
+  border-left: 3px solid var(--accent-red);
+}
+
+.phrase-pill.writing {
+  border-left: 3px solid var(--secondary-blue);
+}
+
+.pill-box { font-size: 11px; color: #94a3b8; }
+.pill-text { font-weight: 600; }
+
+.daka-card {
+  background: linear-gradient(to right, #f0fdf4, #f8fafc);
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daka-title { font-weight: 700; font-size: 13px; color: #166534; }
+.daka-sub { font-size: 11.5px; color: #15803d; margin-top: 2px; }
+.daka-rounds { display: flex; gap: 12px; }
+
+.round-badge {
+  background: #ffffff;
+  border: 1px dashed #22c55e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  color: #166534;
+  font-weight: 600;
+}
+
+.batch-header-bar {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.batch-header-title { font-size: 17px; font-weight: 800; letter-spacing: 0.3px; }
+.batch-header-sub { font-size: 12px; opacity: 0.85; }
+
+.back-to-toc-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s;
+}
+
+.back-to-toc-btn:hover { background: #ffffff; color: #0f172a; }
+
+.module-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin: 18px 0 12px 0;
+}
+
+.module-banner.reading {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid var(--accent-red);
+}
+
+.module-banner.writing {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid var(--secondary-blue);
+}
+
+.phrase-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.phrase-card.reading-card { border-top: 3px solid var(--accent-red); }
+.phrase-card.writing-card { border-top: 3px solid var(--secondary-blue); }
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-no-badge {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.reading-card .card-no-badge { background: #fee2e2; color: #b91c1c; }
+.writing-card .card-no-badge { background: #dbeafe; color: #1d4ed8; }
+
+.card-phrase-link {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.card-pos-capsule { font-size: 11.5px; color: #64748b; font-weight: 500; }
+.card-meaning-text { font-size: 13px; color: #334155; font-weight: 600; }
+
+.card-return-pill {
+  font-size: 11px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.card-return-pill:hover {
+  background: var(--light-blue);
+  color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+.field-row {
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.field-label {
+  display: inline-block;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-right: 6px;
+}
+
+.lbl-mechanism { background: #f3e8ff; color: #7e22ce; }
+.lbl-points { background: #e0e7ff; color: #3730a3; }
+
+.upgrade-box {
+  background: #f0fdf4;
+  border-left: 3px solid #22c55e;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-size: 12.5px;
+  color: #166534;
+}
+
+.colloc-box {
+  background: #fff7ed;
+  border-left: 3px solid #f97316;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #9a3412;
+}
+
+.trap-box {
+  background: #fef2f2;
+  border-left: 3px solid #ef4444;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-size: 12.5px;
+  color: #991b1b;
+}
+
+.example-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #64748b;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.example-en { color: #0f172a; font-weight: 500; margin-bottom: 3px; }
+.example-zh { color: #475569; }
+
+.summary-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  page-break-inside: avoid;
+}
+
+.summary-header {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.summary-content {
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.batch-footer-jump {
+  text-align: right;
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.batch-footer-jump a {
+  font-size: 12px;
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+   ══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 14px !important;
+    padding: 0 4px !important;
+    background-color: #ffffff !important;
+  }
+  .cover-container {
+    padding: 6px 0;
+  }
+  .header-banner {
+    padding: 16px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .header-title {
+    font-size: 19px !important;
+    line-height: 1.35;
+  }
+  .header-subtitle {
+    font-size: 12px;
+  }
+  .matrix-section {
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .matrix-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .phrase-pill {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin: 2px 0;
+  }
+  .daka-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .batch-header-bar {
+    padding: 10px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .back-to-toc-btn {
+    align-self: flex-end;
+  }
+  .phrase-card {
+    margin-bottom: 12px !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+  .card-phrase-name {
+    font-size: 16px !important;
+  }
+  .field-row {
+    font-size: 13.5px !important;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<div class="cover-page">
+<div class="cover-container" id="table-of-contents">
+<div class="header-banner">
+<div class="header-badge">⭐ 2027 考研 & 四六级英语词组特训库</div>
+<div class="header-title">四六级常考词组必备 · List 03 全景深度特训讲义</div>
+<div class="header-subtitle">认知隐喻拆解 · 白话提分升级通路 · 完型命题陷阱解码 · 全书收录 27 组高频词组</div>
+</div>
+<div class="matrix-section">
+<div class="section-caption">
+<h2>📋 批次核心词组速查与自测打卡矩阵 (点击直达词卡)</h2>
+<span style="font-size: 12px; color: #64748b;">支持双向锚点跳转</span>
+</div>
+<div class="matrix-grid">
+<div class="batch-box">
+<div class="batch-box-title">
+<span>🚩 Batch 1 (NO.1 - NO.15)</span>
+<span style="font-size: 11px; color: #64748b;">共 15 组</span>
+</div>
+<div class="pill-container">
+<a href="#p-with-respect-to" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">with respect to</span>
+</a>
+<a href="#p-in-the-shape-of" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">in the shape of</span>
+</a>
+<a href="#p-next-to" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">next to</span>
+</a>
+<a href="#p-hold-true" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">hold true</span>
+</a>
+<a href="#p-be-at-fault" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">be at fault</span>
+</a>
+<a href="#p-make-a-thing-of" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">make a thing of</span>
+</a>
+<a href="#p-suffer-from" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">suffer from</span>
+</a>
+<a href="#p-come-up-to" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">come up to</span>
+</a>
+<a href="#p-live-out" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">live out</span>
+</a>
+<a href="#p-in-all" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">in all</span>
+</a>
+<a href="#p-base-on" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">base on</span>
+</a>
+<a href="#p-commit-to" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">commit to</span>
+</a>
+<a href="#p-dish-out" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">dish out</span>
+</a>
+<a href="#p-forever" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">forever</span>
+</a>
+<a href="#p-settle-in" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">settle in</span>
+</a>
+</div>
+</div>
+<div class="batch-box">
+<div class="batch-box-title">
+<span>🚩 Batch 2 (NO.16 - NO.30)</span>
+<span style="font-size: 11px; color: #64748b;">共 12 组</span>
+</div>
+<div class="pill-container">
+<a href="#p-skeptical-sceptical" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">skeptical / sceptical</span>
+</a>
+<a href="#p-embed" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">embed</span>
+</a>
+<a href="#p-embryo" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">embryo</span>
+</a>
+<a href="#p-elicit" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">elicit</span>
+</a>
+<a href="#p-elsewhere-though-thought" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">elsewhere / though /...</span>
+</a>
+<a href="#p-sketch" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">sketch</span>
+</a>
+<a href="#p-embrace" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">embrace</span>
+</a>
+<a href="#p-embody" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">embody</span>
+</a>
+<a href="#p-elite" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">elite</span>
+</a>
+<a href="#p-thirst" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">thirst</span>
+</a>
+<a href="#p-thorough" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">thorough</span>
+</a>
+<a href="#p-thoughtful" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">thoughtful</span>
+</a>
+</div>
+</div>
+</div>
+<div class="daka-card">
+<div>
+<div class="daka-title">🎯 2027 备考全景档案 · 词组三轮通关打卡</div>
+<div class="daka-sub">一轮：理解介词空间隐喻 | 二轮：背诵提分升级磁链 | 三轮：默写高阶考研真题例句</div>
+</div>
+<div class="daka-rounds">
+<div class="round-badge">☐ 一轮通关</div>
+<div class="round-badge">☐ 二轮巩固</div>
+<div class="round-badge">☐ 三轮考前</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="batch-wrapper">
+<div id="batch-1"></div>
+<div class="batch-header-bar">
+<div>
+<div class="batch-header-title">🚩 Batch 1 · 核心词组深度特训 (NO.1 - NO.15)</div>
+<div class="batch-header-sub">《四六级常考词组必备》List 3 Batch 1 (NO.1 - NO.15) 深度特训讲义</div>
+</div>
+<a href="#table-of-contents" class="back-to-toc-btn">🔄 返回自测总览</a>
+</div>
+<div class="module-banner reading">🔴 第一阶段：阅读/完型识记词组 (深层图式机理与考情解码)</div>
+<div class="phrase-card reading-card" id="p-with-respect-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.1</span>
+<a href="#table-of-contents" class="card-phrase-link">with respect to</a>
+<span class="card-meaning-text">NO.1, 考虑到; 关于; 至于</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：  Root Word:  respect  (List 30, NO. 43 - 方面/尊重)。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>深度机理：  respect 底层含义为 "look back/at"（回望/注视）。with...to 结构形成了一个<strong>“视线定向”</strong>的画面，即将整体注意力精准投射到某一特定维度。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>逻辑考点：  考研阅读中常作为<strong>“维度限定” 或 “话题切入”</strong>。看到它，意味着作者正在缩小讨论范畴。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高频陷阱：  注意它在完型中与 in terms of 的近义替换，其核心逻辑均为“从某一方面来说”。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-in-the-shape-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.2</span>
+<a href="#table-of-contents" class="card-phrase-link">in the shape of</a>
+<span class="card-meaning-text">NO.5, 呈...的形状; 以...的形式</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：  Root Word:  shape  (List 17, NO. 16 - 形状/塑造)。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>深度机理：  in 引导状态，shape 是空间化特征。此结构将抽象的“存在方式”或“援助手段” 具体空间化 。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>实战定位：  考研细节题高频考点。例如： aid in the shape of capital ，不要死扣“形状”，应理解为“以资金形式提供的援助”。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-next-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.3</span>
+<a href="#table-of-contents" class="card-phrase-link">next to</a>
+<span class="card-meaning-text">NO.9, 紧邻; 在...近旁; 几乎</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：   Expansion Word  (关联 List 33, NO. 5 -  nearly )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层机理：  物理距离的“无限贴近”外延至抽象程度的“渐近性（asymptotic proximity）”。当两者之间的缝隙几乎消失，即演变为“几乎（almost）”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>逻辑陷阱：   熟词僻义 重要 。当它后接否定词（nothing, impossible）时，是考研阅读的逻辑雷区。如： It's next to impossible.  意为“这简直不可能”，而非“在不可能的旁边”。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-hold-true">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.4</span>
+<a href="#table-of-contents" class="card-phrase-link">hold true</a>
+<span class="card-meaning-text">NO.11, 适用; 有效; 保持真实</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：  Root Word:  hold  (List 24, NO. 25 - 保持/持有)。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>深度机理：  hold 在此表示“维持某种稳定状态”。当真理（true）在不同时空点被稳稳“握住”时，意味着其规律在持续生效。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>完型逻辑：  常用于议论文的结论部分，代表“普遍适用性”。若文中讨论某个理论在其他领域也成立，hold true 是标准答案。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-be-at-fault">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.5</span>
+<a href="#table-of-contents" class="card-phrase-link">be at fault</a>
+<span class="card-meaning-text">NO.12, 有过错; 有责任</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：  Root Word:  fault  (List 44, NO. 41 - 故障/过错)。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>深度机理：  at 引导一种点状的、陷入其中的状态。at fault 刻画的是主体“处于错误点”的画面感，常用于责任认定。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>阅读极性：   负向情感极性 - 。作者使用此词组时，语气通常带有批判色彩。对比 be to blame，at fault 更多指客观上的责任归属。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-make-a-thing-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.6</span>
+<a href="#table-of-contents" class="card-phrase-link">make a thing of</a>
+<span class="card-meaning-text">NO.13, 小题大做; 把...看得太重</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：   Expansion Word  (关联 List 1, NO. 4 -  object )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层机理：  将一个普通的 object（客体）放大为一个具有显著存在感的 thing（核心大事），即“赋予了不该有的重要性”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>逻辑考点：  识别文中的否定用法。如： Don't make a thing of it.  代表作者倡导“淡化处理”或“宽容”的态度。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-suffer-from">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2.7</span>
+<a href="#table-of-contents" class="card-phrase-link">suffer from</a>
+<span class="card-meaning-text">NO.15, 遭受; 患病; 受...折磨</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层溯源：  Root Word:  suffer  (List 30, NO. 57 - 遭受/忍受)。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>深度机理：  from 代表 源头/起因 。痛苦感（suffer）像水流一样从负面源头（疾病/贫困/压力）流向主体。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>逻辑考点：   因果负极现象 - 。完型必考点：from 之后必接导致痛苦的具体负面原因。在阅读中，它是锁定文章“核心问题（Problem/Pain Point）”的关键锚点。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>针对写作与翻译，本部分提供“词汇升级模型”，帮助你摆脱初级表达的平庸感。</span>
+</div>
+</div>
+<div class="module-banner writing">🔵 第二阶段：写译核心词组 (底层逻辑升级与高阶场景适配)</div>
+<div class="phrase-card writing-card" id="p-come-up-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.1</span>
+<a href="#table-of-contents" class="card-phrase-link">come up to</a>
+<span class="card-meaning-text">NO.2, 达到; 符合; 赶上</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代初级词 meet (the standard) 或 reach ( List 17, NO. 55 )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>come up to expectations  (达到预期)</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>come up to rigorous standards  (符合严格的标准)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  图表描述（数据达标）或对策建议。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  The performance of the new policy didn't  come up to  our initial expectations. (新政策的表现并未达到我们的最初预期。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-live-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.2</span>
+<a href="#table-of-contents" class="card-phrase-link">live out</a>
+<span class="card-meaning-text">NO.3, 活过; 实践; 实现</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代平庸词 realize ( List 17, NO. 59 ) 或 fulfill ( List 25, NO. 2 )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>live out one's potential  (充分挖掘并实现潜力)</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>live out one's core beliefs  (践行核心信仰)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  价值观类作文（梦想、信念、个人成长）。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  Young people are encouraged to  live out  their dreams through unremitting efforts. (应当鼓励年轻人通过不懈努力去实现自己的梦想。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-in-all">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.3</span>
+<a href="#table-of-contents" class="card-phrase-link">in all</a>
+<span class="card-meaning-text">NO.4, 一共; 总计</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代 total ( List 13, NO. 53 ) 或 altogether ( List 41, NO. 37 )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>amounted to... in all  (总计达...)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  图表作文（总结数据总量，展示概括能力）。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：   In all , mobile-phone subscriptions have witnessed a dramatic surge over the decade. (总计，移动电话用户在十年间经历了剧增。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-base-on">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.4</span>
+<a href="#table-of-contents" class="card-phrase-link">base on</a>
+<span class="card-meaning-text">NO.6, 基于; 以...为根据</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代简单的 rely on 或 according to。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>核心语法：  写作常用被动语态 be based on。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>be predicated on empirical observation  (基于经验观察)</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>be grounded in solid evidence  (基于坚实的证据)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  成因分析或逻辑推理类论证。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  Scientific conclusions must  be based on  empirical evidence rather than mere speculation. (科学结论必须基于经验证据而非仅仅是推测。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-commit-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.5</span>
+<a href="#table-of-contents" class="card-phrase-link">commit to</a>
+<span class="card-meaning-text">NO.7, 承诺; 致力于; 投入</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代 work hard on 或 devote to ( List 2, NO. 60 )。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>核心语法 必看雷区：   to 是介词，后面必须接 -ing 形式！  be committed to doing sth.。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>be committed to environmental protection  (致力于环保)</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>commit resources to technological innovation  (投入资源用于技术创新)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  建议信、倡议书。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  Our society should  be committed to improving  the welfare of the elderly. (我们的社会应当致力于提高老年人的福利。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-dish-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.6</span>
+<a href="#table-of-contents" class="card-phrase-link">dish out</a>
+<span class="card-meaning-text">NO.8, 给予; 随意分发</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代 give。带有强烈的<strong>“随意、不负责任”</strong>的批判意味。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>dish out criticism/advice  (肆意批评/随口给建议)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  社会现象类批判作文（如网络暴力、过度消费）。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  Critics on social media are often quick to  dish out  judgment without knowing the truth. (社交媒体上的评论者往往在不了解真相的情况下就肆意断言。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-forever">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.7</span>
+<a href="#table-of-contents" class="card-phrase-link">forever</a>
+<span class="card-meaning-text">NO.10, 永远; 总是</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代 always。写作中使用 be forever doing 强调一种“持续不断的、动态的”状态。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>the forever changing landscape of...  (...永恒变化着的版图)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  描述科技趋势或永恒价值。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  In this digital era, technology is  forever changing  the way we communicate. (在数字时代，科技正不断改变着我们的沟通方式。)</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-settle-in">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3.8</span>
+<a href="#table-of-contents" class="card-phrase-link">settle in</a>
+<span class="card-meaning-text">NO.14, 适应新环境; 搬家; 定居</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>提分升级：  替代 adapt to ( List 13, NO. 45 ) 或 get used to。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>settle in smoothly  (顺利适应/融入)</span>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 场景适配：  英语二必考的欢迎信或给留学生的建议信。</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 满分翻译：  It is high time that you took some measures to  settle in  the new academic environment. (是你该采取措施来适应新学术环境的时候了。)</div>
+</div>
+</div>
+<div class="batch-footer-jump">
+<a href="#table-of-contents">🔝 一键返回顶部目录与自测矩阵</a>
+</div>
+</div>
+<div class="batch-wrapper">
+<div id="batch-2"></div>
+<div class="batch-header-bar">
+<div>
+<div class="batch-header-title">🚩 Batch 2 · 核心词组深度特训 (NO.16 - NO.30)</div>
+<div class="batch-header-sub">《四六级与考研常考词汇》List 3（NO.16 - NO.30）深度特训讲义</div>
+</div>
+<a href="#table-of-contents" class="back-to-toc-btn">🔄 返回自测总览</a>
+</div>
+<div class="module-banner reading">🔴 第一阶段：阅读/完型识记词组 (深层图式机理与考情解码)</div>
+<div class="phrase-card reading-card" id="p-skeptical-sceptical">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.16-17</span>
+<a href="#table-of-contents" class="card-phrase-link">skeptical / sceptical</a>
+<span class="card-meaning-text">adj. 怀疑的</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>认知语言学解构 ：该词反映了“评估图式（Evaluation Schema）”。它并非简单的“否定（Denial）”，而是在信息输入时建立一道“验证屏障”。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>应试逻辑与态度陷阱 ：这是考研阅读“作者态度题”的 金牌选项 。</div>
+<div>陷阱 ：区分  skeptical （客观怀疑/理性审视）与  hostile （敌对）或  critical （严厉批判）。作者对新技术（如 2010 年真题中的 Mobile-phone subscriptions）持怀疑态度时，往往意在强调“需进一步观察”，而非全盘否定。</div>
+<div>真题逻辑 ：在完型中，若上下文出现实验数据与结论的冲突，选项常设  skeptical 。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-embed">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.20</span>
+<a href="#table-of-contents" class="card-phrase-link">embed</a>
+<span class="card-meaning-text">v. 使插入; 使嵌入</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>认知语言学解构 ：基于“容器图式（CONTAINER Schema）”。将一个物体（Object）固定在另一个实体（Matrix）内部，使其成为不可分割的一部分。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>完型逻辑与考点 ：常考查“抽象概念的根深蒂固”。</div>
+<div>考点陷阱 ：考生易将其与  insert  混淆。 insert  仅强调进入动作，而  embed  强调进入后的 固定状态 。</div>
+<div>例 ： Values embedded in a culture （嵌入文化中的价值观）。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-embryo">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.22</span>
+<a href="#table-of-contents" class="card-phrase-link">embryo</a>
+<span class="card-meaning-text">n. 胚胎; adj. 胚胎的</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>认知语言学解构 ：利用“起点-路径-目标（SOURCE-PATH-GOAL）”模型。此词代表路径的最顶端（源头），象征潜能与未分化状态。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>熟词僻义 ：应试中重点掌握短语  in embryo （在萌芽阶段；尚未成熟）。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>阅读辨析 ：若文章讨论产业发展或政策雏形，出现  embryo  意味着该事物正处于初期，逻辑上预示着未来的变化。</span>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-elicit">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.23</span>
+<a href="#table-of-contents" class="card-phrase-link">elicit</a>
+<span class="card-meaning-text">v. 引出; 诱出</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>认知语言学解构 ：基于“力学图式（FORCE Schema）”。通过外界的施力（如提问、刺激），使内部隐藏的信息或反应显性化。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>因果逻辑陷阱 ：完型填空常考动宾搭配。</div>
+<div>陷阱 ：混淆  elicit  与  induce （诱导行为）或  provoke （激怒/引发负面反应）。 elicit  宾语常为  response  或  information 。</div>
+<div>真题适配 ：2013 年关于兼职情况的调查（Survey），研究者通过问卷来  elicit varied responses （引导出不同的回答）。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-elsewhere-though-thought">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.25</span>
+<a href="#table-of-contents" class="card-phrase-link">elsewhere / though / thought</a>
+<span class="card-meaning-text">28, 29</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>逻辑过渡模块 ：</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>elsewhere ：阅读中的“视角转移”信号。当作者讨论完 A 处的现象，用  elsewhere  引入 B 处的对比。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>though ：让步转折逻辑的“锚点”。注意其在句末做副词时表“然而”的隐蔽用法。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>thought ：认知图式中“产品（Product）”与“过程（Process）”的统一。在议论文中，常作为  school of thought （学派/思想流派）出现。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>本部分侧重主动产出，将平庸词汇升级为具备“博士感”的高阶表达。</span>
+</div>
+</div>
+<div class="module-banner writing">🔵 第二阶段：写译核心词组 (底层逻辑升级与高阶场景适配)</div>
+<div class="phrase-card writing-card" id="p-sketch">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.18</span>
+<a href="#table-of-contents" class="card-phrase-link">sketch</a>
+<span class="card-meaning-text">v./n. 概述; 简述; 草图</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：剥离细节，保留核心轮廓。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：describe briefly ➔ sketch。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用图表作文首段。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶句式 ： The table above sketches the shifting trends in employee satisfaction from 2010 to 2012. （上表简述了 2010 至 2012 年员工满意度的变化趋势。）</span>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-embrace">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.19</span>
+<a href="#table-of-contents" class="card-phrase-link">embrace</a>
+<span class="card-meaning-text">v. 接受; 信奉; 囊括</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：基于“身体/容器隐喻”。将他者纳入自己的怀抱，代表从心理上完全接纳。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：accept / try ➔ embrace。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用对策建议类。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶句式 ： Modern citizens are encouraged to embrace the convenience brought by mobile-phone subscriptions. （现代公民应积极接纳移动电话业务带来的便利。）</span>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-embody">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.21</span>
+<a href="#table-of-contents" class="card-phrase-link">embody</a>
+<span class="card-meaning-text">v. 体现; 使具体化</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：基于“实体隐喻（PHYSICAL OBJECT Metaphor）”。给抽象灵魂（思想/品质）一个肉体（Body），使其可感知。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：show / represent ➔ embody。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用意义阐述段。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶句式 ： The prevalence of part-time jobs among students embodies a growing sense of financial independence. （学生兼职的盛行体现了日益增长的经济独立意识。）</span>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-elite">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.24</span>
+<a href="#table-of-contents" class="card-phrase-link">elite</a>
+<span class="card-meaning-text">n./adj. 精英; 出类拔萃的</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：社会层级图式中的顶点。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶磁链 ： the concentration of resources among the social elite （资源在社会精英中的集中）。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用教育或社会公平类话题。</span>
+</div>
+<div class="example-box">
+<div class="example-en">例句 ： Education should not be a privilege reserved for the elite. （教育不应是仅供精英阶层享有的特权。）</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-thirst">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.26</span>
+<a href="#table-of-contents" class="card-phrase-link">thirst</a>
+<span class="card-meaning-text">n. 渴求; 渴望</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：生理驱动隐喻（DESIRE IS HUNGER/THIRST）。将获取知识或成功的欲望具象化为生理渴求。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：want to learn ➔ have a thirst for knowledge。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用个人品质类话题。</span>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-thorough">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.27</span>
+<a href="#table-of-contents" class="card-phrase-link">thorough</a>
+<span class="card-meaning-text">adj. 彻底的; 详尽的</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：由  through  演变而来，建立“穿过（PATH）”图式。动作覆盖了从起点到终点的每一个角落。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：careful / complete ➔ thorough。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用 2012 年“工作满意度”调查类背景。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶句式 ： A thorough investigation into job satisfaction reveals that salary is not the sole determinant. （一项关于工作满意度的详尽调查显示，薪资并非唯一决定因素。）</span>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-thoughtful">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.30</span>
+<a href="#table-of-contents" class="card-phrase-link">thoughtful</a>
+<span class="card-meaning-text">adj. 深思的; 体贴的</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>底层语义 ：充满思考状态的。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>写译升级 ：kind / careful ➔ thoughtful。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>🎬 写译适配 ：适用评论题结论。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>高阶句式 ： A thoughtful analysis of student part-time jobs helps us strike a balance between study and social practice. （对学生兼职现象进行深思熟虑的分析，有助于我们在学习与社会实践间取得平衡。）</span>
+</div>
+</div>
+<div class="batch-footer-jump">
+<a href="#table-of-contents">🔝 一键返回顶部目录与自测矩阵</a>
+</div>
+</div>
+</body>
+</html>
