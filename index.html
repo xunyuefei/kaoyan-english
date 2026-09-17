@@ -1411,17 +1411,21 @@
           <button class="view-btn active" id="btnViewGrid" title="四列打卡矩阵">矩阵</button>
           <button class="view-btn" id="btnViewList" title="详细列表">列表</button>
         </div>
-    <!-- 侧边栏抽屉内多主题全景切换器（解决手机端切换主题痛点） -->
+        <button class="close-sidebar-btn" id="btnCloseSidebar" title="收起导航">✕</button>
+      </div>
+    </div>
+
+    <!-- 侧边栏抽屉内多主题全景切换器（解决手机端与电脑端切换主题痛点） -->
     <div class="sidebar-cat-switcher" id="sidebarCatSwitcher">
-      <button class="sb-cat-btn active" data-cat="vocab" id="sbTabVocab" title="核心词汇 23 单元">
+      <button class="sb-cat-btn active" data-cat="vocab" id="sbTabVocab" title="核心词汇 50 单元">
         <span class="sb-cat-icon">📕</span>
         <span class="sb-cat-text">单词</span>
-        <span class="sb-cat-badge" id="sbCountVocab">23</span>
+        <span class="sb-cat-badge" id="sbCountVocab">50</span>
       </button>
-      <button class="sb-cat-btn" data-cat="phrase" id="sbTabPhrase" title="常考词组 3 单元">
+      <button class="sb-cat-btn" data-cat="phrase" id="sbTabPhrase" title="常考词组 30 单元">
         <span class="sb-cat-icon">📘</span>
         <span class="sb-cat-text">词组</span>
-        <span class="sb-cat-badge" id="sbCountPhrase">3</span>
+        <span class="sb-cat-badge" id="sbCountPhrase">30</span>
       </button>
       <button class="sb-cat-btn" data-cat="special" id="sbTabSpecial" title="话题与态度专项讲义">
         <span class="sb-cat-icon">📗</span>
@@ -1434,6 +1438,7 @@
         <span class="sb-cat-badge" id="sbCountBookmarks">0</span>
       </button>
     </div>
+
     <div class="sidebar-content" id="sidebarContent">
       <!-- 动态渲染 Matrix 或 List -->
     </div>
