@@ -1179,6 +1179,7 @@
     resize: vertical;
     min-height: 90px;
     font-family: inherit;
+    box-sizing: border-box;
   }
   .note-modal-input:focus {
     border-color: var(--accent-blue);
@@ -1210,7 +1211,7 @@
     background: #1d4ed8;
   }
 
-  /* 移动端特别优化强化 */
+  /* 移动端深度自适应 */
   @media (max-width: 768px) {
     :root {
       --header-h: 48px;
@@ -1433,9 +1434,6 @@
         <span class="sb-cat-badge" id="sbCountBookmarks">0</span>
       </button>
     </div>
-        <button class="close-sidebar-btn" id="btnCloseSidebar" title="收起导航">✕</button>
-      </div>
-    </div>
     <div class="sidebar-content" id="sidebarContent">
       <!-- 动态渲染 Matrix 或 List -->
     </div>
@@ -1493,6 +1491,23 @@
     </div>
   </main>
   <!-- 全局悬浮气泡 Toast -->
+  
+  <!-- 原生触控随手记弹窗 (适配手机端与电脑端) -->
+  <div class="note-modal-backdrop" id="noteModalBackdrop">
+    <div class="note-modal">
+      <div class="note-modal-header">
+        <span class="note-modal-title">📝 随手记心得备忘</span>
+        <button class="note-modal-close" id="btnCloseNoteModal" title="关闭">✕</button>
+      </div>
+      <div class="note-modal-target" id="noteModalTarget">radiate (v.)</div>
+      <textarea class="note-modal-input" id="noteModalInput" placeholder="写下你的独家背诵口诀、真题考法或备忘心得..."></textarea>
+      <div class="note-modal-actions">
+        <button class="note-modal-btn cancel" id="btnCancelNoteModal">取消</button>
+        <button class="note-modal-btn save" id="btnSaveNoteModal">保存笔记</button>
+      </div>
+    </div>
+  </div>
+
   <div class="portal-toast" id="portalToast"></div>
 </div>
 
@@ -1606,9 +1621,9 @@
     const backdrop = document.getElementById('sidebarBackdrop');
     const toggleBtn = document.getElementById('sidebarToggle');
 
-    sidebar.classList.toggle('open', sidebarIsOpen);
-    backdrop.classList.toggle('show', sidebarIsOpen);
-    toggleBtn.classList.toggle('active', sidebarIsOpen);
+    if (sidebar) sidebar.classList.toggle('open', sidebarIsOpen);
+    if (backdrop) backdrop.classList.toggle('show', sidebarIsOpen);
+    if (toggleBtn) toggleBtn.classList.toggle('active', sidebarIsOpen);
   }
 
   window.openAndSwitch = function(cat) {
@@ -1622,22 +1637,6 @@
       if (res.ok) {
         const data = await res.json();
         if (data.vocabLists && data.vocabLists.length > 0) return data;
-        if (data.modules) {
-          return {
-            vocabLists: (data.modules.words?.lists || []).map(l => ({
-              id: l.id, num: l.id.replace('list-', ''), label: l.title,
-              sublabel: '60 词 · 4 Batch · 精排版', file: l.path, type: 'vocab', ready: true
-            })),
-            phraseLists: (data.modules.phrases?.lists || []).map(l => ({
-              id: l.id, num: l.id.replace('phrase-', ''), label: l.title,
-              sublabel: '常考词组 · 深度精排', file: l.path, type: 'phrase', ready: true
-            })),
-            specials: (data.modules.thematic?.lists || []).map(l => ({
-              id: l.id, num: l.id === 'thematic' ? '话题' : '态势', label: l.title,
-              sublabel: '专项特训', file: l.path, type: 'special', ready: true
-            }))
-          };
-        }
       }
     } catch(e) {}
     return defaultManifest;
@@ -1665,6 +1664,7 @@
   // ────────────────────────────────────────────
   function renderSidebar() {
     const container = document.getElementById('sidebarContent');
+    if (!container) return;
     container.innerHTML = '';
 
     // 同步侧边栏顶部切换器的高亮
@@ -1675,7 +1675,8 @@
     const viewToggle = document.querySelector('.sidebar-controls .view-toggle');
 
     if (currentCategory === 'bookmarks') {
-      document.getElementById('sidebarSectionTitle').textContent = '⭐ 重点标记归并清单';
+      const secTitle = document.getElementById('sidebarSectionTitle');
+      if (secTitle) secTitle.textContent = '⭐ 重点标记归并清单';
       if (viewToggle) viewToggle.style.display = 'none';
       renderBookmarksSidebar(container);
       return;
@@ -1689,7 +1690,8 @@
       phrase: '📘 四六级词组打卡矩阵',
       special: '📗 专题专项讲义'
     };
-    document.getElementById('sidebarSectionTitle').textContent = titleMap[currentCategory] || '讲义导航';
+    const secTitle = document.getElementById('sidebarSectionTitle');
+    if (secTitle) secTitle.textContent = titleMap[currentCategory] || '讲义导航';
 
     if (currentViewMode === 'grid') {
       const grid = document.createElement('div');
@@ -1808,20 +1810,20 @@
     const bookmarksScreen = document.getElementById('bookmarksScreen');
 
     if (cat === 'bookmarks') {
-      welcomeScreen.style.display = 'none';
-      contentToolbar.style.display = 'none';
-      contentFrame.style.display = 'none';
-      bookmarksScreen.style.display = 'flex';
+      if (welcomeScreen) welcomeScreen.style.display = 'none';
+      if (contentToolbar) contentToolbar.style.display = 'none';
+      if (contentFrame) contentFrame.style.display = 'none';
+      if (bookmarksScreen) bookmarksScreen.style.display = 'flex';
       renderBookmarksScreen();
     } else {
-      bookmarksScreen.style.display = 'none';
+      if (bookmarksScreen) bookmarksScreen.style.display = 'none';
       if (currentId) {
-        contentToolbar.style.display = 'flex';
-        contentFrame.style.display = 'block';
+        if (contentToolbar) contentToolbar.style.display = 'flex';
+        if (contentFrame) contentFrame.style.display = 'block';
       } else {
-        welcomeScreen.style.display = 'flex';
-        contentToolbar.style.display = 'none';
-        contentFrame.style.display = 'none';
+        if (welcomeScreen) welcomeScreen.style.display = 'flex';
+        if (contentToolbar) contentToolbar.style.display = 'none';
+        if (contentFrame) contentFrame.style.display = 'none';
       }
     }
 
@@ -1837,19 +1839,13 @@
     }
   };
 
-  // 绑定侧边栏切换器点击事件
-  document.querySelectorAll('.sb-cat-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const targetCat = this.dataset.cat;
-      switchCategory(targetCat);
-    });
-  });
-
   // 切换视图模式 (Grid / List)
   function switchView(mode) {
     currentViewMode = mode;
-    document.getElementById('btnViewGrid').classList.toggle('active', mode === 'grid');
-    document.getElementById('btnViewList').classList.toggle('active', mode === 'list');
+    const btnGrid = document.getElementById('btnViewGrid');
+    const btnList = document.getElementById('btnViewList');
+    if (btnGrid) btnGrid.classList.toggle('active', mode === 'grid');
+    if (btnList) btnList.classList.toggle('active', mode === 'list');
     renderSidebar();
   }
 
@@ -1870,14 +1866,21 @@
 
     renderSidebar();
 
-    document.getElementById('welcomeScreen').style.display = 'none';
-    document.getElementById('bookmarksScreen').style.display = 'none';
-    document.getElementById('contentToolbar').style.display = 'flex';
-    document.getElementById('toolbarTitle').textContent = `📖 ${item.label} · 全景深度特训讲义`;
-
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const bookmarksScreen = document.getElementById('bookmarksScreen');
+    const contentToolbar = document.getElementById('contentToolbar');
+    const toolbarTitle = document.getElementById('toolbarTitle');
     const frame = document.getElementById('contentFrame');
-    frame.style.display = 'block';
-    frame.src = item.file;
+
+    if (welcomeScreen) welcomeScreen.style.display = 'none';
+    if (bookmarksScreen) bookmarksScreen.style.display = 'none';
+    if (contentToolbar) contentToolbar.style.display = 'flex';
+    if (toolbarTitle) toolbarTitle.textContent = `📖 ${item.label} · 全景深度特训讲义`;
+
+    if (frame) {
+      frame.style.display = 'block';
+      frame.src = item.file;
+    }
   }
 
   // 上下单元切换逻辑
@@ -1970,14 +1973,19 @@
     });
 
     const searchInput = header.querySelector('#bmSearchInput');
-    searchInput.addEventListener('input', (e) => {
-      currentBmSearchQuery = e.target.value.trim().toLowerCase();
-      renderBookmarksBody(container);
-    });
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentBmSearchQuery = e.target.value.trim().toLowerCase();
+        renderBookmarksBody(container);
+      });
+    }
 
-    header.querySelector('#btnExportMarks').addEventListener('click', exportMarksJSON);
-    header.querySelector('#btnImportMarks').addEventListener('click', importMarksJSON);
-    header.querySelector('#btnClearMarks').addEventListener('click', clearAllMarks);
+    const expBtn = header.querySelector('#btnExportMarks');
+    if (expBtn) expBtn.addEventListener('click', exportMarksJSON);
+    const impBtn = header.querySelector('#btnImportMarks');
+    if (impBtn) impBtn.addEventListener('click', importMarksJSON);
+    const clrBtn = header.querySelector('#btnClearMarks');
+    if (clrBtn) clrBtn.addEventListener('click', clearAllMarks);
 
     container.appendChild(header);
 
@@ -2028,10 +2036,13 @@
           <button class="bm-empty-action" id="btnGoStudy">📖 前往精读 List 01</button>
         </div>
       `;
-      bodyContainer.querySelector('#btnGoStudy').addEventListener('click', () => {
-        const first = (manifestData.vocabLists || [])[0];
-        if (first) loadContent(first);
-      });
+      const goBtn = bodyContainer.querySelector('#btnGoStudy');
+      if (goBtn) {
+        goBtn.addEventListener('click', () => {
+          const first = (manifestData.vocabLists || [])[0];
+          if (first) loadContent(first);
+        });
+      }
       return;
     }
 
@@ -2149,17 +2160,23 @@
     }
 
     // 绑定移除标记
-    card.querySelector('.bm-del-btn').addEventListener('click', (e) => {
-      e.stopPropagation();
-      removeUserMark(item.id);
-      showToast(`🗑️ 已取消「${item.name}」的重点标记`);
-      renderBookmarksScreen();
-    });
+    const delBtn = card.querySelector('.bm-del-btn');
+    if (delBtn) {
+      delBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        removeUserMark(item.id);
+        showToast(`🗑️ 已取消「${item.name}」的重点标记`);
+        renderBookmarksScreen();
+      });
+    }
 
     // 绑定原文跳转
-    card.querySelector('.bm-jump-btn').addEventListener('click', () => {
-      jumpToOriginal(item.unitId, item.id);
-    });
+    const jumpBtn = card.querySelector('.bm-jump-btn');
+    if (jumpBtn) {
+      jumpBtn.addEventListener('click', () => {
+        jumpToOriginal(item.unitId, item.id);
+      });
+    }
 
     return card;
   }
@@ -2355,37 +2372,46 @@
     const targetLabel = document.getElementById('noteModalTarget');
     const input = document.getElementById('noteModalInput');
 
-    targetLabel.textContent = targetName;
-    input.value = initialNote || '';
+    if (targetLabel) targetLabel.textContent = targetName;
+    if (input) input.value = initialNote || '';
     noteCallback = callback;
 
-    backdrop.classList.add('show');
-    setTimeout(() => input.focus(), 150);
+    if (backdrop) {
+      backdrop.classList.add('show');
+      setTimeout(() => { if (input) input.focus(); }, 150);
+    }
   }
 
   function closeNoteEditor() {
     const backdrop = document.getElementById('noteModalBackdrop');
-    backdrop.classList.remove('show');
+    if (backdrop) backdrop.classList.remove('show');
     noteCallback = null;
   }
 
-  document.getElementById('btnCloseNoteModal').addEventListener('click', closeNoteEditor);
-  document.getElementById('btnCancelNoteModal').addEventListener('click', closeNoteEditor);
-  document.getElementById('btnSaveNoteModal').addEventListener('click', () => {
-    const input = document.getElementById('noteModalInput');
-    const text = input.value.trim();
-    if (noteCallback) {
-      noteCallback(text);
-    }
-    closeNoteEditor();
-  });
-
-  // 点击遮罩空白关闭弹窗
-  document.getElementById('noteModalBackdrop').addEventListener('click', (e) => {
-    if (e.target === document.getElementById('noteModalBackdrop')) {
+  const btnCloseModal = document.getElementById('btnCloseNoteModal');
+  if (btnCloseModal) btnCloseModal.addEventListener('click', closeNoteEditor);
+  const btnCancelModal = document.getElementById('btnCancelNoteModal');
+  if (btnCancelModal) btnCancelModal.addEventListener('click', closeNoteEditor);
+  const btnSaveModal = document.getElementById('btnSaveNoteModal');
+  if (btnSaveModal) {
+    btnSaveModal.addEventListener('click', () => {
+      const input = document.getElementById('noteModalInput');
+      const text = input ? input.value.trim() : '';
+      if (noteCallback) {
+        noteCallback(text);
+      }
       closeNoteEditor();
-    }
-  });
+    });
+  }
+
+  const modalBackdrop = document.getElementById('noteModalBackdrop');
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        closeNoteEditor();
+      }
+    });
+  }
 
   // ────────────────────────────────────────────
   // Iframe 注入式互动标记引擎 (Iframe Annotation Injector)
@@ -2706,19 +2732,22 @@
         <span class="memo-strip-text"><strong>我的备忘:</strong> ${mark.note}</span>
         <button class="memo-strip-edit" title="修改随手记">✏️ 修改</button>
       `;
-      strip.querySelector('.memo-strip-edit').addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      const editBtn = strip.querySelector('.memo-strip-edit');
+      if (editBtn) {
+        editBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-        openNoteEditor(mark.id, `${mark.name} ${mark.pos ? '('+mark.pos+')' : ''}`, mark.note || '', (newNote) => {
-          saveUserMark({
-            ...mark,
-            note: newNote
+          openNoteEditor(mark.id, `${mark.name} ${mark.pos ? '('+mark.pos+')' : ''}`, mark.note || '', (newNote) => {
+            saveUserMark({
+              ...mark,
+              note: newNote
+            });
+            showToast(`📝 已更新「${mark.name}」的个人备忘！`);
+            updateCardMarkView(card, getUserMark(mark.id));
           });
-          showToast(`📝 已更新「${mark.name}」的个人备忘！`);
-          updateCardMarkView(card, getUserMark(mark.id));
         });
-      });
+      }
       card.appendChild(strip);
     }
   }
@@ -2727,20 +2756,22 @@
   // iframe 加载监听与互动挂载
   // ────────────────────────────────────────────
   const frame = document.getElementById('contentFrame');
-  frame.addEventListener('load', function() {
-    try {
-      const doc = frame.contentDocument || frame.contentWindow.document;
-      if (!doc) return;
+  if (frame) {
+    frame.addEventListener('load', function() {
+      try {
+        const doc = frame.contentDocument || frame.contentWindow.document;
+        if (!doc) return;
 
-      const all = getAllItems();
-      const currentUnit = all.find(l => l.id === currentId);
-      const unitLabel = currentUnit ? currentUnit.label : (currentId || '');
+        const all = getAllItems();
+        const currentUnit = all.find(l => l.id === currentId);
+        const unitLabel = currentUnit ? currentUnit.label : (currentId || '');
 
-      setupIframeAnnotations(doc, currentId, unitLabel);
-    } catch(e) {
-      console.warn('Iframe load listener error:', e);
-    }
-  });
+        setupIframeAnnotations(doc, currentId, unitLabel);
+      } catch(e) {
+        console.warn('Iframe load listener error:', e);
+      }
+    });
+  }
 
   // 初始化流程
   fetchManifest().then(data => {
@@ -2751,9 +2782,9 @@
     const sCount = (data.specials || []).filter(x => x.ready).length;
 
     // 更新顶部 Header 徽章
-    document.getElementById('countVocab').textContent = vCount;
-    document.getElementById('countPhrase').textContent = pCount;
-    document.getElementById('countSpecial').textContent = sCount;
+    const cV = document.getElementById('countVocab'); if(cV) cV.textContent = vCount;
+    const cP = document.getElementById('countPhrase'); if(cP) cP.textContent = pCount;
+    const cS = document.getElementById('countSpecial'); if(cS) cS.textContent = sCount;
 
     // 更新侧边栏抽屉切换器徽章
     const sbV = document.getElementById('sbCountVocab'); if(sbV) sbV.textContent = vCount;
@@ -2788,41 +2819,70 @@
     });
   });
 
-  document.getElementById('sidebarToggle').addEventListener('click', () => toggleSidebar());
-  document.getElementById('sidebarBackdrop').addEventListener('click', () => toggleSidebar(false));
-  document.getElementById('btnCloseSidebar').addEventListener('click', () => toggleSidebar(false));
-  document.getElementById('floatingNavBtn').addEventListener('click', () => toggleSidebar());
-
-  document.getElementById('btnViewGrid').addEventListener('click', () => switchView('grid'));
-  document.getElementById('btnViewList').addEventListener('click', () => switchView('list'));
-
-  document.getElementById('btnPrevUnit').addEventListener('click', () => stepUnit(-1));
-  document.getElementById('btnNextUnit').addEventListener('click', () => stepUnit(1));
-  document.getElementById('btnJumpSpecial').addEventListener('click', () => {
-    const topicsItem = (manifestData.specials || []).find(x => x.id === 'topics');
-    if (topicsItem) loadContent(topicsItem);
+  // 绑定侧边栏切换器点击事件
+  document.querySelectorAll('.sb-cat-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetCat = this.dataset.cat;
+      switchCategory(targetCat);
+    });
   });
 
-  document.getElementById('brandHome').addEventListener('click', () => {
-    location.hash = '';
-    currentId = null;
-    document.getElementById('welcomeScreen').style.display = 'flex';
-    document.getElementById('bookmarksScreen').style.display = 'none';
-    document.getElementById('contentToolbar').style.display = 'none';
-    document.getElementById('contentFrame').style.display = 'none';
-    toggleSidebar(false);
-  });
+  const sbToggle = document.getElementById('sidebarToggle');
+  if (sbToggle) sbToggle.addEventListener('click', () => toggleSidebar());
+  const sbBackdrop = document.getElementById('sidebarBackdrop');
+  if (sbBackdrop) sbBackdrop.addEventListener('click', () => toggleSidebar(false));
+  const sbClose = document.getElementById('btnCloseSidebar');
+  if (sbClose) sbClose.addEventListener('click', () => toggleSidebar(false));
+  const floatingNav = document.getElementById('floatingNavBtn');
+  if (floatingNav) floatingNav.addEventListener('click', () => toggleSidebar());
 
-  document.getElementById('themeToggle').addEventListener('click', function() {
-    const isDark = !document.documentElement.hasAttribute('data-theme');
-    if (isDark) {
-      document.documentElement.setAttribute('data-theme', 'light');
-      this.textContent = '☀️';
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      this.textContent = '🌙';
-    }
-  });
+  const btnGrid = document.getElementById('btnViewGrid');
+  if (btnGrid) btnGrid.addEventListener('click', () => switchView('grid'));
+  const btnList = document.getElementById('btnViewList');
+  if (btnList) btnList.addEventListener('click', () => switchView('list'));
+
+  const btnPrev = document.getElementById('btnPrevUnit');
+  if (btnPrev) btnPrev.addEventListener('click', () => stepUnit(-1));
+  const btnNext = document.getElementById('btnNextUnit');
+  if (btnNext) btnNext.addEventListener('click', () => stepUnit(1));
+  const btnJumpSp = document.getElementById('btnJumpSpecial');
+  if (btnJumpSp) {
+    btnJumpSp.addEventListener('click', () => {
+      const topicsItem = (manifestData.specials || []).find(x => x.id === 'topics');
+      if (topicsItem) loadContent(topicsItem);
+    });
+  }
+
+  const brand = document.getElementById('brandHome');
+  if (brand) {
+    brand.addEventListener('click', () => {
+      location.hash = '';
+      currentId = null;
+      const welcomeScreen = document.getElementById('welcomeScreen');
+      const bookmarksScreen = document.getElementById('bookmarksScreen');
+      const contentToolbar = document.getElementById('contentToolbar');
+      const contentFrame = document.getElementById('contentFrame');
+      if (welcomeScreen) welcomeScreen.style.display = 'flex';
+      if (bookmarksScreen) bookmarksScreen.style.display = 'none';
+      if (contentToolbar) contentToolbar.style.display = 'none';
+      if (contentFrame) contentFrame.style.display = 'none';
+      toggleSidebar(false);
+    });
+  }
+
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      const isDark = !document.documentElement.hasAttribute('data-theme');
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        this.textContent = '☀️';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        this.textContent = '🌙';
+      }
+    });
+  }
 
   // 键盘快捷键支持：按 M 唤出目录，按 ESC 收起目录
   window.addEventListener('keydown', (e) => {
@@ -2830,7 +2890,8 @@
     if (e.key === 'm' || e.key === 'M') {
       toggleSidebar();
     } else if (e.key === 'Escape') {
-      if (document.getElementById('noteModalBackdrop').classList.contains('show')) {
+      const backdrop = document.getElementById('noteModalBackdrop');
+      if (backdrop && backdrop.classList.contains('show')) {
         closeNoteEditor();
       } else if (sidebarIsOpen) {
         toggleSidebar(false);
@@ -2839,21 +2900,5 @@
   });
 })();
 </script>
-
-  <!-- 原生触控随手记弹窗 (适配手机端与电脑端) -->
-  <div class="note-modal-backdrop" id="noteModalBackdrop">
-    <div class="note-modal">
-      <div class="note-modal-header">
-        <span class="note-modal-title">📝 随手记心得备忘</span>
-        <button class="note-modal-close" id="btnCloseNoteModal" title="关闭">✕</button>
-      </div>
-      <div class="note-modal-target" id="noteModalTarget">radiate (v.)</div>
-      <textarea class="note-modal-input" id="noteModalInput" placeholder="写下你的独家背诵口诀、真题考法或备忘心得..."></textarea>
-      <div class="note-modal-actions">
-        <button class="note-modal-btn cancel" id="btnCancelNoteModal">取消</button>
-        <button class="note-modal-btn save" id="btnSaveNoteModal">保存笔记</button>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
