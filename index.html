@@ -1030,6 +1030,332 @@
     transform: translateY(-1px);
   }
 
+
+  /* ─── 侧边栏多主题自由切换器 (Sidebar Category Switcher) ─── */
+  .sidebar-cat-switcher {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 8px 10px;
+    background: var(--bg-hover);
+    border-bottom: 1px solid rgba(148,163,184,0.15);
+    flex-shrink: 0;
+  }
+  .sb-cat-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 2px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    gap: 2px;
+    user-select: none;
+  }
+  .sb-cat-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+  }
+  .sb-cat-btn.active {
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+  }
+  .sb-cat-btn.active .sb-cat-badge {
+    background: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+  }
+  .sb-cat-btn[data-cat="bookmarks"].active {
+    background: #eab308;
+    border-color: #ca8a04;
+    color: #713f12;
+    box-shadow: 0 2px 8px rgba(234, 179, 8, 0.35);
+  }
+  .sb-cat-btn[data-cat="bookmarks"].active .sb-cat-badge {
+    background: #fef08a;
+    color: #854d0e;
+  }
+  .sb-cat-icon { font-size: 13px; line-height: 1; }
+  .sb-cat-text { font-size: 10.5px; font-weight: 700; line-height: 1; }
+  .sb-cat-badge {
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  /* ─── 移动端轻量随手记弹窗 (Mobile Note Modal) ─── */
+  .note-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .note-modal-backdrop.show {
+    display: flex;
+    opacity: 1;
+  }
+  .note-modal {
+    background: var(--bg-card);
+    border: 1px solid rgba(148,163,184,0.25);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: scale(0.95);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .note-modal-backdrop.show .note-modal {
+    transform: scale(1);
+  }
+  .note-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .note-modal-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .note-modal-close {
+    border: none;
+    background: var(--bg-hover);
+    color: var(--text-secondary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .note-modal-close:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  .note-modal-target {
+    font-size: 13px;
+    color: var(--accent-blue);
+    font-weight: 700;
+    background: rgba(59, 130, 246, 0.08);
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  .note-modal-input {
+    width: 100%;
+    border: 1px solid rgba(148,163,184,0.3);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    outline: none;
+    resize: vertical;
+    min-height: 90px;
+    font-family: inherit;
+  }
+  .note-modal-input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  .note-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .note-modal-btn {
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s;
+  }
+  .note-modal-btn.cancel {
+    background: var(--bg-hover);
+    color: var(--text-secondary);
+  }
+  .note-modal-btn.save {
+    background: var(--accent-blue);
+    color: #ffffff;
+  }
+  .note-modal-btn.save:hover {
+    background: #1d4ed8;
+  }
+
+  /* 移动端特别优化强化 */
+  @media (max-width: 768px) {
+    :root {
+      --header-h: 48px;
+      --sidebar-w: min(90vw, 350px);
+    }
+    .header {
+      padding: 0 6px;
+      gap: 4px;
+    }
+    .sidebar-toggle-btn {
+      padding: 5px 8px;
+      font-size: 12.5px;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    #toggleText { display: none; }
+    .header-brand { display: none; }
+    .category-tabs {
+      margin-left: 0;
+      gap: 2px;
+      padding: 2px;
+      flex: 1;
+      justify-content: space-around;
+    }
+    .cat-tab {
+      padding: 4px 5px;
+      font-size: 10px;
+      gap: 2px;
+      white-space: nowrap;
+    }
+    .cat-tab .badge-count {
+      font-size: 8px;
+      padding: 0 3px;
+    }
+    .content-toolbar {
+      flex-direction: column;
+      height: auto;
+      gap: 6px;
+      padding: 6px 8px;
+    }
+    .toolbar-title {
+      font-size: 12px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .toolbar-actions {
+      display: flex;
+      width: 100%;
+      gap: 4px;
+    }
+    .tool-btn {
+      flex: 1;
+      justify-content: center;
+      padding: 6px 4px;
+      font-size: 10.5px;
+    }
+    .floating-nav-pill {
+      bottom: 16px;
+      left: 12px;
+      padding: 7px 13px;
+      font-size: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      z-index: 38;
+      touch-action: manipulation;
+    }
+
+    /* 重点标记归并看板移动端全宽与微排版 */
+    .bookmarks-screen {
+      padding: 12px 10px 70px;
+    }
+    .bm-title-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+    .bm-title {
+      font-size: 16.5px;
+    }
+    .bm-subtitle {
+      font-size: 11.5px;
+      line-height: 1.4;
+    }
+    .bm-stats-bar {
+      gap: 4px;
+    }
+    .bm-stat-chip {
+      padding: 2.5px 7px;
+      font-size: 10px;
+    }
+    .bm-controls-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      padding: 8px;
+    }
+    .bm-filters {
+      gap: 4px;
+    }
+    .bm-filter-btn {
+      padding: 3.5px 7px;
+      font-size: 10.5px;
+    }
+    .bm-search-box {
+      width: 100%;
+    }
+    .bm-search-input {
+      font-size: 11.5px;
+      padding: 5px 8px 5px 26px;
+    }
+    .bm-actions {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .bm-action-btn {
+      flex: 1;
+      justify-content: center;
+      padding: 5px 4px;
+      font-size: 10.5px;
+    }
+    .bm-items-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .bm-card {
+      padding: 10px 12px;
+    }
+    .bm-card-word {
+      font-size: 14.5px;
+    }
+    .bm-card-meaning {
+      font-size: 11.5px;
+    }
+    .bm-card-memo {
+      font-size: 11px;
+    }
+    .bm-priority-header {
+      font-size: 12.5px;
+      padding: 7px 10px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1084,6 +1410,29 @@
           <button class="view-btn active" id="btnViewGrid" title="四列打卡矩阵">矩阵</button>
           <button class="view-btn" id="btnViewList" title="详细列表">列表</button>
         </div>
+    <!-- 侧边栏抽屉内多主题全景切换器（解决手机端切换主题痛点） -->
+    <div class="sidebar-cat-switcher" id="sidebarCatSwitcher">
+      <button class="sb-cat-btn active" data-cat="vocab" id="sbTabVocab" title="核心词汇 23 单元">
+        <span class="sb-cat-icon">📕</span>
+        <span class="sb-cat-text">单词</span>
+        <span class="sb-cat-badge" id="sbCountVocab">23</span>
+      </button>
+      <button class="sb-cat-btn" data-cat="phrase" id="sbTabPhrase" title="常考词组 3 单元">
+        <span class="sb-cat-icon">📘</span>
+        <span class="sb-cat-text">词组</span>
+        <span class="sb-cat-badge" id="sbCountPhrase">3</span>
+      </button>
+      <button class="sb-cat-btn" data-cat="special" id="sbTabSpecial" title="话题与态度专项讲义">
+        <span class="sb-cat-icon">📗</span>
+        <span class="sb-cat-text">专项</span>
+        <span class="sb-cat-badge" id="sbCountSpecial">2</span>
+      </button>
+      <button class="sb-cat-btn" data-cat="bookmarks" id="sbTabBookmarks" title="重点标记归并看板">
+        <span class="sb-cat-icon">⭐</span>
+        <span class="sb-cat-text">标记</span>
+        <span class="sb-cat-badge" id="sbCountBookmarks">0</span>
+      </button>
+    </div>
         <button class="close-sidebar-btn" id="btnCloseSidebar" title="收起导航">✕</button>
       </div>
     </div>
@@ -1219,7 +1568,7 @@
     }, 2200);
   }
 
-  // 更新顶部 Tab 徽章与欢迎页统计数据
+  // 更新顶部 Tab 与侧边栏 Tab 徽章数据
   function updateBookmarksBadge() {
     const marks = getUserMarks();
     const count = Object.keys(marks).length;
@@ -1227,14 +1576,17 @@
     const countEl = document.getElementById('countBookmarks');
     if (countEl) countEl.textContent = count;
     
+    const sbCountEl = document.getElementById('sbCountBookmarks');
+    if (sbCountEl) sbCountEl.textContent = count;
+
     const wcEl = document.getElementById('wcBookmarks');
     if (wcEl) wcEl.textContent = count;
   }
 
   const defaultManifest = {
-    vocabLists: Array.from({ length: 22 }, (_, i) => {
+    vocabLists: Array.from({ length: 23 }, (_, i) => {
       const num = String(i + 1).padStart(2, '0');
-      return { id: `list-${num}`, num, label: `List ${num}`, sublabel: `60 词 · 4 Batch`, file: `content/list-${num}.html`, type: 'vocab', ready: true };
+      return { id: `list-${num}`, num, label: `List ${num}`, sublabel: `60 词 · 4 Batch · 精排版`, file: `content/list-${num}.html`, type: 'vocab', ready: true };
     }),
     phraseLists: [
       { id: 'phrase-01', num: '01', label: '词组 List 01', sublabel: '常考词组 · 深度精排', file: 'content/phrase-list-01.html', type: 'phrase', ready: true },
@@ -1315,11 +1667,21 @@
     const container = document.getElementById('sidebarContent');
     container.innerHTML = '';
 
+    // 同步侧边栏顶部切换器的高亮
+    document.querySelectorAll('.sb-cat-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.cat === currentCategory);
+    });
+
+    const viewToggle = document.querySelector('.sidebar-controls .view-toggle');
+
     if (currentCategory === 'bookmarks') {
-      document.getElementById('sidebarSectionTitle').textContent = '⭐ 重点标记归并矩阵';
+      document.getElementById('sidebarSectionTitle').textContent = '⭐ 重点标记归并清单';
+      if (viewToggle) viewToggle.style.display = 'none';
       renderBookmarksSidebar(container);
       return;
     }
+
+    if (viewToggle) viewToggle.style.display = 'flex';
 
     const items = getItemsByCategory(currentCategory);
     const titleMap = {
@@ -1381,7 +1743,7 @@
         <div style="padding:30px 14px; text-align:center; color:var(--text-secondary); font-size:12px; line-height:1.6;">
           <div style="font-size:24px; margin-bottom:8px;">⭐</div>
           <strong>暂无重点标记</strong><br>
-          在任意讲义中点击词卡右上角的「☆ 标记」，即可按优先级归并至此！
+          在任意讲义中点击词卡右上角的「☆ 标记」，即可按优先级自动归并至此！
         </div>
       `;
       return;
@@ -1427,8 +1789,16 @@
   // 切换分类 Tab (Switch Category)
   // ────────────────────────────────────────────
   window.switchCategory = function(cat) {
+    const prevCategory = currentCategory;
     currentCategory = cat;
+
+    // 联动顶部 Tab 高亮
     document.querySelectorAll('.cat-tab').forEach(b => {
+      b.classList.toggle('active', b.dataset.cat === cat);
+    });
+
+    // 联动侧边栏 Tab 高亮
+    document.querySelectorAll('.sb-cat-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.cat === cat);
     });
 
@@ -1456,9 +1826,26 @@
     }
 
     renderSidebar();
+
+    // 提升手机端体验：如果用户在阅读中切换了不同分类，自动呼出侧边栏供其挑选该分类单元
+    if (cat !== 'bookmarks' && prevCategory !== cat && currentId) {
+      const all = getAllItems();
+      const curItem = all.find(x => x.id === currentId);
+      if (curItem && curItem.type !== cat) {
+        toggleSidebar(true);
+      }
+    }
   };
 
-  // 切换视图模式
+  // 绑定侧边栏切换器点击事件
+  document.querySelectorAll('.sb-cat-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetCat = this.dataset.cat;
+      switchCategory(targetCat);
+    });
+  });
+
+  // 切换视图模式 (Grid / List)
   function switchView(mode) {
     currentViewMode = mode;
     document.getElementById('btnViewGrid').classList.toggle('active', mode === 'grid');
@@ -1474,6 +1861,9 @@
     if (item.type !== currentCategory && currentCategory !== 'bookmarks') {
       currentCategory = item.type;
       document.querySelectorAll('.cat-tab').forEach(b => {
+        b.classList.toggle('active', b.dataset.cat === item.type);
+      });
+      document.querySelectorAll('.sb-cat-btn').forEach(b => {
         b.classList.toggle('active', b.dataset.cat === item.type);
       });
     }
@@ -1599,200 +1989,306 @@
     renderBookmarksBody(container);
   }
 
-  // 渲染归并库正文内容
+  // 渲染归并看板列表内容
   function renderBookmarksBody(container) {
-    const bodyContainer = container.querySelector('#bmBodyContainer') || container;
+    const bodyContainer = container.querySelector('#bmBodyContainer');
+    if (!bodyContainer) return;
     bodyContainer.innerHTML = '';
 
     const marksObj = getUserMarks();
     let marks = Object.values(marksObj);
 
-    // 过滤逻辑
-    if (currentBmFilterPriority !== 'all') {
-      marks = marks.filter(m => String(m.priority || 1) === currentBmFilterPriority);
-    }
+    // 筛选 1: 类型
     if (currentBmFilterType !== 'all') {
-      marks = marks.filter(m => (m.type || 'vocab') === currentBmFilterType);
+      marks = marks.filter(x => x.type === currentBmFilterType);
     }
+
+    // 筛选 2: 优先级
+    if (currentBmFilterPriority !== 'all') {
+      const p = parseInt(currentBmFilterPriority, 10);
+      marks = marks.filter(x => (x.priority || 1) === p);
+    }
+
+    // 筛选 3: 搜索关键词
     if (currentBmSearchQuery) {
-      marks = marks.filter(m => {
-        const q = currentBmSearchQuery;
-        return (
-          (m.name && m.name.toLowerCase().includes(q)) ||
-          (m.meaning && m.meaning.toLowerCase().includes(q)) ||
-          (m.note && m.note.toLowerCase().includes(q)) ||
-          (m.unitLabel && m.unitLabel.toLowerCase().includes(q))
-        );
+      marks = marks.filter(x => {
+        const text = `${x.name || ''} ${x.meaning || ''} ${x.note || ''} ${x.unitLabel || ''}`.toLowerCase();
+        return text.includes(currentBmSearchQuery);
       });
     }
 
     if (!marks.length) {
       bodyContainer.innerHTML = `
         <div class="bm-empty-state">
-          <div class="bm-empty-icon">⭐</div>
-          <div class="bm-empty-title">当前筛选条件下暂无标记条目</div>
+          <div class="bm-empty-icon">📂</div>
+          <div class="bm-empty-title">当前筛选下暂无标记内容</div>
           <div class="bm-empty-desc">
-            在阅读任意讲义时，轻点词卡右上角的「☆ 标记」按钮，即可将您感兴趣或需要死磕的词汇与词组按 3 层优先级自动归并到这里！
+            您可以前往任意 <strong>📕 单词讲义</strong> 或 <strong>📘 常考词组</strong>，点击卡片右上角的「☆ 标记」自选优先级（1~3层）进行归并收录！
           </div>
-          <button class="bm-empty-action" onclick="switchCategory('vocab')">📖 前往精选讲义开始阅读</button>
+          <button class="bm-empty-action" id="btnGoStudy">📖 前往精读 List 01</button>
         </div>
       `;
+      bodyContainer.querySelector('#btnGoStudy').addEventListener('click', () => {
+        const first = (manifestData.vocabLists || [])[0];
+        if (first) loadContent(first);
+      });
       return;
     }
 
-    // 严格按优先级分组 (P3 -> P2 -> P1)
-    const p3List = marks.filter(m => m.priority === 3);
-    const p2List = marks.filter(m => m.priority === 2);
-    const p1List = marks.filter(m => m.priority === 1 || !m.priority);
-
-    // 排序：组内按更新时间倒序
-    p3List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
-    p2List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
-    p1List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
-
-    const sections = [
-      { priority: 3, title: '🔥 优先级 3 · 核心死磕 / 顶级必背', badge: 'P3 必背', desc: '绝对不可丢分的顶层命题眼', list: p3List, cls: 'p3' },
-      { priority: 2, title: '⚡ 优先级 2 · 强化攻克 / 易错高频', badge: 'P2 强化', desc: '考研二轮循环重点强化的难点考点', list: p2List, cls: 'p2' },
-      { priority: 1, title: '✨ 优先级 1 · 兴趣积累 / 深度关注', badge: 'P1 兴趣', desc: '具有深层逻辑拓展价值与兴趣储备的词群', list: p1List, cls: 'p1' }
+    // 按照优先级分组：3 (核心必背) -> 2 (强化攻克) -> 1 (兴趣关注)
+    const priorityGroups = [
+      { p: 3, title: '💖 优先级 3 · 核心必背 (死磕巩固)', classKey: 'p3', list: [] },
+      { p: 2, title: '🧡 优先级 2 · 强化攻克 (易错高频)', classKey: 'p2', list: [] },
+      { p: 1, title: '💛 优先级 1 · 兴趣关注 (拓展积累)', classKey: 'p1', list: [] }
     ];
 
-    sections.forEach(sec => {
-      if (!sec.list.length) return;
+    marks.forEach(item => {
+      const p = item.priority || 1;
+      const grp = priorityGroups.find(g => g.p === p) || priorityGroups[2];
+      grp.list.push(item);
+    });
 
-      const secEl = document.createElement('div');
-      secEl.className = 'bm-priority-section';
-      secEl.innerHTML = `
-        <div class="bm-priority-header ${sec.cls}">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span>${sec.title}</span>
-            <span style="font-size:11px; font-weight:600; opacity:0.85;">(${sec.list.length} 词)</span>
-          </div>
-          <span style="font-size:11.5px; font-weight:500; opacity:0.8;">${sec.desc}</span>
+    priorityGroups.forEach(grp => {
+      if (!grp.list.length) return;
+
+      // 组内最新编辑优先
+      grp.list.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+
+      const sec = document.createElement('div');
+      sec.className = 'bm-priority-section';
+      sec.innerHTML = `
+        <div class="bm-priority-header ${grp.classKey}">
+          <span>${grp.title}</span>
+          <span style="font-size:12px; font-weight:700; opacity:0.85;">共 ${grp.list.length} 条</span>
         </div>
       `;
 
       const grid = document.createElement('div');
       grid.className = 'bm-items-grid';
 
-      sec.list.forEach(item => {
-        const card = document.createElement('div');
-        card.className = `bm-card ${sec.cls}`;
-
-        const isPhrase = item.type === 'phrase';
-        const sourceName = item.unitLabel || (isPhrase ? '词组讲义' : '核心词汇');
-        const posText = item.pos ? `${item.pos}` : '';
-
-        card.innerHTML = `
-          <div class="bm-card-top">
-            <div class="bm-card-title-group">
-              <span class="bm-card-word">${item.name}</span>
-              <span class="bm-card-pos">${posText}</span>
-              <span class="bm-card-source ${item.type || 'vocab'}">${isPhrase ? '📘 词组' : '📕 单词'} · ${sourceName} ${item.no ? 'NO.' + item.no : ''}</span>
-            </div>
-            <button class="bm-del-btn" title="取消标记">✕</button>
-          </div>
-
-          <div class="bm-card-meaning">${item.meaning || '暂无释义'}</div>
-
-          ${item.note ? `
-            <div class="bm-card-memo">
-              <span>📝</span>
-              <div class="bm-card-memo-text">${item.note}</div>
-              <button class="bm-card-memo-edit" title="编辑笔记">✏️ 修改</button>
-            </div>
-          ` : `
-            <div style="display:flex; justify-content:flex-end;">
-              <button class="bm-card-memo-edit" style="color:var(--text-secondary); font-size:11px;" title="添加备忘随手记">📝 随手记心得</button>
-            </div>
-          `}
-
-          <div class="bm-card-actions">
-            <div class="bm-priority-selector">
-              <span style="font-size:10px; font-weight:700; color:var(--text-secondary); margin-right:4px;">优先级:</span>
-              <button class="bm-p-chip ${item.priority === 1 ? 'active p1' : ''}" data-p="1">💛 P1</button>
-              <button class="bm-p-chip ${item.priority === 2 ? 'active p2' : ''}" data-p="2">🧡 P2</button>
-              <button class="bm-p-chip ${item.priority === 3 ? 'active p3' : ''}" data-p="3">💖 P3</button>
-            </div>
-
-            <div class="bm-card-links">
-              <button class="bm-jump-btn" title="在原文中高亮定位">
-                <span>🚀 原文精准跳转 ↗</span>
-              </button>
-            </div>
-          </div>
-        `;
-
-        // 绑定删除按钮
-        card.querySelector('.bm-del-btn').addEventListener('click', () => {
-          removeUserMark(item.id);
-          showToast(`⚪ 已取消「${item.name}」的标记`);
-          renderBookmarksBody(container);
-        });
-
-        // 绑定优先级切换
-        card.querySelectorAll('.bm-p-chip').forEach(chip => {
-          chip.addEventListener('click', () => {
-            const newP = parseInt(chip.dataset.p, 10);
-            if (newP === item.priority) return;
-            saveUserMark({
-              ...item,
-              priority: newP
-            });
-            const pLabels = { 1: '💛 P1 兴趣', 2: '🧡 P2 强化', 3: '💖 P3 必背' };
-            showToast(`⭐ 已将「${item.name}」优先级调整为 ${pLabels[newP]}`);
-            renderBookmarksScreen();
-          });
-        });
-
-        // 绑定随手记修改
-        const memoBtn = card.querySelector('.bm-card-memo-edit');
-        if (memoBtn) {
-          memoBtn.addEventListener('click', () => {
-            const currentNote = item.note || '';
-            const newNote = window.prompt(`为「${item.name}」添加/编辑备忘随手记：`, currentNote);
-            if (newNote === null) return;
-            saveUserMark({
-              ...item,
-              note: newNote.trim()
-            });
-            showToast(`📝 已更新「${item.name}」的个人备忘！`);
-            renderBookmarksBody(container);
-          });
-        }
-
-        // 绑定原文跳转按钮
-        card.querySelector('.bm-jump-btn').addEventListener('click', () => {
-          jumpToOriginal(item.unitId, item.id);
-        });
-
+      grp.list.forEach(item => {
+        const card = createBookmarkCardElement(item);
         grid.appendChild(card);
       });
 
-      secEl.appendChild(grid);
-      bodyContainer.appendChild(secEl);
+      sec.appendChild(grid);
+      bodyContainer.appendChild(sec);
     });
   }
 
-  // ────────────────────────────────────────────
-  // 原文精准跳转穿梭引擎 (Deep Jump to Original Lecture Card)
-  // ────────────────────────────────────────────
-  function jumpToOriginal(unitId, anchorId) {
-    if (!unitId) return;
-    const all = getAllItems();
-    const targetUnit = all.find(l => l.id === unitId);
-    if (!targetUnit) {
-      showToast('⚠️ 未找到目标讲义单元');
-      return;
+  // 生成单条重点卡片 DOM
+  function createBookmarkCardElement(item) {
+    const card = document.createElement('div');
+    card.className = `bm-card p${item.priority || 1}`;
+
+    const isPhrase = item.type === 'phrase';
+    const typeBadgeClass = isPhrase ? 'phrase' : 'vocab';
+    const typeBadgeText = isPhrase ? '📘 词组' : '📕 单词';
+
+    card.innerHTML = `
+      <div class="bm-card-top">
+        <div class="bm-card-title-group">
+          <span class="bm-card-word">${item.name}</span>
+          ${item.pos ? `<span class="bm-card-pos">${item.pos}</span>` : ''}
+          <span class="bm-card-source ${typeBadgeClass}">${item.unitLabel || item.unitId} · ${item.no ? 'NO.'+item.no : typeBadgeText}</span>
+        </div>
+        <button class="bm-del-btn" title="取消标记 (从归并库中移除)">✕ 移除</button>
+      </div>
+
+      <div class="bm-card-meaning">${item.meaning || '暂无释义'}</div>
+
+      ${item.note ? `
+        <div class="bm-card-memo">
+          <span class="bm-card-memo-text"><strong>📝 随手记:</strong> ${item.note}</span>
+          <button class="bm-card-memo-edit" title="编辑随手记">✏️ 编辑</button>
+        </div>
+      ` : ''}
+
+      <div class="bm-card-actions">
+        <div class="bm-priority-selector" title="调整优先级 (1~3层)">
+          <button class="bm-p-chip p3 ${(item.priority === 3) ? 'active' : ''}" data-p="3">💖 P3</button>
+          <button class="bm-p-chip p2 ${(item.priority === 2) ? 'active' : ''}" data-p="2">🧡 P2</button>
+          <button class="bm-p-chip p1 ${(item.priority === 1 || !item.priority) ? 'active' : ''}" data-p="1">💛 P1</button>
+        </div>
+
+        <button class="bm-jump-btn" title="精准切换至原讲义并脉冲定位">
+          <span>🚀 原文精准跳转</span>
+          <span>↗</span>
+        </button>
+      </div>
+    `;
+
+    // 绑定优先级切换
+    card.querySelectorAll('.bm-p-chip').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const p = parseInt(btn.dataset.p, 10);
+        saveUserMark({
+          ...item,
+          priority: p
+        });
+        showToast(`⭐ 已将「${item.name}」调整为 P${p}`);
+        renderBookmarksScreen();
+      });
+    });
+
+    // 绑定编辑随手记
+    const editBtn = card.querySelector('.bm-card-memo-edit');
+    if (editBtn) {
+      editBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openNoteEditor(item.id, item.name, item.note || '', (newNote) => {
+          saveUserMark({
+            ...item,
+            note: newNote
+          });
+          showToast(`📝 已更新「${item.name}」的备忘笔记！`);
+          renderBookmarksScreen();
+        });
+      });
     }
 
+    // 绑定移除标记
+    card.querySelector('.bm-del-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      removeUserMark(item.id);
+      showToast(`🗑️ 已取消「${item.name}」的重点标记`);
+      renderBookmarksScreen();
+    });
+
+    // 绑定原文跳转
+    card.querySelector('.bm-jump-btn').addEventListener('click', () => {
+      jumpToOriginal(item.unitId, item.id);
+    });
+
+    return card;
+  }
+
+  // 跨视图跳转回原文并高亮脉冲
+  function jumpToOriginal(unitId, anchorId) {
+    const all = getAllItems();
+    let target = all.find(x => x.id === unitId);
+    if (!target) {
+      if (unitId.startsWith('list-')) {
+        const num = unitId.replace('list-', '');
+        target = { id: unitId, num, label: `List ${num}`, file: `content/${unitId}.html`, type: 'vocab', ready: true };
+      } else if (unitId.startsWith('phrase-')) {
+        const num = unitId.replace('phrase-', '');
+        target = { id: unitId, num, label: `词组 List ${num}`, file: `content/phrase-list-${num}.html`, type: 'phrase', ready: true };
+      } else if (unitId === 'topics') {
+        target = { id: 'topics', num: '话题', label: '全景话题特训', file: 'content/topics.html', type: 'special', ready: true };
+      } else if (unitId === 'reading') {
+        target = { id: 'reading', num: '态势', label: '阅读情感态度特训', file: 'content/reading.html', type: 'special', ready: true };
+      }
+    }
+    if (!target) return;
+
     pendingJumpAnchor = anchorId;
-    loadContent(targetUnit);
-    showToast(`🚀 正在飞跃至 ${targetUnit.label}…`);
+    loadContent(target);
+    showToast(`🚀 正在精准穿梭至 ${target.label} · ${anchorId} ↗`);
   }
 
   // ────────────────────────────────────────────
-  // 导出与导入备份功能 (Export / Import Backup)
+  // 全局跨单元穿梭与双向跳转路由中枢 (Global Bidirectional Cross-Unit Router)
   // ────────────────────────────────────────────
+  function handleIframeLinkNavigation(href, e, doc) {
+    if (!href) return;
+
+    // 1. 页面内部纯锚点（如 #table-of-contents, #batch-1, #w-xxx）
+    if (href.startsWith('#')) {
+      if (e) e.preventDefault();
+      const targetId = href.substring(1);
+      const targetEl = doc.getElementById(targetId) 
+        || doc.querySelector(`[name="${targetId}"]`)
+        || doc.getElementById('w-' + targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
+
+    // 2. 忽略外部链接 (http, https, mailto, etc.)
+    if (/^(https?:|mailto:|tel:|\/\/)/i.test(href)) {
+      return;
+    }
+
+    // 3. 拦截跨单元或专题穿梭
+    if (e) e.preventDefault();
+
+    let targetUnitId = null;
+    let targetAnchor = null;
+
+    const hashIndex = href.indexOf('#');
+    if (hashIndex !== -1) {
+      targetAnchor = href.substring(hashIndex + 1).trim();
+    }
+    const cleanPath = (hashIndex !== -1 ? href.substring(0, hashIndex) : href).trim();
+
+    // 智能解析 A: 话题特训
+    if (/话题|topics|thematic/i.test(cleanPath)) {
+      targetUnitId = 'topics';
+    }
+    // 智能解析 B: 阅读情感态度特训
+    else if (/情感|态度|reading|attitude/i.test(cleanPath)) {
+      targetUnitId = 'reading';
+    }
+    // 智能解析 C: 词组单元
+    else if (/phrase[-_\s]*list[-_\s]*(\d+)|phrase[-_\s]*(\d+)|词组\s*List\s*(\d+)/i.test(cleanPath)) {
+      const m = cleanPath.match(/phrase[-_\s]*list[-_\s]*(\d+)|phrase[-_\s]*(\d+)|词组\s*List\s*(\d+)/i);
+      const num = String(m[1] || m[2] || m[3]).padStart(2, '0');
+      targetUnitId = `phrase-${num}`;
+    }
+    // 智能解析 D: 核心词汇单元
+    else if (/list[-_\s]*(\d+)/i.test(cleanPath)) {
+      const m = cleanPath.match(/list[-_\s]*(\d+)/i);
+      const num = String(m[1]).padStart(2, '0');
+      targetUnitId = `list-${num}`;
+    }
+
+    if (!targetUnitId) return;
+
+    // 如果目标是当前正在阅读的单元：直接平滑滚动到锚点
+    if (targetUnitId === currentId && currentCategory !== 'bookmarks') {
+      if (targetAnchor) {
+        const el = doc.getElementById(targetAnchor) 
+          || doc.getElementById('w-' + targetAnchor)
+          || doc.getElementById('tw-' + targetAnchor)
+          || doc.getElementById('aw-' + targetAnchor)
+          || doc.getElementById(targetAnchor.replace(/^[wta]+-/, ''));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('card-focus-highlight');
+          setTimeout(() => el.classList.remove('card-focus-highlight'), 3000);
+        }
+      }
+      return;
+    }
+
+    // 跨单元无缝穿梭
+    const all = getAllItems();
+    let targetItem = all.find(x => x.id === targetUnitId);
+    if (!targetItem) {
+      if (targetUnitId.startsWith('list-')) {
+        const num = targetUnitId.replace('list-', '');
+        targetItem = { id: targetUnitId, num, label: `List ${num}`, file: `content/${targetUnitId}.html`, type: 'vocab', ready: true };
+      } else if (targetUnitId.startsWith('phrase-')) {
+        const num = targetUnitId.replace('phrase-', '');
+        targetItem = { id: targetUnitId, num, label: `词组 List ${num}`, file: `content/phrase-list-${num}.html`, type: 'phrase', ready: true };
+      } else if (targetUnitId === 'topics') {
+        targetItem = { id: 'topics', num: '话题', label: '全景话题特训', file: 'content/topics.html', type: 'special', ready: true };
+      } else if (targetUnitId === 'reading') {
+        targetItem = { id: 'reading', num: '态势', label: '阅读情感态度特训', file: 'content/reading.html', type: 'special', ready: true };
+      }
+    }
+
+    if (targetItem) {
+      pendingJumpAnchor = targetAnchor;
+      loadContent(targetItem);
+      showToast(`🚀 已为您跨单元穿梭至 ${targetItem.label} ↗`);
+    }
+  }
+
+  // 备份与恢复
   function exportMarksJSON() {
     const marks = getUserMarks();
     const count = Object.keys(marks).length;
@@ -1851,6 +2347,47 @@
   }
 
   // ────────────────────────────────────────────
+  // 原生移动端 & 桌面端随手记编辑弹窗
+  // ────────────────────────────────────────────
+  let noteCallback = null;
+  function openNoteEditor(targetId, targetName, initialNote, callback) {
+    const backdrop = document.getElementById('noteModalBackdrop');
+    const targetLabel = document.getElementById('noteModalTarget');
+    const input = document.getElementById('noteModalInput');
+
+    targetLabel.textContent = targetName;
+    input.value = initialNote || '';
+    noteCallback = callback;
+
+    backdrop.classList.add('show');
+    setTimeout(() => input.focus(), 150);
+  }
+
+  function closeNoteEditor() {
+    const backdrop = document.getElementById('noteModalBackdrop');
+    backdrop.classList.remove('show');
+    noteCallback = null;
+  }
+
+  document.getElementById('btnCloseNoteModal').addEventListener('click', closeNoteEditor);
+  document.getElementById('btnCancelNoteModal').addEventListener('click', closeNoteEditor);
+  document.getElementById('btnSaveNoteModal').addEventListener('click', () => {
+    const input = document.getElementById('noteModalInput');
+    const text = input.value.trim();
+    if (noteCallback) {
+      noteCallback(text);
+    }
+    closeNoteEditor();
+  });
+
+  // 点击遮罩空白关闭弹窗
+  document.getElementById('noteModalBackdrop').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('noteModalBackdrop')) {
+      closeNoteEditor();
+    }
+  });
+
+  // ────────────────────────────────────────────
   // Iframe 注入式互动标记引擎 (Iframe Annotation Injector)
   // ────────────────────────────────────────────
   function setupIframeAnnotations(doc, unitId, unitLabel) {
@@ -1881,6 +2418,7 @@
           background: #ffffff;
           color: #64748b;
           transition: all 0.15s ease;
+          touch-action: manipulation;
         }
         .mark-cycle-btn:hover {
           background: #f1f5f9;
@@ -1916,6 +2454,7 @@
           padding: 2.5px 6px;
           border-radius: 5px;
           transition: all 0.15s;
+          touch-action: manipulation;
         }
         .mark-note-btn:hover {
           background: #fef08a;
@@ -1971,11 +2510,30 @@
           animation: focusPulseRing 1.3s ease 2;
           outline: 3px solid #2563eb !important;
         }
+
+        /* 移动端卡片头部换行自适应 */
+        @media (max-width: 600px) {
+          .card-header-link {
+            flex-wrap: wrap;
+            gap: 6px;
+          }
+          .card-top-right {
+            margin-left: auto;
+          }
+          .mark-ctrl-wrap {
+            margin-left: 0;
+            margin-top: 2px;
+          }
+          .mark-cycle-btn, .mark-note-btn {
+            padding: 2px 5px;
+            font-size: 10.5px;
+          }
+        }
       `;
       doc.head.appendChild(styleEl);
     }
 
-    // 2. 遍历单词卡片和词组卡片
+    // 2. 遍历单词卡片和词组卡片注入标记按钮
     const cards = doc.querySelectorAll('.word-card, .phrase-card');
     const marks = getUserMarks();
 
@@ -1998,46 +2556,39 @@
       // 组装标记工具组
       let wrap = card.querySelector('.mark-ctrl-wrap');
       if (!wrap) {
-        wrap = doc.createElement('span');
+        wrap = doc.createElement('div');
         wrap.className = 'mark-ctrl-wrap';
-        wrap.onclick = (e) => { e.preventDefault(); e.stopPropagation(); };
 
         const cycleBtn = doc.createElement('button');
         cycleBtn.className = 'mark-cycle-btn';
-        cycleBtn.title = '点击切换优先级：无 ➔ P1 兴趣 ➔ P2 强化 ➔ P3 必背 ➔ 移除';
+        cycleBtn.title = '标记为重点：循环切换 P1(兴趣) -> P2(强化) -> P3(必背) -> 取消';
         cycleBtn.innerHTML = '<span class="icon">☆</span> <span class="txt">标记</span>';
 
         const noteBtn = doc.createElement('button');
         noteBtn.className = 'mark-note-btn';
-        noteBtn.innerHTML = '✏️';
         noteBtn.title = '添加/编辑备忘随手记';
+        noteBtn.innerHTML = '📝';
 
         wrap.appendChild(cycleBtn);
         wrap.appendChild(noteBtn);
 
-        const targetContainer = isPhrase
-          ? card.querySelector('.card-header-flex')
-          : card.querySelector('.card-top-right');
-        if (targetContainer) {
-          targetContainer.insertBefore(wrap, targetContainer.firstChild);
+        const targetAnchor = card.querySelector('.word-title-box') || card.querySelector('.card-phrase-box') || card.querySelector('.card-header-link');
+        if (targetAnchor) {
+          targetAnchor.appendChild(wrap);
         }
 
-        // 绑定标记轮转事件
+        // 绑定标记层级循环事件 (0 -> 1 -> 2 -> 3 -> 0)
         cycleBtn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
 
           const cur = getUserMark(cardId);
-          let nextP = 1;
-          if (cur) {
-            if (cur.priority === 1) nextP = 2;
-            else if (cur.priority === 2) nextP = 3;
-            else if (cur.priority === 3) nextP = 0; // 取消
-          }
+          const currentP = cur ? (cur.priority || 1) : 0;
+          let nextP = currentP + 1;
 
-          if (nextP === 0) {
+          if (nextP > 3) {
             removeUserMark(cardId);
-            showToast(`⚪ 已取消「${name}」的标记`);
+            showToast(`🗑️ 已取消「${name}」的标记`);
           } else {
             saveUserMark({
               id: cardId,
@@ -2051,52 +2602,69 @@
               priority: nextP,
               note: cur ? (cur.note || '') : ''
             });
-            const pLabels = { 1: '💛 P1 兴趣重点', 2: '🧡 P2 强化高频', 3: '💖 P3 核心必背' };
+            const pLabels = { 1: '💛 P1 兴趣关注', 2: '🧡 P2 强化攻克', 3: '💖 P3 核心必背' };
             showToast(`⭐ 已将「${name}」设置为 ${pLabels[nextP]}（已归并入库）`);
           }
 
           updateCardMarkView(card, getUserMark(cardId));
         });
 
-        // 绑定随手记事件
+        // 绑定随手记事件 (弹出原生优雅弹窗)
         noteBtn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
 
           const cur = getUserMark(cardId);
           const currentNote = cur ? (cur.note || '') : '';
-          const inputNote = window.prompt(`为「${name}」添加/编辑备忘随手记：`, currentNote);
-          if (inputNote === null) return;
 
-          saveUserMark({
-            id: cardId,
-            name,
-            pos,
-            meaning,
-            type: isPhrase ? 'phrase' : 'vocab',
-            unitId,
-            unitLabel: unitLabel || unitId,
-            no,
-            priority: cur ? (cur.priority || 1) : 1,
-            note: inputNote.trim()
+          openNoteEditor(cardId, `${name} ${pos ? '('+pos+')' : ''}`, currentNote, (newNote) => {
+            saveUserMark({
+              id: cardId,
+              name,
+              pos,
+              meaning,
+              type: isPhrase ? 'phrase' : 'vocab',
+              unitId,
+              unitLabel: unitLabel || unitId,
+              no,
+              priority: cur ? (cur.priority || 1) : 1,
+              note: newNote
+            });
+            showToast(`📝 已更新「${name}」的个人备忘！`);
+            updateCardMarkView(card, getUserMark(cardId));
           });
-          showToast(`📝 已更新「${name}」的个人备忘！`);
-          updateCardMarkView(card, getUserMark(cardId));
         });
       }
 
       updateCardMarkView(card, marks[cardId]);
     });
 
-    // 3. 处理跳转精准聚焦
-    if (pendingJumpAnchor) {
-      const targetCard = doc.getElementById(pendingJumpAnchor);
-      if (targetCard) {
-        setTimeout(() => {
-          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          targetCard.classList.add('card-focus-highlight');
-        }, 150);
+    // 3. 全局拦截 Iframe 内的所有链接点击（打通跨单元双向穿梭与锚点定位）
+    doc.body.addEventListener('click', function(e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+      const href = link.getAttribute('href');
+      if (href) {
+        handleIframeLinkNavigation(href, e, doc);
       }
+    });
+
+    // 4. 处理跳转精准聚焦
+    if (pendingJumpAnchor) {
+      const targetAnchor = pendingJumpAnchor;
+      setTimeout(() => {
+        const targetEl = doc.getElementById(targetAnchor) 
+          || doc.getElementById('w-' + targetAnchor)
+          || doc.getElementById('tw-' + targetAnchor)
+          || doc.getElementById('aw-' + targetAnchor)
+          || doc.getElementById(targetAnchor.replace(/^[wta]+-/, ''))
+          || doc.querySelector(`[name="${targetAnchor}"]`);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetEl.classList.add('card-focus-highlight');
+          setTimeout(() => targetEl.classList.remove('card-focus-highlight'), 3000);
+        }
+      }, 250);
       pendingJumpAnchor = null;
     }
   }
@@ -2141,21 +2709,22 @@
       strip.querySelector('.memo-strip-edit').addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const inputNote = window.prompt(`修改「${mark.name}」的备忘随手记：`, mark.note || '');
-        if (inputNote === null) return;
-        saveUserMark({
-          ...mark,
-          note: inputNote.trim()
+
+        openNoteEditor(mark.id, `${mark.name} ${mark.pos ? '('+mark.pos+')' : ''}`, mark.note || '', (newNote) => {
+          saveUserMark({
+            ...mark,
+            note: newNote
+          });
+          showToast(`📝 已更新「${mark.name}」的个人备忘！`);
+          updateCardMarkView(card, getUserMark(mark.id));
         });
-        showToast(`📝 已更新「${mark.name}」的个人备忘！`);
-        updateCardMarkView(card, getUserMark(mark.id));
       });
       card.appendChild(strip);
     }
   }
 
   // ────────────────────────────────────────────
-  // iframe 穿梭劫持与标记引擎初始化挂载
+  // iframe 加载监听与互动挂载
   // ────────────────────────────────────────────
   const frame = document.getElementById('contentFrame');
   frame.addEventListener('load', function() {
@@ -2163,29 +2732,17 @@
       const doc = frame.contentDocument || frame.contentWindow.document;
       if (!doc) return;
 
-      // 获取当前单元的描述信息
       const all = getAllItems();
       const currentUnit = all.find(l => l.id === currentId);
       const unitLabel = currentUnit ? currentUnit.label : (currentId || '');
 
-      // 挂载互动标记引擎
       setupIframeAnnotations(doc, currentId, unitLabel);
-
-      // 监听穿梭链接
-      const links = doc.querySelectorAll('a[href*="话题特训"]');
-      links.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const topicsItem = (manifestData.specials || []).find(x => x.id === 'topics');
-          if (topicsItem) loadContent(topicsItem);
-        });
-      });
     } catch(e) {
       console.warn('Iframe load listener error:', e);
     }
   });
 
-  // 初始化
+  // 初始化流程
   fetchManifest().then(data => {
     manifestData = data;
 
@@ -2193,24 +2750,27 @@
     const pCount = (data.phraseLists || []).filter(x => x.ready).length;
     const sCount = (data.specials || []).filter(x => x.ready).length;
 
+    // 更新顶部 Header 徽章
     document.getElementById('countVocab').textContent = vCount;
     document.getElementById('countPhrase').textContent = pCount;
     document.getElementById('countSpecial').textContent = sCount;
 
+    // 更新侧边栏抽屉切换器徽章
+    const sbV = document.getElementById('sbCountVocab'); if(sbV) sbV.textContent = vCount;
+    const sbP = document.getElementById('sbCountPhrase'); if(sbP) sbP.textContent = pCount;
+    const sbS = document.getElementById('sbCountSpecial'); if(sbS) sbS.textContent = sCount;
+
+    // 更新欢迎页数据
     const wcV = document.getElementById('wcVocab'); if(wcV) wcV.textContent = vCount;
     const wcP = document.getElementById('wcPhrase'); if(wcP) wcP.textContent = pCount;
     const wcS = document.getElementById('wcSpecial'); if(wcS) wcS.textContent = sCount;
 
     updateBookmarksBadge();
 
-    if (location.hash) {
-      const targetId = location.hash.slice(1);
-      if (targetId === 'bookmarks') {
-        switchCategory('bookmarks');
-        return;
-      }
+    const hash = location.hash.replace(/^#/, '');
+    if (hash) {
       const all = getAllItems();
-      const target = all.find(l => l.id === targetId && l.ready);
+      const target = all.find(x => x.id === hash);
       if (target) {
         loadContent(target);
         return;
@@ -2220,20 +2780,18 @@
     renderSidebar();
   });
 
-  // 事件监听绑定
-  document.getElementById('sidebarToggle').addEventListener('click', () => toggleSidebar());
-  document.getElementById('floatingNavBtn').addEventListener('click', () => toggleSidebar(true));
-  document.getElementById('sidebarBackdrop').addEventListener('click', () => toggleSidebar(false));
-  document.getElementById('btnCloseSidebar').addEventListener('click', () => toggleSidebar(false));
-
-  document.querySelectorAll('.cat-tab').forEach(b => {
-    b.addEventListener('click', () => {
-      switchCategory(b.dataset.cat);
-      if (b.dataset.cat !== 'bookmarks') {
-        toggleSidebar(true);
-      }
+  // 顶部大类 Tab 点击
+  document.querySelectorAll('.cat-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const cat = this.dataset.cat;
+      switchCategory(cat);
     });
   });
+
+  document.getElementById('sidebarToggle').addEventListener('click', () => toggleSidebar());
+  document.getElementById('sidebarBackdrop').addEventListener('click', () => toggleSidebar(false));
+  document.getElementById('btnCloseSidebar').addEventListener('click', () => toggleSidebar(false));
+  document.getElementById('floatingNavBtn').addEventListener('click', () => toggleSidebar());
 
   document.getElementById('btnViewGrid').addEventListener('click', () => switchView('grid'));
   document.getElementById('btnViewList').addEventListener('click', () => switchView('list'));
@@ -2271,11 +2829,31 @@
     if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
     if (e.key === 'm' || e.key === 'M') {
       toggleSidebar();
-    } else if (e.key === 'Escape' && sidebarIsOpen) {
-      toggleSidebar(false);
+    } else if (e.key === 'Escape') {
+      if (document.getElementById('noteModalBackdrop').classList.contains('show')) {
+        closeNoteEditor();
+      } else if (sidebarIsOpen) {
+        toggleSidebar(false);
+      }
     }
   });
 })();
 </script>
+
+  <!-- 原生触控随手记弹窗 (适配手机端与电脑端) -->
+  <div class="note-modal-backdrop" id="noteModalBackdrop">
+    <div class="note-modal">
+      <div class="note-modal-header">
+        <span class="note-modal-title">📝 随手记心得备忘</span>
+        <button class="note-modal-close" id="btnCloseNoteModal" title="关闭">✕</button>
+      </div>
+      <div class="note-modal-target" id="noteModalTarget">radiate (v.)</div>
+      <textarea class="note-modal-input" id="noteModalInput" placeholder="写下你的独家背诵口诀、真题考法或备忘心得..."></textarea>
+      <div class="note-modal-actions">
+        <button class="note-modal-btn cancel" id="btnCancelNoteModal">取消</button>
+        <button class="note-modal-btn save" id="btnSaveNoteModal">保存笔记</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
