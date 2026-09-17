@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四六级常考词组 List 04 深度特训讲义</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+  --primary-blue: #1e3a8a;
+  --secondary-blue: #2563eb;
+  --light-blue: #eff6ff;
+  --accent-red: #dc2626;
+  --light-red: #fef2f2;
+  --dark-slate: #0f172a;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-sub: #475569;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text-main);
+  background-color: #f8fafc;
+  line-height: 1.55;
+  font-size: 13.5px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: A4;
+  margin: 11mm 12mm 11mm 12mm;
+}
+
+.cover-page {
+  page-break-after: always;
+  break-after: page;
+}
+
+.batch-wrapper {
+  page-break-before: always;
+  break-before: page;
+}
+
+.phrase-card {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cover-container { padding: 10px 0; }
+
+.header-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 24px 26px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.25);
+  margin-bottom: 20px;
+}
+
+.header-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-title {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.matrix-section {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 18px 20px;
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
+}
+
+.section-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.section-caption h2 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.batch-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.batch-box-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.phrase-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 11.5px;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.phrase-pill:hover {
+  border-color: var(--secondary-blue);
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  transform: translateY(-1px);
+}
+
+.phrase-pill.reading {
+  border-left: 3px solid var(--accent-red);
+}
+
+.phrase-pill.writing {
+  border-left: 3px solid var(--secondary-blue);
+}
+
+.pill-box { font-size: 11px; color: #94a3b8; }
+.pill-text { font-weight: 600; }
+
+.daka-card {
+  background: linear-gradient(to right, #f0fdf4, #f8fafc);
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daka-title { font-weight: 700; font-size: 13px; color: #166534; }
+.daka-sub { font-size: 11.5px; color: #15803d; margin-top: 2px; }
+.daka-rounds { display: flex; gap: 12px; }
+
+.round-badge {
+  background: #ffffff;
+  border: 1px dashed #22c55e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  color: #166534;
+  font-weight: 600;
+}
+
+.batch-header-bar {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.batch-header-title { font-size: 17px; font-weight: 800; letter-spacing: 0.3px; }
+.batch-header-sub { font-size: 12px; opacity: 0.85; }
+
+.back-to-toc-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.2s;
+}
+
+.back-to-toc-btn:hover { background: #ffffff; color: #0f172a; }
+
+.module-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin: 18px 0 12px 0;
+}
+
+.module-banner.reading {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid var(--accent-red);
+}
+
+.module-banner.writing {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid var(--secondary-blue);
+}
+
+.phrase-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.phrase-card.reading-card { border-top: 3px solid var(--accent-red); }
+.phrase-card.writing-card { border-top: 3px solid var(--secondary-blue); }
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-no-badge {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.reading-card .card-no-badge { background: #fee2e2; color: #b91c1c; }
+.writing-card .card-no-badge { background: #dbeafe; color: #1d4ed8; }
+
+.card-phrase-link {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.card-pos-capsule { font-size: 11.5px; color: #64748b; font-weight: 500; }
+.card-meaning-text { font-size: 13px; color: #334155; font-weight: 600; }
+
+.card-return-pill {
+  font-size: 11px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.card-return-pill:hover {
+  background: var(--light-blue);
+  color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+.field-row {
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.field-label {
+  display: inline-block;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-right: 6px;
+}
+
+.lbl-mechanism { background: #f3e8ff; color: #7e22ce; }
+.lbl-points { background: #e0e7ff; color: #3730a3; }
+
+.upgrade-box {
+  background: #f0fdf4;
+  border-left: 3px solid #22c55e;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-size: 12.5px;
+  color: #166534;
+}
+
+.colloc-box {
+  background: #fff7ed;
+  border-left: 3px solid #f97316;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #9a3412;
+}
+
+.trap-box {
+  background: #fef2f2;
+  border-left: 3px solid #ef4444;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 8px 0;
+  font-size: 12.5px;
+  color: #991b1b;
+}
+
+.example-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #64748b;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.example-en { color: #0f172a; font-weight: 500; margin-bottom: 3px; }
+.example-zh { color: #475569; }
+
+.summary-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  page-break-inside: avoid;
+}
+
+.summary-header {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.summary-content {
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.batch-footer-jump {
+  text-align: right;
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.batch-footer-jump a {
+  font-size: 12px;
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+   ══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 14px !important;
+    padding: 0 4px !important;
+    background-color: #ffffff !important;
+  }
+  .cover-container {
+    padding: 6px 0;
+  }
+  .header-banner {
+    padding: 16px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .header-title {
+    font-size: 19px !important;
+    line-height: 1.35;
+  }
+  .header-subtitle {
+    font-size: 12px;
+  }
+  .matrix-section {
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .matrix-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .phrase-pill {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin: 2px 0;
+  }
+  .daka-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .batch-header-bar {
+    padding: 10px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .back-to-toc-btn {
+    align-self: flex-end;
+  }
+  .phrase-card {
+    margin-bottom: 12px !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+  .card-phrase-name {
+    font-size: 16px !important;
+  }
+  .field-row {
+    font-size: 13.5px !important;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<div class="cover-page">
+<div class="cover-container" id="table-of-contents">
+<div class="header-banner">
+<div class="header-badge">⭐ 2027 考研 & 四六级英语词组特训库</div>
+<div class="header-title">四六级常考词组必备 · List 04 全景深度特训讲义</div>
+<div class="header-subtitle">认知隐喻拆解 · 白话提分升级通路 · 完型命题陷阱解码 · 全书收录 30 组高频词组</div>
+</div>
+<div class="matrix-section">
+<div class="section-caption">
+<h2>📋 批次核心词组速查与自测打卡矩阵 (点击直达词卡)</h2>
+<span style="font-size: 12px; color: #64748b;">支持双向锚点跳转</span>
+</div>
+<div class="matrix-grid">
+<div class="batch-box">
+<div class="batch-box-title">
+<span>🚩 Batch 1 (Batch 1)</span>
+<span style="font-size: 11px; color: #64748b;">共 15 组</span>
+</div>
+<div class="pill-container">
+<a href="#p-under-discussion" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">under discussion</span>
+</a>
+<a href="#p-flick-through" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">flick through</span>
+</a>
+<a href="#p-orient-to" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">orient to</span>
+</a>
+<a href="#p-be-out-of-breath" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">be out of breath</span>
+</a>
+<a href="#p-hang-out" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">hang out</span>
+</a>
+<a href="#p-prohibit-from" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">prohibit from</span>
+</a>
+<a href="#p-rob-of" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">rob of</span>
+</a>
+<a href="#p-grow-out-of" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">grow out of</span>
+</a>
+<a href="#p-pull-over" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">pull over</span>
+</a>
+<a href="#p-lose-heart" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">lose heart</span>
+</a>
+<a href="#p-pull-off" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">pull off</span>
+</a>
+<a href="#p-take-away" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">take away</span>
+</a>
+<a href="#p-drop-out" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">drop out</span>
+</a>
+<a href="#p-spark-off" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">spark off</span>
+</a>
+<a href="#p-do-up" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">do up</span>
+</a>
+</div>
+</div>
+<div class="batch-box">
+<div class="batch-box-title">
+<span>🚩 Batch 2 (NO.16 - NO.30)</span>
+<span style="font-size: 11px; color: #64748b;">共 15 组</span>
+</div>
+<div class="pill-container">
+<a href="#p-comply-with" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">comply with</span>
+</a>
+<a href="#p-be-bound-to" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">be bound to</span>
+</a>
+<a href="#p-in-earnest" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">in earnest</span>
+</a>
+<a href="#p-fade-away" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">fade away</span>
+</a>
+<a href="#p-pass-away" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">pass away</span>
+</a>
+<a href="#p-rule-out" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">rule out</span>
+</a>
+<a href="#p-fall-short-of" class="phrase-pill reading">
+<span class="pill-box">☐</span>
+<span class="pill-text">fall short of</span>
+</a>
+<a href="#p-stem-from" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">stem from</span>
+</a>
+<a href="#p-account-for" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">account for</span>
+</a>
+<a href="#p-bring-about" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">bring about</span>
+</a>
+<a href="#p-make-sense-of" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">make sense of</span>
+</a>
+<a href="#p-set-in-motion" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">set in motion</span>
+</a>
+<a href="#p-wipe-out" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">wipe out</span>
+</a>
+<a href="#p-carry-out" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">carry out</span>
+</a>
+<a href="#p-smooth-the-way-for" class="phrase-pill writing">
+<span class="pill-box">☐</span>
+<span class="pill-text">smooth the way for</span>
+</a>
+</div>
+</div>
+</div>
+<div class="daka-card">
+<div>
+<div class="daka-title">🎯 2027 备考全景档案 · 词组三轮通关打卡</div>
+<div class="daka-sub">一轮：理解介词空间隐喻 | 二轮：背诵提分升级磁链 | 三轮：默写高阶考研真题例句</div>
+</div>
+<div class="daka-rounds">
+<div class="round-badge">☐ 一轮通关</div>
+<div class="round-badge">☐ 二轮巩固</div>
+<div class="round-badge">☐ 三轮考前</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="batch-wrapper">
+<div id="batch-1"></div>
+<div class="batch-header-bar">
+<div>
+<div class="batch-header-title">🚩 Batch 1 · 核心词组深度特训 (Batch 1)</div>
+<div class="batch-header-sub">四六级常考词组 List 4 Batch 1 深度特训讲义</div>
+</div>
+<a href="#table-of-contents" class="back-to-toc-btn">🔄 返回自测总览</a>
+</div>
+<div class="module-banner reading">🔴 第一阶段：阅读/完型识记词组 (深层图式机理与考情解码)</div>
+<div class="phrase-card reading-card" id="p-under-discussion">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.3</span>
+<a href="#table-of-contents" class="card-phrase-link">under discussion</a>
+<span class="card-meaning-text">在讨论中/审议中</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  under 在此表示“处于某种过程或状态之中”，如同被讨论的氛围所“覆盖”。想象一份草案放在圆桌中心，所有人的目光和言语都在其上方交织，该草案即处于  under  (在...之下/之中)  discussion  (讨论) 的状态。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  常用于阅读理解中交代背景，如 the proposal under discussion（正在讨论的提议）。注意与 under consideration（在考虑中）、under construction（在建设中）形成状态类词组簇。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   考点：  完型常考介词搭配。  陷阱：  干扰项常设 in 或 on。需记住表示“在进行中”的抽象状态，under 是高频首选。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-flick-through">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.5</span>
+<a href="#table-of-contents" class="card-phrase-link">flick through</a>
+<span class="card-meaning-text">浏览; 翻阅</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  flick 本意是“轻弹”，through 表示“从头到尾的穿过”。画面感：手指快速拨动书页，目光从第一页快速穿透到最后一页。这是一种 非深度、非细节 的阅读动作。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  常在阅读理解关于“数字阅读”或“信息碎片化”的文章中出现，描述现代人走马观花的阅读习惯。近义词辨析：scan（扫视以寻找特定信息）、skim（略读以掌握大意）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   考点：  对应阅读中的“细节判断”。  陷阱：  若文章说某人 flicked through the report，题目问其是否掌握了具体细节（detailed information），逻辑上通常为“否”。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-orient-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.7</span>
+<a href="#table-of-contents" class="card-phrase-link">orient to</a>
+<span class="card-meaning-text">使适应; 定位; 确定方向</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  orient 源自“东方（Orient）”，古代导航以东方为基准。to 指向目标。合起来就是“调整自己的位置以指向特定目标”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  阅读中常考其形容词形式的派生用法：market-oriented（市场导向的）、result-oriented（结果导向的）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   逻辑功能：  表达“匹配”或“适应”逻辑 +。  陷阱：  完型中常考 orient 与 to/towards 的固定搭配，干扰项常设 for 或 in。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-be-out-of-breath">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.10</span>
+<a href="#table-of-contents" class="card-phrase-link">be out of breath</a>
+<span class="card-meaning-text">上气不接下气; 气喘吁吁</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  out of 表示“超出...范围”或“枯竭”。当体能消耗超过了正常的呼吸频率，你就像是“跑出了呼吸的节奏范围之外”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  常出现在阅读理解的叙述性文本或小说节选中。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   考点：  状态描写。  陷阱：  区分 short of breath（呼吸困难/短促，多指病理）与 out of breath（气喘吁吁，多指运动后）。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-hang-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.11</span>
+<a href="#table-of-contents" class="card-phrase-link">hang out</a>
+<span class="card-meaning-text">闲逛; 常去某处</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  hang（悬挂），out（在外面）。想象衣服挂在外面随风晃荡，没有明确的目的地。引申为人在街头或社交场所无目的地消磨时间。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  四六级听力及校园类阅读的高频词。注意其名词形式 hangout（常去的地方）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   考点：  社交语境。  陷阱：  不要与 hang up（挂断电话/中止）混淆。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-prohibit-from">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.12</span>
+<a href="#table-of-contents" class="card-phrase-link">prohibit from</a>
+<span class="card-meaning-text">禁止; 阻止</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  prohibit 指正式法律或规则的禁止，from 具有“分离/隔绝”逻辑。其底层画面是将主体与某种行为（doing）强行隔离开，使之无法接触。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  常考结构：prohibit sb. from doing sth.。同义辨析：forbid (更口语/个人化), ban (通常指社会公约性的禁止)。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   逻辑功能：  负向阻止逻辑 -。  陷阱：  完型中 from 后的动词必须用 -doing 形式。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-rob-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.13</span>
+<a href="#table-of-contents" class="card-phrase-link">rob of</a>
+<span class="card-meaning-text">抢劫; 剥夺...的权利</span>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  rob（抢劫），of 在此表示“剥离/除去”。这种结构强调“受害者”是被作用的对象，即 rob sb. of sth.。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  考试中常考 抽象剥夺 ，如 rob citizens of their privacy（剥夺公民隐私）。 易混辨析：  steal 的宾语是“物”（steal sth. from sb.），而 rob 的宾语是“人或地点”（rob sb. of sth.）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   逻辑功能：  负向剥夺逻辑 -。  陷阱：  完型选项中常同时出现 steal 和 rob，需根据宾语是“人”还是“物”快速锁定。</div>
+</div>
+</div>
+<div class="module-banner writing">🔵 第二阶段：写译核心词组 (底层逻辑升级与高阶场景适配)</div>
+<div class="phrase-card writing-card" id="p-grow-out-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.1</span>
+<a href="#table-of-contents" class="card-phrase-link">grow out of</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  根植于某处并向外生长；源于某种基础。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  produce/stem from/originate from ➔  grow out of</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  grow out of mutual understanding (产生于相互理解), grow out of a simple idea (源于一个简单的想法)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  图表成因分析、现象评论。</div>
+<div class="example-en">例句：  The current cooperation  grows out of  mutual trust and shared interests between the two enterprises.</div>
+<div class="example-en">翻译：  目前的合作产生于两家企业之间的相互信任和共同利益。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-pull-over">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.2</span>
+<a href="#table-of-contents" class="card-phrase-link">pull over</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  拽动方向盘使车向路边靠拢。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  stop the car at the side ➔  pull over</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  be ordered to pull over (被命令靠边停车)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  叙事性作文、交通/社会场景描写。</div>
+<div class="example-en">例句：  To avoid a potential traffic accident, the driver decided to  pull over  and check the engine.</div>
+<div class="example-en">翻译：  为了避免潜在的交通事故，司机决定靠边停车检查发动机。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-lose-heart">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.4</span>
+<a href="#table-of-contents" class="card-phrase-link">lose heart</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  丢失了内心的动力源泉（核心）。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  give up/become discouraged ➔  lose heart</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  never lose heart in the face of adversity (面对逆境绝不丧失信心)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  励志类短文、对策建议（鼓励坚持）。</div>
+<div class="example-en">例句：  No matter how difficult the task may be, we should never  lose heart .</div>
+<div class="example-en">翻译：  无论任务多么艰巨，我们都不应该丧失信心。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-pull-off">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.6</span>
+<a href="#table-of-contents" class="card-phrase-link">pull off</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  顶住压力将其从困难中“拽”出来并完成；成功脱离。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  succeed in doing sth. difficult ➔  pull off</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  pull off a major victory (赢得重大胜利), pull off a deal (谈成一笔生意)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  成功案例描述、图表结果评价。</div>
+<div class="example-en">例句：  It was a challenging project, but the team managed to  pull it off  ahead of schedule.</div>
+<div class="example-en">翻译：  这是一个充满挑战的项目，但团队设法提前成功完成了它。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-take-away">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.8</span>
+<a href="#table-of-contents" class="card-phrase-link">take away</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  将某物带离原处，使其消失或减去。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  eliminate/remove/subtract ➔  take away</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  take away the pain (消除痛苦), a key take-away (核心收获/要点)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  对策建议、讲座总结信。</div>
+<div class="example-en">例句：  Effective measures should be adopted to  take away  the negative impact of environmental pollution.</div>
+<div class="example-en">翻译：  应当采取有效措施来消除环境污染的负面影响。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-drop-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.9</span>
+<a href="#table-of-contents" class="card-phrase-link">drop out</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  从既定的轨道或群体中跌落/退出。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  quit/stop participating ➔  drop out</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  drop out of school (辍学), drop out of the race (退出比赛)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  社会问题分析（如贫困导致辍学）。</div>
+<div class="example-en">例句：  Financial difficulties often force students from impoverished families to  drop out of  school.</div>
+<div class="example-en">翻译：  经济困难经常迫使来自贫困家庭的学生辍学。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-spark-off">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.14</span>
+<a href="#table-of-contents" class="card-phrase-link">spark off</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  迸发出火花（spark）从而瞬间引燃（off）。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  cause/trigger/set off ➔  spark off</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  spark off widespread public debate (引发广泛的公众辩论)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  现象引出、社会热点评论。</div>
+<div class="example-en">例句：  The new policy  sparked off  a heated discussion regarding social justice.</div>
+<div class="example-en">翻译：  这项新政策引发了一场关于社会公平的热烈讨论。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-do-up">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.15</span>
+<a href="#table-of-contents" class="card-phrase-link">do up</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  向上（up）整理使其完整、美观或牢固。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  repair/decorate/fasten ➔  do up</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  do up an old house (翻新旧房子), do up one's shoelaces (系鞋带)。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  社会变迁描写、居住环境改善建议。</div>
+<div class="example-en">例句：  The local government decided to  do up  the historical buildings to attract more tourists.</div>
+<div class="example-en">翻译：  当地政府决定修缮历史建筑以吸引更多游客。</div>
+</div>
+</div>
+<div class="batch-footer-jump">
+<a href="#table-of-contents">🔝 一键返回顶部目录与自测矩阵</a>
+</div>
+</div>
+<div class="batch-wrapper">
+<div id="batch-2"></div>
+<div class="batch-header-bar">
+<div>
+<div class="batch-header-title">🚩 Batch 2 · 核心词组深度特训 (NO.16 - NO.30)</div>
+<div class="batch-header-sub">《四六级常考词组必备》List 4 (Batch 2: NO.16 - NO.30) 深度特训讲义</div>
+</div>
+<a href="#table-of-contents" class="back-to-toc-btn">🔄 返回自测总览</a>
+</div>
+<div class="module-banner reading">🔴 第一阶段：阅读/完型识记词组 (深层图式机理与考情解码)</div>
+<div class="phrase-card reading-card" id="p-comply-with">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.17</span>
+<a href="#table-of-contents" class="card-phrase-link">comply with</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  with 在语言逻辑中代表“协同/一致性”。comply with 的核心图式是使个体行为与既定的外部框架保持“步调一致”，即与规则同步。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  关联词汇 comply（List 10, NO.30，意为“顺从；遵守”）。在考题中常与 regulation（List 28, NO.16）或 standard（List 23, NO.36）搭配。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   正向一致逻辑 + 。考点在于其“被动属性”，通常指遵守法律或外部指令，而非出自内心的坚持（与 adhere to 辨析）。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-be-bound-to">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.18</span>
+<a href="#table-of-contents" class="card-phrase-link">be bound to</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  bound 源于 bond（List 40, NO.57，意为“纽带”）。其逻辑图式是被无形的纽带束缚在既定轨道上，无法他移，引申为“注定、必然”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  真题中常作为 inevitable（List 20, NO.47，意为“不可避免的；必定的”）的同义表达出现。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   必然判断逻辑 。常用于作者对事物发展趋势的强力预测，选项中若出现 uncertain 则是典型的反向干扰。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-in-earnest">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.20</span>
+<a href="#table-of-contents" class="card-phrase-link">in earnest</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  语言学规律：in + 抽象名词（如  in silence ,  in haste ）常构建一种副词性的状态。earnest 意味着严肃认真的态度，in earnest 即处于“认真且正式”的状态。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  关联 serious（List 18, NO.11）。在考研真题语境中，它不仅指态度认真，更常指某个项目或阶段“真正地、正式地”拉开帷幕。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   阶段转折逻辑 。通常标志着从“准备/试探阶段”进入“全面执行阶段”，在阅读中具有定位关键行动的功能。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-fade-away">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.23</span>
+<a href="#table-of-contents" class="card-phrase-link">fade away</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  away 强调“离去/消失”。关联 fade（List 5, NO.28，意为“逐渐消失”）。逻辑画面是光线或影响力的波长逐渐减弱，直至完全脱离视线。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  辨析对象为 pass away。fade away 强调过程的渐变性，对象通常是记忆、传统（tradition, List 8, NO.60）或物理影响。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：  常用于描述社会趋势的减弱，逻辑上对应  负向递减 - 。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-pass-away">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.26</span>
+<a href="#table-of-contents" class="card-phrase-link">pass away</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  pass 意为“经过”，pass away 即“经过当前时空并永远离开”。关联 passerby（List 43, NO.39，行人）。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  这是对“死亡”最标准的委婉表达，逻辑上可关联 cease（List 2, NO.48，停止）。注意对象必须是“生命”。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   语体辨析陷阱 。在正式的文章或传记中，它用于替代过于生硬的 die。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-rule-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.28</span>
+<a href="#table-of-contents" class="card-phrase-link">rule out</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  rule（List 29, NO.59）在此取“裁决/划界”之意。out 指向“界限之外”。其底层逻辑是：依据规则划定范围，将不合格者“挡在界外”。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  核心同义词为 eliminate（List 2, NO.18）。常用于排除某种 possibility（List 24, NO.43）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   否定逻辑 - 。在科学论证或逻辑推导题中，看到该词应立即排除其后接的所有内容。</div>
+</div>
+</div>
+<div class="phrase-card reading-card" id="p-fall-short-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.29</span>
+<a href="#table-of-contents" class="card-phrase-link">fall short of</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【介词/副词搭配机理 & 记忆挂钩】：  fall（List 5, NO.33）描述抛物线的下落。short of 表示在终点前提前着陆。物理图式是：箭矢未到靶心便跌落。</span>
+</div>
+<div class="field-row">
+<span class="field-label lbl-points">🎯 考情辨析</span>
+<span>【考情/熟词僻义/形近辨析】：  常考搭配 fall short of expectations（未达到预期）。</span>
+</div>
+<div class="trap-box">
+<strong>⚠️ 完型/阅读考点陷阱：</strong>
+<div>【完型/阅读逻辑与考点陷阱】：   对比逻辑 ≠ / < 。用于描述“产出（output, List 21, NO.2）”与“标准（standard, List 23, NO.36）”之间的负向差距。</div>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>本模块构建从“低级白话”到“学术高阶”的升级通路。在写作中，这些词组能直接体现你对现象背后的因果关系及执行力度的掌控。</div>
+</div>
+</div>
+<div class="module-banner writing">🔵 第二阶段：写译核心词组 (底层逻辑升级与高阶场景适配)</div>
+<div class="phrase-card writing-card" id="p-stem-from">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.16</span>
+<a href="#table-of-contents" class="card-phrase-link">stem from</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  植物的“茎”（stem, List 23, NO.52）源于根部，代表事物追根溯源。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  cause / because of ➔  stem from</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  stem from deep-rooted social problems（源于根深蒂固的社会问题）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  图表/现象成因分析。</div>
+<div class="example-en">高质量例句：  The worsening pollution largely  stems from  the lack of effective regulation.</div>
+<div class="example-en">中文对照：  环境污染的恶化在很大程度上源于缺乏有效的监管。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-account-for">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.19</span>
+<a href="#table-of-contents" class="card-phrase-link">account for</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  account（List 11, NO.13，账目/说明）。逻辑是在总账中说明某一数值的来源或构成。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  explain / occupy ➔  account for</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  account for a large proportion（占据很大比例）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  图表描述（比例数据说明）。</div>
+<div class="example-en">高质量例句：  Overseas students  account for  a significant portion of the university's population.</div>
+<div class="example-en">中文对照：  海外学生占据了该校学生总数的显著比例。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-bring-about">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.21</span>
+<a href="#table-of-contents" class="card-phrase-link">bring about</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  about 带有“在其近前/周围”的含义。bring about 意为“带着某物转而进入人们的视野/存在中”，即促成变化。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  cause ➔  bring about</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  bring about a radical change（引起根本性的变化，radical 见 List 1, NO.3）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  政策/技术产生的影响分析。</div>
+<div class="example-en">高质量例句：  Technological innovation will inevitably  bring about  profound shifts in our daily habits.</div>
+<div class="example-en">中文对照：  技术创新将不可避免地引起我们日常习惯的深刻变革。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-make-sense-of">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.22</span>
+<a href="#table-of-contents" class="card-phrase-link">make sense of</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  sense（List 18, NO.3，理解力/意义）。逻辑是从杂乱无章的信息中“制造”出条理。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  understand ➔  make sense of</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  make sense of complex data（厘清复杂数据）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  阐述对复杂现象或调查结果的认知。</div>
+<div class="example-en">高质量例句：  Only by  making sense of  the survey data can we outline the future market trend.</div>
+<div class="example-en">中文对照：  只有在厘清调查数据的基础上，我们才能勾勒出未来的市场趋势。（注：survey 见 List 30, NO.5；outline 见 List 20, NO.60）</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-set-in-motion">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.24</span>
+<a href="#table-of-contents" class="card-phrase-link">set in motion</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  set（List 17, NO.9，设置）。逻辑是启动处于静止状态的“齿轮”，使其进入持续运行的运动（motion）轨道。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  start / begin ➔  set in motion</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  set the reform in motion（启动改革进程）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  对策建议（启动特定方案/行动）。</div>
+<div class="example-en">高质量例句：  The authorities have  set in motion  a series of programs to protect cultural heritage.</div>
+<div class="example-en">中文对照：  官方已启动了一系列保护文化遗产的计划。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-wipe-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.25</span>
+<a href="#table-of-contents" class="card-phrase-link">wipe out</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  像擦黑板一样，通过外部力量将某物彻底从表面清除干净。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  eliminate / destroy ➔  wipe out</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  wipe out poverty（消除贫困，poverty 见 List 21, NO.3）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  解决问题（彻底消除负向因素）。</div>
+<div class="example-en">高质量例句：  The new policy is designed to  wipe out  illiteracy in underdeveloped regions.</div>
+<div class="example-en">中文对照：  新政策旨在彻底消除欠发达地区的文盲现象。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-carry-out">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.27</span>
+<a href="#table-of-contents" class="card-phrase-link">carry out</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  carry（List 43, NO.16，运送）。其核心逻辑是将原本停留在“纸面或构想中”的计划，搬运落实到“现实空间”。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  do / perform ➔  carry out</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  carry out an extensive survey（进行广泛调查）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  描述实验执行、计划落实或任务完成。</div>
+<div class="example-en">高质量例句：  Strictly  carrying out  the strategy is essential for achieving long-term goals.</div>
+<div class="example-en">中文对照：  严格执行该战略对于实现长期目标至关重要。</div>
+</div>
+</div>
+<div class="phrase-card writing-card" id="p-smooth-the-way-for">
+<div class="card-header-flex">
+<div class="card-title-group">
+<span class="card-no-badge">NO.30</span>
+<a href="#table-of-contents" class="card-phrase-link">smooth the way for</a>
+</div>
+<a href="#table-of-contents" class="card-return-pill">🔄 回目录</a>
+</div>
+<div class="field-row">
+<span class="field-label lbl-mechanism">🧠 图式机理</span>
+<span>【底层语义与核心图式】：  smooth（List 37, NO.46，平坦）。逻辑是移走道路上的碎石阻碍，使后来的车辆或行动更为通畅。</span>
+</div>
+<div class="upgrade-box">
+<strong>🚀 白话 ➔ 提分升级通路：</strong>
+<div>【白话 ➔ 提分词组升级通路】：  help / facilitate ➔  smooth the way for</div>
+</div>
+<div class="colloc-box">
+<strong>🔗 高阶搭配磁链：</strong>
+<div>【高阶搭配磁链】：  smooth the way for sustainable development（为可持续发展铺平道路）。</div>
+</div>
+<div class="example-box">
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 【🎬 写译场景适配】：</div>
+<div style="font-weight:700; color:#334155; margin-bottom:4px;">🎬 适用题型：  展望未来或提出先决条件的建议。</div>
+<div class="example-en">高质量例句：  International cooperation will  smooth the way for  a global economic recovery.</div>
+<div class="example-en">中文对照：  国际合作将为全球经济复苏铺平道路。</div>
+<div class="example-en">📖 第三模块：【Batch 2 逻辑综述与防混淆指南】</div>
+<div class="example-en">消失的颗粒度：fade away vs. pass away</div>
+<div class="example-en">fade away: 强调“由强转弱”的渐变，对象通常是抽象事物（ influence, tradition, memory ）。</div>
+<div class="example-en">pass away: 专指生命跨越终点，语体正式且带有尊重色彩，对象仅限人（ people ）。</div>
+<div class="example-en">因果链的方向：stem from vs. bring about</div>
+<div class="example-en">stem from: 结果  stem from  原因。侧重于“向后回溯”，常用于分析历史或社会问题的根源。</div>
+<div class="example-en">bring about: 原因/行动  bring about  结果。侧重于“向前推进”，常用于描述政策或技术产生的实际效果。</div>
+<div class="example-en">顺从与统一的边界：comply with vs. conform to</div>
+<div class="example-en">comply with: (List 10, NO.30) 重点在于“法律、规则或指令”的遵守，带有一种不得不从的被动色彩。</div>
+<div class="example-en">conform to: (List 22, NO.37) 重点在于“社会准则、传统习惯”的一致性，强调个体在形态、标准或态度上与大众保持统一。</div>
+<div class="example-en">排除的力度：rule out vs. eliminate</div>
+<div class="example-en">rule out: (List 29, NO.59) 偏向逻辑推理过程，指在假设阶段因不符合规则而将其排除在外。</div>
+<div class="example-en">eliminate: (List 2, NO.18) 偏向于实际的消除动作，常用于消除贫困（ poverty ）、消除噪音等物理或社会层面的清除。</div>
+</div>
+</div>
+<div class="batch-footer-jump">
+<a href="#table-of-contents">🔝 一键返回顶部目录与自测矩阵</a>
+</div>
+</div>
+</body>
+</html>

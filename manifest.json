@@ -214,7 +214,7 @@
       "sublabel": "60 词 · 4 Batch · 精排版",
       "file": "content/list-24.html",
       "type": "vocab",
-      "ready": false
+      "ready": true
     },
     {
       "id": "list-25",
@@ -486,7 +486,7 @@
       "sublabel": "常考词组 · 深度精排",
       "file": "content/phrase-list-04.html",
       "type": "phrase",
-      "ready": false
+      "ready": true
     },
     {
       "id": "phrase-05",
