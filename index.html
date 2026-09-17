@@ -623,6 +623,413 @@
     .wc .l { font-size: 10.5px; }
   }
 
+
+  /* ══════════════════════════════════════════════════════════════
+     ⭐ 重点标记库与多层级优先级系统样式 (Bookmarks & Priority System)
+     ══════════════════════════════════════════════════════════════ */
+  .cat-tab[data-cat="bookmarks"].active {
+    background: #fef08a !important;
+    color: #854d0e !important;
+  }
+  .cat-tab[data-cat="bookmarks"] .badge-count {
+    background: #fef9c3;
+    color: #854d0e;
+    font-weight: 800;
+  }
+
+  /* 悬浮 Toast 提示 */
+  .portal-toast {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .portal-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* 重点标记专属主题主容器 */
+  .bookmarks-screen {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 32px 60px;
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+  }
+  .bm-header {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bm-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .bm-title {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.3px;
+  }
+  .bm-subtitle {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .bm-stats-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .bm-stat-chip {
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+  }
+  .bm-stat-chip.total { background: var(--bg-card); border: 1px solid rgba(148,163,184,0.25); color: var(--text-primary); }
+  .bm-stat-chip.p3 { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+  .bm-stat-chip.p2 { background: #ffedd5; color: #9a3412; border: 1px solid #fdba74; }
+  .bm-stat-chip.p1 { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+
+  .bm-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    border: 1px solid rgba(148,163,184,0.15);
+  }
+  .bm-filters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .bm-filter-btn {
+    background: var(--bg-card);
+    border: 1px solid rgba(148,163,184,0.2);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .bm-filter-btn:hover { color: var(--text-primary); border-color: var(--accent-blue); }
+  .bm-filter-btn.active {
+    background: var(--accent-blue);
+    color: #fff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 1px 4px rgba(59,130,246,0.3);
+  }
+  .bm-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .bm-search-input {
+    padding: 5px 10px 5px 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(148,163,184,0.25);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 12px;
+    width: 200px;
+    outline: none;
+    transition: all 0.2s;
+  }
+  .bm-search-input:focus {
+    border-color: var(--accent-blue);
+    width: 240px;
+  }
+  .bm-search-icon {
+    position: absolute;
+    left: 9px;
+    font-size: 11px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .bm-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bm-action-btn {
+    background: var(--bg-card);
+    border: 1px solid rgba(148,163,184,0.2);
+    color: var(--text-primary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .bm-action-btn:hover { background: var(--bg-hover); border-color: var(--accent-blue); }
+
+  /* 优先级大卡片分组 */
+  .bm-priority-section {
+    margin-bottom: 26px;
+  }
+  .bm-priority-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .bm-priority-header.p3 {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(220, 38, 38, 0.05));
+    border-left: 4px solid #ef4444;
+    color: #dc2626;
+  }
+  .bm-priority-header.p2 {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(234, 88, 12, 0.05));
+    border-left: 4px solid #f97316;
+    color: #ea580c;
+  }
+  .bm-priority-header.p1 {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.12), rgba(202, 138, 4, 0.05));
+    border-left: 4px solid #eab308;
+    color: #ca8a04;
+  }
+  .bm-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 12px;
+  }
+
+  /* 单条标记卡片 */
+  .bm-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(148,163,184,0.2);
+    border-radius: 10px;
+    padding: 13px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .bm-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-color: rgba(148,163,184,0.35);
+  }
+  .bm-card.p3 { border-left: 4px solid #ef4444; }
+  .bm-card.p2 { border-left: 4px solid #f97316; }
+  .bm-card.p1 { border-left: 4px solid #eab308; }
+
+  .bm-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .bm-card-title-group {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .bm-card-word {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.2px;
+  }
+  .bm-card-pos {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  .bm-card-source {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid rgba(148,163,184,0.15);
+  }
+  .bm-card-source.vocab { color: #2563eb; background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.2); }
+  .bm-card-source.phrase { color: #0284c7; background: rgba(2,132,199,0.08); border-color: rgba(2,132,199,0.2); }
+
+  .bm-card-meaning {
+    font-size: 12.5px;
+    color: var(--text-primary);
+    line-height: 1.45;
+    background: var(--bg-secondary);
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  .bm-card-memo {
+    font-size: 11.5px;
+    color: #854d0e;
+    background: #fefce8;
+    border: 1px dashed #fde047;
+    padding: 6px 9px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .bm-card-memo-text { flex: 1; line-height: 1.4; }
+  .bm-card-memo-edit {
+    border: none;
+    background: transparent;
+    color: #ca8a04;
+    cursor: pointer;
+    font-size: 11.5px;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  .bm-card-memo-edit:hover { background: #fef08a; }
+
+  .bm-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(148,163,184,0.15);
+  }
+  .bm-priority-selector {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: var(--bg-secondary);
+    padding: 2px;
+    border-radius: 6px;
+  }
+  .bm-p-chip {
+    border: none;
+    background: transparent;
+    padding: 2px 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.15s;
+  }
+  .bm-p-chip:hover { color: var(--text-primary); }
+  .bm-p-chip.active.p1 { background: #fef9c3; color: #854d0e; }
+  .bm-p-chip.active.p2 { background: #ffedd5; color: #9a3412; }
+  .bm-p-chip.active.p3 { background: #fee2e2; color: #991b1b; }
+
+  .bm-card-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bm-jump-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    background: rgba(59,130,246,0.08);
+    border: 1px solid rgba(59,130,246,0.25);
+    padding: 3px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .bm-jump-btn:hover {
+    background: var(--accent-blue);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.25);
+  }
+  .bm-del-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .bm-del-btn:hover { color: #ef4444; background: #fee2e2; }
+
+  /* 空状态引导 */
+  .bm-empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .bm-empty-icon { font-size: 44px; }
+  .bm-empty-title { font-size: 17px; font-weight: 800; color: var(--text-primary); }
+  .bm-empty-desc { font-size: 13px; max-width: 480px; line-height: 1.6; }
+  .bm-empty-action {
+    margin-top: 10px;
+    background: var(--accent-blue);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .bm-empty-action:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
 </style>
 </head>
 <body>
@@ -652,6 +1059,10 @@
     <button class="cat-tab" data-cat="special" id="tabSpecial">
       <span>📗 专项特训</span>
       <span class="badge-count" id="countSpecial">2</span>
+    </button>
+    <button class="cat-tab" data-cat="bookmarks" id="tabBookmarks" title="我的标记与精选特训词库 (按 3 层优先级自动归并)">
+      <span>⭐ 重点标记</span>
+      <span class="badge-count" id="countBookmarks">0</span>
     </button>
   </div>
 
@@ -721,22 +1132,104 @@
             <div class="n" id="wcSpecial">2</div>
             <div class="l">📗 专项特训</div>
           </div>
+          <div class="wc" onclick="openAndSwitch('bookmarks')">
+            <div class="n" id="wcBookmarks">0</div>
+            <div class="l">⭐ 重点归并库</div>
+          </div>
         </div>
       </div>
       <iframe class="content-frame" id="contentFrame" style="display:none;"></iframe>
+      <!-- ⭐ 我的标记·特训精选库专属视图 -->
+      <div class="bookmarks-screen" id="bookmarksScreen" style="display:none;"></div>
     </div>
   </main>
+  <!-- 全局悬浮气泡 Toast -->
+  <div class="portal-toast" id="portalToast"></div>
 </div>
 
 <script>
 (function() {
   'use strict';
 
-  let currentCategory = 'vocab'; // 'vocab' | 'phrase' | 'special'
+  let currentCategory = 'vocab'; // 'vocab' | 'phrase' | 'special' | 'bookmarks'
   let currentViewMode = 'grid'; // 'grid' | 'list'
   let currentId = null;
   let manifestData = null;
   let sidebarIsOpen = false;
+  let pendingJumpAnchor = null;
+
+  // 重点标记与优先级筛选状态
+  let currentBmFilterPriority = 'all'; // 'all' | '3' | '2' | '1'
+  let currentBmFilterType = 'all';     // 'all' | 'vocab' | 'phrase'
+  let currentBmSearchQuery = '';
+
+  const STORAGE_KEY = 'kaoyan_english_user_marks';
+
+  // ────────────────────────────────────────────
+  // 本地存储管理 (User Marks & Priority Storage)
+  // ────────────────────────────────────────────
+  function getUserMarks() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch(e) {
+      return {};
+    }
+  }
+
+  function saveUserMarks(marks) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(marks));
+    } catch(e) {}
+    updateBookmarksBadge();
+  }
+
+  function getUserMark(id) {
+    const marks = getUserMarks();
+    return marks[id] || null;
+  }
+
+  function saveUserMark(item) {
+    const marks = getUserMarks();
+    marks[item.id] = {
+      ...item,
+      updatedAt: Date.now()
+    };
+    saveUserMarks(marks);
+  }
+
+  function removeUserMark(id) {
+    const marks = getUserMarks();
+    if (marks[id]) {
+      delete marks[id];
+      saveUserMarks(marks);
+    }
+  }
+
+  // 浮动 Toast 气泡提醒
+  let toastTimer = null;
+  function showToast(msg) {
+    const toast = document.getElementById('portalToast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2200);
+  }
+
+  // 更新顶部 Tab 徽章与欢迎页统计数据
+  function updateBookmarksBadge() {
+    const marks = getUserMarks();
+    const count = Object.keys(marks).length;
+    
+    const countEl = document.getElementById('countBookmarks');
+    if (countEl) countEl.textContent = count;
+    
+    const wcEl = document.getElementById('wcBookmarks');
+    if (wcEl) wcEl.textContent = count;
+  }
 
   const defaultManifest = {
     vocabLists: Array.from({ length: 22 }, (_, i) => {
@@ -745,7 +1238,8 @@
     }),
     phraseLists: [
       { id: 'phrase-01', num: '01', label: '词组 List 01', sublabel: '常考词组 · 深度精排', file: 'content/phrase-list-01.html', type: 'phrase', ready: true },
-      { id: 'phrase-02', num: '02', label: '词组 List 02', sublabel: '常考词组 · 深度精排', file: 'content/phrase-list-02.html', type: 'phrase', ready: true }
+      { id: 'phrase-02', num: '02', label: '词组 List 02', sublabel: '常考词组 · 深度精排', file: 'content/phrase-list-02.html', type: 'phrase', ready: true },
+      { id: 'phrase-03', num: '03', label: '词组 List 03', sublabel: '常考词组 · 深度精排', file: 'content/phrase-list-03.html', type: 'phrase', ready: true }
     ],
     specials: [
       { id: 'topics', num: '话题', label: '全景话题特训', sublabel: '主题词群 · 场景关联', file: 'content/topics.html', type: 'special', ready: true },
@@ -814,12 +1308,20 @@
     ];
   }
 
-  // 渲染侧边栏内容
+  // ────────────────────────────────────────────
+  // 侧边栏渲染 (Render Sidebar Navigation)
+  // ────────────────────────────────────────────
   function renderSidebar() {
     const container = document.getElementById('sidebarContent');
     container.innerHTML = '';
-    const items = getItemsByCategory(currentCategory);
 
+    if (currentCategory === 'bookmarks') {
+      document.getElementById('sidebarSectionTitle').textContent = '⭐ 重点标记归并矩阵';
+      renderBookmarksSidebar(container);
+      return;
+    }
+
+    const items = getItemsByCategory(currentCategory);
     const titleMap = {
       vocab: '📕 核心词汇打卡矩阵',
       phrase: '📘 四六级词组打卡矩阵',
@@ -840,7 +1342,6 @@
         card.addEventListener('click', () => {
           if (!item.ready) return;
           loadContent(item);
-          // 选中后自动收起侧边栏，带来满屏阅读体验！
           toggleSidebar(false);
         });
         grid.appendChild(card);
@@ -870,12 +1371,90 @@
     }
   }
 
-  // 切换分类 Tab
+  // 侧边栏专属：重点标记快捷清单
+  function renderBookmarksSidebar(container) {
+    const marksObj = getUserMarks();
+    const marks = Object.values(marksObj);
+
+    if (!marks.length) {
+      container.innerHTML = `
+        <div style="padding:30px 14px; text-align:center; color:var(--text-secondary); font-size:12px; line-height:1.6;">
+          <div style="font-size:24px; margin-bottom:8px;">⭐</div>
+          <strong>暂无重点标记</strong><br>
+          在任意讲义中点击词卡右上角的「☆ 标记」，即可按优先级归并至此！
+        </div>
+      `;
+      return;
+    }
+
+    // 严格按优先级从高到低排序 (3 -> 2 -> 1)
+    marks.sort((a, b) => (b.priority || 1) - (a.priority || 1) || (b.updatedAt || 0) - (a.updatedAt || 0));
+
+    const list = document.createElement('div');
+    list.className = 'nav-list';
+    
+    marks.forEach(item => {
+      const el = document.createElement('a');
+      el.className = 'nav-item';
+      el.href = 'javascript:void(0)';
+      
+      const pColors = {
+        3: { bg: '#fee2e2', text: '#991b1b', label: 'P3 必背' },
+        2: { bg: '#ffedd5', text: '#9a3412', label: 'P2 强化' },
+        1: { bg: '#fef9c3', text: '#854d0e', label: 'P1 兴趣' }
+      };
+      const pInfo = pColors[item.priority || 1] || pColors[1];
+
+      el.innerHTML = `
+        <span class="nav-badge" style="background:${pInfo.bg}; color:${pInfo.text}; font-weight:800; font-size:10px;">${pInfo.label}</span>
+        <span class="nav-label">
+          <strong>${item.name}</strong> <small style="color:var(--text-secondary); font-style:italic;">${item.pos || ''}</small>
+          <small style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block;">${item.meaning || ''}</small>
+        </span>
+      `;
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        jumpToOriginal(item.unitId, item.id);
+        toggleSidebar(false);
+      });
+      list.appendChild(el);
+    });
+
+    container.appendChild(list);
+  }
+
+  // ────────────────────────────────────────────
+  // 切换分类 Tab (Switch Category)
+  // ────────────────────────────────────────────
   window.switchCategory = function(cat) {
     currentCategory = cat;
     document.querySelectorAll('.cat-tab').forEach(b => {
       b.classList.toggle('active', b.dataset.cat === cat);
     });
+
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const contentToolbar = document.getElementById('contentToolbar');
+    const contentFrame = document.getElementById('contentFrame');
+    const bookmarksScreen = document.getElementById('bookmarksScreen');
+
+    if (cat === 'bookmarks') {
+      welcomeScreen.style.display = 'none';
+      contentToolbar.style.display = 'none';
+      contentFrame.style.display = 'none';
+      bookmarksScreen.style.display = 'flex';
+      renderBookmarksScreen();
+    } else {
+      bookmarksScreen.style.display = 'none';
+      if (currentId) {
+        contentToolbar.style.display = 'flex';
+        contentFrame.style.display = 'block';
+      } else {
+        welcomeScreen.style.display = 'flex';
+        contentToolbar.style.display = 'none';
+        contentFrame.style.display = 'none';
+      }
+    }
+
     renderSidebar();
   };
 
@@ -892,7 +1471,7 @@
     currentId = item.id;
     location.hash = item.id;
 
-    if (item.type !== currentCategory) {
+    if (item.type !== currentCategory && currentCategory !== 'bookmarks') {
       currentCategory = item.type;
       document.querySelectorAll('.cat-tab').forEach(b => {
         b.classList.toggle('active', b.dataset.cat === item.type);
@@ -902,6 +1481,7 @@
     renderSidebar();
 
     document.getElementById('welcomeScreen').style.display = 'none';
+    document.getElementById('bookmarksScreen').style.display = 'none';
     document.getElementById('contentToolbar').style.display = 'flex';
     document.getElementById('toolbarTitle').textContent = `📖 ${item.label} · 全景深度特训讲义`;
 
@@ -921,13 +1501,677 @@
     loadContent(list[nextIdx]);
   }
 
-  // iframe 内部穿梭链接劫持（实现全站无缝互通！）
+  // ────────────────────────────────────────────
+  // ⭐ 重点标记特训库主界面渲染 (Render Bookmarks Master Screen)
+  // ────────────────────────────────────────────
+  function renderBookmarksScreen() {
+    const container = document.getElementById('bookmarksScreen');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const marksObj = getUserMarks();
+    const allMarks = Object.values(marksObj);
+
+    // 统计数据
+    const totalCount = allMarks.length;
+    const p3Count = allMarks.filter(x => x.priority === 3).length;
+    const p2Count = allMarks.filter(x => x.priority === 2).length;
+    const p1Count = allMarks.filter(x => x.priority === 1 || !x.priority).length;
+
+    // 1. Header & Stats Bar
+    const header = document.createElement('div');
+    header.className = 'bm-header';
+    header.innerHTML = `
+      <div class="bm-title-row">
+        <div>
+          <div class="bm-title">
+            <span>⭐ 我的标记 · 特训精选词库</span>
+          </div>
+          <div class="bm-subtitle">
+            全自动归并在所有讲义中做过标记的词组与词汇 · 严格按 3 层优先级智能排序 · 随手记心得实时同步
+          </div>
+        </div>
+        <div class="bm-stats-bar">
+          <span class="bm-stat-chip total">总归并: <strong>${totalCount}</strong></span>
+          <span class="bm-stat-chip p3">💖 P3 核心必背: <strong>${p3Count}</strong></span>
+          <span class="bm-stat-chip p2">🧡 P2 强化攻克: <strong>${p2Count}</strong></span>
+          <span class="bm-stat-chip p1">💛 P1 兴趣积累: <strong>${p1Count}</strong></span>
+        </div>
+      </div>
+
+      <div class="bm-controls-row">
+        <div class="bm-filters">
+          <button class="bm-filter-btn ${currentBmFilterPriority === 'all' ? 'active' : ''}" data-p="all">全部优先级</button>
+          <button class="bm-filter-btn ${currentBmFilterPriority === '3' ? 'active' : ''}" data-p="3">💖 P3 必背 (${p3Count})</button>
+          <button class="bm-filter-btn ${currentBmFilterPriority === '2' ? 'active' : ''}" data-p="2">🧡 P2 强化 (${p2Count})</button>
+          <button class="bm-filter-btn ${currentBmFilterPriority === '1' ? 'active' : ''}" data-p="1">💛 P1 兴趣 (${p1Count})</button>
+          <span style="color:rgba(148,163,184,0.4); margin:0 4px;">|</span>
+          <button class="bm-filter-btn ${currentBmFilterType === 'all' ? 'active' : ''}" data-t="all">全部类型</button>
+          <button class="bm-filter-btn ${currentBmFilterType === 'vocab' ? 'active' : ''}" data-t="vocab">📕 仅单词</button>
+          <button class="bm-filter-btn ${currentBmFilterType === 'phrase' ? 'active' : ''}" data-t="phrase">📘 仅词组</button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div class="bm-search-box">
+            <span class="bm-search-icon">🔍</span>
+            <input type="text" class="bm-search-input" id="bmSearchInput" placeholder="搜单词、释义或个人笔记…" value="${currentBmSearchQuery}">
+          </div>
+          <div class="bm-actions">
+            <button class="bm-action-btn" id="btnExportMarks" title="导出 JSON 备份">📤 备份</button>
+            <button class="bm-action-btn" id="btnImportMarks" title="从 JSON 导入">📥 恢复</button>
+            <button class="bm-action-btn" id="btnClearMarks" style="color:#ef4444;" title="清空全部标记">🗑️ 清空</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // 绑定筛选事件
+    header.querySelectorAll('.bm-filter-btn[data-p]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentBmFilterPriority = btn.dataset.p;
+        renderBookmarksScreen();
+      });
+    });
+    header.querySelectorAll('.bm-filter-btn[data-t]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentBmFilterType = btn.dataset.t;
+        renderBookmarksScreen();
+      });
+    });
+
+    const searchInput = header.querySelector('#bmSearchInput');
+    searchInput.addEventListener('input', (e) => {
+      currentBmSearchQuery = e.target.value.trim().toLowerCase();
+      renderBookmarksBody(container);
+    });
+
+    header.querySelector('#btnExportMarks').addEventListener('click', exportMarksJSON);
+    header.querySelector('#btnImportMarks').addEventListener('click', importMarksJSON);
+    header.querySelector('#btnClearMarks').addEventListener('click', clearAllMarks);
+
+    container.appendChild(header);
+
+    // 2. Body List Container
+    const bodyContainer = document.createElement('div');
+    bodyContainer.id = 'bmBodyContainer';
+    container.appendChild(bodyContainer);
+
+    renderBookmarksBody(container);
+  }
+
+  // 渲染归并库正文内容
+  function renderBookmarksBody(container) {
+    const bodyContainer = container.querySelector('#bmBodyContainer') || container;
+    bodyContainer.innerHTML = '';
+
+    const marksObj = getUserMarks();
+    let marks = Object.values(marksObj);
+
+    // 过滤逻辑
+    if (currentBmFilterPriority !== 'all') {
+      marks = marks.filter(m => String(m.priority || 1) === currentBmFilterPriority);
+    }
+    if (currentBmFilterType !== 'all') {
+      marks = marks.filter(m => (m.type || 'vocab') === currentBmFilterType);
+    }
+    if (currentBmSearchQuery) {
+      marks = marks.filter(m => {
+        const q = currentBmSearchQuery;
+        return (
+          (m.name && m.name.toLowerCase().includes(q)) ||
+          (m.meaning && m.meaning.toLowerCase().includes(q)) ||
+          (m.note && m.note.toLowerCase().includes(q)) ||
+          (m.unitLabel && m.unitLabel.toLowerCase().includes(q))
+        );
+      });
+    }
+
+    if (!marks.length) {
+      bodyContainer.innerHTML = `
+        <div class="bm-empty-state">
+          <div class="bm-empty-icon">⭐</div>
+          <div class="bm-empty-title">当前筛选条件下暂无标记条目</div>
+          <div class="bm-empty-desc">
+            在阅读任意讲义时，轻点词卡右上角的「☆ 标记」按钮，即可将您感兴趣或需要死磕的词汇与词组按 3 层优先级自动归并到这里！
+          </div>
+          <button class="bm-empty-action" onclick="switchCategory('vocab')">📖 前往精选讲义开始阅读</button>
+        </div>
+      `;
+      return;
+    }
+
+    // 严格按优先级分组 (P3 -> P2 -> P1)
+    const p3List = marks.filter(m => m.priority === 3);
+    const p2List = marks.filter(m => m.priority === 2);
+    const p1List = marks.filter(m => m.priority === 1 || !m.priority);
+
+    // 排序：组内按更新时间倒序
+    p3List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+    p2List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+    p1List.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+
+    const sections = [
+      { priority: 3, title: '🔥 优先级 3 · 核心死磕 / 顶级必背', badge: 'P3 必背', desc: '绝对不可丢分的顶层命题眼', list: p3List, cls: 'p3' },
+      { priority: 2, title: '⚡ 优先级 2 · 强化攻克 / 易错高频', badge: 'P2 强化', desc: '考研二轮循环重点强化的难点考点', list: p2List, cls: 'p2' },
+      { priority: 1, title: '✨ 优先级 1 · 兴趣积累 / 深度关注', badge: 'P1 兴趣', desc: '具有深层逻辑拓展价值与兴趣储备的词群', list: p1List, cls: 'p1' }
+    ];
+
+    sections.forEach(sec => {
+      if (!sec.list.length) return;
+
+      const secEl = document.createElement('div');
+      secEl.className = 'bm-priority-section';
+      secEl.innerHTML = `
+        <div class="bm-priority-header ${sec.cls}">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span>${sec.title}</span>
+            <span style="font-size:11px; font-weight:600; opacity:0.85;">(${sec.list.length} 词)</span>
+          </div>
+          <span style="font-size:11.5px; font-weight:500; opacity:0.8;">${sec.desc}</span>
+        </div>
+      `;
+
+      const grid = document.createElement('div');
+      grid.className = 'bm-items-grid';
+
+      sec.list.forEach(item => {
+        const card = document.createElement('div');
+        card.className = `bm-card ${sec.cls}`;
+
+        const isPhrase = item.type === 'phrase';
+        const sourceName = item.unitLabel || (isPhrase ? '词组讲义' : '核心词汇');
+        const posText = item.pos ? `${item.pos}` : '';
+
+        card.innerHTML = `
+          <div class="bm-card-top">
+            <div class="bm-card-title-group">
+              <span class="bm-card-word">${item.name}</span>
+              <span class="bm-card-pos">${posText}</span>
+              <span class="bm-card-source ${item.type || 'vocab'}">${isPhrase ? '📘 词组' : '📕 单词'} · ${sourceName} ${item.no ? 'NO.' + item.no : ''}</span>
+            </div>
+            <button class="bm-del-btn" title="取消标记">✕</button>
+          </div>
+
+          <div class="bm-card-meaning">${item.meaning || '暂无释义'}</div>
+
+          ${item.note ? `
+            <div class="bm-card-memo">
+              <span>📝</span>
+              <div class="bm-card-memo-text">${item.note}</div>
+              <button class="bm-card-memo-edit" title="编辑笔记">✏️ 修改</button>
+            </div>
+          ` : `
+            <div style="display:flex; justify-content:flex-end;">
+              <button class="bm-card-memo-edit" style="color:var(--text-secondary); font-size:11px;" title="添加备忘随手记">📝 随手记心得</button>
+            </div>
+          `}
+
+          <div class="bm-card-actions">
+            <div class="bm-priority-selector">
+              <span style="font-size:10px; font-weight:700; color:var(--text-secondary); margin-right:4px;">优先级:</span>
+              <button class="bm-p-chip ${item.priority === 1 ? 'active p1' : ''}" data-p="1">💛 P1</button>
+              <button class="bm-p-chip ${item.priority === 2 ? 'active p2' : ''}" data-p="2">🧡 P2</button>
+              <button class="bm-p-chip ${item.priority === 3 ? 'active p3' : ''}" data-p="3">💖 P3</button>
+            </div>
+
+            <div class="bm-card-links">
+              <button class="bm-jump-btn" title="在原文中高亮定位">
+                <span>🚀 原文精准跳转 ↗</span>
+              </button>
+            </div>
+          </div>
+        `;
+
+        // 绑定删除按钮
+        card.querySelector('.bm-del-btn').addEventListener('click', () => {
+          removeUserMark(item.id);
+          showToast(`⚪ 已取消「${item.name}」的标记`);
+          renderBookmarksBody(container);
+        });
+
+        // 绑定优先级切换
+        card.querySelectorAll('.bm-p-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            const newP = parseInt(chip.dataset.p, 10);
+            if (newP === item.priority) return;
+            saveUserMark({
+              ...item,
+              priority: newP
+            });
+            const pLabels = { 1: '💛 P1 兴趣', 2: '🧡 P2 强化', 3: '💖 P3 必背' };
+            showToast(`⭐ 已将「${item.name}」优先级调整为 ${pLabels[newP]}`);
+            renderBookmarksScreen();
+          });
+        });
+
+        // 绑定随手记修改
+        const memoBtn = card.querySelector('.bm-card-memo-edit');
+        if (memoBtn) {
+          memoBtn.addEventListener('click', () => {
+            const currentNote = item.note || '';
+            const newNote = window.prompt(`为「${item.name}」添加/编辑备忘随手记：`, currentNote);
+            if (newNote === null) return;
+            saveUserMark({
+              ...item,
+              note: newNote.trim()
+            });
+            showToast(`📝 已更新「${item.name}」的个人备忘！`);
+            renderBookmarksBody(container);
+          });
+        }
+
+        // 绑定原文跳转按钮
+        card.querySelector('.bm-jump-btn').addEventListener('click', () => {
+          jumpToOriginal(item.unitId, item.id);
+        });
+
+        grid.appendChild(card);
+      });
+
+      secEl.appendChild(grid);
+      bodyContainer.appendChild(secEl);
+    });
+  }
+
+  // ────────────────────────────────────────────
+  // 原文精准跳转穿梭引擎 (Deep Jump to Original Lecture Card)
+  // ────────────────────────────────────────────
+  function jumpToOriginal(unitId, anchorId) {
+    if (!unitId) return;
+    const all = getAllItems();
+    const targetUnit = all.find(l => l.id === unitId);
+    if (!targetUnit) {
+      showToast('⚠️ 未找到目标讲义单元');
+      return;
+    }
+
+    pendingJumpAnchor = anchorId;
+    loadContent(targetUnit);
+    showToast(`🚀 正在飞跃至 ${targetUnit.label}…`);
+  }
+
+  // ────────────────────────────────────────────
+  // 导出与导入备份功能 (Export / Import Backup)
+  // ────────────────────────────────────────────
+  function exportMarksJSON() {
+    const marks = getUserMarks();
+    const count = Object.keys(marks).length;
+    if (!count) {
+      showToast('⚠️ 当前词库为空，暂无标记数据可导出');
+      return;
+    }
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(marks, null, 2));
+    const a = document.createElement('a');
+    a.setAttribute("href", dataStr);
+    a.setAttribute("download", `考研英语特训重点词库_${new Date().toISOString().split('T')[0]}.json`);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    showToast(`📥 成功导出 ${count} 条重点词库备份！`);
+  }
+
+  function importMarksJSON() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const imported = JSON.parse(ev.target.result);
+          if (typeof imported === 'object' && imported !== null) {
+            const current = getUserMarks();
+            const merged = { ...current, ...imported };
+            saveUserMarks(merged);
+            showToast(`🎉 成功导入并归并词库，当前共 ${Object.keys(merged).length} 条！`);
+            renderBookmarksScreen();
+          } else {
+            showToast('❌ JSON 格式不正确');
+          }
+        } catch(err) {
+          showToast('❌ 文件解析失败，请检查是否为合法 JSON');
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  }
+
+  function clearAllMarks() {
+    const marks = getUserMarks();
+    const count = Object.keys(marks).length;
+    if (!count) return;
+    if (window.confirm(`确定要清空全部 ${count} 条重点标记吗？此操作不可逆！`)) {
+      saveUserMarks({});
+      showToast('🗑️ 已清空所有标记词库');
+      renderBookmarksScreen();
+    }
+  }
+
+  // ────────────────────────────────────────────
+  // Iframe 注入式互动标记引擎 (Iframe Annotation Injector)
+  // ────────────────────────────────────────────
+  function setupIframeAnnotations(doc, unitId, unitLabel) {
+    if (!doc) return;
+
+    // 1. 注入内联样式
+    if (!doc.getElementById('portal-annotation-style')) {
+      const styleEl = doc.createElement('style');
+      styleEl.id = 'portal-annotation-style';
+      styleEl.textContent = `
+        .mark-ctrl-wrap {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          margin-left: 8px;
+          user-select: none;
+        }
+        .mark-cycle-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+          padding: 2.5px 7px;
+          border-radius: 5px;
+          font-size: 11px;
+          font-weight: 700;
+          cursor: pointer;
+          border: 1px solid #cbd5e1;
+          background: #ffffff;
+          color: #64748b;
+          transition: all 0.15s ease;
+        }
+        .mark-cycle-btn:hover {
+          background: #f1f5f9;
+          border-color: #94a3b8;
+          color: #0f172a;
+          transform: translateY(-1px);
+        }
+        .mark-cycle-btn.p1 {
+          background: #fef9c3 !important;
+          color: #854d0e !important;
+          border-color: #facc15 !important;
+          box-shadow: 0 1px 4px rgba(234, 179, 8, 0.25);
+        }
+        .mark-cycle-btn.p2 {
+          background: #ffedd5 !important;
+          color: #9a3412 !important;
+          border-color: #fb923c !important;
+          box-shadow: 0 1px 4px rgba(249, 115, 22, 0.25);
+        }
+        .mark-cycle-btn.p3 {
+          background: #fee2e2 !important;
+          color: #991b1b !important;
+          border-color: #f87171 !important;
+          box-shadow: 0 1px 6px rgba(239, 68, 68, 0.25);
+          font-weight: 800;
+        }
+        .mark-note-btn {
+          background: #f8fafc;
+          border: 1px solid #cbd5e1;
+          color: #64748b;
+          font-size: 11px;
+          cursor: pointer;
+          padding: 2.5px 6px;
+          border-radius: 5px;
+          transition: all 0.15s;
+        }
+        .mark-note-btn:hover {
+          background: #fef08a;
+          color: #854d0e;
+          border-color: #facc15;
+        }
+
+        /* 卡片边框反馈 */
+        .word-card.marked-p1, .phrase-card.marked-p1 {
+          border-left: 5px solid #eab308 !important;
+          background: linear-gradient(to right, rgba(254, 249, 195, 0.35), #ffffff 16%) !important;
+        }
+        .word-card.marked-p2, .phrase-card.marked-p2 {
+          border-left: 5px solid #f97316 !important;
+          background: linear-gradient(to right, rgba(255, 237, 213, 0.45), #ffffff 18%) !important;
+        }
+        .word-card.marked-p3, .phrase-card.marked-p3 {
+          border-left: 5px solid #ef4444 !important;
+          background: linear-gradient(to right, rgba(254, 226, 226, 0.5), #ffffff 20%) !important;
+          box-shadow: 0 3px 12px rgba(239, 68, 68, 0.12) !important;
+        }
+
+        .memo-strip {
+          margin-top: 6px;
+          padding: 5px 9px;
+          background: #fefce8;
+          border: 1px dashed #fde047;
+          border-radius: 5px;
+          font-size: 11px;
+          color: #854d0e;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 6px;
+        }
+        .memo-strip-text { flex: 1; line-height: 1.4; }
+        .memo-strip-edit {
+          color: #ca8a04;
+          cursor: pointer;
+          font-weight: 700;
+          border: none;
+          background: transparent;
+          font-size: 10.5px;
+        }
+
+        /* 脉冲聚焦 */
+        @keyframes focusPulseRing {
+          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.85); }
+          50% { transform: scale(1.02); box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+        .card-focus-highlight {
+          animation: focusPulseRing 1.3s ease 2;
+          outline: 3px solid #2563eb !important;
+        }
+      `;
+      doc.head.appendChild(styleEl);
+    }
+
+    // 2. 遍历单词卡片和词组卡片
+    const cards = doc.querySelectorAll('.word-card, .phrase-card');
+    const marks = getUserMarks();
+
+    cards.forEach(card => {
+      const cardId = card.id;
+      if (!cardId) return;
+
+      const isPhrase = card.classList.contains('phrase-card');
+      const name = isPhrase
+        ? (card.querySelector('.card-phrase-link')?.textContent.trim() || '')
+        : (card.querySelector('.word-name')?.textContent.trim() || '');
+      const pos = isPhrase
+        ? (card.querySelector('.card-pos-capsule')?.textContent.trim() || '')
+        : (card.querySelector('.word-pos')?.textContent.trim() || '');
+      const meaning = isPhrase
+        ? (card.querySelector('.field-row:nth-of-type(1)')?.textContent.replace(/^.*?：/, '').trim() || '')
+        : (card.querySelector('.field-val strong')?.textContent.trim() || card.querySelector('.field-val')?.textContent.trim() || '');
+      const no = card.querySelector('.word-no')?.textContent.trim() || '';
+
+      // 组装标记工具组
+      let wrap = card.querySelector('.mark-ctrl-wrap');
+      if (!wrap) {
+        wrap = doc.createElement('span');
+        wrap.className = 'mark-ctrl-wrap';
+        wrap.onclick = (e) => { e.preventDefault(); e.stopPropagation(); };
+
+        const cycleBtn = doc.createElement('button');
+        cycleBtn.className = 'mark-cycle-btn';
+        cycleBtn.title = '点击切换优先级：无 ➔ P1 兴趣 ➔ P2 强化 ➔ P3 必背 ➔ 移除';
+        cycleBtn.innerHTML = '<span class="icon">☆</span> <span class="txt">标记</span>';
+
+        const noteBtn = doc.createElement('button');
+        noteBtn.className = 'mark-note-btn';
+        noteBtn.innerHTML = '✏️';
+        noteBtn.title = '添加/编辑备忘随手记';
+
+        wrap.appendChild(cycleBtn);
+        wrap.appendChild(noteBtn);
+
+        const targetContainer = isPhrase
+          ? card.querySelector('.card-header-flex')
+          : card.querySelector('.card-top-right');
+        if (targetContainer) {
+          targetContainer.insertBefore(wrap, targetContainer.firstChild);
+        }
+
+        // 绑定标记轮转事件
+        cycleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const cur = getUserMark(cardId);
+          let nextP = 1;
+          if (cur) {
+            if (cur.priority === 1) nextP = 2;
+            else if (cur.priority === 2) nextP = 3;
+            else if (cur.priority === 3) nextP = 0; // 取消
+          }
+
+          if (nextP === 0) {
+            removeUserMark(cardId);
+            showToast(`⚪ 已取消「${name}」的标记`);
+          } else {
+            saveUserMark({
+              id: cardId,
+              name,
+              pos,
+              meaning,
+              type: isPhrase ? 'phrase' : 'vocab',
+              unitId,
+              unitLabel: unitLabel || unitId,
+              no,
+              priority: nextP,
+              note: cur ? (cur.note || '') : ''
+            });
+            const pLabels = { 1: '💛 P1 兴趣重点', 2: '🧡 P2 强化高频', 3: '💖 P3 核心必背' };
+            showToast(`⭐ 已将「${name}」设置为 ${pLabels[nextP]}（已归并入库）`);
+          }
+
+          updateCardMarkView(card, getUserMark(cardId));
+        });
+
+        // 绑定随手记事件
+        noteBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const cur = getUserMark(cardId);
+          const currentNote = cur ? (cur.note || '') : '';
+          const inputNote = window.prompt(`为「${name}」添加/编辑备忘随手记：`, currentNote);
+          if (inputNote === null) return;
+
+          saveUserMark({
+            id: cardId,
+            name,
+            pos,
+            meaning,
+            type: isPhrase ? 'phrase' : 'vocab',
+            unitId,
+            unitLabel: unitLabel || unitId,
+            no,
+            priority: cur ? (cur.priority || 1) : 1,
+            note: inputNote.trim()
+          });
+          showToast(`📝 已更新「${name}」的个人备忘！`);
+          updateCardMarkView(card, getUserMark(cardId));
+        });
+      }
+
+      updateCardMarkView(card, marks[cardId]);
+    });
+
+    // 3. 处理跳转精准聚焦
+    if (pendingJumpAnchor) {
+      const targetCard = doc.getElementById(pendingJumpAnchor);
+      if (targetCard) {
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.add('card-focus-highlight');
+        }, 150);
+      }
+      pendingJumpAnchor = null;
+    }
+  }
+
+  // 实时刷新卡片标记视觉效果
+  function updateCardMarkView(card, mark) {
+    const cycleBtn = card.querySelector('.mark-cycle-btn');
+    if (!cycleBtn) return;
+
+    card.classList.remove('marked-p1', 'marked-p2', 'marked-p3');
+    cycleBtn.classList.remove('p1', 'p2', 'p3');
+
+    // 移除已有的备忘小条
+    let oldStrip = card.querySelector('.memo-strip');
+    if (oldStrip) oldStrip.remove();
+
+    if (!mark) {
+      cycleBtn.innerHTML = '<span class="icon">☆</span> <span class="txt">标记</span>';
+      return;
+    }
+
+    const p = mark.priority || 1;
+    card.classList.add(`marked-p${p}`);
+    cycleBtn.classList.add(`p${p}`);
+
+    const badgeMap = {
+      1: '<span class="icon">💛</span> <span class="txt">P1 兴趣</span>',
+      2: '<span class="icon">🧡</span> <span class="txt">P2 强化</span>',
+      3: '<span class="icon">💖</span> <span class="txt">P3 必背</span>'
+    };
+    cycleBtn.innerHTML = badgeMap[p] || badgeMap[1];
+
+    // 如果有笔记，渲染备忘小条
+    if (mark.note) {
+      const strip = document.createElement('div');
+      strip.className = 'memo-strip';
+      strip.innerHTML = `
+        <span>📝</span>
+        <span class="memo-strip-text"><strong>我的备忘:</strong> ${mark.note}</span>
+        <button class="memo-strip-edit" title="修改随手记">✏️ 修改</button>
+      `;
+      strip.querySelector('.memo-strip-edit').addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const inputNote = window.prompt(`修改「${mark.name}」的备忘随手记：`, mark.note || '');
+        if (inputNote === null) return;
+        saveUserMark({
+          ...mark,
+          note: inputNote.trim()
+        });
+        showToast(`📝 已更新「${mark.name}」的个人备忘！`);
+        updateCardMarkView(card, getUserMark(mark.id));
+      });
+      card.appendChild(strip);
+    }
+  }
+
+  // ────────────────────────────────────────────
+  // iframe 穿梭劫持与标记引擎初始化挂载
+  // ────────────────────────────────────────────
   const frame = document.getElementById('contentFrame');
   frame.addEventListener('load', function() {
     try {
       const doc = frame.contentDocument || frame.contentWindow.document;
       if (!doc) return;
-      // 监听 iframe 内部所有指向全景话题特训的穿梭链接
+
+      // 获取当前单元的描述信息
+      const all = getAllItems();
+      const currentUnit = all.find(l => l.id === currentId);
+      const unitLabel = currentUnit ? currentUnit.label : (currentId || '');
+
+      // 挂载互动标记引擎
+      setupIframeAnnotations(doc, currentId, unitLabel);
+
+      // 监听穿梭链接
       const links = doc.querySelectorAll('a[href*="话题特训"]');
       links.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -937,7 +2181,7 @@
         });
       });
     } catch(e) {
-      // 跨源保护忽略
+      console.warn('Iframe load listener error:', e);
     }
   });
 
@@ -957,8 +2201,14 @@
     const wcP = document.getElementById('wcPhrase'); if(wcP) wcP.textContent = pCount;
     const wcS = document.getElementById('wcSpecial'); if(wcS) wcS.textContent = sCount;
 
+    updateBookmarksBadge();
+
     if (location.hash) {
       const targetId = location.hash.slice(1);
+      if (targetId === 'bookmarks') {
+        switchCategory('bookmarks');
+        return;
+      }
       const all = getAllItems();
       const target = all.find(l => l.id === targetId && l.ready);
       if (target) {
@@ -979,7 +2229,9 @@
   document.querySelectorAll('.cat-tab').forEach(b => {
     b.addEventListener('click', () => {
       switchCategory(b.dataset.cat);
-      toggleSidebar(true);
+      if (b.dataset.cat !== 'bookmarks') {
+        toggleSidebar(true);
+      }
     });
   });
 
@@ -997,6 +2249,7 @@
     location.hash = '';
     currentId = null;
     document.getElementById('welcomeScreen').style.display = 'flex';
+    document.getElementById('bookmarksScreen').style.display = 'none';
     document.getElementById('contentToolbar').style.display = 'none';
     document.getElementById('contentFrame').style.display = 'none';
     toggleSidebar(false);
@@ -1015,6 +2268,7 @@
 
   // 键盘快捷键支持：按 M 唤出目录，按 ESC 收起目录
   window.addEventListener('keydown', (e) => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
     if (e.key === 'm' || e.key === 'M') {
       toggleSidebar();
     } else if (e.key === 'Escape' && sidebarIsOpen) {
