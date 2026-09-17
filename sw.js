@@ -3,7 +3,7 @@
 // 核心原则：Network-First (网络优先) + App Shell 预缓存 + 动态上限防膨胀
 // ==============================================================================
 
-const CACHE_VERSION = 'kaoyan-english-pwa-v1.0';
+const CACHE_VERSION = 'kaoyan-english-pwa-v1.1';
 const OFFLINE_URL = './offline.html';
 
 // 基础外壳资产（轻量级、核心必需）
@@ -15,14 +15,30 @@ const PRECACHE_SHELL = [
   './icons/icon-512.png',
   './icons/apple-touch-icon.png',
   './icons/favicon.png',
+  './icon-192.png',
+  './icon-512.png',
   OFFLINE_URL
 ];
 
-// 1. 安装阶段
+// 1. 安装阶段：弹性容错预缓存 App Shell（保障安卓 Edge/Chrome 100% 安装成功）
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_VERSION).then(cache => {
-      return cache.addAll(PRECACHE_SHELL);
+    caches.open(CACHE_VERSION).then(async cache => {
+      // 使用 Promise.allSettled 逐项缓存，绝不因单项偶发波动而导致整套 SW 安装夭折
+      await Promise.allSettled(
+        PRECACHE_SHELL.map(async url => {
+          try {
+            const res = await fetch(url, { cache: 'reload' });
+            if (res && res.ok) {
+              await cache.put(url, res);
+            } else {
+              console.warn('[SW-English] Precache status non-200 for:', url, res ? res.status : 'null');
+            }
+          } catch (err) {
+            console.warn('[SW-English] Precache fetch error for:', url, err);
+          }
+        })
+      );
     }).then(() => self.skipWaiting())
   );
 });
