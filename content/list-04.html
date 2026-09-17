@@ -2,6 +2,7 @@
     <html lang="zh-CN">
     <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红宝书 List 04 全景深度特训讲义</title>
     <style>
       @page {
@@ -532,6 +533,51 @@
         text-decoration: none;
         font-weight: 700;
       }
+
+      /* ══════════════════════════════════════════════════════════════
+         手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+         ══════════════════════════════════════════════════════════════ */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 14px !important;
+          padding: 0 4px !important;
+        }
+        .header-banner {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+          padding: 12px 14px !important;
+        }
+        .header-left h1 {
+          font-size: 18px !important;
+        }
+        .header-badge {
+          text-align: left !important;
+          padding: 4px 8px !important;
+        }
+        .batch-nav-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .matrix-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 6px !important;
+        }
+        .matrix-item {
+          font-size: 11.5px !important;
+          padding: 5px 6px !important;
+        }
+        .word-card {
+          margin-bottom: 12px !important;
+          padding: 14px 12px !important;
+        }
+        .word-title {
+          font-size: 17px !important;
+        }
+        .word-row {
+          font-size: 13.5px !important;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -573,7 +619,7 @@
               <span>🚩 Batch 2 (NO.16 - NO.30)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">制度规范与组织建构 · 体系 / 机制 / 框架规约 ｜ 阅读 9 词 ＋ 写译 6 词</div>
+            <div class="batch-nav-desc">制度规范与组织建构 · 体系 / 机制 / 框架规约 ｜ 阅读 7 词 ＋ 写译 8 词</div>
           </a>
       <a href="#batch-3" class="batch-nav-card">
             <div class="batch-nav-title">
@@ -587,7 +633,7 @@
               <span>🚩 Batch 4 (NO.46 - NO.60)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">宏观治理与趋势把控 · 调控 / 监督 / 远见规划 ｜ 阅读 9 词 ＋ 写译 6 词</div>
+            <div class="batch-nav-desc">宏观治理与趋势把控 · 调控 / 监督 / 远见规划 ｜ 阅读 7 词 ＋ 写译 8 词</div>
           </a>
     </div>
       </div>
@@ -701,7 +747,7 @@
                 <span class="num">19</span>
                 <span class="name">defend</span>
               </a>
-          <a href="#w-define" class="matrix-item reading" title="点击跳转至 define">
+          <a href="#w-define" class="matrix-item writing" title="点击跳转至 define">
                 <span class="chk">☐</span>
                 <span class="num">20</span>
                 <span class="name">define</span>
@@ -741,7 +787,7 @@
                 <span class="num">27</span>
                 <span class="name">delicate</span>
               </a>
-          <a href="#w-deliver" class="matrix-item reading" title="点击跳转至 deliver">
+          <a href="#w-deliver" class="matrix-item writing" title="点击跳转至 deliver">
                 <span class="chk">☐</span>
                 <span class="num">28</span>
                 <span class="name">deliver</span>
@@ -841,7 +887,7 @@
       <div class="matrix-col">
             <div class="matrix-col-header">Batch 4 (NO.46 - NO.60)</div>
             <div class="matrix-col-list">
-              <a href="#w-ability" class="matrix-item reading" title="点击跳转至 ability">
+              <a href="#w-ability" class="matrix-item writing" title="点击跳转至 ability">
                 <span class="chk">☐</span>
                 <span class="num">46</span>
                 <span class="name">ability</span>
@@ -866,7 +912,7 @@
                 <span class="num">50</span>
                 <span class="name">balance</span>
               </a>
-          <a href="#w-base" class="matrix-item reading" title="点击跳转至 base">
+          <a href="#w-base" class="matrix-item writing" title="点击跳转至 base">
                 <span class="chk">☐</span>
                 <span class="num">51</span>
                 <span class="name">base</span>
@@ -983,7 +1029,7 @@
             <span class="word-no">02</span>
             <span class="word-name">behavior</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.02</span>
@@ -991,10 +1037,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 behavior，经学术语境历史演进，直击考研核心概念：举止;表现。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">be- (加强) + have (持有/保持)。底层含义为个体所持有的外在表现。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>举止;表现</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题： 在 2012 年员工满意度与 2013 年兼职行为相关语篇中，常指向 consumer behavior （消费者行为）或 employment patterns （雇佣模式）。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>命题人常将其与</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-action" class="backlink-tag">🔙 来源: action (List 12)</a> </div></div>
         </div>
       </div>  <div id="w-behaviour" class="word-card reading-card">
@@ -1083,7 +1129,7 @@
             <span class="word-no">07</span>
             <span class="word-name">beneficial</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.07</span>
@@ -1269,7 +1315,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (9 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (7 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-characteristic" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1290,26 +1336,6 @@
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">该词极高频出现在\细节题的题干（Stem）\中。 - 【名师点睛】 ：命题人极少在正确选项中原词复现 characteristic，而是采用 语义等值替换 。若题干问main characteristic，考生需在原文中定位 feature、trait 或 property。 陷阱 ：干扰项常将文中的局部特征（partial feature）夸大为本质属性（essential nature），导致以偏概全。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-feature" class="backlink-tag">🔙 来源: feature (List 11)</a> </div></div>
-        </div>
-      </div>  <div id="w-define" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">20</span>
-            <span class="word-name">define</span>
-            <span class="word-pos">v.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.20</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自 define (下定义)。后缀 -ition 表名词。科学记忆：给一个模糊的概念画定终点线（fin = limit）的过程。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>下定义;定范围</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在词汇题/语义题中，题目要求推测术语的definition。 - 【名师点睛】 ：考研阅读存在 语义饱和 现象，正确答案通常是其基于特定语境的临时定义，而命题人常给出一个词的通用字典释义作为干扰项，诱导不看上下文的考生误入歧途。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
         </div>
       </div>  <div id="w-definite" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1337,7 +1363,7 @@
             <span class="word-no">22</span>
             <span class="word-name">definition</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.22</span>
@@ -1345,9 +1371,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">de- (向下/离开/强调) + finition (核心意符) → 语义引申为：定义;清晰度。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自 define (下定义)。后缀 -ition 表名词。科学记忆：给一个模糊的概念画定终点线（fin = limit）的过程。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>定义;清晰度</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在词汇题/语义题中，题目要求推测术语的definition。 - 【名师点睛】 ：考研阅读存在 语义饱和 现象，正确答案通常是其基于特定语境的临时定义，而命题人常给出一个词的通用字典释义作为干扰项，诱导不看上下文的考生误入歧途。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1391,33 +1417,13 @@
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
-      </div>  <div id="w-deliver" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">28</span>
-            <span class="word-name">deliver</span>
-            <span class="word-pos">v.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.28</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自 deliver。de- (从...中脱离) + liber (自由)。底层语义：使某物脱离束缚（自由）。引申为：使婴儿脱离母体（分娩）、使信息脱离思想（演讲风格）、使物品脱离库房（交付）。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>v. 交付;递送;为...接生;发表;陈述;予以</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">科普类考分娩，人文类考表达方式。 陷阱： 干扰项常利用快递/交付等生活义项，干扰考生对学术语境（如：speech delivery）的深层理解。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
-        </div>
       </div>  <div id="w-delivery" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
             <span class="word-no">29</span>
             <span class="word-name">delivery</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.29</span>
@@ -1425,9 +1431,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">de- (向下/离开/强调) + livery (核心意符) → 语义引申为：传送;交付;分娩。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自 deliver。de- (从...中脱离) + liber (自由)。底层语义：使某物脱离束缚（自由）。引申为：使婴儿脱离母体（分娩）、使信息脱离思想（演讲风格）、使物品脱离库房（交付）。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>传送;交付;分娩</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">科普类考分娩，人文类考表达方式。 陷阱： 干扰项常利用快递/交付等生活义项，干扰考生对学术语境（如：speech delivery）的深层理解。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1447,12 +1453,12 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">fict (做/塑造/虚构) + -ion。联想记忆：fact（事实）的对立面是 fiction（虚构）。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>小说;虚构 2027考研英语词汇红宝书</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">常在例证题中作为反面论据或虚构案例出现。 - 【名师点睛】 ：考生需牢记 Fact vs. Fiction（事实对立虚构） 的二元悖论。若文中提到某事是fiction，而在是非判断题（True/False）中出现reality或truth，则属于正反混淆。在逻辑推导中，fiction 常用于证明作者对某种伪科学或谣言的否定态度。 第二部分：【写译核心词】深度特训（NO.16-30 选萃） 针对英语二写作（图表描述、成因分析、书信/通知），本部分通过模块化词链与场景适配，助力考生实现表达的从低阶向高阶跃迁。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">常在例证题中作为反面论据或虚构案例出现。 - 【名师点睛】 ：考生需牢记 Fact vs. Fiction（事实对立虚构） 的二元悖论。若文中提到某事是fiction，而在是非判断题（True/False）中出现reality或truth，则属于正反混淆。在逻辑推导中，fiction 常用于证明作者对某种伪科学或谣言的否定态度。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
       </div>  <div class="phase-header writing">
-        <span>🔵 第二阶段：写译核心词特训 (6 词)</span>
+        <span>🔵 第二阶段：写译核心词特训 (8 词)</span>
         <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
       </div>  <div id="w-characterise" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1467,13 +1473,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 characterise，经学术语境历史演进，直击考研核心概念：表现特色;刻画性格。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively characterise crucial resources</span> (积极采取措施以落实（表现特色）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-implement" class="cross-tag" title="直达 List 16">implement (List 16) ↗</a> <span class="synonym-pill">facilitate</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">在物体上刻下独特的 mark（印记）。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be characterized by...</span> (以...为特征/其特点是...)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">feature (以...为特色) / depict (描述)。 通路：The graph shows... → The current situation is characterized by...</span></div></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
-            <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>characterise</strong> relevant developmental priorities.</div>
-            <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（描述趋势特征）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The past decade in China has been characterized by a dramatic surge in the number of mobile-phone subscriptions. （源自2010年真题数据背景）</div>
+            <div class="example-zh"><strong>中文对照：</strong>过去十年，中国手机用户数量的剧增已成为这一时期的显著特征。</div>
           </div>
           
         </div>
@@ -1514,14 +1520,37 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">打击（fend）开进攻，保护自身。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">defend oneself against criticism  ｜  defend one's standpoint</span> (defend oneself against criticism (辩护/反驳批评)  ｜  defend one's standpoint (捍卫观点))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">defend oneself against criticism  ｜  s standpoint</span> (辩护/反驳批评  ｜  捍卫观点)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">safeguard (保护/捍卫) / justify (证明...正当)。 通路：protect → defend/safeguard</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：大作文（成因分析/观点论证）。</div>
             <div class="example-en"><strong>高质量例句：</strong>It is imperative for authorities to <strong>defend</strong> the legitimate rights of consumers in the era of e-commerce.</div>
-            <div class="example-zh"><strong>中文对照：</strong>在电子商务时代，政府捍卫消费者的合法权益至关重要。 - define (v.)</div>
+            <div class="example-zh"><strong>中文对照：</strong>在电子商务时代，政府捍卫消费者的合法权益至关重要。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 01 全景深度特训讲义_精排版.html#w-justify" class="backlink-tag">🔙 来源: justify (List 01)</a> <a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-guard" class="backlink-tag">🔙 来源: guard (List 12)</a> </div></div>
+        </div>
+      </div>  <div id="w-define" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">20</span>
+            <span class="word-name">define</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.20</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">给事物画下 boundary（边界），使其明确化。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be defined as  ｜  clearly defined goals</span> (被定义为  ｜  明确的目标)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">specify (具体说明) / interpret (诠释)。 通路：say clearly → define/specify</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：大作文（现象定义/内涵阐述）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Success should not be <strong>defined</strong> solely by one's financial wealth, but by one's contribution to society.</div>
+            <div class="example-zh"><strong>中文对照：</strong>成功不应仅仅由一个人的财富来定义，而应由其对社会的贡献来衡量。</div>
+          </div>
+          
         </div>
       </div>  <div id="w-defy" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1537,7 +1566,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">撕毁协议（fid = faith），公开挑衅。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">defy description  ｜  defy common sense</span> (defy description (难以形容)  ｜  defy common sense (违背常识))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">defy description  ｜  defy common sense</span> (难以形容  ｜  违背常识)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">disregard (无视/不顾) / challenge (质疑/挑战)。 通路：don't follow → defy/disregard</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：大作文（批判反面社会现象/职场新趋势）。</div>
@@ -1560,7 +1589,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">向后（de-）留下（lay），指拖延时间。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">without delay  ｜  delay the progress of...</span> (without delay (毫不耽搁)  ｜  delay the progress of... (拖延...的进展))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">without delay  ｜  delay the progress of...</span> (毫不耽搁  ｜  拖延...的进展)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">postpone (推迟) / procrastinate (因懒散而拖延)。 通路：put off → delay/postpone</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：小作文（书信道歉/通知改期）。</div>
@@ -1583,14 +1612,37 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来自 libra（秤），指像称重一样反复权衡。 逻辑排比 ：Deliberate thoughts lead to deliberate actions.</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">a deliberate choice  ｜  deliberate on/over a problem</span> (a deliberate choice (深思熟虑的选择)  ｜  deliberate on/over a problem (仔细考虑问题))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">a deliberate choice  ｜  deliberate on/over a problem</span> (深思熟虑的选择  ｜  仔细考虑问题)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">intentional (故意的) / calculated (蓄意的/经过计算的)。 通路：thoughtful → deliberate</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：大作文（深度成因分析）。</div>
             <div class="example-en"><strong>高质量例句：</strong>The shift in career choices among graduates is not accidental but a <strong>deliberate</strong> response to the changing market.</div>
-            <div class="example-zh"><strong>中文对照：</strong>毕业生职业选择的转变并非偶然，而是对不断变化的市场做出的深思熟虑的反应。 - deliver (v.)</div>
+            <div class="example-zh"><strong>中文对照：</strong>毕业生职业选择的转变并非偶然，而是对不断变化的市场做出的深思熟虑的反应。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-debate" class="backlink-tag">🔙 来源: debate (List 05)</a> <a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-ponder" class="backlink-tag">🔙 来源: ponder (List 16)</a> </div></div>
+        </div>
+      </div>  <div id="w-deliver" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">28</span>
+            <span class="word-name">deliver</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.28</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 liber（自由），意为释放并送达。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">deliver a speech  ｜  s promise</span> (发表演讲  ｜  履行诺言)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">convey (传达) / fulfill (履行)。 通路：give/send → deliver/convey</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：小作文（通知/邀请信）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>A distinguished professor will be invited to <strong>deliver</strong> a keynote speech regarding environmental protection.</div>
+            <div class="example-zh"><strong>中文对照：</strong>一位著名的教授将被邀请发表关于环境保护的主旨演讲。</div>
+          </div>
+          
         </div>
       </div>  <div class="batch-footer">
         <span>（Batch 2 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
@@ -1711,13 +1763,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 finance，经学术语境历史演进，直击考研核心概念：金融; 财务; v. 提供资金。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary finance of sustainable reform</span> (推动可持续改革的主导要素（金融）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 fin- (结束/支付)，底层逻辑是通过支付来终结债务，引申为金钱周转与管理。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">source of finance 资金来源 - financial burden/strain 财务负担/压力</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">funding (n. 资金) —— 写作中描述政府拨款</span> <span class="synonym-pill">科研经费时常用。 - fiscal (adj. 财政的) —— 描述国家级财政政策时</span> <span class="synonym-pill">用 fiscal policy 代替 financial policy。</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>finance</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型：英二图表作文成因分析（涉及经济压力、经费投入）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The lack of adequate financial support is considered a primary factor hindering the development of the project.</div>
+            <div class="example-zh"><strong>中文对照：</strong>缺乏充足的财务支持被认为是阻碍该项目发展的首要因素。</div>
           </div>
           
         </div>
@@ -1742,7 +1794,7 @@
             <div class="example-en"><strong>高质量例句：</strong>The lack of adequate <strong>financial</strong> support is considered a primary factor hindering the development of the project.</div>
             <div class="example-zh"><strong>中文对照：</strong>缺乏充足的财务支持被认为是阻碍该项目发展的首要因素。</div>
           </div>
-          
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-economic" class="backlink-tag">🔙 来源: economic (List 05)</a> </div></div>
         </div>
       </div>  <div id="w-finding" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1963,35 +2015,15 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (9 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (7 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
-      </div>  <div id="w-ability" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">46</span>
-            <span class="word-name">ability</span>
-            <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.46</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">同族词挂钩。源自 ability （能力）的形容词形式。科学联想：后缀 -able 表示能...的，词根 ab- 在此处演化自 hab- （持有），即手头握有工具或资源去执行。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>能力; 才能</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 常出现在细节题中，描述主体（Subject）是否具备某种属性。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>常见正反混淆。若文中为 unable 或 disabled （残疾的/丧失能力的），选项中可能偷换为 able 的肯定句式进行干扰。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-capacity" class="backlink-tag">🔙 来源: capacity (List 02)</a> <a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-efficiency" class="backlink-tag">🔙 来源: efficiency (List 05)</a> <a href="红宝书 List 08 全景深度特训讲义_精排版.html#w-talent" class="backlink-tag">🔙 来源: talent (List 08)</a> </div></div>
-        </div>
       </div>  <div id="w-able" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
             <span class="word-no">47</span>
             <span class="word-name">able</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.47</span>
@@ -1999,10 +2031,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 able，经学术语境历史演进，直击考研核心概念：能...的; 有能力的 能够。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">同族词挂钩。源自 ability （能力）的形容词形式。科学联想：后缀 -able 表示能...的，词根 ab- 在此处演化自 hab- （持有），即手头握有工具或资源去执行。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>能...的; 有能力的 能够</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 常出现在细节题中，描述主体（Subject）是否具备某种属性。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>常见正反混淆。若文中为 unable 或 disabled （残疾的/丧失能力的），选项中可能偷换为 able 的肯定句式进行干扰。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-capable" class="backlink-tag">🔙 来源: capable (List 02)</a> </div></div>
         </div>
       </div>  <div id="w-abnormal" class="word-card reading-card">
@@ -2025,33 +2057,13 @@
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>推理题切入点 。命题人常针对 abnormal 的内容设问其产生的原因。陷阱在于过度推断，将统计学上的异常（abnormal）误导为道德上的错误（wrong）。</div>
           
         </div>
-      </div>  <div id="w-base" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">51</span>
-            <span class="word-name">base</span>
-            <span class="word-pos">v.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.51</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 base （基础/底部）+ 后缀 -ment （名词标志）。建筑物的最低部。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>以...为基础; n. 基地 基础</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 细节题定位词。常出现在描述办公环境、住房问题或科研实验室（位于地下室）的语境中。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>范围缩小。若文中指整个地下空间，选项可能细化为具体的储藏室，注意空间范围的一致性。</div>
-          
-        </div>
       </div>  <div id="w-basement" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
             <span class="word-no">52</span>
             <span class="word-name">basement</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.52</span>
@@ -2059,10 +2071,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 basement，经学术语境历史演进，直击考研核心概念：地下室。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 base （基础/底部）+ 后缀 -ment （名词标志）。建筑物的最低部。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>地下室</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 细节题定位词。常出现在描述办公环境、住房问题或科研实验室（位于地下室）的语境中。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>范围缩小。若文中指整个地下空间，选项可能细化为具体的储藏室，注意空间范围的一致性。</div>
           
         </div>
       </div>  <div id="w-basic" class="word-card reading-card">
@@ -2131,7 +2143,7 @@
             <span class="word-no">60</span>
             <span class="word-name">data</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.60</span>
@@ -2143,11 +2155,34 @@
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>数据; 资料 2027考研英语词汇红宝书</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 细节题与例证题的核心定位标志。出现数字或实验结果的地方必有 data 。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>偷换概念。文中可能是 raw data （原始数据），选项却说 finding （调查结论），注意过程数据与最终结果的区别。</div>
-          
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-follow" class="backlink-tag">🔙 来源: follow (List 12)</a> </div></div>
         </div>
       </div>  <div class="phase-header writing">
-        <span>🔵 第二阶段：写译核心词特训 (6 词)</span>
+        <span>🔵 第二阶段：写译核心词特训 (8 词)</span>
         <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-ability" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">46</span>
+            <span class="word-name">ability</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.46</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ab- (离开/偏离) + ility (核心意符) → 语义引申为：能力; 才能。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">demonstrate the ability to...</span> (展示做某事的能力)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">capability</strong> <span class="syn-desc-text">: 强调完成特定任务或达到某种要求的实际本领，常与of/for连用（如 the capability of solving complex problems）</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">competence</strong> <span class="syn-desc-text">: 侧重胜任某项工作或职责所具备的知识、技能与资格，常与in/for连用（如 professional competence in academic writing）</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：英二图表作文（成因分析：如大学生兼职是为了提升能力）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Part-time jobs provide students with a precious chance to demonstrate their <strong>ability</strong> to handle complex tasks in the workplace.</div>
+            <div class="example-zh"><strong>中文对照：</strong>兼职工作为学生提供了一个展示其在职场中处理复杂任务能力的宝贵机会。</div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-capacity" class="backlink-tag">🔙 来源: capacity (List 02)</a> <a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-efficient" class="backlink-tag">🔙 来源: efficient (List 05)</a> <a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-efficiency" class="backlink-tag">🔙 来源: efficiency (List 05)</a> <span style="font-size:7.2pt; color:#94a3b8;">等4处</span></div></div>
+        </div>
       </div>  <div id="w-background" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
@@ -2191,6 +2226,29 @@
             <div class="scenario-tag">📌 适用场景：英二小作文（建议信/通知：平衡学习与娱乐）。</div>
             <div class="example-en"><strong>高质量例句：</strong>It is of vital importance for college students to strike a <strong>balance</strong> between academic pursuits and extracurricular activities.</div>
             <div class="example-zh"><strong>中文对照：</strong>对于大学生来说，在学业追求和课外活动之间取得平衡是至关重要的。</div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-base" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">51</span>
+            <span class="word-name">base</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.51</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 base，经学术语境历史演进，直击考研核心概念：以...为基础; n. 基地 基础。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be based on / on the basis of</span> (基于.../在...的基础上)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">found</strong> <span class="syn-desc-text">: 强调从无到有创建，常接组织、机构或理论体系（如 found a research center）</span></div><div class="synonym-flow-item"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-ground" class="cross-tag" title="直达 List 12">ground (List 12) ↗</a> <span class="syn-desc-text">: 强调为观点或行为提供坚实依据，多用于抽象事物（如 ground the theory in practice）</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：英二写译通用（论证根据）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The conclusion drawn from the survey is <strong>based</strong> on a large volume of reliable data.</div>
+            <div class="example-zh"><strong>中文对照：</strong>该项调查得出的结论是基于大量可靠数据的。</div>
           </div>
           
         </div>

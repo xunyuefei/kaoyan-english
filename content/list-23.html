@@ -2,6 +2,7 @@
     <html lang="zh-CN">
     <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红宝书 List 23 全景深度特训讲义</title>
     <style>
       @page {
@@ -532,6 +533,51 @@
         text-decoration: none;
         font-weight: 700;
       }
+
+      /* ══════════════════════════════════════════════════════════════
+         手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+         ══════════════════════════════════════════════════════════════ */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 14px !important;
+          padding: 0 4px !important;
+        }
+        .header-banner {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+          padding: 12px 14px !important;
+        }
+        .header-left h1 {
+          font-size: 18px !important;
+        }
+        .header-badge {
+          text-align: left !important;
+          padding: 4px 8px !important;
+        }
+        .batch-nav-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .matrix-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 6px !important;
+        }
+        .matrix-item {
+          font-size: 11.5px !important;
+          padding: 5px 6px !important;
+        }
+        .word-card {
+          margin-bottom: 12px !important;
+          padding: 14px 12px !important;
+        }
+        .word-title {
+          font-size: 17px !important;
+        }
+        .word-row {
+          font-size: 13.5px !important;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -573,21 +619,21 @@
               <span>🚩 Batch 2 (NO.16 - NO.30)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">核心高频词汇精讲 · 第二批次 ｜ 阅读 9 词 ＋ 写译 6 词</div>
+            <div class="batch-nav-desc">核心高频词汇精讲 · 第二批次 ｜ 阅读 8 词 ＋ 写译 7 词</div>
           </a>
       <a href="#batch-3" class="batch-nav-card">
             <div class="batch-nav-title">
               <span>🚩 Batch 3 (NO.31 - NO.45)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">核心高频词汇精讲 · 第三批次 ｜ 阅读 15 词 ＋ 写译 0 词</div>
+            <div class="batch-nav-desc">核心高频词汇精讲 · 第三批次 ｜ 阅读 13 词 ＋ 写译 2 词</div>
           </a>
       <a href="#batch-4" class="batch-nav-card">
             <div class="batch-nav-title">
               <span>🚩 Batch 4 (NO.46 - NO.60)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">核心高频词汇精讲 · 第四批次 ｜ 阅读 10 词 ＋ 写译 5 词</div>
+            <div class="batch-nav-desc">核心高频词汇精讲 · 第四批次 ｜ 阅读 9 词 ＋ 写译 6 词</div>
           </a>
     </div>
       </div>
@@ -746,7 +792,7 @@
                 <span class="num">28</span>
                 <span class="name">relation</span>
               </a>
-          <a href="#w-relationship" class="matrix-item reading" title="点击跳转至 relationship">
+          <a href="#w-relationship" class="matrix-item writing" title="点击跳转至 relationship">
                 <span class="chk">☐</span>
                 <span class="num">29</span>
                 <span class="name">relationship</span>
@@ -796,7 +842,7 @@
                 <span class="num">37</span>
                 <span class="name">standpoint</span>
               </a>
-          <a href="#w-stance" class="matrix-item reading" title="点击跳转至 stance">
+          <a href="#w-stance" class="matrix-item writing" title="点击跳转至 stance">
                 <span class="chk">☐</span>
                 <span class="num">38</span>
                 <span class="name">stance</span>
@@ -821,7 +867,7 @@
                 <span class="num">42</span>
                 <span class="name">state</span>
               </a>
-          <a href="#w-statement" class="matrix-item reading" title="点击跳转至 statement">
+          <a href="#w-statement" class="matrix-item writing" title="点击跳转至 statement">
                 <span class="chk">☐</span>
                 <span class="num">43</span>
                 <span class="name">statement</span>
@@ -866,7 +912,7 @@
                 <span class="num">50</span>
                 <span class="name">steady</span>
               </a>
-          <a href="#w-steer" class="matrix-item reading" title="点击跳转至 steer">
+          <a href="#w-steer" class="matrix-item writing" title="点击跳转至 steer">
                 <span class="chk">☐</span>
                 <span class="num">51</span>
                 <span class="name">steer</span>
@@ -1043,7 +1089,7 @@
             <span class="word-no">05</span>
             <span class="word-name">modern</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.05</span>
@@ -1051,9 +1097,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 modern，经学术语境历史演进，直击考研核心概念：现代的; 时髦的。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词族联动特训。后缀 -ize/-ise 表示使成为...状态， -ation 则实现名词化。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>现代的; 时髦的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【专家点睛】 在阅读中看到 modernization ，务必寻找其后紧跟的 but 或 yet 转折枢纽。命题人常利用 modern 与文中提到的 predecessor （前身）进行时间节点的信息错位设陷，考察考生对社会演变代价的理解。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1083,7 +1129,7 @@
             <span class="word-no">07</span>
             <span class="word-name">modernisation</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.07</span>
@@ -1091,9 +1137,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词族联动特训。后缀 -ize/-ise 表示使成为...状态， -ation 则实现名词化。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 modernisation，经学术语境历史演进，直击考研核心概念：现代化。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>现代化</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">【专家点睛】 在阅读中看到 modernization ，务必寻找其后紧跟的 but 或 yet 转折枢纽。命题人常利用 modern 与文中提到的 predecessor （前身）进行时间节点的信息错位设陷，考察考生对社会演变代价的理解。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1203,7 +1249,7 @@
             <span class="word-no">13</span>
             <span class="word-name">preferable</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.13</span>
@@ -1211,9 +1257,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (在前/预先) + ferable (核心意符) → 语义引申为：较合意的; 更可取的。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (before) + fer (carry)。将某物带到前面，体现了优先选择的底层逻辑。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>较合意的; 更可取的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">这是定位作者倾向性的极强信号灯。文中一旦出现 preferable ，对应选项中 positive （积极的）或 supportive （支持的）的关联性极高。过渡 ：阅读词的价值在于解码逻辑，而接下来的写译核心词则要求考生完成从认得出到用得对的质变，特别是在英语二图表作文的数据描写与深度分析中。 2. 【写译核心词】高分表达与场景适配实战 在本组词汇中，涉及大量描述适度、预测及认知偏见的表达。在英语二图表作文中，使用 moderate 或 modest 替代基础词汇，能显著提升数据描写的专业性；使用 modify 或 prejudice 替代 change 或 bias ，则能体现成因分析的论证深度。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1223,7 +1269,7 @@
             <span class="word-no">14</span>
             <span class="word-name">preference</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.14</span>
@@ -1231,9 +1277,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (before) + fer (carry)。将某物带到前面，体现了优先选择的底层逻辑。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (在前/预先) + ference (核心意符) → 语义引申为：偏爱; 偏好; 优先; 优惠。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>偏爱; 偏好; 优先; 优惠</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">这是定位作者倾向性的极强信号灯。文中一旦出现 preferable ，对应选项中 positive （积极的）或 supportive （支持的）的关联性极高。过渡 ：阅读词的价值在于解码逻辑，而接下来的写译核心词则要求考生完成从认得出到用得对的质变，特别是在英语二图表作文的数据描写与深度分析中。 2. 【写译核心词】高分表达与场景适配实战 在本组词汇中，涉及大量描述适度、预测及认知偏见的表达。在英语二图表作文中，使用 moderate 或 modest 替代基础词汇，能显著提升数据描写的专业性；使用 modify 或 prejudice 替代 change 或 bias ，则能体现成因分析的论证深度。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-bias" class="backlink-tag">🔙 来源: bias (List 11)</a> <a href="红宝书 List 21 全景深度特训讲义_精排版.html#w-priority" class="backlink-tag">🔙 来源: priority (List 21)</a> </div></div>
         </div>
@@ -1269,7 +1315,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (9 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (8 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-preliminary" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1397,7 +1443,7 @@
             <span class="word-no">28</span>
             <span class="word-name">relation</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.28</span>
@@ -1405,28 +1451,8 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (反复/回/再次) + lation (核心意符) → 语义引申为：关联; 联系; 亲属。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>关联; 联系; 亲属</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
-        </div>
-      </div>  <div id="w-relationship" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">29</span>
-            <span class="word-name">relationship</span>
-            <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.29</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">均由 relate 派生。relation 侧重宏观联系或亲属；relationship 侧重具体、长期的相互关系（如人际关系、因果关系）。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>关系; 联系; 亲戚关系</strong></div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>关联; 联系; 亲属</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 细节题定位词。常考两者之间的互动关系。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>偷换概念。将文中的 causal relationship（因果关系）在选项中偷换为 coincidental connection（巧合联系）。</div>
           
@@ -1448,11 +1474,11 @@
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">relate + -ive (形容词/名词后缀)。有联系的人是亲戚；有联系的性质是相对的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>亲戚;adj.比较的; 相对的 相关联的 2027考研英语词汇红宝书</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">题型关联： 语义题/细节题。考察 relative advantage（相对优势）时，通常隐含对比对象。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>绝对化用词。若文中是 relative（相对的），选项出现 permanent（永久的）或 universal（普遍的）则为典型干扰。 🔵 写译核心词模块（NO.18 - NO.25，含合并项）</div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>绝对化用词。若文中是 relative（相对的），选项出现 permanent（永久的）或 universal（普遍的）则为典型干扰。</div>
           
         </div>
       </div>  <div class="phase-header writing">
-        <span>🔵 第二阶段：写译核心词特训 (6 词)</span>
+        <span>🔵 第二阶段：写译核心词特训 (7 词)</span>
         <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
       </div>  <div id="w-preparation" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1490,13 +1516,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (反复/回/再次) + flect (核心意符) → 语义引申为：反射; 反映; 反省; 思考 仔细考虑。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively reflect crucial resources</span> (积极采取措施以落实（反射）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-implement" class="cross-tag" title="直达 List 16">implement (List 16) ↗</a> <span class="synonym-pill">facilitate</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (回) + flect- (弯曲)。光线折回是反射，思绪转回是深思。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">reflect on / upon... 沉思/反思…… profoundly reflect that... 深刻反映出……</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">mirror (反映/映射)：生动形象地描述数据反映现状。 contemplate (沉思)：指对深刻问题的思考。</span></div></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
-            <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>reflect</strong> relevant developmental priorities.</div>
-            <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（现状描述/意义评论）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The sharp increase in mobile-phone subscriptions <strong>reflects</strong> the profound transformation of our communication habits.</div>
+            <div class="example-zh"><strong>中文对照：</strong>手机注册量的剧增反映了我们通讯习惯的深刻变革。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-ponder" class="backlink-tag">🔙 来源: ponder (List 16)</a> </div></div>
         </div>
@@ -1513,13 +1539,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (回) + flect- (弯曲)。光线折回是反射，思绪转回是深思。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">reflect on / upon... 沉思/反思…… profoundly reflect that... 深刻反映出……</span> (真题高分搭配)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">mirror (反映/映射)：生动形象地描述数据反映现状。 contemplate (沉思)：指对深刻问题的思考。</span></div></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (反复/回/再次) + flection (核心意符) → 语义引申为：反射; 反映; 反省; 沉思。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary reflection of sustainable reform</span> (推动可持续改革的主导要素（反射）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（现状描述/意义评论）。</div>
-            <div class="example-en"><strong>高质量例句：</strong>The sharp increase in mobile-phone subscriptions reflects the profound transformation of our communication habits.</div>
-            <div class="example-zh"><strong>中文对照：</strong>手机注册量的剧增反映了我们通讯习惯的深刻变革。</div>
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>reflection</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
           </div>
           
         </div>
@@ -1536,13 +1562,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (回) + flect- (弯曲)。光线折回是反射，思绪转回是深思。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">reflect on / upon... 沉思/反思…… profoundly reflect that... 深刻反映出……</span> (真题高分搭配)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">mirror (反映/映射)：生动形象地描述数据反映现状。 contemplate (沉思)：指对深刻问题的思考。</span></div></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (反复/回/再次) + flection (核心意符) → 语义引申为：反射; 反映。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary reflection of sustainable reform</span> (推动可持续改革的主导要素（反射）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（现状描述/意义评论）。</div>
-            <div class="example-en"><strong>高质量例句：</strong>The sharp increase in mobile-phone subscriptions reflects the profound transformation of our communication habits.</div>
-            <div class="example-zh"><strong>中文对照：</strong>手机注册量的剧增反映了我们通讯习惯的深刻变革。</div>
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>reflection</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
           </div>
           
         </div>
@@ -1592,6 +1618,29 @@
           </div>
           
         </div>
+      </div>  <div id="w-relationship" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">29</span>
+            <span class="word-name">relationship</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.29</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">re- (反复/回/再次) + lationship (核心意符) → 语义引申为：关系; 联系; 亲戚关系。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary relationship of sustainable reform</span> (推动可持续改革的主导要素（关系）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>relationship</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+          </div>
+          
+        </div>
       </div>  <div class="batch-footer">
         <span>（Batch 2 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
       </div>
@@ -1604,7 +1653,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (15 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (13 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-relativity" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1700,7 +1749,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">由物理的垂直延伸为精神的抵抗与坚定。 - 【Source Context 补全】 ：除立场外，名词义项包含 停止与抵抗的状态 （ take a stand 亦可指进行抵抗）。 - 【高分词链】 ： take a firm stand on (采取坚定立场), stand up to the fierce competition (经受/抵御住激烈的竞争)。 - 【🎬 英二专属场景】 ： 图表作文态度评论段 。 - 【高分例句】 ： From my perspective, it is high time that we took a firm stand on environmental protection. (在我看来，现在是我们对环境保护采取坚定立场的时候了。) 3.</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">由物理的垂直延伸为精神的抵抗与坚定。 - 【Source Context 补全】 ：除立场外，名词义项包含 停止与抵抗的状态 （ take a stand 亦可指进行抵抗）。 - 【高分词链】 ： take a firm stand on (采取坚定立场), stand up to the fierce competition (经受/抵御住激烈的竞争)。 - 【🎬 英二专属场景】 ： 图表作文态度评论段 。 - 【高分例句】 ： From my perspective, it is high time that we took a firm stand on environmental protection. (在我看来，现在是我们对环境保护采取坚定立场的时候了。)</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>站立;忍受;抵御;n. 停止;抵抗的状态;立足点</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
@@ -1720,7 +1769,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原指战场上的旗帜/基准。 - 【Source Context 补全】 ：形容词义包含 规范的；权威的 。在翻译中， standard work 应译为权威著作。 - 【替换词】 ： criterion (标准), benchmark (基准)。 - 【🎬 英二专属场景】 ： 描述生活水平提高或评价体系 。 - 【高分例句】 ： With the improvement of living standards , people are increasingly focusing on the quality of spiritual life. (随着生活水平的提高，人们越来越关注精神生活的质量。) 4.</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原指战场上的旗帜/基准。 - 【Source Context 补全】 ：形容词义包含 规范的；权威的 。在翻译中， standard work 应译为权威著作。 - 【替换词】 ： criterion (标准), benchmark (基准)。 - 【🎬 英二专属场景】 ： 描述生活水平提高或评价体系 。 - 【高分例句】 ： With the improvement of living standards , people are increasingly focusing on the quality of spiritual life. (随着生活水平的提高，人们越来越关注精神生活的质量。)</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>标准;adj. 标准的;规范的;权威的</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
@@ -1740,31 +1789,11 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 standpoint，经学术语境历史演进，直击考研核心概念：立场;观点。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理落脚点转化为思想视角。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>立场;观点</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 07 全景深度特训讲义_精排版.html#w-opinion" class="backlink-tag">🔙 来源: opinion (List 07)</a> </div></div>
-        </div>
-      </div>  <div id="w-stance" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">38</span>
-            <span class="word-name">stance</span>
-            <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.38</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理落脚点转化为思想视角。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>站姿;立场;态度</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 20 全景深度特训讲义_精排版.html#w-viewpoint" class="backlink-tag">🔙 来源: viewpoint (List 20)</a> </div></div>
         </div>
       </div>  <div id="w-start" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1832,7 +1861,7 @@
             <span class="word-no">42</span>
             <span class="word-name">state</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.42</span>
@@ -1842,26 +1871,6 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 state，经学术语境历史演进，直击考研核心概念：情形;状态;国家;州;v. 说明;陈述;声明;规定;adj. 国事礼仪(或概括)的;州的;邦的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>情形;状态;国家;州;v. 说明;陈述;声明;规定;adj. 国事礼仪(或概括)的;州的;邦的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>例证题灵魂定位词 ：当文中出现具体数字或 statistics 时，通常是为了支持其前/后的核心观点。 主谓一致陷阱 ：该词作统计学时谓语用单数；作统计数据讲时，谓语动词必须用 复数 。 二、 【写译核心词】深度特训（NO.32, 35, 36, 37/38, 42/43） 1.</div>
-          
-        </div>
-      </div>  <div id="w-statement" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">43</span>
-            <span class="word-name">statement</span>
-            <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.43</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 statement，经学术语境历史演进，直击考研核心概念：声明;陈述。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>声明;陈述</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>在经济类文章翻译中， statement 常指出 财务报表 (financial statement) ，而非简单的声明。</div>
           
@@ -1892,7 +1901,7 @@
             <span class="word-no">45</span>
             <span class="word-name">statistics</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.45</span>
@@ -1903,8 +1912,57 @@
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 statistics，经学术语境历史演进，直击考研核心概念：统计学;统计数字。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>统计学;统计数字</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>例证题灵魂定位词 ：当文中出现具体数字或 statistics 时，通常是为了支持其前/后的核心观点。 主谓一致陷阱 ：该词作统计学时谓语用单数；作统计数据讲时，谓语动词必须用 复数 。 二、 【写译核心词】深度特训（NO.32, 35, 36, 37/38, 42/43）</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 04 全景深度特训讲义_精排版.html#w-figure" class="backlink-tag">🔙 来源: figure (List 04)</a> </div></div>
+        </div>
+      </div>  <div class="phase-header writing">
+        <span>🔵 第二阶段：写译核心词特训 (2 词)</span>
+        <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-stance" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">38</span>
+            <span class="word-name">stance</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.38</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 stance，经学术语境历史演进，直击考研核心概念：站姿;立场;态度。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary stance of sustainable reform</span> (推动可持续改革的主导要素（站姿）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>stance</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 20 全景深度特训讲义_精排版.html#w-viewpoint" class="backlink-tag">🔙 来源: viewpoint (List 20)</a> </div></div>
+        </div>
+      </div>  <div id="w-statement" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">43</span>
+            <span class="word-name">statement</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.43</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 statement，经学术语境历史演进，直击考研核心概念：声明;陈述。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary statement of sustainable reform</span> (推动可持续改革的主导要素（声明）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>statement</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+          </div>
+          
         </div>
       </div>  <div class="batch-footer">
         <span>（Batch 3 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
@@ -1918,7 +1976,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (10 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (9 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-statue" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1926,7 +1984,7 @@
             <span class="word-no">46</span>
             <span class="word-name">statue</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.46</span>
@@ -1936,7 +1994,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 statue，经学术语境历史演进，直击考研核心概念：雕像;雕塑。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>雕像;雕塑</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位 ： status 极高频出现在涉及数字状态或社会层级的段落。命题人常在选项中利用 statue 进行形近干扰。 语义限定 ：注意 statute 专指政府或机构制定的成文法令，在法律类阅读中，它是对 law 的具体化描述。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1946,7 +2004,7 @@
             <span class="word-no">47</span>
             <span class="word-name">status</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.47</span>
@@ -1956,7 +2014,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 status，经学术语境历史演进，直击考研核心概念：地位;身份;状态;职称;重要性。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>地位;身份;状态;职称;重要性</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位 ： status 极高频出现在涉及数字状态或社会层级的段落。命题人常在选项中利用 statue 进行形近干扰。 语义限定 ：注意 statute 专指政府或机构制定的成文法令，在法律类阅读中，它是对 law 的具体化描述。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 07 全景深度特训讲义_精排版.html#w-rank" class="backlink-tag">🔙 来源: rank (List 07)</a> </div></div>
         </div>
@@ -1976,29 +2034,9 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 statute，经学术语境历史演进，直击考研核心概念：法令;法规;条例。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>法令;法规;条例</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位 ： status 极高频出现在涉及数字状态或社会层级的段落。命题人常在选项中利用 statue 进行形近干扰。 语义限定 ：注意 statute 专指政府或机构制定的成文法令，在法律类阅读中，它是对 law 的具体化描述。 2.</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位 ： status 极高频出现在涉及数字状态或社会层级的段落。命题人常在选项中利用 statue 进行形近干扰。 语义限定 ：注意 statute 专指政府或机构制定的成文法令，在法律类阅读中，它是对 law 的具体化描述。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 01 全景深度特训讲义_精排版.html#w-law" class="backlink-tag">🔙 来源: law (List 01)</a> </div></div>
-        </div>
-      </div>  <div id="w-steer" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">51</span>
-            <span class="word-name">steer</span>
-            <span class="word-pos">v.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.51</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 steer，经学术语境历史演进，直击考研核心概念：驾驶;引导;掌舵;操纵;n. 捷牛。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>驾驶;引导;掌舵;操纵;n. 捷牛</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题专攻 ：此词是作者态度题中的 强负极/批评性 词汇。若文现提到 stern warning (严厉警告) 或 stern criticism (严厉批评)，预示着作者对当前现状持否定或强制管控的态度。 干扰拦截 ：不要将其误认为中性词，它带有明显的惩罚性或压迫性色彩。 3.</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-guide" class="backlink-tag">🔙 来源: guide (List 14)</a> </div></div>
         </div>
       </div>  <div id="w-stern" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -2006,7 +2044,7 @@
             <span class="word-no">54</span>
             <span class="word-name">stern</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.54</span>
@@ -2014,10 +2052,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 stern，经学术语境历史演进，直击考研核心概念：严厉的,严格的;苛刻的;n. 船尾。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">联想驾驶 ( steer )。船长站在船尾 ( stern ) 严厉地控制航向。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>严厉的,严格的;苛刻的;n. 船尾</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题专攻 ：此词是作者态度题中的 强负极/批评性 词汇。若文现提到 stern warning (严厉警告) 或 stern criticism (严厉批评)，预示着作者对当前现状持否定或强制管控的态度。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>不要将其误认为中性词，它带有明显的惩罚性或压迫性色彩。</div>
           
         </div>
       </div>  <div id="w-anonymous" class="word-card reading-card">
@@ -2036,7 +2074,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">a- (无) + -onym- (名字) + -ous -> 无名字的 -> 匿名的 。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>匡名的;无名的;不知名的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">概念辨析陷阱 ：在网络隐私或捐赠语境中，注意区分 anonymous (不知道是谁) 与 confidential (知道身份但信息加密/保密)。命题人常在身份透明度上设置细节干扰。 4.</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">概念辨析陷阱 ：在网络隐私或捐赠语境中，注意区分 anonymous (不知道是谁) 与 confidential (知道身份但信息加密/保密)。命题人常在身份透明度上设置细节干扰。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2056,7 +2094,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 anticipate，经学术语境历史演进，直击考研核心概念：v. 预料;预期;期望;抢先;提前使用。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>v. 预料;预期;期望;抢先;提前使用</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题定位 ：文末若出现作者 anticipate 未来的某种趋势，通常是推理题或主旨延伸题的命题点。 主观期望陷阱 ：注意区分文中是客观预测还是作者的主观期望。干扰项常将作者的 anticipation (预期) 错误描述为 actual fact (既定事实)。 5.</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题定位 ：文末若出现作者 anticipate 未来的某种趋势，通常是推理题或主旨延伸题的命题点。 主观期望陷阱 ：注意区分文中是客观预测还是作者的主观期望。干扰项常将作者的 anticipation (预期) 错误描述为 actual fact (既定事实)。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-forecast" class="backlink-tag">🔙 来源: forecast (List 12)</a> </div></div>
         </div>
@@ -2066,7 +2104,7 @@
             <span class="word-no">58</span>
             <span class="word-name">anxiety</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.58</span>
@@ -2076,7 +2114,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 anxiety，经学术语境历史演进，直击考研核心概念：忧虑;焦虑;渴望。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>忧虑;焦虑;渴望</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义逻辑题 ：在考查逻辑关系的题目中，需通过介词判定情感色彩。例如：公众对AI的 anxiety 属于负面焦虑，而公司对新技术的 anxious to adopt 属于积极渴望。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2096,7 +2134,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 anxious，经学术语境历史演进，直击考研核心概念：adj. 焦虑的;不要的;担忧的;渴望的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>adj. 焦虑的;不要的;担忧的;渴望的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义逻辑题 ：在考查逻辑关系的题目中，需通过介词判定情感色彩。例如：公众对AI的 anxiety 属于负面焦虑，而公司对新技术的 anxious to adopt 属于积极渴望。 6.</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义逻辑题 ：在考查逻辑关系的题目中，需通过介词判定情感色彩。例如：公众对AI的 anxiety 属于负面焦虑，而公司对新技术的 anxious to adopt 属于积极渴望。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2121,7 +2159,7 @@
           
         </div>
       </div>  <div class="phase-header writing">
-        <span>🔵 第二阶段：写译核心词特训 (5 词)</span>
+        <span>🔵 第二阶段：写译核心词特训 (6 词)</span>
         <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
       </div>  <div id="w-stay" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -2160,14 +2198,37 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 steady，经学术语境历史演进，直击考研核心概念：稳定的。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">show a steady upward trend  ｜  stay constant/stable  ｜  The past decade has witnessed a steady growth in the number of mobile-phone subscriptions in China.</span> (呈现稳步上升趋势  ｜  保持稳定  ｜  过去十年，中国移动电话用户数量呈现稳步增长。)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">stable</strong> <span class="syn-desc-text">: 强调状态牢固、不易变化，多指经济、局势等宏观层面（如 a stable economy）</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">constant</strong> <span class="syn-desc-text">: 强调持续不断、始终如一，侧重频率或程度不变（如 constant temperature）</span></div></div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a steady role in development</span> (在现代社会发展中发挥重要作用)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 13 全景深度特训讲义_精排版.html#w-significant" class="cross-tag" title="直达 List 13">significant (List 13) ↗</a> <span class="synonym-pill">pivotal</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型 ：图表作文数据描写。 高分词链 ： show a steady upward trend (呈现稳步上升趋势)； stay constant/stable (保持稳定)。</div>
-            <div class="example-en"><strong>高质量例句：</strong>（对齐2010手机用户题）：The past decade has witnessed a <strong>steady</strong> growth in the number of mobile-phone subscriptions in China. (过去十年，中国移动电话用户数量呈现稳步增长。)</div>
-            <div class="example-zh"><strong>中文对照：</strong></div>
+            <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
+            <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>steady</strong> influence on long-term technological and economic stability.</div>
+            <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
           </div>
           
+        </div>
+      </div>  <div id="w-steer" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">51</span>
+            <span class="word-name">steer</span>
+            <span class="word-pos">v.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.51</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 steer，经学术语境历史演进，直击考研核心概念：驾驶;引导;掌舵;操纵;n. 捷牛。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">steer the public toward healthy lifestyles</span> (引导公众走向健康生活方式)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">升级 guide</span> <span class="synonym-pill">direct 。</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：适用题型 ：小作文建议信/图表对策段。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Education plays a pivotal role in <strong>steering</strong> the younger generation toward correct values.</div>
+            <div class="example-zh"><strong>中文对照：</strong>教育在引导年轻一代建立正确价值观方面起着关键作用。</div>
+          </div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-guide" class="backlink-tag">🔙 来源: guide (List 14)</a> </div></div>
         </div>
       </div>  <div id="w-stem" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -2184,11 +2245,11 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 stem，经学术语境历史演进，直击考研核心概念：柄;茎;词干;v. 阻止;起源于(~from)。</div></div>
           <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">stem from a combination of factors and take measures to stem the tide</span> (源于多种因素并采取措施遏制趋势)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-originate" class="cross-tag" title="直达 List 16">originate (List 16) ↗</a> <span class="syn-desc-text">: 强调从某一起点开始，常用于事物起源（如 The custom originates from ancient rituals）</span></div><div class="synonym-flow-item"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-derive" class="cross-tag" title="直达 List 16">derive (List 16) ↗</a> <span class="syn-desc-text">: 强调从某来源获得或衍生，常与from连用（如 Many English words derive from Latin）</span></div></div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">起源于升级 originate from ；阻止升级 stop</span> <span class="synonym-pill">curb 。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：场景A（成因分析） ： stem from (源于)。</div>
-            <div class="example-en"><strong>高质量例句：</strong>（对齐2012员工满意度）：The decline in job satisfaction <strong>stems</strong> primarily from the lack of professional development. (工作满意度的下降主要源于职业发展的缺失。) 场景B（对策段） ： stem the tide of... (遏制...的势头)。 例句：Immediate measures must be taken to stem the tide of environmental degradation. (必须立即采取措施以遏制环境恶化的势头。) 5.</div>
-            <div class="example-zh"><strong>中文对照：</strong></div>
+            <div class="example-en"><strong>高质量例句：</strong>（对齐2012员工满意度）：The decline in job satisfaction <strong>stems</strong> primarily from the lack of professional development. (工作满意度的下降主要源于职业发展的缺失。) 场景B（对策段） ： stem the tide of... (遏制...的势头)。 例句：Immediate measures must be taken to stem the tide of environmental degradation.</div>
+            <div class="example-zh"><strong>中文对照：</strong>必须立即采取措施以遏制环境恶化的势头。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-derive" class="backlink-tag">🔙 来源: derive (List 16)</a> </div></div>
         </div>
@@ -2207,11 +2268,11 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 step，经学术语境历史演进，直击考研核心概念：步;步骤;踏级;步伐;v. 踩;踏;行走。</div></div>
           <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">take effective/concrete steps to address the issue  ｜  Comprehensive steps should be taken immediately to reverse this worrying trend.</span> (采取有效/具体的步骤解决问题  ｜  应立即采取综合措施以扭转这一令人担忧的趋势。)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><a href="红宝书 List 07 全景深度特训讲义_精排版.html#w-measure" class="cross-tag" title="直达 List 07">measure (List 07) ↗</a> <span class="syn-desc-text">: 指为达到某一目的而采取的具体行动或措施，常与take搭配，如take measures to reduce pollution</span></div><div class="synonym-flow-item"><a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-action" class="cross-tag" title="直达 List 12">action (List 12) ↗</a> <span class="syn-desc-text">: 指为解决问题或达成目标而进行的行动，强调行为本身，如take action against corruption</span></div></div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">升级 measures</span> <span class="synonym-pill">actions 。</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型 ：所有作文类型的解决措施段。 高分词链 ： take effective/concrete steps to address the issue (采取有效/具体的步骤解决问题)。</div>
-            <div class="example-en"><strong>高质量例句：</strong>Comprehensive <strong>steps</strong> should be taken immediately to reverse this worrying trend. (应立即采取综合措施以扭转这一令人担忧的趋势。) 6.</div>
-            <div class="example-zh"><strong>中文对照：</strong></div>
+            <div class="scenario-tag">📌 适用场景：适用题型 ：所有作文类型的解决措施段。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Comprehensive <strong>steps</strong> should be taken immediately to reverse this worrying trend.</div>
+            <div class="example-zh"><strong>中文对照：</strong>应立即采取综合措施以扭转这一令人担忧的趋势。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 07 全景深度特训讲义_精排版.html#w-measure" class="backlink-tag">🔙 来源: measure (List 07)</a> <a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-gradual" class="backlink-tag">🔙 来源: gradual (List 11)</a> </div></div>
         </div>
@@ -2230,13 +2291,13 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 answer，经学术语境历史演进，直击考研核心概念：回答;答案;v. 回答;回应。</div></div>
           <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">provide a definitive answer to the pressing question</span> (为这一紧迫问题提供明确的答案)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">reply</strong> <span class="syn-desc-text">: 侧重对具体问题或话语的正式口头或书面回应，常与to连用（如 reply to a letter）</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">respond</strong> <span class="syn-desc-text">: 强调对刺激、请求或情况作出反应或回应，更正式且常含采取行动之意（如 respond to the crisis）</span></div></div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">升级 solution</span> <span class="synonym-pill">remedy 。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：作文结论段/提议信。</div>
-            <div class="example-en"><strong>高质量例句：</strong>Technological innovation is widely considered the fundamental <strong>answer</strong> to the current energy crisis. (技术创新被广泛认为是应对当前能源危机的根本解决之道。)</div>
-            <div class="example-zh"><strong>中文对照：</strong></div>
+            <div class="example-en"><strong>高质量例句：</strong>Technological innovation is widely considered the fundamental <strong>answer</strong> to the current energy crisis.</div>
+            <div class="example-zh"><strong>中文对照：</strong>技术创新被广泛认为是应对当前能源危机的根本解决之道。</div>
           </div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-solve" class="backlink-tag">🔙 来源: solve (List 14)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-solution" class="backlink-tag">🔙 来源: solution (List 14)</a> </div></div>
         </div>
       </div>  <div class="batch-footer">
         <span>（Batch 4 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>

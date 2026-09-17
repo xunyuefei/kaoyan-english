@@ -2,6 +2,7 @@
     <html lang="zh-CN">
     <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红宝书 List 08 全景深度特训讲义</title>
     <style>
       @page {
@@ -532,6 +533,51 @@
         text-decoration: none;
         font-weight: 700;
       }
+
+      /* ══════════════════════════════════════════════════════════════
+         手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+         ══════════════════════════════════════════════════════════════ */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 14px !important;
+          padding: 0 4px !important;
+        }
+        .header-banner {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+          padding: 12px 14px !important;
+        }
+        .header-left h1 {
+          font-size: 18px !important;
+        }
+        .header-badge {
+          text-align: left !important;
+          padding: 4px 8px !important;
+        }
+        .batch-nav-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .matrix-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 6px !important;
+        }
+        .matrix-item {
+          font-size: 11.5px !important;
+          padding: 5px 6px !important;
+        }
+        .word-card {
+          margin-bottom: 12px !important;
+          padding: 14px 12px !important;
+        }
+        .word-title {
+          font-size: 17px !important;
+        }
+        .word-row {
+          font-size: 13.5px !important;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -587,7 +633,7 @@
               <span>🚩 Batch 4 (NO.46 - NO.60)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">诱因动机与传统守正 · 诱发 / 考验 / 文脉赓续 ｜ 阅读 9 词 ＋ 写译 6 词</div>
+            <div class="batch-nav-desc">诱因动机与传统守正 · 诱发 / 考验 / 文脉赓续 ｜ 阅读 7 词 ＋ 写译 8 词</div>
           </a>
     </div>
       </div>
@@ -851,7 +897,7 @@
                 <span class="num">47</span>
                 <span class="name">temporal</span>
               </a>
-          <a href="#w-temporary" class="matrix-item reading" title="点击跳转至 temporary">
+          <a href="#w-temporary" class="matrix-item writing" title="点击跳转至 temporary">
                 <span class="chk">☐</span>
                 <span class="num">48</span>
                 <span class="name">temporary</span>
@@ -881,7 +927,7 @@
                 <span class="num">53</span>
                 <span class="name">tentative</span>
               </a>
-          <a href="#w-term" class="matrix-item reading" title="点击跳转至 term">
+          <a href="#w-term" class="matrix-item writing" title="点击跳转至 term">
                 <span class="chk">☐</span>
                 <span class="num">54</span>
                 <span class="name">term</span>
@@ -1113,7 +1159,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原意是穿过洞穴。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>通过;穿过;adv. 彻底;从头到尾地;adj. 全程的;直通的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位： 常作为 手段/方式状语。 在寻找如何解决问题的答案时，关注 through 后的名词。 - 逻辑干扰： 选项可能利用 through 偷换因果关系（例如将通过A实现B改为B导致了A）。 🔵 写译核心词（高分搭配与场景应用）</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节定位： 常作为 手段/方式状语。 在寻找如何解决问题的答案时，关注 through 后的名词。 - 逻辑干扰： 选项可能利用 through 偷换因果关系（例如将通过A实现B改为B导致了A）。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>容易与 thorough (彻底的) 混淆。</div>
           
         </div>
@@ -1141,7 +1187,7 @@
             <div class="example-en"><strong>高质量例句：</strong>The government should broaden the <strong>scope</strong> of social welfare to cover more low-income families.</div>
             <div class="example-zh"><strong>中文对照：</strong>政府应当扩大社会福利的覆盖范围，以惠及更多低收入家庭。</div>
           </div>
-          
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 07 全景深度特训讲义_精排版.html#w-range" class="backlink-tag">🔙 来源: range (List 07)</a> </div></div>
         </div>
       </div>  <div id="w-secure" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1248,13 +1294,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 thrift，经学术语境历史演进，直击考研核心概念：节俭;节约。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary thrift of sustainable reform</span> (推动可持续改革的主导要素（节俭）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源同 thrive → 底层画面： 通过精打细算实现繁荣 。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">Promote the virtue of thrift 弘扬节俭的美德 - Practice thrift in daily life 在日常生活中践行节俭</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">saving money (大白话) → practicing thrift (地道表达) - economy (经济) → frugality</span> <span class="synonym-pill">thrift (节约</span> <span class="synonym-pill">节俭)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>thrift</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型：英二小作文（倡议书：节约粮食或资源）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>It is high time that we promoted the virtue of <strong>thrift</strong> and reduced unnecessary waste in our campus.</div>
+            <div class="example-zh"><strong>中文对照：</strong>现在是我们弘扬节俭美德并减少校园内不必要浪费的时候了。</div>
           </div>
           
         </div>
@@ -1271,13 +1317,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源同 thrive → 底层画面： 通过精打细算实现繁荣 。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">Promote the virtue of thrift 弘扬节俭的美德 - Practice thrift in daily life 在日常生活中践行节俭</span> (真题高分搭配)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">saving money (大白话) → practicing thrift (地道表达) - economy (经济) → frugality</span> <span class="synonym-pill">thrift (节约</span> <span class="synonym-pill">节俭)</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">原意是抓紧机会。底层画面： 草木茂盛，事业兴旺 。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">A thriving economy/market 繁荣的经济/市场 - Thrive on challenges 在挑战中茁壮成长</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">develop well (平淡) → thrive</span> <span class="synonym-pill">prosper (生动) - grow fast (一般) → flourish</span> <span class="synonym-pill">thrive (文学感)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型：英二小作文（倡议书：节约粮食或资源）。</div>
-            <div class="example-en"><strong>高质量例句：</strong>It is high time that we promoted the virtue of thrift and reduced unnecessary waste in our campus.</div>
-            <div class="example-zh"><strong>中文对照：</strong>现在是我们弘扬节俭美德并减少校园内不必要浪费的时候了。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型：英二大作文（某行业/文化现象的繁荣）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The e-commerce industry has been thriving over the past decade, according to the data provided above.</div>
+            <div class="example-zh"><strong>中文对照：</strong>根据上述提供的数据，电子商务行业在过去十年中一直蓬勃发展。专家提醒： List 8 Batch 1 中，seem/seemingly 是阅读逻辑的灵魂词，thrive/thrift 则是写作中谈论经济与价值观的高频词，请务必结合例句中的句式结构进行背诵。</div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-flourish" class="backlink-tag">🔙 来源: flourish (List 16)</a> </div></div>
         </div>
@@ -1411,7 +1457,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 write，经学术语境历史演进，直击考研核心概念：书写;写信;写作 2027考研英语词汇红宝书。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>书写;写信;写作 2027考研英语词汇红宝书</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">例证题： 文章提及某位作家的 writing 或某篇 written 作品，通常是为了论证某个观点。需向上文寻找其论点。 🔵 第二部分：【写译核心词】深度特训 （NO.19 - NO.23, NO.26 - NO.29）</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">例证题： 文章提及某位作家的 writing 或某篇 written 作品，通常是为了论证某个观点。需向上文寻找其论点。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1500,15 +1546,15 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 utilize，经学术语境历史演进，直击考研核心概念：利用。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively utilize crucial resources</span> (积极采取措施以落实（利用）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-implement" class="cross-tag" title="直达 List 16">implement (List 16) ↗</a> <span class="synonym-pill">facilitate</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 use。画面感：将资源转化为有用的工具。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">utilize available resources 利用现有资源 - fully utilize 充分利用</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">use -> harness (开发利用) - make use of -> exploit (充分利用</span> <span class="synonym-pill">开采)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
-            <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>utilize</strong> relevant developmental priorities.</div>
-            <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 大作文成因分析（科技进步或资源分配等背景）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Modern technology enables us to <strong>utilize</strong> solar energy more efficiently than ever before.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-employment" class="backlink-tag">🔙 来源: employment (List 10)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-employ" class="backlink-tag">🔙 来源: employ (List 10)</a> <a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-employment" class="backlink-tag">🔙 来源: employment (List 10)</a> </div></div>
         </div>
       </div>  <div id="w-utilise" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1546,13 +1592,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 worship，经学术语境历史演进，直击考研核心概念：崇拜;崇敬;礼拜;v. 崇拜;尊崇;做礼拜。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary worship of sustainable reform</span> (推动可持续改革的主导要素（崇拜）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">worth（价值）+ ship（状态）。画面感：赋予极高价值的膜拜。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">blind worship of celebrities 对名人的盲目崇拜 - idol worship 偶像崇拜</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">like -> adore (深爱</span> <span class="synonym-pill">崇拜) - respect -> venerate (敬仰</span> <span class="synonym-pill">崇奉)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>worship</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（文化消费、粉丝经济、盲目跟风现象）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The blind <strong>worship</strong> of consumerism among the younger generation has led to irrational spending habits.</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
           
         </div>
@@ -1569,12 +1615,12 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">worth（价值）+ ship（状态）。画面感：赋予极高价值的膜拜。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">blind worship of celebrities 对名人的盲目崇拜 - idol worship 偶像崇拜</span> (真题高分搭配)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">like -> adore (深爱</span> <span class="synonym-pill">崇拜) - respect -> venerate (敬仰</span> <span class="synonym-pill">崇奉)</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 worth，经学术语境历史演进，直击考研核心概念：价值;adj. 有...价值;值得的。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">...</span> (大作文万能衔接)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">be good for -> be deserving of (值得)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（文化消费、粉丝经济、盲目跟风现象）。</div>
-            <div class="example-en"><strong>高质量例句：</strong>The blind worship of consumerism among the younger generation has led to irrational spending habits.</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（描写趋势或关键数据后的评论）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>It is <strong>worth</strong> noting that the number of people choosing online courses has doubled in the past year.</div>
             <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
           <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 09 全景深度特训讲义_精排版.html#w-value" class="backlink-tag">🔙 来源: value (List 09)</a> </div></div>
@@ -1655,8 +1701,8 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">派生词。由动词 write (书写) + 后缀 -er (表人) 构成。在学术阅读中，其指代范围通常从简单的写作者延伸至文献作者或理论构建者。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>作家;作者</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题定位： 真题中常出现 The writer's attitude towards... is...，此时 writer 等同于 author，要求考生精准锁定文章末尾或转折处表达观点的词汇。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>命题人有时会利用文中提到的某位学者与本文作者 (the writer)进行观点偷换，考生需辨清引言观点与作者本人观点的界限。</div>
           
         </div>
       </div>  <div id="w-tow" class="word-card reading-card">
@@ -1713,10 +1759,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 towards，经学术语境历史演进，直击考研核心概念：向;朝;关于。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">to (向) + -ward (方向后缀)。-s 是副词性所有格后缀，两者含义相同，但 towards 在英式英语中更常用。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>向;朝;关于</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>命题人有时会利用文中提到的某位学者与本文作者 (the writer)进行观点偷换，考生需辨清引言观点与作者本人观点的界限。</div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">态度题标志词： 该词是态度题题干的常驻嘉宾，如 attitude towards...。</div></div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>考生常忽略其对于/关于的抽象含义，误以为仅表示物理方向。在阅读选项中，它常引导对象，若选项中的对象与原文不符，则构成对象偷换。</div>
           
         </div>
       </div>  <div id="w-take" class="word-card reading-card">
@@ -1737,7 +1783,7 @@
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>v. 拿;带领;乘坐;接受;花费;做(某个动作)</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义题核心： 由于含义极其广泛，常在词汇题中考察其短语搭配（如 take on 承担/呈现，take up 占据/开始从事）。 - 例证题线索： Take... as an example 是标准的例证题识别信号，暗示后文为支撑论点的例子。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-shoulder" class="backlink-tag">🔙 来源: shoulder (List 05)</a> <a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-engagement" class="backlink-tag">🔙 来源: engagement (List 12)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-shoulder" class="backlink-tag">🔙 来源: shoulder (List 05)</a> <a href="红宝书 List 11 全景深度特训讲义_精排版.html#w-account" class="backlink-tag">🔙 来源: account (List 11)</a> <a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-engagement" class="backlink-tag">🔙 来源: engagement (List 12)</a> </div></div>
         </div>
       </div>  <div id="w-taste" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1795,7 +1841,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">teen (13-19的数字后缀) + age (年龄) + -er (人)。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>(十三到十九岁的)青少年</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题： 常作为数字鸿沟、社交媒体影响或教育改革文章的主体。 - 特征偷换： 选项中若将 teenager 扩大化为 all young people 或缩小化为 children，通常为范围错误的干扰项。 🔵 写译核心词特训（高分表达与场景适配）</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题： 常作为数字鸿沟、社交媒体影响或教育改革文章的主体。 - 特征偷换： 选项中若将 teenager 扩大化为 all young people 或缩小化为 children，通常为范围错误的干扰项。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1907,13 +1953,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 technology，经学术语境历史演进，直击考研核心概念：科技;技术。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary technology of sustainable reform</span> (推动可持续改革的主导要素（科技）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">techno- (工艺) + -logy (学科)。底层画面是： 工业或科学领域的系统性技术 。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">cutting-edge technology 尖端技术 - information technology 信息技术 (IT)</span> (真题高分搭配)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">new things -> technological breakthroughs (技术突破)</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>technology</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（描述互联网、人工智能等现象）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>With the flourishing of information <strong>technology</strong> , people now enjoy unprecedented convenience in knowledge acquisition.</div>
+            <div class="example-zh"><strong>中文对照：</strong>随着信息技术的繁荣，人们现在在获取知识方面享受着前所未有的便利。</div>
           </div>
           
         </div>
@@ -1938,7 +1984,7 @@
             <div class="example-en"><strong>高质量例句：</strong>With the flourishing of information technology , people now enjoy unprecedented convenience in knowledge acquisition.</div>
             <div class="example-zh"><strong>中文对照：</strong>随着信息技术的繁荣，人们现在在获取知识方面享受着前所未有的便利。</div>
           </div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-competition" class="backlink-tag">🔙 来源: competition (List 10)</a> </div></div>
+          
         </div>
       </div>  <div id="w-temper" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1975,7 +2021,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (9 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (7 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-temperature" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -2013,27 +2059,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 temp (时间) + oral (形容词后缀)。其底层画面是随着时间流逝而变化的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>时间的;世俗的;暂存的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题： 文中若出现 temporal 与 eternal (永恒的) 或 spiritual (精神的) 的对比，常考查对现实世界/物质世界特征的推理。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
-        </div>
-      </div>  <div id="w-temporary" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">48</span>
-            <span class="word-name">temporary</span>
-            <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.48</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 temporary，经学术语境历史演进，直击考研核心概念：短暂的;临时的。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>短暂的;临时的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">推理题： 文中若出现 temporal 与 eternal (永恒的) 或 spiritual (精神的) 的对比，常考查对现实世界/物质世界特征的推理。 - 语义干扰： 容易与 temporary (临时的) 混淆，temporal 更偏重于时间属性的客观描述。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2097,33 +2123,13 @@
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>若文章作者使用了maybe, possibly, likely等词，正确选项常对应 tentative。陷阱选项常设为 definite (确定的) 或 conclusive (结论性的)，属于正反混淆。</div>
           
         </div>
-      </div>  <div id="w-term" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">54</span>
-            <span class="word-name">term</span>
-            <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.54</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 term (边界/界限) + inal。底层画面是到了边界，不能再走了。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>学期;术语;措辞;期限;条款;v. 把...称作;把...叫做</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义题： 注意晚期和终点的语义延伸。在社会经济类文章中，terminal decline 指无可挽回的衰退。命题陷阱在于将其理解为短期的或局部的。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
-        </div>
       </div>  <div id="w-terminal" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
             <span class="word-no">55</span>
             <span class="word-name">terminal</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.55</span>
@@ -2131,9 +2137,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 terminal，经学术语境历史演进，直击考研核心概念：终端的;晚期的;n. 终点站;航站搂;终端。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 term (边界/界限) + inal。底层画面是到了边界，不能再走了。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>终端的;晚期的;n. 终点站;航站搂;终端</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">语义题： 注意晚期和终点的语义延伸。在社会经济类文章中，terminal decline 指无可挽回的衰退。命题陷阱在于将其理解为短期的或局部的。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2153,13 +2159,36 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">term (界限) + inate (动词后缀)。使某事到达界限，即终止。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>结束;终止;满期</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题： 在合同协议或就业类文章中，常考查合同终止的条件。干扰项常在终止原因上做文章，如将主动退出篡改为被动开除。 🔵 第二部分：写译核心词（应试提分矩阵） 此类单词不仅要识记，更需在英二图表作文与书信作文中精准调用。 1. temporary (NO.48) (adj.) - 【词源与底层语义】： 来源于 temp (时间)。物理画面：只在这一段时间内存在。 - 【核心高分词链】： - take temporary measures (采取临时措施) - temporary employment (临时就业) - 【真题对齐替换大礼包】： - 白话词：short-term -> 提分词： transient (转瞬即逝的) - 白话词：momentary -> 提分词： provisional (临时的/暂定的) - 【🎬 英二专属写译场景】： - 适用题型： 图表大作文（原因分析：短期政策波动的影响）。 - 高质量例句： The sudden surge in part-time jobs may be a temporary phenomenon rather than a long-term trend. - 译： 兼职工作的突然激增可能是一种临时现象，而非长期的趋势。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">细节题： 在合同协议或就业类文章中，常考查合同终止的条件。干扰项常在终止原因上做文章，如将主动退出篡改为被动开除。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
       </div>  <div class="phase-header writing">
-        <span>🔵 第二阶段：写译核心词特训 (6 词)</span>
+        <span>🔵 第二阶段：写译核心词特训 (8 词)</span>
         <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-temporary" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">48</span>
+            <span class="word-name">temporary</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.48</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">来源于 temp (时间)。物理画面：只在这一段时间内存在。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">take temporary measures  ｜  temporary employment</span> (采取临时措施  ｜  临时就业)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：short-term -> 提分词： transient (转瞬即逝的) - 白话词：momentary -> 提分词： provisional (临时的/暂定的)</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表大作文（原因分析：短期政策波动的影响）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The sudden surge in part-time jobs may be a <strong>temporary</strong> phenomenon rather than a long-term trend. - 译： 兼职工作的突然激增可能是一种临时现象，而非长期的趋势。</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
       </div>  <div id="w-tend" class="word-card writing-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
           <div class="word-title-box">
@@ -2173,13 +2202,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 tend，经学术语境历史演进，直击考研核心概念：趋向;朝向;往往会;照料;看护。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively tend crucial resources</span> (积极采取措施以落实（趋向）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-implement" class="cross-tag" title="直达 List 16">implement (List 16) ↗</a> <span class="synonym-pill">facilitate</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 tend (拉伸)。底层画面：向某个方向拉伸。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">tend to believe that...  ｜  show a growing tendency to</span> (倾向于认为...  ｜  呈现出日益增长的倾向)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：be likely to -> 提分词： be inclined to - 白话词：trend -> 提分词： inclination</span></div></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
-            <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>tend</strong> relevant developmental priorities.</div>
-            <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+            <div class="scenario-tag">📌 适用场景：英二图表大作文（描述趋势：...呈现增长趋势）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing tendency to take part-time jobs for diverse reasons. - 译： 如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
           
         </div>
@@ -2197,11 +2226,34 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词根 tend (拉伸)。底层画面：向某个方向拉伸。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">tend to believe that...  ｜  show a growing tendency to</span> (tend to believe that... (倾向于认为...)  ｜  show a growing tendency to (呈现出日益增长的倾向))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">tend to believe that...  ｜  show a growing tendency to</span> (倾向于认为...  ｜  呈现出日益增长的倾向)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：be likely to -> 提分词： be inclined to - 白话词：trend -> 提分词： inclination</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：英二图表大作文（描述趋势：...呈现增长趋势）。</div>
-            <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing <strong>tendency</strong> to take part-time jobs for diverse reasons. - 译： 如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。 3. term (NO.54) (n./v.)</div>
+            <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing <strong>tendency</strong> to take part-time jobs for diverse reasons. - 译： 如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
+          </div>
+          
+        </div>
+      </div>  <div id="w-term" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">54</span>
+            <span class="word-name">term</span>
+            <span class="word-pos">n.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.54</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面是界限、边界。延伸为时间界限（学期/期限）和意义界限（术语/措辞）。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">in the long/short term  ｜  in terms of</span> (长/短期来看  ｜  在...方面；从...角度)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：language -> 提分词： terminology (专业术语) - 白话词：period -> 提分词： duration (时长/期限)</span></div></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：图表大作文（结论预测：从长远来看）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>In the long <strong>term</strong> , the optimization of industrial structure will exert a profound impact on job satisfaction. - 译： 从长远来看，产业结构的优化将对工作满意度产生深远影响。 4. testify (NO.57) (v.)</div>
             <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
           
@@ -2242,13 +2294,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 trace，经学术语境历史演进，直击考研核心概念：痕迹;轨迹;微量;追踪;v. 追踪;追溯;仔细查找;描摹。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary trace of sustainable reform</span> (推动可持续改革的主导要素（痕迹）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">trace 侧重于寻找过去留下的微量痕迹；track 侧重于沿着既定的轨道/足迹实时跟踪。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">trace... back to...  ｜  keep track of</span> (追溯到...  ｜  记录；跟踪)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：look for -> 提分词： pursue (追踪/追求) - 白话词：find the origin -> 提分词： date back to</span></div></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>trace</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：英二图表作文（背景分析：追溯某现象的根源）。</div>
+            <div class="example-en"><strong>高质量例句：</strong>The root of this social phenomenon can be <strong>traced</strong> back to the rapid development of information technology. - 译： 这一社会现象的根源可以追溯到信息技术的快速发展。</div>
+            <div class="example-zh"><strong>中文对照：</strong></div>
           </div>
           
         </div>
@@ -2266,7 +2318,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">trace 侧重于寻找过去留下的微量痕迹；track 侧重于沿着既定的轨道/足迹实时跟踪。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">trace... back to...  ｜  keep track of</span> (trace... back to... (追溯到...)  ｜  keep track of (记录；跟踪))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">trace... back to...  ｜  keep track of</span> (追溯到...  ｜  记录；跟踪)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：look for -> 提分词： pursue (追踪/追求) - 白话词：find the origin -> 提分词： date back to</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：英二图表作文（背景分析：追溯某现象的根源）。</div>
@@ -2289,7 +2341,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">trans (跨越) + dit (给)。底层画面是跨越时间交给下一代的东西，即传统。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">break with tradition  ｜  cultural tradition</span> (break with tradition (打破传统)  ｜  cultural tradition (文化传统))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">break with tradition  ｜  cultural tradition</span> (打破传统  ｜  文化传统)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：habit -> 提分词： convention (常规/习俗) - 白话词：old -> 提分词： long-standing (长久以来的)</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：英二小作文（书信：邀请参加传统节日活动）。</div>

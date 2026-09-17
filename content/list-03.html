@@ -2,6 +2,7 @@
     <html lang="zh-CN">
     <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红宝书 List 03 全景深度特训讲义</title>
     <style>
       @page {
@@ -532,6 +533,51 @@
         text-decoration: none;
         font-weight: 700;
       }
+
+      /* ══════════════════════════════════════════════════════════════
+         手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+         ══════════════════════════════════════════════════════════════ */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 14px !important;
+          padding: 0 4px !important;
+        }
+        .header-banner {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+          padding: 12px 14px !important;
+        }
+        .header-left h1 {
+          font-size: 18px !important;
+        }
+        .header-badge {
+          text-align: left !important;
+          padding: 4px 8px !important;
+        }
+        .batch-nav-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .matrix-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 6px !important;
+        }
+        .matrix-item {
+          font-size: 11.5px !important;
+          padding: 5px 6px !important;
+        }
+        .word-card {
+          margin-bottom: 12px !important;
+          padding: 14px 12px !important;
+        }
+        .word-title {
+          font-size: 17px !important;
+        }
+        .word-row {
+          font-size: 13.5px !important;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -1063,7 +1109,7 @@
             <span class="word-no">11</span>
             <span class="word-name">sit</span>
             <span class="word-pos">v.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.11</span>
@@ -1071,9 +1117,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 sit，经学术语境历史演进，直击考研核心概念：坐。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">均源自拉丁语 situm (安置/位置)。sit 为动作，site 为物理或虚拟的空间。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>坐</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在英语二关于网络订阅（Mobile-phone subscriptions）或职场满意度（Workplace satisfaction）的文章中，site 频繁指代网络站点或办公选址。它是细节定位的坐标词，需快速锁定其在文中的具体物理或虚拟指代。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1103,7 +1149,7 @@
             <span class="word-no">15</span>
             <span class="word-name">skeleton</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.15</span>
@@ -1113,7 +1159,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 skeleton，经学术语境历史演进，直击考研核心概念：骨架;骷髅;纲要;梗概;adj. 骨干的;骨骼的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>骨架;骷髅;纲要;梗概;adj. 骨干的;骨骼的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在推理题中，skeleton 常引申为 基本框架/核心计划 。其逻辑对应的是初步的、未完善的，常与 elaborate (List 2, 详尽阐述) 形成程度上的反差。若文中提到 skeleton plan，则暗示该计划尚需填充细节。 3. 【写译核心词】模块：高分表达转化与英二场景适配 写译核心词要求考生掌握从白话到学术表达的升级路径，通过高价值词链提升语言的严谨度。 3.1 核心输出特训 单词,词根/词源底层语义,高分词链,真题对齐替换</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">在推理题中，skeleton 常引申为 基本框架/核心计划 。其逻辑对应的是初步的、未完善的，常与 elaborate (List 2, 详尽阐述) 形成程度上的反差。若文中提到 skeleton plan，则暗示该计划尚需填充细节。 3. 【写译核心词】模块：高分表达转化与英二场景适配</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1279,7 +1325,7 @@
             <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>situation</strong> is vital to fostering continuous social harmony.</div>
             <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
           </div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 04 全景深度特训讲义_精排版.html#w-characterize" class="backlink-tag">🔙 来源: characterize (List 04)</a> <a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-circumstance" class="backlink-tag">🔙 来源: circumstance (List 12)</a> <a href="红宝书 List 21 全景深度特训讲义_精排版.html#w-context" class="backlink-tag">🔙 来源: context (List 21)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 04 全景深度特训讲义_精排版.html#w-characterise" class="backlink-tag">🔙 来源: characterise (List 04)</a> <a href="红宝书 List 04 全景深度特训讲义_精排版.html#w-characterize" class="backlink-tag">🔙 来源: characterize (List 04)</a> <a href="红宝书 List 12 全景深度特训讲义_精排版.html#w-circumstance" class="backlink-tag">🔙 来源: circumstance (List 12)</a> <span style="font-size:7.2pt; color:#94a3b8;">等4处</span></div></div>
         </div>
       </div>  <div class="batch-footer">
         <span>（Batch 1 学习完毕）</span> &nbsp;｜&nbsp; <a href="#table-of-contents">🔝 一键返回顶部目录</a>
@@ -1301,7 +1347,7 @@
             <span class="word-no">16</span>
             <span class="word-name">skeptical</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.16</span>
@@ -1321,7 +1367,7 @@
             <span class="word-no">17</span>
             <span class="word-name">sceptical</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.17</span>
@@ -1545,8 +1591,8 @@
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">aristocracy</strong> <span class="syn-desc-text">: 指世袭贵族或特权上层阶级，强调血统与世袭地位（如 the British aristocracy）</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">intelligentsia</strong> <span class="syn-desc-text">: 指知识分子精英群体，强调学识与文化影响力（如 the scientific intelligentsia）</span></div></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：考研英一/英二议论文核心论证段</div>
-            <div class="example-en"><strong>高质量例句：</strong>Education should not be a privilege reserved for the <strong>elite</strong>. （教育不应是仅供精英阶层享有的特权。）</div>
-            <div class="example-zh"><strong>中文对照：</strong></div>
+            <div class="example-en"><strong>高质量例句：</strong>Education should not be a privilege reserved for the <strong>elite</strong>.</div>
+            <div class="example-zh"><strong>中文对照：</strong>教育不应是仅供精英阶层享有的特权。</div>
           </div>
           
         </div>
@@ -1679,7 +1725,7 @@
             <span class="word-no">33</span>
             <span class="word-name">update</span>
             <span class="word-pos">v.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.33</span>
@@ -2059,7 +2105,7 @@
             <span class="word-no">51</span>
             <span class="word-name">academic</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.51</span>
@@ -2067,11 +2113,11 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">看见并证明。物理本质是作为观察者记录历史。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">属于学园的。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>学院的;学术的;n. 大学教师;学者</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">需与形容词 academic 联动记忆。在英二文章中，看到此词通常意味着文本具有高度的学术背景（Academic context），需进入严肃阅读模式。PhD 笔记： 识记词如同阅读航路中的灯塔，不仅指示位置，更划定语义的安全区，防止过度推导。 3. 写译核心词：画面本质与提分转换 写译词汇是卷面高级感的源泉，直接决定了阅卷老师对你思维深度的评分。 witness (v./n.) - 【底层语义】： 看见并证明。物理本质是作为观察者记录历史。 - 【核心高分词链】： witness a dramatic increase/decline in... (见证了...的剧烈增长/下降)。 - 【替换礼包】： see → witness - 【英二专属场景适配】： 用于图表趋势描述。 - High-quality Sentence: While the past decade has witnessed a significant rise in mobile-phone subscriptions, it is the underlying digital infrastructure that has accelerated this trend, accessing previously isolated markets. - 中文对照： 尽管过去十年见证了移动电话用户数量的显著增长，但正是潜在的数字基础设施加速了这一趋势，并触及了此前孤立的市场。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 04 全景深度特训讲义_精排版.html#w-ability" class="backlink-tag">🔙 来源: ability (List 04)</a> </div></div>
         </div>
       </div>  <div id="w-academy" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -2079,7 +2125,7 @@
             <span class="word-no">52</span>
             <span class="word-name">academy</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.52</span>
@@ -2089,7 +2135,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">追溯至柏拉图在希腊阿卡德摩斯 (Akademos) 英雄墓地旁创立的园林学园。从物理上的花园演变为抽象的系统化高等教育机构。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>学院</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">需与形容词 academic 联动记忆。在英二文章中，看到此词通常意味着文本具有高度的学术背景（Academic context），需进入严肃阅读模式。PhD 笔记： 识记词如同阅读航路中的灯塔，不仅指示位置，更划定语义的安全区，防止过度推导。 3. 写译核心词：画面本质与提分转换 写译词汇是卷面高级感的源泉，直接决定了阅卷老师对你思维深度的评分。 witness (v./n.) - 【底层语义】： 看见并证明。物理本质是作为观察者记录历史。 - 【核心高分词链】： witness a dramatic increase/decline in... (见证了...的剧烈增长/下降)。 - 【替换礼包】： see → witness - 【英二专属场景适配】： 用于图表趋势描述。 - High-quality Sentence: While the past decade has witnessed a significant rise in mobile-phone subscriptions, it is the underlying digital infrastructure that has accelerated this trend, accessing previously isolated markets. - 中文对照： 尽管过去十年见证了移动电话用户数量的显著增长，但正是潜在的数字基础设施加速了这一趋势，并触及了此前孤立的市场。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -2127,7 +2173,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ac- (朝向/加强) + cept (核心意符) → 语义引申为：接受;认可;同意。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">顺从地接过来并予以认可。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>接受;认可;同意</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
@@ -2199,7 +2245,7 @@
             <span class="word-no">58</span>
             <span class="word-name">begin</span>
             <span class="word-pos">v.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.58</span>
@@ -2207,9 +2253,9 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 begin，经学术语境历史演进，直击考研核心概念：开始;着手。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">认知语言学称之为起始体 (Inchoative aspect)。与 origin (侧重静态源头) 不同， begin 强调\原始发动\的那一瞬动作，即事物跨越无到有的阈值。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>开始;着手</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">常见于科普文或历史类文章首段，作为时间轴的起点标识，辅助推导事件的因果链。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>

@@ -2,6 +2,7 @@
     <html lang="zh-CN">
     <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>红宝书 List 18 全景深度特训讲义</title>
     <style>
       @page {
@@ -532,6 +533,51 @@
         text-decoration: none;
         font-weight: 700;
       }
+
+      /* ══════════════════════════════════════════════════════════════
+         手机端屏幕专属自适应（完全不影响 A4 PDF 打印版面）
+         ══════════════════════════════════════════════════════════════ */
+      @media screen and (max-width: 640px) {
+        body {
+          font-size: 14px !important;
+          padding: 0 4px !important;
+        }
+        .header-banner {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 8px !important;
+          padding: 12px 14px !important;
+        }
+        .header-left h1 {
+          font-size: 18px !important;
+        }
+        .header-badge {
+          text-align: left !important;
+          padding: 4px 8px !important;
+        }
+        .batch-nav-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .matrix-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 6px !important;
+        }
+        .matrix-item {
+          font-size: 11.5px !important;
+          padding: 5px 6px !important;
+        }
+        .word-card {
+          margin-bottom: 12px !important;
+          padding: 14px 12px !important;
+        }
+        .word-title {
+          font-size: 17px !important;
+        }
+        .word-row {
+          font-size: 13.5px !important;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -573,7 +619,7 @@
               <span>🚩 Batch 2 (NO.16 - NO.30)</span>
               <span>👉 直达本批</span>
             </div>
-            <div class="batch-nav-desc">核心高频词汇精讲 · 第二批次 ｜ 阅读 15 词 ＋ 写译 0 词</div>
+            <div class="batch-nav-desc">核心高频词汇精讲 · 第二批次 ｜ 阅读 14 词 ＋ 写译 1 词</div>
           </a>
       <a href="#batch-3" class="batch-nav-card">
             <div class="batch-nav-title">
@@ -701,7 +747,7 @@
                 <span class="num">19</span>
                 <span class="name">accuracy</span>
               </a>
-          <a href="#w-accurate" class="matrix-item reading" title="点击跳转至 accurate">
+          <a href="#w-accurate" class="matrix-item writing" title="点击跳转至 accurate">
                 <span class="chk">☐</span>
                 <span class="num">20</span>
                 <span class="name">accurate</span>
@@ -970,7 +1016,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 select，经学术语境历史演进，直击考研核心概念：选择;挑选;adj. 精心挑选的。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自拉丁语 se- (分开) + legere (挑选/收集)。其物理本质是从大群体中拨开并挑出特定的个体，强调精选这一过程。</div></div>
           <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively select crucial resources</span> (积极采取措施以落实（选择）)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 16 全景深度特训讲义_精排版.html#w-implement" class="cross-tag" title="直达 List 16">implement (List 16) ↗</a> <span class="synonym-pill">facilitate</span></div></div>
           <div class="example-container">
@@ -993,8 +1039,8 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自拉丁语 se- (分开) + legere (挑选/收集)。其物理本质是从大群体中拨开并挑出特定的个体，强调精选这一过程。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">select the most suitable candidate  ｜  a wide selection of high-quality resources  ｜  random selection of data samples</span> (select the most suitable candidate (挑选最合适的候选人)  ｜  a wide selection of high-quality resources (广泛的高质量资源选择)  ｜  random selection of data samples (数据样本的随机抽取))</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 selection，经学术语境历史演进，直击考研核心概念：挑选;选择。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">make a careful selection of candidates based on merit</span> (根据才能对候选人进行仔细的选拔)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">opt for (替代 choose</span> <span class="synonym-pill">select</span> <span class="synonym-pill">更具学术感) assortment (替代 selection</span> <span class="synonym-pill">表示各种各样的组合</span> <span class="synonym-pill">常用于描述多样性) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二图表大作文（描述数据采集）或书信类小作文（选择活动/日期）。</div>
@@ -1017,7 +1063,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自词根 sens- (感觉/意识)。物理本质是感官系统接收并解析外界信号。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">sense potential crises in advance  ｜  make sense of the complex data  ｜  cultivate a sense of social responsibility</span> (sense potential crises in advance (预先意识到潜在危机)  ｜  make sense of the complex data (理解/搞清复杂数据)  ｜  cultivate a sense of social responsibility (培养社会责任感))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">sense potential crises in advance  ｜  make sense of the complex data  ｜  cultivate a sense of social responsibility</span> (预先意识到潜在危机  ｜  理解/搞清复杂数据  ｜  培养社会责任感)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">perceive (替代 sense v.</span> <span class="synonym-pill">强调感知</span> <span class="synonym-pill">觉察) comprehend (替代 make sense of</span> <span class="synonym-pill">强调深度理解) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二图表大作文（分析现象背后的深层意义/社会感知）。</div>
@@ -1063,7 +1109,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">sense (理智) + -ible (能够...的)。【纠偏】严防错印恰劣的，其核心含义是明智的、合乎情理的。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">make a sensible decision  ｜  propose a sensible solution</span> (make a sensible decision (做出明智的决定)  ｜  propose a sensible solution (提出合理的解决方案))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">make a sensible decision  ｜  propose a sensible solution</span> (做出明智的决定  ｜  提出合理的解决方案)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">rational (替代 sensible</span> <span class="synonym-pill">强调逻辑上的合理性) prudent (替代 sensible</span> <span class="synonym-pill">强调审慎且明智) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二图表大作文（成因分析后的建议部分）。</div>
@@ -1086,7 +1132,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">sense + -itive (形容词后缀)。物理本质是触觉或情感极其敏锐，易受微小变化影响。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be sensitive to market fluctuations  ｜  address sensitive social issues</span> (be sensitive to market fluctuations (对市场波动敏感)  ｜  address sensitive social issues (处理敏感社会问题))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">be sensitive to market fluctuations  ｜  address sensitive social issues</span> (对市场波动敏感  ｜  处理敏感社会问题)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">vulnerable (在表示易受影响时可替换) susceptible (强调生理或心理上的易感性) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二书信小作文（表达体贴/善解人意）或图表分析（对价格/政策敏感）。</div>
@@ -1109,7 +1155,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">se- (分开) + parare (准备/拨开)。物理本质是将混在一起的东西拨到两边。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">separate work from life  ｜  two separate entities</span> (separate work from life (将工作与生活分开)  ｜  two separate entities (两个独立的实体))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">separate work from life  ｜  two separate entities</span> (将工作与生活分开  ｜  两个独立的实体)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">detach (替代 separate</span> <span class="synonym-pill">强调从连接状态中拆开) isolate (替代 separate</span> <span class="synonym-pill">强调隔离</span> <span class="synonym-pill">孤立) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二图表大作文（分类描述数据或分析独立因素）。</div>
@@ -1154,7 +1200,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 serial，经学术语境历史演进，直击考研核心概念：连续的;连环的;n. 连续剧;连载小说。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ser- (连接/排列)。 series 是一组，而 serial 强调连载的、连续的。</div></div>
           <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a serial role in development</span> (在现代社会发展中发挥重要作用)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 13 全景深度特训讲义_精排版.html#w-significant" class="cross-tag" title="直达 List 13">significant (List 13) ↗</a> <span class="synonym-pill">pivotal</span></div></div>
           <div class="example-container">
@@ -1201,7 +1247,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">拉丁语 serius ，意为庄重、不苟言笑。引申为事态重大、不容忽视。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">take potential threats seriously  ｜  pose a serious challenge to...</span> (take potential threats seriously (认真对待潜在威胁)  ｜  pose a serious challenge to... (对...构成严峻挑战))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">take potential threats seriously  ｜  pose a serious challenge to...</span> (认真对待潜在威胁  ｜  对...构成严峻挑战)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">grave (替代 serious</span> <span class="synonym-pill">形容问题极端严重) severe (替代 serious</span> <span class="synonym-pill">形容打击或程度剧烈) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二图表大作文（问题严重性描述）。</div>
@@ -1224,7 +1270,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 torrere (烘烤)。古代习俗是在酒杯里放一片烤面包，后演变为祝酒。【纠偏】严防错印税酒。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">propose a toast to the success  ｜  toast to the bright future</span> (propose a toast to the success (为成功举杯)  ｜  toast to the bright future (为美好的未来祝酒))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">propose a toast to the success  ｜  toast to the bright future</span> (为成功举杯  ｜  为美好的未来祝酒)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">salute (替代 toast</span> <span class="synonym-pill">表示敬意或致敬) celebrate (替代 toast</span> <span class="synonym-pill">表示庆祝) 🎬 英二专属写译场景适配</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型 ：英二小作文（祝贺信/聚会通知/答谢信）。</div>
@@ -1314,7 +1360,7 @@
         <span class="return-pill">🔄 点此回目录</span>
       </a>
       <div class="phase-header reading">
-        <span>🔴 第一阶段：阅读识记词特训 (15 词)</span>
+        <span>🔴 第一阶段：阅读识记词特训 (14 词)</span>
         <span style="font-size:7.5pt;">瞬间识别 · 预判陷阱 · 情感色彩</span>
       </div>  <div id="w-tolerant" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1322,7 +1368,7 @@
             <span class="word-no">16</span>
             <span class="word-name">tolerant</span>
             <span class="word-pos">adj.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill pos">🟢 正向/褒义</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.16</span>
@@ -1330,10 +1376,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 tolerant，经学术语境历史演进，直击考研核心概念：宽容的;容忍的。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">拆解词根 tol- (to bear/carry, 承担/忍受)。其语义路径是从原始的身体负重演变为心理上的忍受，最终升华为社会文明中的宽容与包容。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>宽容的;容忍的</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>（作者态度题）： tolerant 常作为正面或中性态度选项出现。 专家警示： 命题人常利用容忍与支持的界限设坑。在英二阅读中，作者对某一社会现象的容忍（ tolerate ）并不代表赞同（ approve ），若选项出现 supportive 即为典型的程度过头干扰。</div>
           
         </div>
       </div>  <div id="w-tolerate" class="word-card reading-card">
@@ -1342,7 +1388,7 @@
             <span class="word-no">17</span>
             <span class="word-name">tolerate</span>
             <span class="word-pos">v.</span>
-            <span class="attitude-pill pos">🟢 正向/褒义</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.17</span>
@@ -1350,10 +1396,10 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">拆解词根 tol- (to bear/carry, 承担/忍受)。其语义路径是从原始的身体负重演变为心理上的忍受，最终升华为社会文明中的宽容与包容。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 tolerate，经学术语境历史演进，直击考研核心概念：容忍;宽容。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>容忍;宽容</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>（作者态度题）： tolerant 常作为正面或中性态度选项出现。 专家警示： 命题人常利用容忍与支持的界限设坑。在英二阅读中，作者对某一社会现象的容忍（ tolerate ）并不代表赞同（ approve ），若选项出现 supportive 即为典型的程度过头干扰。</div>
+          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
       </div>  <div id="w-accumulate" class="word-card reading-card">
@@ -1382,7 +1428,7 @@
             <span class="word-no">19</span>
             <span class="word-name">accuracy</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.19</span>
@@ -1390,28 +1436,8 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ac- (朝向/加强) + curacy (核心意符) → 语义引申为：精确性;准确度。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>精确性;准确度</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
-          <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          
-        </div>
-      </div>  <div id="w-accurate" class="word-card reading-card">
-        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-          <div class="word-title-box">
-            <span class="word-no">20</span>
-            <span class="word-name">accurate</span>
-            <span class="word-pos">adj.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
-          </div>
-          <div class="card-top-right">
-            <span class="type-badge reading">🔴 阅读识记 · NO.20</span>
-            <span class="return-chip">🔄 回目录</span>
-          </div>
-        </a>
-        <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">前缀 ad- (to) + 词根 cur- (care, 照料)。其底层画面是由于投入了极大的细心与照料，从而排除了所有偏差。</div></div>
-          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>精确的;无误的</strong></div></div>
+          <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>精确性;准确度</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>在细节题中，该词常作为原文数据或事实的总结性替换词（常与 validity 或 reliability 互为支撑）。 专家警示： 警惕极端化干扰项（Extreme Option Trap），如原文表达趋于精确，选项若出现 absolute accuracy （绝对精确）则属于语义扭曲。</div>
           
@@ -1474,7 +1500,7 @@
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>承认;认可;告知收到;答谢</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-recognise" class="backlink-tag">🔙 来源: recognise (List 14)</a> <a href="红宝书 List 20 全景深度特训讲义_精排版.html#w-appreciate" class="backlink-tag">🔙 来源: appreciate (List 20)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 14 全景深度特训讲义_精排版.html#w-recognize" class="backlink-tag">🔙 来源: recognize (List 14)</a> <a href="红宝书 List 20 全景深度特训讲义_精排版.html#w-appreciate" class="backlink-tag">🔙 来源: appreciate (List 20)</a> </div></div>
         </div>
       </div>  <div id="w-cheer" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1574,7 +1600,7 @@
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>选择;抉择;精选品;adj. 上等的;精选的</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
-          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-decide" class="backlink-tag">🔙 来源: decide (List 05)</a> <a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-alternative" class="backlink-tag">🔙 来源: alternative (List 10)</a> <a href="红宝书 List 17 全景深度特训讲义_精排版.html#w-optional" class="backlink-tag">🔙 来源: optional (List 17)</a> </div></div>
+          <div class="field-row" style="margin-top:4px; border-top:1px dashed #cbd5e1; padding-top:3px;"><span class="field-label" style="color:#64748b;">⬅️ 跨单元引用：</span><div class="field-val"><a href="红宝书 List 05 全景深度特训讲义_精排版.html#w-decide" class="backlink-tag">🔙 来源: decide (List 05)</a> <a href="红宝书 List 10 全景深度特训讲义_精排版.html#w-alternative" class="backlink-tag">🔙 来源: alternative (List 10)</a> <a href="红宝书 List 17 全景深度特训讲义_精排版.html#w-option" class="backlink-tag">🔙 来源: option (List 17)</a> <span style="font-size:7.2pt; color:#94a3b8;">等4处</span></div></div>
         </div>
       </div>  <div id="w-choose" class="word-card reading-card">
         <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
@@ -1614,6 +1640,32 @@
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>板;董事会;v. 上船(或火车、飞机等) 2027考研英语词汇红宝书</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
+          
+        </div>
+      </div>  <div class="phase-header writing">
+        <span>🔵 第二阶段：写译核心词特训 (1 词)</span>
+        <span style="font-size:7.5pt;">词链对齐 · 场景输出 · 高分表达</span>
+      </div>  <div id="w-accurate" class="word-card writing-card">
+        <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+          <div class="word-title-box">
+            <span class="word-no">20</span>
+            <span class="word-name">accurate</span>
+            <span class="word-pos">adj.</span>
+          </div>
+          <div class="card-top-right">
+            <span class="type-badge writing">🔵 写译核心 · NO.20</span>
+            <span class="return-chip">🔄 回目录</span>
+          </div>
+        </a>
+        <div class="word-body">
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">ac- (朝向/加强) + curate (核心意符) → 语义引申为：精确的;无误的。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a accurate role in development</span> (在现代社会发展中发挥重要作用)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 13 全景深度特训讲义_精排版.html#w-significant" class="cross-tag" title="直达 List 13">significant (List 13) ↗</a> <span class="synonym-pill">pivotal</span></div></div>
+          <div class="example-container">
+            <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
+            <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>accurate</strong> influence on long-term technological and economic stability.</div>
+            <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
+          </div>
           
         </div>
       </div>  <div class="batch-footer">
@@ -1766,7 +1818,7 @@
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 whole （完整的，健康的），古代认为完整无损的事物具有神性。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>神圣的;圣洁的</strong></div></div>
-          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 文化传统类文章。 陷阱解密： 注意其引申义，有时用于反讽或修辞，表示不可侵犯的原则。 🔵 第二部分：写译核心词（NO.33 - NO.45，合并特训组） 此类单词不仅要识记，更要形成搭配磁链，直接用于英二图表大作文或应用文小作文。</div></div>
+          <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">定位标志： 文化传统类文章。 陷阱解密： 注意其引申义，有时用于反讽或修辞，表示不可侵犯的原则。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
           
         </div>
@@ -1787,7 +1839,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">物理本质是隆隆声，引申为经济像爆炸一样猛烈且快速地增长。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">experience a rapid boom  ｜  an economic boom  ｜  the boom in e-commerce</span> (experience a rapid boom (经历快速繁荣)  ｜  an economic boom (经济繁荣)  ｜  the boom in e-commerce (电子商务的激增))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">experience a rapid boom  ｜  an economic boom  ｜  the boom in e-commerce</span> (经历快速繁荣  ｜  经济繁荣  ｜  电子商务的激增)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">flourish (繁荣)</span> <span class="synonym-pill">soar (激增)。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文趋势描写。</div>
@@ -1810,7 +1862,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">底层画面是从下方往上推，表示外力作用下的提升。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">boost economic growth  ｜  boost confidence  ｜  give a boost to...</span> (boost economic growth (促进经济增长)  ｜  boost confidence (增强信心)  ｜  give a boost to... (给……以推动))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">boost economic growth  ｜  boost confidence  ｜  give a boost to...</span> (促进经济增长  ｜  增强信心  ｜  给……以推动)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">enhance (增强)</span> <span class="synonym-pill">stimulate (刺激)。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型： 大作文成因分析或对策建议。</div>
@@ -1833,7 +1885,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 verb （词），核心画面是用嘴说出来的。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">verbal communication  ｜  verbal agreement  ｜  verbal abuse</span> (verbal communication (口头交流)  ｜  verbal agreement (口头协议)  ｜  verbal abuse (言语谩骂))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">verbal communication  ｜  verbal agreement  ｜  verbal abuse</span> (口头交流  ｜  口头协议  ｜  言语谩骂)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">oral (口头的)</span> <span class="synonym-pill">linguistic (语言的)。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型： 大作文人际关系类（如沟通的重要性）。</div>
@@ -1856,7 +1908,7 @@
         </a>
         <div class="word-body">
           <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">源自 vers （转），核心画面是从原型转出的另一个样子。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">an upgraded version  ｜  the latest version  ｜  the digital version of...</span> (an upgraded version (升级版本)  ｜  the latest version (最新样式/版本)  ｜  the digital version of... (……的电子版))</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">an upgraded version  ｜  the latest version  ｜  the digital version of...</span> (升级版本  ｜  最新样式/版本  ｜  ……的电子版)</div></div>
           <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">edition (版本)</span> <span class="synonym-pill">variant (变体)。</span></div></div>
           <div class="example-container">
             <div class="scenario-tag">📌 适用场景：适用题型： 书信小作文（如产品咨询或投诉）。</div>
@@ -1878,13 +1930,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 honor，经学术语境历史演进，直击考研核心概念：荣誉;荣幸;尊敬;v. 尊敬;给予荣誉。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary honor of sustainable reform</span> (推动可持续改革的主导要素（荣誉）)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">社会公认的崇高价值或对此表示的敬意。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">win great honor and respect  ｜  in honor of...  ｜  a high sense of honor</span> (赢得巨大荣誉和尊重  ｜  为了纪念……  ｜  强烈的荣誉感)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">glory (光荣)</span> <span class="synonym-pill">prestige (威望)。</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>honor</strong> is vital to fostering continuous social harmony.</div>
-            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 志愿者服务、优秀人物评价等应用文/大作文。</div>
+            <div class="example-en"><strong>高质量例句：</strong>It is a great <strong>honor</strong> for me to be selected as a volunteer for this international conference.</div>
+            <div class="example-zh"><strong>中文对照：</strong>我能被选为这次国际会议的志愿者感到非常荣幸。</div>
           </div>
           
         </div>
@@ -1901,13 +1953,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">社会公认的崇高价值或对此表示的敬意。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">win great honor and respect  ｜  in honor of...  ｜  a high sense of honor</span> (win great honor and respect (赢得巨大荣誉和尊重)  ｜  in honor of... (为了纪念……)  ｜  a high sense of honor (强烈的荣誉感))</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">glory (光荣)</span> <span class="synonym-pill">prestige (威望)。</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 honour，经学术语境历史演进，直击考研核心概念：荣誉;荣幸;尊敬;v. 尊敬;给予荣誉。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary honour of sustainable reform</span> (推动可持续改革的主导要素（荣誉）)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 02 全景深度特训讲义_精排版.html#w-element" class="cross-tag" title="直达 List 02">element (List 02) ↗</a> <span class="synonym-pill">dimension</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型： 志愿者服务、优秀人物评价等应用文/大作文。</div>
-            <div class="example-en"><strong>高质量例句：</strong>It is a great honor for me to be selected as a volunteer for this international conference.</div>
-            <div class="example-zh"><strong>中文对照：</strong>我能被选为这次国际会议的志愿者感到非常荣幸。</div>
+            <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+            <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>honour</strong> is vital to fostering continuous social harmony.</div>
+            <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
           </div>
           
         </div>
@@ -1924,13 +1976,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 honorable，经学术语境历史演进，直击考研核心概念：光荣的;可敬的;尊敬的。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a honorable role in development</span> (在现代社会发展中发挥重要作用)</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 13 全景深度特训讲义_精排版.html#w-significant" class="cross-tag" title="直达 List 13">significant (List 13) ↗</a> <span class="synonym-pill">pivotal</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">值得被给予 honor 的，形容人的品质。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">an honorable behavior  ｜  an honorable man  ｜  pursue an honorable career</span> (高尚的行为  ｜  可敬的人  ｜  追求光荣的事业)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">respectable (可敬的)</span> <span class="synonym-pill">noble (高尚的)。</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
-            <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>honorable</strong> influence on long-term technological and economic stability.</div>
-            <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
+            <div class="scenario-tag">📌 适用场景：适用题型： 价值观、传统美德类大作文。</div>
+            <div class="example-en"><strong>高质量例句：</strong>Taking care of our parents is not only a legal obligation but also an <strong>honorable</strong> virtue in Chinese culture.</div>
+            <div class="example-zh"><strong>中文对照：</strong>照顾父母不仅是法律义务，在中国文化中也是一种光荣的美德。Batch 3 结束 - 确保掌握自豪地拥有与图表趋势词</div>
           </div>
           
         </div>
@@ -1947,13 +1999,13 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">值得被给予 honor 的，形容人的品质。</div></div>
-          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">an honorable behavior  ｜  an honorable man  ｜  pursue an honorable career</span> (an honorable behavior (高尚的行为)  ｜  an honorable man (可敬的人)  ｜  pursue an honorable career (追求光荣的事业))</div></div>
-          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">respectable (可敬的)</span> <span class="synonym-pill">noble (高尚的)。</span></div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 honourable，经学术语境历史演进，直击考研核心概念：可敬的;荣誉的。</div></div>
+          <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a honourable role in development</span> (在现代社会发展中发挥重要作用)</div></div>
+          <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><a href="红宝书 List 13 全景深度特训讲义_精排版.html#w-significant" class="cross-tag" title="直达 List 13">significant (List 13) ↗</a> <span class="synonym-pill">pivotal</span></div></div>
           <div class="example-container">
-            <div class="scenario-tag">📌 适用场景：适用题型： 价值观、传统美德类大作文。</div>
-            <div class="example-en"><strong>高质量例句：</strong>Taking care of our parents is not only a legal obligation but also an honorable virtue in Chinese culture.</div>
-            <div class="example-zh"><strong>中文对照：</strong>照顾父母不仅是法律义务，在中国文化中也是一种光荣的美德。Batch 3 结束 - 确保掌握自豪地拥有与图表趋势词</div>
+            <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
+            <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>honourable</strong> influence on long-term technological and economic stability.</div>
+            <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
           </div>
           
         </div>
@@ -2237,7 +2289,7 @@
             <span class="word-no">59</span>
             <span class="word-name">prescribe</span>
             <span class="word-pos">v.</span>
-            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
+            <span class="attitude-pill neg">🔴 负向/警惕</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.59</span>
@@ -2245,7 +2297,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (在前/预先) + scribe (核心意符) → 语义引申为：开药方;规定。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (提前) + scribe (写) → 医生在拿药前预先写好的字 → 开处方 ；法律生效前预先写好的规则 → 规定 。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>开药方;规定</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
@@ -2257,7 +2309,7 @@
             <span class="word-no">60</span>
             <span class="word-name">prescription</span>
             <span class="word-pos">n.</span>
-            <span class="attitude-pill neg">🔴 负向/警惕</span>
+            <span class="attitude-pill warn">⚠️ 警惕/偏见</span>
           </div>
           <div class="card-top-right">
             <span class="type-badge reading">🔴 阅读识记 · NO.60</span>
@@ -2265,7 +2317,7 @@
           </div>
         </a>
         <div class="word-body">
-          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (提前) + scribe (写) → 医生在拿药前预先写好的字 → 开处方 ；法律生效前预先写好的规则 → 规定 。</div></div>
+          <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pre- (在前/预先) + scription (核心意符) → 语义引申为：处方;药方 2027考研英语词汇红宝书。</div></div>
           <div class="field-row"><span class="field-label">🎯 考研核心义：</span><div class="field-val"><strong>处方;药方 2027考研英语词汇红宝书</strong></div></div>
           <div class="field-row"><span class="field-label">🔍 逻辑考点：</span><div class="field-val">考研阅读事实论据向观点推演的核心定位词。在英一/英二事实细节题中常作为锁定题干事实的关键线索。</div></div>
           <div class="trap-box"><strong>⚠️ 命题陷阱：</strong>干扰项常设'偷换概念'或'正反颠倒'。注意紧扣段落核心主题句，避免范围被选项过度泛化。</div>
