@@ -330,7 +330,8 @@
     line-height: 1.45;
   }
   .field-row:last-child { margin-bottom: 0; }
-  .field-label { flex-shrink: 0; font-weight: 700; width: 78px; color: #475569; }
+  .field-label { flex-shrink: 0; font-weight: 700; min-width: 78px;
+        white-space: nowrap; color: #475569; }
   .field-val { flex: 1; color: #1e293b; }
 
   .collocation-box {
@@ -397,7 +398,7 @@
     </div>
     <div class="header-badge">
       <div>专题类型：<strong>大作文场景母题</strong></div>
-      <div>全案收录：<strong>6 大母题 ｜ 619 写译核心词</strong></div>
+      <div>全案收录：<strong>6 大母题 ｜ 629 写译核心词</strong></div>
     </div>
   </div>
 
@@ -409,7 +410,7 @@
     <a href="#theme-tech" class="theme-nav-card">
       <div class="theme-nav-title">
         <span>🚩 科技与算法</span>
-        <span style="font-size:7.5pt; color:#0284c7;">112 词 👉</span>
+        <span style="font-size:7.5pt; color:#0284c7;">113 词 👉</span>
       </div>
       <div class="theme-nav-desc">母题一：科技智能、算法网络与数字化变革...</div>
     </a>
@@ -423,7 +424,7 @@
     <a href="#theme-law" class="theme-nav-card">
       <div class="theme-nav-title">
         <span>🚩 法律与正义</span>
-        <span style="font-size:7.5pt; color:#0284c7;">92 词 👉</span>
+        <span style="font-size:7.5pt; color:#0284c7;">98 词 👉</span>
       </div>
       <div class="theme-nav-desc">母题三：法律司法、制度规范与社会治理...</div>
     </a>
@@ -437,7 +438,7 @@
     <a href="#theme-edu" class="theme-nav-card">
       <div class="theme-nav-title">
         <span>🚩 教育与成长</span>
-        <span style="font-size:7.5pt; color:#0284c7;">83 词 👉</span>
+        <span style="font-size:7.5pt; color:#0284c7;">86 词 👉</span>
       </div>
       <div class="theme-nav-desc">母题五：教育培养、青年成长与能力认知...</div>
     </a>
@@ -452,12 +453,12 @@
 
   <div class="matrix-container">
     <div class="matrix-header">
-      <span>🔤 全景 619 词话题自测与直达矩阵</span>
+      <span>🔤 全景 629 词话题自测与直达矩阵</span>
       <span style="font-size:7.5pt; color:#64748b;">按 6 大母题排布 ｜ ☐ 考前写作仿写打卡</span>
     </div>
     <div class="matrix-grid-4">
       <div class="matrix-col">
-        <div class="matrix-col-header">第 1 组 (155 词)</div>
+        <div class="matrix-col-header">第 1 组 (158 词)</div>
         <div class="matrix-col-list">
           <a href="#tw-aid" class="matrix-item theme-item" title="科技与算法 · List 10">
             <span class="chk">☐</span>
@@ -798,6 +799,11 @@
             <span class="chk">☐</span>
             <span class="num">11</span>
             <span class="name">substitute</span>
+          </a>
+          <a href="#tw-mediate" class="matrix-item theme-item" title="科技与算法 · List 02">
+            <span class="chk">☐</span>
+            <span class="num">10</span>
+            <span class="name">mediate</span>
           </a>
           <a href="#tw-medium" class="matrix-item theme-item" title="科技与算法 · List 02">
             <span class="chk">☐</span>
@@ -1234,11 +1240,6 @@
             <span class="num">36</span>
             <span class="name">career</span>
           </a>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-header">第 2 组 (155 词)</div>
-        <div class="matrix-col-list">
           <a href="#tw-celebrity" class="matrix-item theme-item" title="经济与职场 · List 02">
             <span class="chk">☐</span>
             <span class="num">50</span>
@@ -1249,6 +1250,11 @@
             <span class="num">21</span>
             <span class="name">embody</span>
           </a>
+        </div>
+      </div>
+      <div class="matrix-col">
+        <div class="matrix-col-header">第 2 组 (158 词)</div>
+        <div class="matrix-col-list">
           <a href="#tw-thorough" class="matrix-item theme-item" title="经济与职场 · List 03">
             <span class="chk">☐</span>
             <span class="num">27</span>
@@ -1459,6 +1465,11 @@
             <span class="num">60</span>
             <span class="name">advancement</span>
           </a>
+          <a href="#tw-collection" class="matrix-item theme-item" title="法律与正义 · List 15">
+            <span class="chk">☐</span>
+            <span class="num">23</span>
+            <span class="name">collection</span>
+          </a>
           <a href="#tw-communication" class="matrix-item theme-item" title="法律与正义 · List 15">
             <span class="chk">☐</span>
             <span class="num">40</span>
@@ -1498,6 +1509,11 @@
             <span class="chk">☐</span>
             <span class="num">50</span>
             <span class="name">original</span>
+          </a>
+          <a href="#tw-philosophy" class="matrix-item theme-item" title="法律与正义 · List 16">
+            <span class="chk">☐</span>
+            <span class="num">56</span>
+            <span class="name">philosophy</span>
           </a>
           <a href="#tw-organisation" class="matrix-item theme-item" title="法律与正义 · List 17">
             <span class="chk">☐</span>
@@ -1689,6 +1705,16 @@
             <span class="num">43</span>
             <span class="name">statement</span>
           </a>
+          <a href="#tw-panel" class="matrix-item theme-item" title="法律与正义 · List 02">
+            <span class="chk">☐</span>
+            <span class="num">05</span>
+            <span class="name">panel</span>
+          </a>
+          <a href="#tw-meditation" class="matrix-item theme-item" title="法律与正义 · List 02">
+            <span class="chk">☐</span>
+            <span class="num">11</span>
+            <span class="name">meditation</span>
+          </a>
           <a href="#tw-absence" class="matrix-item theme-item" title="法律与正义 · List 02">
             <span class="chk">☐</span>
             <span class="num">20</span>
@@ -1743,11 +1769,6 @@
             <span class="chk">☐</span>
             <span class="num">26</span>
             <span class="name">thirst</span>
-          </a>
-          <a href="#tw-beholf" class="matrix-item theme-item" title="法律与正义 · List 03">
-            <span class="chk">☐</span>
-            <span class="num">60</span>
-            <span class="name">beholf</span>
           </a>
           <a href="#tw-finding" class="matrix-item theme-item" title="法律与正义 · List 04">
             <span class="chk">☐</span>
@@ -1814,10 +1835,25 @@
             <span class="num">29</span>
             <span class="name">legitimate</span>
           </a>
+          <a href="#tw-leisure" class="matrix-item theme-item" title="法律与正义 · List 06">
+            <span class="chk">☐</span>
+            <span class="num">30</span>
+            <span class="name">leisure</span>
+          </a>
           <a href="#tw-measure" class="matrix-item theme-item" title="法律与正义 · List 07">
             <span class="chk">☐</span>
             <span class="num">50</span>
             <span class="name">measure</span>
+          </a>
+          <a href="#tw-weight" class="matrix-item theme-item" title="法律与正义 · List 09">
+            <span class="chk">☐</span>
+            <span class="num">42</span>
+            <span class="name">weight</span>
+          </a>
+          <a href="#tw-welfare" class="matrix-item theme-item" title="法律与正义 · List 09">
+            <span class="chk">☐</span>
+            <span class="num">44</span>
+            <span class="name">welfare</span>
           </a>
           <a href="#tw-allocate" class="matrix-item theme-item" title="生态与安全 · List 10">
             <span class="chk">☐</span>
@@ -2009,16 +2045,16 @@
             <span class="num">57</span>
             <span class="name">aggravate</span>
           </a>
+        </div>
+      </div>
+      <div class="matrix-col">
+        <div class="matrix-col-header">第 3 组 (158 词)</div>
+        <div class="matrix-col-list">
           <a href="#tw-alternate" class="matrix-item theme-item" title="教育与成长 · List 10">
             <span class="chk">☐</span>
             <span class="num">10</span>
             <span class="name">alternate</span>
           </a>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-header">第 3 组 (155 词)</div>
-        <div class="matrix-col-list">
           <a href="#tw-alternative" class="matrix-item theme-item" title="教育与成长 · List 10">
             <span class="chk">☐</span>
             <span class="num">11</span>
@@ -2108,6 +2144,11 @@
             <span class="chk">☐</span>
             <span class="num">53</span>
             <span class="name">independence</span>
+          </a>
+          <a href="#tw-independent" class="matrix-item theme-item" title="教育与成长 · List 15">
+            <span class="chk">☐</span>
+            <span class="num">54</span>
+            <span class="name">independent</span>
           </a>
           <a href="#tw-poll" class="matrix-item theme-item" title="教育与成长 · List 16">
             <span class="chk">☐</span>
@@ -2203,6 +2244,11 @@
             <span class="chk">☐</span>
             <span class="num">53</span>
             <span class="name">qualify</span>
+          </a>
+          <a href="#tw-quality" class="matrix-item theme-item" title="教育与成长 · List 01">
+            <span class="chk">☐</span>
+            <span class="num">54</span>
+            <span class="name">quality</span>
           </a>
           <a href="#tw-confident" class="matrix-item theme-item" title="教育与成长 · List 20">
             <span class="chk">☐</span>
@@ -2428,6 +2474,11 @@
             <span class="chk">☐</span>
             <span class="num">26</span>
             <span class="name">vanich</span>
+          </a>
+          <a href="#tw-wear" class="matrix-item theme-item" title="教育与成长 · List 09">
+            <span class="chk">☐</span>
+            <span class="num">39</span>
+            <span class="name">wear</span>
           </a>
           <a href="#tw-allow" class="matrix-item theme-item" title="文化与思辨 · List 10">
             <span class="chk">☐</span>
@@ -2789,16 +2840,16 @@
             <span class="num">45</span>
             <span class="name">soluble</span>
           </a>
+        </div>
+      </div>
+      <div class="matrix-col">
+        <div class="matrix-col-header">第 4 组 (155 词)</div>
+        <div class="matrix-col-list">
           <a href="#tw-solution" class="matrix-item theme-item" title="文化与思辨 · List 14">
             <span class="chk">☐</span>
             <span class="num">46</span>
             <span class="name">solution</span>
           </a>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-header">第 4 组 (154 词)</div>
-        <div class="matrix-col-list">
           <a href="#tw-solve" class="matrix-item theme-item" title="文化与思辨 · List 14">
             <span class="chk">☐</span>
             <span class="num">47</span>
@@ -2848,11 +2899,6 @@
             <span class="chk">☐</span>
             <span class="num">46</span>
             <span class="name">determine</span>
-          </a>
-          <a href="#tw-independent" class="matrix-item theme-item" title="文化与思辨 · List 15">
-            <span class="chk">☐</span>
-            <span class="num">54</span>
-            <span class="name">independent</span>
           </a>
           <a href="#tw-deserve" class="matrix-item theme-item" title="文化与思辨 · List 16">
             <span class="chk">☐</span>
@@ -3274,6 +3320,11 @@
             <span class="num">14</span>
             <span class="name">elaborate</span>
           </a>
+          <a href="#tw-elegant" class="matrix-item theme-item" title="文化与思辨 · List 02">
+            <span class="chk">☐</span>
+            <span class="num">15</span>
+            <span class="name">elegant</span>
+          </a>
           <a href="#tw-absent" class="matrix-item theme-item" title="文化与思辨 · List 02">
             <span class="chk">☐</span>
             <span class="num">21</span>
@@ -3591,7 +3642,7 @@
 <div class="section-wrapper">
   <div id="theme-tech"></div>
   <a href="#table-of-contents" class="section-header-link theme-bg" title="点击返回目录">
-    <h2>🚩 母题一：科技智能、算法网络与数字化变革 (112 词)</h2>
+    <h2>🚩 母题一：科技智能、算法网络与数字化变革 (113 词)</h2>
     <span class="return-pill">🔄 点此回目录</span>
   </a>
   <div class="section-guide-box">
@@ -3870,7 +3921,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------图表描述（数据趋势）</div>
         <div class="example-en"><strong>高质量例句：</strong>As is clearly demonstrated in the chart, the number of domestic tourists shows a <strong>gradual</strong> upward trend .</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>如图表清晰所示，国内游客数量呈现出逐渐上升的趋势。</div>
       </div>
     </div>
   </div>  <div id="tw-immediate" class="word-card writing-card">
@@ -4099,7 +4150,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">Indication (正式用法：迹象/暗示) - Symptom (侧重指某种社会问题或疾病的征兆)</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（趋势预测）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The fluctuation in the chart is a distinct <strong>sign</strong> of the changing consumption patterns among the younger generation. - 对照翻译： 图表中的波动是年轻一代消费模式发生变化的明显标志。</div>
+        <div class="example-en"><strong>高质量例句：</strong>The fluctuation in the chart is a distinct <strong>sign</strong> of the changing consumption patterns among the younger generation.</div>
         <div class="example-zh"><strong>中文对照：</strong>图表中的波动是年轻一代消费模式发生变化的明显标志。</div>
       </div>
     </div>
@@ -4122,7 +4173,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Convey (传达) - Manifest (表明</span> <span class="synonym-pill">显示)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（结论分析/建议段）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The sharp decline in the number of brick-and-mortar stores <strong>signals</strong> a fundamental shift in the retail industry. - 对照翻译： 实体店数量的剧烈下降标志着零售业发生了根本性的转变。</div>
+        <div class="example-en"><strong>高质量例句：</strong>The sharp decline in the number of brick-and-mortar stores <strong>signals</strong> a fundamental shift in the retail industry.</div>
         <div class="example-zh"><strong>中文对照：</strong>实体店数量的剧烈下降标志着零售业发生了根本性的转变。</div>
       </div>
     </div>
@@ -4145,7 +4196,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Parallel (平行的</span> <span class="synonym-pill">类似的) - Comparable (可比的</span> <span class="synonym-pill">类似的)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（数据对比段）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>A <strong>similar</strong> situation can be observed in the rural areas, where the digital divide remains a major obstacle. - 对照翻译： 在农村地区也可以观察到类似的情况，那里的数字鸿沟仍然是一个主要障碍。</div>
+        <div class="example-en"><strong>高质量例句：</strong>A <strong>similar</strong> situation can be observed in the rural areas, where the digital divide remains a major obstacle.</div>
         <div class="example-zh"><strong>中文对照：</strong>在农村地区也可以观察到类似的情况，那里的数字鸿沟仍然是一个主要障碍。</div>
       </div>
     </div>
@@ -4214,7 +4265,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">rocket (v. 猛增) ------ 强调速度极快</span> <span class="synonym-pill">画面感强。 - surge (v. 激增) ------ 强调像海浪一样波涛汹涌地增长。</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（核心描述词，替换 rise/increase）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>As is indicated by the chart, the number of mobile-phone subscriptions <strong>soared</strong> over the period from 2010 to</div>
+        <div class="example-en"><strong>高质量例句：</strong>As is indicated by the chart, the number of mobile-phone subscriptions <strong>soared</strong> over the period from 2010 to 2025.</div>
         <div class="example-zh"><strong>中文对照：</strong>如图表所示，2010年至2025年间，手机用户订阅数量飞速增长。</div>
       </div>
     </div>
@@ -5161,6 +5212,29 @@
         <div class="example-zh"><strong>中文对照：</strong>在许多制造业中，人工智能正日益被视为体力劳动的一种有效替代。</div>
       </div>
     </div>
+  </div>  <div id="tw-mediate" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">10</span>
+        <span class="word-name">mediate</span>
+        <span class="word-pos">v.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 02 · NO.10</span>
+        <a href="红宝书 List 02 全景深度特训讲义_精排版.pdf#w-mediate" class="back-to-list-btn" title="点击跨文件跳转至 List 02 原文">🔙 穿梭回 List 02 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 mediate，经学术语境历史演进，直击考研核心概念：调停;斡旋。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively mediate crucial resources</span> (积极采取措施以落实（调停）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">implement</span> <span class="synonym-pill">facilitate</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
+        <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>mediate</strong> relevant developmental priorities.</div>
+        <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+      </div>
+    </div>
   </div>  <div id="tw-medium" class="word-card writing-card">
     <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
       <div class="word-title-box">
@@ -5572,7 +5646,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（分析负面趋势，如满意度下降）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The <strong>failure</strong> to balance work and life is the primary cause of the decline in employee satisfaction.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>没能平衡好工作与生活是员工满意度下降的主要原因。</div>
       </div>
     </div>
   </div>  <div id="tw-fair" class="word-card writing-card">
@@ -5709,8 +5783,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">v. impair, undermine, compromise</span></div><div class="synonym-flow-item"><span class="syn-desc-text">n. detriment, hazard . - 🎬 实战场景 ：论述环境污染或科技（如智能手机）负面影响。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：论述环境污染或科技（如智能手机）负面影响。</div>
-        <div class="example-en"><strong>高质量例句：</strong>Over-reliance on digital devices may inflict substantial and irreversible <strong>harm</strong> upon teenagers' cognitive development. - 对照： 过度依赖数字设备可能会对青少年的认知发展造成实质且不可逆的伤害。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>Over-reliance on digital devices may inflict substantial and irreversible <strong>harm</strong> upon teenagers' cognitive development.</div>
+        <div class="example-zh"><strong>中文对照：</strong>过度依赖数字设备可能会对青少年的认知发展造成实质且不可逆的伤害。</div>
       </div>
     </div>
   </div>  <div id="tw-ignorance" class="word-card writing-card">
@@ -5732,8 +5806,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">n. unawareness, illiteracy, lack of insight . - 🎬 实战场景： 分析某负面社会现象（如历史遗产破坏、网络欺诈）的原因。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：分析某负面社会现象（如历史遗产破坏、网络欺诈）的原因。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The widespread <strong>ignorance</strong> of historical heritage protection among the public is a cause for profound concern. - 对照 ：民众对历史遗产保护的普遍无知是引起深切关注的原因。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>The widespread <strong>ignorance</strong> of historical heritage protection among the public is a cause for profound concern.</div>
+        <div class="example-zh"><strong>中文对照：</strong>民众对历史遗产保护的普遍无知是引起深切关注的原因。</div>
       </div>
     </div>
   </div>  <div id="tw-illustrate" class="word-card writing-card">
@@ -5755,8 +5829,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">v. demonstrate, clarify, exemplify, depict . - 🎬 实战场景 ：大作文第一段，描述图表数据所反映的本质。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文第一段，描述图表数据所反映的本质。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The figures provided in the table vividly <strong>illustrate</strong> the striking contrast between urban and rural consumption patterns. - 对照 ：表中提供的数据生动地阐明了城乡消费模式之间的鲜明对比。 第三部分：特训总结与逻辑复盘 根据柴荣老师讲义中\第五章：状语从句 与 句子切分方法\，我们将本批次单词整合进高分复合句：Although many individuals have to confront the harsh reality of fierce social competition, they should never ignore the importance of harmony between career and life, which is essential for long-term well-being. 【名师点评：命题人视角】 1. 语法核心 ：本句使用了 Although 引导的让步状语从句 （Chapter 5 Logic）+ 主句核心 + which 引导的非限制性定语从句 。 2. 命题陷阱提示 ：在阅读中，命题人极喜欢在 Although 后的让步成分里放干扰信息，而把真正的答案核心藏在主句或 which 引导的从句里。使用这种结构能显著提升你作文的逻辑严密性。 3. 语义落位 ： harsh 修饰 reality ， harmony 作为 ignore 的宾语，形成了完美的语义闭环。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>The figures provided in the table vividly <strong>illustrate</strong> the striking contrast between urban and rural consumption patterns.</div>
+        <div class="example-zh"><strong>中文对照：</strong>表中提供的数据生动地阐明了城乡消费模式之间的鲜明对比。</div>
       </div>
     </div>
   </div>  <div id="tw-quote" class="word-card writing-card">
@@ -5779,7 +5853,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文首段描述。</div>
         <div class="example-en"><strong>高质量例句：</strong>As is <strong>quoted</strong> from the data provided by the chart, the satisfaction level has reached its peak.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>正如该图表提供的数据所引用的，满意度已达到顶峰。</div>
       </div>
     </div>
   </div>  <div id="tw-raise" class="word-card writing-card">
@@ -5824,7 +5898,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">most -> utmost (提分词) - peak -> zenith (提分词) - 🎬 英二专属写译场景适配</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型 ：图表大作文（描述峰值数据）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The expenditure on research and development reached its <strong>maximum</strong> in</div>
+        <div class="example-en"><strong>高质量例句：</strong>The expenditure on research and development reached its <strong>maximum</strong> in 2023.</div>
         <div class="example-zh"><strong>中文对照：</strong>研发支出在2023年达到了最高值。</div>
       </div>
     </div>
@@ -5871,7 +5945,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二图表大作文（描写数据变化的手段、交通/沟通方式调研）。</div>
         <div class="example-en"><strong>高质量例句：</strong>As illustrated in the chart, the Internet has emerged as a primary <strong>means</strong> of obtaining information among the younger generation.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>如图表所示，互联网已成为年轻一代获取信息的主要手段。</div>
       </div>
     </div>
   </div>  <div id="tw-operate" class="word-card writing-card">
@@ -5894,7 +5968,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文原因分析（分析社会/企业系统如何运作）。</div>
         <div class="example-en"><strong>高质量例句：</strong>This mechanism <strong>operates</strong> on the principle of mutual benefit and cooperation.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>这一机制是基于互利合作的原则运作的。</div>
       </div>
     </div>
   </div>  <div id="tw-utilize" class="word-card writing-card">
@@ -5917,7 +5991,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 大作文成因分析（科技进步或资源分配等背景）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Modern technology enables us to <strong>utilize</strong> solar energy more efficiently than ever before.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>现代技术使我们能够比以往任何时候都更有效地利用太阳能。</div>
       </div>
     </div>
   </div>  <div id="tw-utilise" class="word-card writing-card">
@@ -5940,7 +6014,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 大作文成因分析（科技进步或资源分配等背景）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Modern technology enables us to utilize solar energy more efficiently than ever before.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>现代技术使我们能够比以往任何时候都更有效地利用太阳能。</div>
       </div>
     </div>
   </div>  <div id="tw-worth" class="word-card writing-card">
@@ -5963,7 +6037,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（描写趋势或关键数据后的评论）。</div>
         <div class="example-en"><strong>高质量例句：</strong>It is <strong>worth</strong> noting that the number of people choosing online courses has doubled in the past year.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>值得注意的是，选择在线课程的人数在去年翻了一番。</div>
       </div>
     </div>
   </div>  <div id="tw-technical" class="word-card writing-card">
@@ -6322,7 +6396,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------图表描述（教育/职业选择）</div>
         <div class="example-en"><strong>高质量例句：</strong>A growing number of university <strong>graduates</strong> tend to start their own businesses rather than seek traditional jobs.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>越来越多的大学毕业生倾向于自主创业，而非寻找传统工作。</div>
       </div>
     </div>
   </div>  <div id="tw-health" class="word-card writing-card">
@@ -6345,7 +6419,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------社会现象描述（工作压力/生活方式）</div>
         <div class="example-en"><strong>高质量例句：</strong>Young people should not strive for career success at the expense of their physical and mental <strong>health</strong> .</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>年轻人不应当以牺牲身心健康为代价去追求事业成功。讲义总结： 本批次词汇（Batch 4）涵盖了从基础动作（heal, feedback）到抽象概念（goal, gradual）再到社会管理（govern, grant）的多维度词汇。重点掌握 gradual 在图表描述中的应用，以及 feedback 和 grant 在应用文写作中的正式语气。</div>
       </div>
     </div>
   </div>  <div id="tw-immune" class="word-card writing-card">
@@ -6666,7 +6740,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">surge (剧增)：形容增长极快。 - expansion (扩张/扩大)：形容规模上的增长。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文首段趋势描述。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The chart displays a dramatic <strong>growth</strong> in the number of mobile-phone subscriptions between 2000 and</div>
+        <div class="example-en"><strong>高质量例句：</strong>The chart displays a dramatic <strong>growth</strong> in the number of mobile-phone subscriptions between 2000 and 2010.</div>
         <div class="example-zh"><strong>中文对照：</strong>图表显示了2000年至2010年间手机用户订阅数量的剧烈增长。</div>
       </div>
     </div>
@@ -7121,7 +7195,7 @@
       </div>
     </a>
     <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 pace，经学术语境历史演进，直击考研核心概念：一步;步伐;步速;v. 跛步;调整步调。</div></div>
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">经过试验（probe）确定真伪。</div></div>
       <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary pace of sustainable reform</span> (推动可持续改革的主导要素（一步）)</div></div>
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
       <div class="example-container">
@@ -7403,7 +7477,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（成因分析：如受教育程度对就业的影响）。</div>
         <div class="example-en"><strong>高质量例句：</strong>There is no denying the fact that <strong>education</strong> plays a fundamental role in shaping an individual's worldview and future career path.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>不可否认，教育在塑造个人世界观和未来职业道路方面起着根本性的作用。</div>
       </div>
     </div>
   </div>  <div id="tw-efficient" class="word-card writing-card">
@@ -7426,7 +7500,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（分析企业成功或科技发展的优势）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Promoting technological innovation is the most <strong>efficient</strong> way to enhance national efficiency and competitiveness.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>推动技术创新是提高国家效率和竞争力的最有效方式。</div>
       </div>
     </div>
   </div>  <div id="tw-efficiency" class="word-card writing-card">
@@ -7449,7 +7523,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（分析企业成功或科技发展的优势）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Promoting technological innovation is the most efficient way to enhance national <strong>efficiency</strong> and competitiveness.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>推动技术创新是提高国家效率和竞争力的最有效方式。</div>
       </div>
     </div>
   </div>  <div id="tw-generate" class="word-card writing-card">
@@ -7494,8 +7568,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">adj. severe, rigorous, austere, bleak . - 🎬 实战场景 ：分析就业压力（2012 Text 4）或教育不平等背景。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：分析就业压力（2012 Text 4）或教育不平等背景。</div>
-        <div class="example-en"><strong>高质量例句：</strong>Many graduates have to confront the <strong>harsh</strong> reality of fierce competition in the labor market. - 对照 ：许多毕业生不得不面对劳动力市场竞争激烈的严酷现实。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>Many graduates have to confront the <strong>harsh</strong> reality of fierce competition in the labor market.</div>
+        <div class="example-zh"><strong>中文对照：</strong>许多毕业生不得不面对劳动力市场竞争激烈的严酷现实。</div>
       </div>
     </div>
   </div>  <div id="tw-quest" class="word-card writing-card">
@@ -7518,7 +7592,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：成功/梦想类图表作文评论。</div>
         <div class="example-en"><strong>高质量例句：</strong>Humanity's eternal <strong>quest</strong> for knowledge has driven the continuous progress of our society.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>人类对知识永恒的探求驱动了社会的持续进步。</div>
       </div>
     </div>
   </div>  <div id="tw-mature" class="word-card writing-card">
@@ -7587,7 +7661,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（描写城乡人口变化、城乡消费支出差异等成因分析）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The past few decades have witnessed a dramatic shift of population from rural regions to <strong>urban</strong> areas .</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>过去几十年见证了人口从农村地区向城市地区的剧烈迁移。</div>
       </div>
     </div>
   </div>  <div id="tw-worship" class="word-card writing-card">
@@ -7610,7 +7684,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（文化消费、粉丝经济、盲目跟风现象）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The blind <strong>worship</strong> of consumerism among the younger generation has led to irrational spending habits.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>年轻一代对消费主义的盲目崇拜导致了不理性的消费习惯。</div>
       </div>
     </div>
   </div>  <div id="tw-target" class="word-card writing-card">
@@ -7655,8 +7729,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：short-term -> 提分词： transient (转瞬即逝的) - 白话词：momentary -> 提分词： provisional (临时的/暂定的)</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表大作文（原因分析：短期政策波动的影响）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The sudden surge in part-time jobs may be a <strong>temporary</strong> phenomenon rather than a long-term trend. - 译： 兼职工作的突然激增可能是一种临时现象，而非长期的趋势。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>The sudden surge in part-time jobs may be a <strong>temporary</strong> phenomenon rather than a long-term trend.</div>
+        <div class="example-zh"><strong>中文对照：</strong>兼职工作的突然激增可能是一种临时现象，而非长期的趋势。</div>
       </div>
     </div>
   </div>  <div id="tw-yield" class="word-card writing-card">
@@ -7736,7 +7810,7 @@
 <div class="section-wrapper">
   <div id="theme-law"></div>
   <a href="#table-of-contents" class="section-header-link theme-bg" title="点击返回目录">
-    <h2>🚩 母题三：法律司法、制度规范与社会治理 (92 词)</h2>
+    <h2>🚩 母题三：法律司法、制度规范与社会治理 (98 词)</h2>
     <span class="return-pill">🔄 点此回目录</span>
   </a>
   <div class="section-guide-box">
@@ -7785,7 +7859,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------图表评论（社会问题类解决对策）</div>
         <div class="example-en"><strong>高质量例句：</strong>The government should implement effective measures to <strong>govern</strong> the chaotic market environment.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>政府应当采取有效措施来治理混乱的市场环境。</div>
       </div>
     </div>
   </div>  <div id="tw-government" class="word-card writing-card">
@@ -7808,7 +7882,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------图表评论（社会问题类解决对策）</div>
         <div class="example-en"><strong>高质量例句：</strong>The <strong>government</strong> should implement effective measures to govern the chaotic market environment.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>政府应当采取有效措施来治理混乱的市场环境。</div>
       </div>
     </div>
   </div>  <div id="tw-grant" class="word-card writing-card">
@@ -7831,7 +7905,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------成因分析（政府支持/教育保障）</div>
         <div class="example-en"><strong>高质量例句：</strong>To narrow the educational gap, the authorities have <strong>granted</strong> special educational subsidies to children in remote areas.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>为了缩小教育差距，当局已向偏远地区的儿童发放了专项教育补贴。</div>
       </div>
     </div>
   </div>  <div id="tw-enforce" class="word-card writing-card">
@@ -7877,7 +7951,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表作文趋势描述。</div>
         <div class="example-en"><strong>高质量例句：</strong>Most economists <strong>forecast</strong> a steady growth in consumer spending over the next decade.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>大多数经济学家预测，未来十年消费支出将保持稳步增长。</div>
       </div>
     </div>
   </div>  <div id="tw-memorandum" class="word-card writing-card">
@@ -8202,6 +8276,29 @@
         <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
+  </div>  <div id="tw-collection" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">23</span>
+        <span class="word-name">collection</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 15 · NO.23</span>
+        <a href="红宝书 List 15 全景深度特训讲义_精排版.pdf#w-collection" class="back-to-list-btn" title="点击跨文件跳转至 List 15 原文">🔙 穿梭回 List 15 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">col- (共同) + lection (核心意符) → 语义引申为：收集物;收藏品。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary collection of sustainable reform</span> (推动可持续改革的主导要素（收集物）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>collection</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
   </div>  <div id="tw-communication" class="word-card writing-card">
     <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
       <div class="word-title-box">
@@ -8383,6 +8480,29 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
         <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>original</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-philosophy" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">56</span>
+        <span class="word-name">philosophy</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 16 · NO.56</span>
+        <a href="红宝书 List 16 全景深度特训讲义_精排版.pdf#w-philosophy" class="back-to-list-btn" title="点击跨文件跳转至 List 16 原文">🔙 穿梭回 List 16 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 philosophy，经学术语境历史演进，直击考研核心概念：哲学。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary philosophy of sustainable reform</span> (推动可持续改革的主导要素（哲学）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>philosophy</strong> is vital to fostering continuous social harmony.</div>
         <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
@@ -9260,6 +9380,52 @@
         <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
+  </div>  <div id="tw-panel" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">05</span>
+        <span class="word-name">panel</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 02 · NO.05</span>
+        <a href="红宝书 List 02 全景深度特训讲义_精排版.pdf#w-panel" class="back-to-list-btn" title="点击跨文件跳转至 List 02 原文">🔙 穿梭回 List 02 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 panel，经学术语境历史演进，直击考研核心概念：敝板;仪器板;专家咨询组;讨论小组;v. 用嵌板镶。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary panel of sustainable reform</span> (推动可持续改革的主导要素（敝板）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>panel</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-meditation" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">11</span>
+        <span class="word-name">meditation</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 02 · NO.11</span>
+        <a href="红宝书 List 02 全景深度特训讲义_精排版.pdf#w-meditation" class="back-to-list-btn" title="点击跨文件跳转至 List 02 原文">🔙 穿梭回 List 02 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 meditation，经学术语境历史演进，直击考研核心概念：冥想;沉思。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary meditation of sustainable reform</span> (推动可持续改革的主导要素（冥想）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>meditation</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
   </div>  <div id="tw-absence" class="word-card writing-card">
     <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
       <div class="word-title-box">
@@ -9348,7 +9514,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">fact -> circumstance (环境</span> <span class="synonym-pill">情况) - example -> instance (例子)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二小作文（阐述理由/通知）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>> instance (例子)</div>
+        <div class="example-en"><strong>高质量例句：</strong>Such is the <strong>case</strong> that excessive focus on academic scores may hinder the development of practical skills.</div>
         <div class="example-zh"><strong>中文对照：</strong>情况正是如此：过度关注学术成绩可能会阻碍实践技能的发展。</div>
       </div>
     </div>
@@ -9510,29 +9676,6 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
         <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>thirst</strong> is vital to fostering continuous social harmony.</div>
-        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
-      </div>
-    </div>
-  </div>  <div id="tw-beholf" class="word-card writing-card">
-    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-      <div class="word-title-box">
-        <span class="word-no">60</span>
-        <span class="word-name">beholf</span>
-        <span class="word-pos">n.</span>
-      </div>
-      <div class="card-top-right">
-        <span class="unit-origin-badge">源自 List 03 · NO.60</span>
-        <a href="红宝书 List 03 全景深度特训讲义_精排版.pdf#w-beholf" class="back-to-list-btn" title="点击跨文件跳转至 List 03 原文">🔙 穿梭回 List 03 ↗</a>
-        <span class="return-chip">🔄 回目录</span>
-      </div>
-    </a>
-    <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 beholf，经学术语境历史演进，直击考研核心概念：代表;利益;支持 2027考研英语词汇红宝书。</div></div>
-      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary beholf of sustainable reform</span> (推动可持续改革的主导要素（代表）)</div></div>
-      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
-      <div class="example-container">
-        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
-        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>beholf</strong> is vital to fostering continuous social harmony.</div>
         <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
@@ -9835,6 +9978,29 @@
         <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
       </div>
     </div>
+  </div>  <div id="tw-leisure" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">30</span>
+        <span class="word-name">leisure</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 06 · NO.30</span>
+        <a href="红宝书 List 06 全景深度特训讲义_精排版.pdf#w-leisure" class="back-to-list-btn" title="点击跨文件跳转至 List 06 原文">🔙 穿梭回 List 06 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 leisure，经学术语境历史演进，直击考研核心概念：空闲;闲暇 2027考研英语词汇红宝书。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary leisure of sustainable reform</span> (推动可持续改革的主导要素（空闲）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>leisure</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
   </div>  <div id="tw-measure" class="word-card writing-card">
     <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
       <div class="word-title-box">
@@ -9855,7 +10021,53 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文末段建议/对策段。</div>
         <div class="example-en"><strong>高质量例句：</strong>It is high time that we took feasible <strong>measures</strong> to address this thorny issue.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>现在是我们采取可行措施来解决这个棘手问题的时候了。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-weight" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">42</span>
+        <span class="word-name">weight</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 09 · NO.42</span>
+        <a href="红宝书 List 09 全景深度特训讲义_精排版.pdf#w-weight" class="back-to-list-btn" title="点击跨文件跳转至 List 09 原文">🔙 穿梭回 List 09 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 weight，经学术语境历史演进，直击考研核心概念：n. 重量;砝码;秤锤;重物;负担;重要性;v. 使负担;装载过重;视...为重要。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary weight of sustainable reform</span> (推动可持续改革的主导要素（n. 重量）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>weight</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-welfare" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">44</span>
+        <span class="word-name">welfare</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 09 · NO.44</span>
+        <a href="红宝书 List 09 全景深度特训讲义_精排版.pdf#w-welfare" class="back-to-list-btn" title="点击跨文件跳转至 List 09 原文">🔙 穿梭回 List 09 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 welfare，经学术语境历史演进，直击考研核心概念：福利;社会救济。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary welfare of sustainable reform</span> (推动可持续改革的主导要素（福利）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>welfare</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
   </div>  <div class="section-footer">
@@ -10122,7 +10334,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 对策段/结论段建议。</div>
         <div class="example-en"><strong>高质量例句：</strong>Improving the legal system is the only way to <strong>guarantee</strong> the rights of employees.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>完善法律体系是保障员工权益的唯一途径。</div>
       </div>
     </div>
   </div>  <div id="tw-smell" class="word-card writing-card">
@@ -10536,7 +10748,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二书信小作文安排行程，或大作文建议段陈述优先措施。</div>
         <div class="example-en"><strong>高质量例句：</strong>When planning their career, college students should give top <strong>priority</strong> to their long-term self-improvement.</div>
-        <div class="example-zh"><strong>中文对照：</strong>在规划职业生涯时，大学生应将长期的自我提升放在首位。 🔴 阅读识记词（逻辑拆解版）</div>
+        <div class="example-zh"><strong>中文对照：</strong>在规划职业生涯时，大学生应将长期的自我提升放在首位。</div>
       </div>
     </div>
   </div>  <div id="tw-cater" class="word-card writing-card">
@@ -10650,8 +10862,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">n. concord, consensus, unity</span></div><div class="synonym-flow-item"><span class="syn-desc-text">adj. environmentally sound (环境友好/和谐的，源自 2005 Text 2)。 - 🎬 实战场景 ：环境保护、社区建设、文化交流。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：环境保护、社区建设、文化交流。</div>
-        <div class="example-en"><strong>高质量例句：</strong>It is crucial that we base policies on the need to maintain a sustainable <strong>harmony</strong> between human activities and the natural environment. - 对照： 至关重要的一点是，我们制定的政策应基于维持人类活动与自然环境之间持续和谐的需求。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>It is crucial that we base policies on the need to maintain a sustainable <strong>harmony</strong> between human activities and the natural environment.</div>
+        <div class="example-zh"><strong>中文对照：</strong>至关重要的一点是，我们制定的政策应基于维持人类活动与自然环境之间持续和谐的需求。</div>
       </div>
     </div>
   </div>  <div id="tw-security" class="word-card writing-card">
@@ -10720,7 +10932,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表大作文（针对环境恶化、道德缺失等负面现象提出对策）。</div>
         <div class="example-en"><strong>高质量例句：</strong>It is <strong>urgent</strong> that the government should formulate stricter laws to regulate this behavior.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>政府迫切需要制定更严格的法律来规范这种行为。</div>
       </div>
     </div>
   </div>  <div id="tw-aggravate" class="word-card writing-card">
@@ -10754,7 +10966,7 @@
 <div class="section-wrapper">
   <div id="theme-edu"></div>
   <a href="#table-of-contents" class="section-header-link theme-bg" title="点击返回目录">
-    <h2>🚩 母题五：教育培养、青年成长与能力认知 (83 词)</h2>
+    <h2>🚩 母题五：教育培养、青年成长与能力认知 (86 词)</h2>
     <span class="return-pill">🔄 点此回目录</span>
   </a>
   <div class="section-guide-box">
@@ -11170,8 +11382,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">cultivate (专门用于培养能力</span> <span class="synonym-pill">素质</span> <span class="synonym-pill">习惯) - foster (用于促进经济增长或培养环境)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 小作文（书信/建议信）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>It is advisable for college students to</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>It is advisable for college students to <strong>develop</strong> independent thinking abilities while participating in social activities.</div>
+        <div class="example-zh"><strong>中文对照：</strong>建议大学生在参加社会活动的同时培养独立思考的能力。</div>
       </div>
     </div>
   </div>  <div id="tw-independence" class="word-card writing-card">
@@ -11194,6 +11406,29 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表作文（描述大学生生活或个人品质）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The data reveals that an increasing number of young people value financial <strong>independence</strong> after graduation.</div>
+        <div class="example-zh"><strong>中文对照：</strong>数据显示，越来越多的年轻人看重毕业后的财务独立。本特训结束。 请重点复习 entail 的逻辑关系与 plausible 的阅读态度，并背诵 determine 和 ensure 在英二图表作文中的核心句式。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-independent" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">54</span>
+        <span class="word-name">independent</span>
+        <span class="word-pos">adj.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 15 · NO.54</span>
+        <a href="红宝书 List 15 全景深度特训讲义_精排版.pdf#w-independent" class="back-to-list-btn" title="点击跨文件跳转至 List 15 原文">🔙 穿梭回 List 15 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">in- (不) + de- (下) + pend (悬挂)。画面是不挂在别人下面，即不依赖。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">cultivate independent thinking ability  ｜  gain economic independence</span> (培养独立思考能力  ｜  获得经济独立)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">autonomous (用于形容自治的或自主性极强的) - self-reliant (强调自力更生的)</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：适用题型： 图表作文（描述大学生生活或个人品质）。</div>
+        <div class="example-en"><strong>高质量例句：</strong>The data reveals that an increasing number of young people value financial independence after graduation.</div>
         <div class="example-zh"><strong>中文对照：</strong>数据显示，越来越多的年轻人看重毕业后的财务独立。本特训结束。 请重点复习 entail 的逻辑关系与 plausible 的阅读态度，并背诵 determine 和 ensure 在英二图表作文中的核心句式。</div>
       </div>
     </div>
@@ -11354,7 +11589,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">optimal / ideal</strong> <span class="syn-desc-text">: 在建议信中描述最佳方案。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 告示（Notice）/ 建议信（给学校/公司提建议）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>To ensure the <strong>optimum</strong> performance of the library system, regular maintenance and updates are indispensable. - 对照翻译： 为了确保图书馆系统的最佳性能，定期的维护和更新是必不可少的。</div>
+        <div class="example-en"><strong>高质量例句：</strong>To ensure the <strong>optimum</strong> performance of the library system, regular maintenance and updates are indispensable.</div>
         <div class="example-zh"><strong>中文对照：</strong>为了确保图书馆系统的最佳性能，定期的维护和更新是必不可少的。</div>
       </div>
     </div>
@@ -11632,6 +11867,29 @@
         <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
         <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>qualify</strong> relevant developmental priorities.</div>
         <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-quality" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">54</span>
+        <span class="word-name">quality</span>
+        <span class="word-pos">n.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 01 · NO.54</span>
+        <a href="红宝书 List 01 全景深度特训讲义_精排版.pdf#w-quality" class="back-to-list-btn" title="点击跨文件跳转至 List 01 原文">🔙 穿梭回 List 01 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 quality，经学术语境历史演进，直击考研核心概念：质量;素质;品质。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary quality of sustainable reform</span> (推动可持续改革的主导要素（质量）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：议论文核心论据与论点阐述</div>
+        <div class="example-en"><strong>高质量例句：</strong>Policy analysts emphasize that addressing the underlying <strong>quality</strong> is vital to fostering continuous social harmony.</div>
+        <div class="example-zh"><strong>中文对照：</strong>政策分析人士强调，妥善解决这一深层要素对于促进持续的社会和谐至关重要。</div>
       </div>
     </div>
   </div>  <div id="tw-confident" class="word-card writing-card">
@@ -12298,7 +12556,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（描述困难处境或社会矛盾）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Nowadays, an increasing number of fresh graduates are <strong>faced</strong> with fierce competition in the domestic job market.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>如今，越来越多的应届毕业生在国内就业市场上正面临着激烈的竞争。</div>
       </div>
     </div>
   </div>  <div id="tw-factor" class="word-card writing-card">
@@ -12321,7 +12579,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（成因分析段的万能开头）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Several <strong>factors</strong> could account for this phenomenon, and the following are the most representative ones.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>有几个因素可以解释这一现象，以下是最具代表性的几个。</div>
       </div>
     </div>
   </div>  <div id="tw-gap" class="word-card writing-card">
@@ -12389,8 +12647,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">v. neglected, disregarded, overlooked, turned a blind eye to . - 🎬 实战场景 ：描述人们对某种风险或传统美德的漠视。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：描述人们对某种风险或传统美德的漠视。</div>
-        <div class="example-en"><strong>高质量例句：</strong>In pursuit of temporary profit, some companies deliberately <strong>ignore</strong> the long-term consequences of their environmental impact. - 对照： 在追求短期利润的过程中，一些公司刻意忽视了其对环境影响的长期后果。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>In pursuit of temporary profit, some companies deliberately <strong>ignore</strong> the long-term consequences of their environmental impact.</div>
+        <div class="example-zh"><strong>中文对照：</strong>在追求短期利润的过程中，一些公司刻意忽视了其对环境影响的长期后果。</div>
       </div>
     </div>
   </div>  <div id="tw-passion" class="word-card writing-card">
@@ -12413,7 +12671,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文成因分析（涉及个人兴趣）或书信作文。</div>
         <div class="example-en"><strong>高质量例句：</strong>An increasing number of youngsters have developed a lifelong <strong>passion</strong> for traditional culture.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>越来越多的年轻人对传统文化产生了持久的热情。</div>
       </div>
     </div>
   </div>  <div id="tw-schedule" class="word-card writing-card">
@@ -12436,7 +12694,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：小作文（如邀请信中的行程安排）或学习计划类文章。</div>
         <div class="example-en"><strong>高质量例句：</strong>To ensure efficiency, we should maintain a well-organized daily <strong>schedule</strong> .</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>为确保效率，我们应当保持井然有序的每日日程安排。【专家提分建议】： 在识记 Batch 1 时，重点关注 scheme 的贬义用法和 span 在图表作文中的时间跨度表达。 questionnaire 是定位社会科学实验类文章的黄金之匙，务必熟练掌握。</div>
       </div>
     </div>
   </div>  <div id="tw-opportunity" class="word-card writing-card">
@@ -12459,7 +12717,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表大作文（个人成长、教育公平、兼职情况分析）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Higher education offers students unprecedented opportunities to explore their hidden potential.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>高等教育为学生提供了前所未有的挖掘自身潜能的机会。</div>
       </div>
     </div>
   </div>  <div id="tw-seek" class="word-card writing-card">
@@ -12528,7 +12786,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英语二小作文（书信提议或推荐活动）。</div>
         <div class="example-en"><strong>高质量例句：</strong>I believe you will find this internship experience highly <strong>worthwhile</strong> for your future career.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>我相信你会发现这次实习经历对你未来的职业生涯非常有价值。</div>
       </div>
     </div>
   </div>  <div id="tw-talent" class="word-card writing-card">
@@ -12666,6 +12924,29 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
         <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>vanich</strong> relevant developmental priorities.</div>
+        <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-wear" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">39</span>
+        <span class="word-name">wear</span>
+        <span class="word-pos">v.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 09 · NO.39</span>
+        <a href="红宝书 List 09 全景深度特训讲义_精排版.pdf#w-wear" class="back-to-list-btn" title="点击跨文件跳转至 List 09 原文">🔙 穿梭回 List 09 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">词源核心素 wear，经学术语境历史演进，直击考研核心概念：穿;载;n. 衣着;磨损。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively wear crucial resources</span> (积极采取措施以落实（穿）)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">implement</span> <span class="synonym-pill">facilitate</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
+        <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>wear</strong> relevant developmental priorities.</div>
         <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
       </div>
     </div>
@@ -13255,7 +13536,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：小作文------投诉信/建议信</div>
         <div class="example-en"><strong>高质量例句：</strong>I would be most grateful if you could provide some valuable <strong>feedback</strong> on my proposal at your earliest convenience.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>如果您能在方便时尽快对我的提议提供一些宝贵的反馈，我将不胜感激。</div>
       </div>
     </div>
   </div>  <div id="tw-goal" class="word-card writing-card">
@@ -13278,7 +13559,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：大作文------成因分析/个人品质类</div>
         <div class="example-en"><strong>高质量例句：</strong>Only by staying persistent can we achieve the ultimate <strong>goal</strong> in the face of daunting challenges.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>唯有保持毅力，我们才能在面对巨大挑战时实现最终目标。</div>
       </div>
     </div>
   </div>  <div id="tw-action" class="word-card writing-card">
@@ -13416,7 +13697,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表作文成因分析。</div>
         <div class="example-en"><strong>高质量例句：</strong>The rapid development of technology is a driving <strong>force</strong> that forces traditional industries to undergo digital transformation.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>技术的飞速发展是一股驱动力，迫使传统行业进行数字化转型。</div>
       </div>
     </div>
   </div>  <div id="tw-forge" class="word-card writing-card">
@@ -13439,7 +13720,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 书信小作文（建立联系）/ 大作文分析社会合作。</div>
         <div class="example-en"><strong>高质量例句：</strong>Schools and families should <strong>forge</strong> solid bonds to ensure the mental health of adolescents.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>学校和家庭应建立牢固的纽带，以确保青少年的心理健康。</div>
       </div>
     </div>
   </div>  <div id="tw-group" class="word-card writing-card">
@@ -13462,7 +13743,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表描述。</div>
         <div class="example-en"><strong>高质量例句：</strong>The data in the table can be <strong>grouped</strong> into three distinct categories based on age levels.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>表格中的数据可以根据年龄段分为三个不同的类别。</div>
       </div>
     </div>
   </div>  <div id="tw-guard" class="word-card writing-card">
@@ -13485,7 +13766,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 大作文建议段（如何预防负面问题）。</div>
         <div class="example-en"><strong>高质量例句：</strong>It is imperative for the government to <strong>guard</strong> against the environmental pollution caused by over-industrialization.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>政府必须提防过度工业化引起的环境污染。</div>
       </div>
     </div>
   </div>  <div id="tw-include" class="word-card writing-card">
@@ -13531,7 +13812,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 社会美德/文化融合类大作文。</div>
         <div class="example-en"><strong>高质量例句：</strong>Creating an <strong>inclusive</strong> environment is essential for the harmonious coexistence of diverse groups.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>创造一个包容的环境对于不同群体的和谐共处至关重要。专家提醒： 请重点复习 ground 的僻义（根据）和 forge 的高分表达（建立纽带），这两点在近五年英二写译及阅读中具有极高的Utility。</div>
       </div>
     </div>
   </div>  <div id="tw-incorporate" class="word-card writing-card">
@@ -13691,7 +13972,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Advisor (常用于学术</span> <span class="synonym-pill">书信作文中关于选课或论文的场景) - Counsellor (常用于心理或职业规划场景)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二书信小作文（如：求职信、咨询信、感谢信）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>I am writing to express my sincere gratitude for your role as my <strong>mentor</strong> during my internship, as your guidance significantly improved my professional skills. - 对照翻译： 我写这封信是为了表达我由衷的感谢，感谢你在我实习期间担任我的导师，因为你的指导显著提高了我的专业技能。</div>
+        <div class="example-en"><strong>高质量例句：</strong>I am writing to express my sincere gratitude for your role as my <strong>mentor</strong> during my internship, as your guidance significantly improved my professional skills.</div>
         <div class="example-zh"><strong>中文对照：</strong>我写这封信是为了表达我由衷的感谢，感谢你在我实习期间担任我的导师，因为你的指导显著提高了我的专业技能。</div>
       </div>
     </div>
@@ -13714,7 +13995,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Consequence (多指负面结果) - Resultant (侧重指合力产生的最终产物)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（成因分析或结论段）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The data analysis reveals that the current <strong>outcome</strong> is largely attributed to the increasing investment in research and development. - 对照翻译： 数据分析显示，目前的结果主要归功于在研发投入上的日益增加。</div>
+        <div class="example-en"><strong>高质量例句：</strong>The data analysis reveals that the current <strong>outcome</strong> is largely attributed to the increasing investment in research and development.</div>
         <div class="example-zh"><strong>中文对照：</strong>数据分析显示，目前的结果主要归功于在研发投入上的日益增加。</div>
       </div>
     </div>
@@ -13737,7 +14018,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Vital (极其重要的) - Considerable (相当大的</span> <span class="synonym-pill">显著的)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（通用万能词）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>It is of great <strong>significance</strong> for college students to strike a balance between academic performance and social practice. - 对照翻译： 对于大学生来说，在学习成绩和社会实践之间取得平衡具有重大意义。</div>
+        <div class="example-en"><strong>高质量例句：</strong>It is of great <strong>significance</strong> for college students to strike a balance between academic performance and social practice.</div>
         <div class="example-zh"><strong>中文对照：</strong>对于大学生来说，在学习成绩和社会实践之间取得平衡具有重大意义。</div>
       </div>
     </div>
@@ -13760,7 +14041,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Vital (极其重要的) - Considerable (相当大的</span> <span class="synonym-pill">显著的)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（通用万能词）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>It is of great significance for college students to strike a balance between academic performance and social practice. - 对照翻译： 对于大学生来说，在学习成绩和社会实践之间取得平衡具有重大意义。</div>
+        <div class="example-en"><strong>高质量例句：</strong>It is of great significance for college students to strike a balance between academic performance and social practice.</div>
         <div class="example-zh"><strong>中文对照：</strong>对于大学生来说，在学习成绩和社会实践之间取得平衡具有重大意义。</div>
       </div>
     </div>
@@ -13783,8 +14064,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">Brevity (文字</span> <span class="synonym-pill">时间的简炼) - Plainness (外表的朴素)</span></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二小作文（通知/邀请函/建议信）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>For the sake of <strong>simplicity</strong> and clarity, the following guidelines should be strictly followed by all participants. - 对照翻译： 为了简便和清晰起见，所有参与者应严格遵守以下准则。讲义结束</div>
-        <div class="example-zh"><strong>中文对照：</strong>为了简便和清晰起见，所有参与者应严格遵守以下准则。讲义结束</div>
+        <div class="example-en"><strong>高质量例句：</strong>For the sake of <strong>simplicity</strong> and clarity, the following guidelines should be strictly followed by all participants.</div>
+        <div class="example-zh"><strong>中文对照：</strong>为了简便和清晰起见，所有参与者应严格遵守以下准则。</div>
       </div>
     </div>
   </div>  <div id="tw-simplify" class="word-card writing-card">
@@ -14592,29 +14873,6 @@
         <div class="example-zh"><strong>中文对照：</strong>各种因素决定了房价的波动，包括政府政策和市场需求。</div>
       </div>
     </div>
-  </div>  <div id="tw-independent" class="word-card writing-card">
-    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
-      <div class="word-title-box">
-        <span class="word-no">54</span>
-        <span class="word-name">independent</span>
-        <span class="word-pos">adj.</span>
-      </div>
-      <div class="card-top-right">
-        <span class="unit-origin-badge">源自 List 15 · NO.54</span>
-        <a href="红宝书 List 15 全景深度特训讲义_精排版.pdf#w-independent" class="back-to-list-btn" title="点击跨文件跳转至 List 15 原文">🔙 穿梭回 List 15 ↗</a>
-        <span class="return-chip">🔄 回目录</span>
-      </div>
-    </a>
-    <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">in- (进入/在内 或 否定) + dependent (核心意符) → 语义引申为：独立的;自主的。</div></div>
-      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a independent role in development</span> (在现代社会发展中发挥重要作用)</div></div>
-      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">significant</span> <span class="synonym-pill">pivotal</span></div></div>
-      <div class="example-container">
-        <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
-        <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>independent</strong> influence on long-term technological and economic stability.</div>
-        <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
-      </div>
-    </div>
   </div>  <div id="tw-deserve" class="word-card writing-card">
     <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
       <div class="word-title-box">
@@ -14933,7 +15191,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">viewpoint / standpoint</strong> <span class="syn-desc-text">: 在英二图表作文分析原因时，替换观点。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表作文成因分析 / 评论性书信。</div>
-        <div class="example-en"><strong>高质量例句：</strong>When analyzed from a historical <strong>perspective</strong> , the fluctuation in job satisfaction reveals deeper social transitions. - 对照翻译： 当从历史视角进行分析时，工作满意度的波动揭示了更深层次的社会转型。</div>
+        <div class="example-en"><strong>高质量例句：</strong>When analyzed from a historical <strong>perspective</strong> , the fluctuation in job satisfaction reveals deeper social transitions.</div>
         <div class="example-zh"><strong>中文对照：</strong>当从历史视角进行分析时，工作满意度的波动揭示了更深层次的社会转型。</div>
       </div>
     </div>
@@ -14956,7 +15214,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">positive / sanguine</strong> <span class="syn-desc-text">: 在英二写作描述人物品质或未来预测时替换。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 图表作文趋势预测（末段）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>Despite the current challenges, most experts remain <strong>optimistic</strong> about the long-term prospects of the digital economy. - 对照翻译： 尽管存在当前的挑战，大多数专家对数字经济的长期前景仍保持乐观。</div>
+        <div class="example-en"><strong>高质量例句：</strong>Despite the current challenges, most experts remain <strong>optimistic</strong> about the long-term prospects of the digital economy.</div>
         <div class="example-zh"><strong>中文对照：</strong>尽管存在当前的挑战，大多数专家对数字经济的长期前景仍保持乐观。</div>
       </div>
     </div>
@@ -14979,7 +15237,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">choice / alternative</strong> <span class="syn-desc-text">: 替换 option</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">voluntary / non-compulsory</strong> <span class="syn-desc-text">: 替换 optional。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表作文（关于学生课程选择/兼职选择）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>For many university students, part-time jobs have become an attractive <strong>option</strong> to enhance their social experience. - 对照翻译： 对于许多大学生来说，兼职工作已成为增强社会经验的一个有吸引力的选择。</div>
+        <div class="example-en"><strong>高质量例句：</strong>For many university students, part-time jobs have become an attractive <strong>option</strong> to enhance their social experience.</div>
         <div class="example-zh"><strong>中文对照：</strong>对于许多大学生来说，兼职工作已成为增强社会经验的一个有吸引力的选择。</div>
       </div>
     </div>
@@ -15002,7 +15260,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">choice / alternative</strong> <span class="syn-desc-text">: 替换 option</span></div><div class="synonym-flow-item"><strong class="syn-lead-badge">voluntary / non-compulsory</strong> <span class="syn-desc-text">: 替换 optional。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表作文（关于学生课程选择/兼职选择）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>For many university students, part-time jobs have become an attractive option to enhance their social experience. - 对照翻译： 对于许多大学生来说，兼职工作已成为增强社会经验的一个有吸引力的选择。</div>
+        <div class="example-en"><strong>高质量例句：</strong>For many university students, part-time jobs have become an attractive option to enhance their social experience.</div>
         <div class="example-zh"><strong>中文对照：</strong>对于许多大学生来说，兼职工作已成为增强社会经验的一个有吸引力的选择。</div>
       </div>
     </div>
@@ -15025,7 +15283,7 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><strong class="syn-lead-badge">arrange / coordinate</strong> <span class="syn-desc-text">: 在书信作文中邀请或计划活动。</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 小作文（邀请信/通知：组织讲座、聚会等）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>Our school plans to <strong>organize</strong> a seminar regarding environmental protection next Friday. - 对照翻译： 我们学校计划下周五组织一场关于环境保护的研讨会。 6. enhance (NO.46, v.)</div>
+        <div class="example-en"><strong>高质量例句：</strong>Our school plans to <strong>organize</strong> a seminar regarding environmental protection next Friday.</div>
         <div class="example-zh"><strong>中文对照：</strong>我们学校计划下周五组织一场关于环境保护的研讨会。</div>
       </div>
     </div>
@@ -15164,7 +15422,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型 ：英二小作文（祝贺信/聚会通知/答谢信）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Let us raise our glasses and <strong>toast</strong> to the enduring friendship between our two universities.</div>
-        <div class="example-zh"><strong>中文对照：</strong>让我们举起酒杯，为我们两校之间持久的友谊干杯。 🔴 阅读识记词（考点解密）</div>
+        <div class="example-zh"><strong>中文对照：</strong>让我们举起酒杯，为我们两校之间持久的友谊干杯。</div>
       </div>
     </div>
   </div>  <div id="tw-together" class="word-card writing-card">
@@ -15302,7 +15560,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 价值观、传统美德类大作文。</div>
         <div class="example-en"><strong>高质量例句：</strong>Taking care of our parents is not only a legal obligation but also an <strong>honorable</strong> virtue in Chinese culture.</div>
-        <div class="example-zh"><strong>中文对照：</strong>照顾父母不仅是法律义务，在中国文化中也是一种光荣的美德。Batch 3 结束 - 确保掌握自豪地拥有与图表趋势词</div>
+        <div class="example-zh"><strong>中文对照：</strong>照顾父母不仅是法律义务，在中国文化中也是一种光荣的美德。</div>
       </div>
     </div>
   </div>  <div id="tw-present" class="word-card writing-card">
@@ -16469,7 +16727,7 @@
       </div>
     </a>
     <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">经过试验（probe）确定真伪。</div></div>
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pro- (forward) + vid- (see)，即预见并提前准备。</div></div>
       <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively prove crucial resources</span> (积极采取措施以落实（证明）)</div></div>
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">implement</span> <span class="synonym-pill">facilitate</span></div></div>
       <div class="example-container">
@@ -16492,7 +16750,7 @@
       </div>
     </a>
     <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">pro- (forward) + vid- (see)，即预见并提前准备。</div></div>
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">被规定好的、唯一的前提。 - 【写译必考】 这不是 provide 的过去式，而是 条件逻辑的巅峰 。</div></div>
       <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">actively provide crucial resources</span> (积极采取措施以落实（提供）)</div></div>
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">implement</span> <span class="synonym-pill">facilitate</span></div></div>
       <div class="example-container">
@@ -16515,7 +16773,7 @@
       </div>
     </a>
     <div class="word-body">
-      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">被规定好的、唯一的前提。 - 【写译必考】 这不是 provide 的过去式，而是 条件逻辑的巅峰 。</div></div>
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">中间物、媒介。 - 【博士预警】 Media 是复数！在英译汉中，注意主谓一致。如果在翻译里把 The media are... 译错，说明你的语法地基是豆腐渣。</div></div>
       <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">the primary provided of sustainable reform</span> (推动可持续改革的主导要素（如果）)</div></div>
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">element</span> <span class="synonym-pill">dimension</span></div></div>
       <div class="example-container">
@@ -16545,6 +16803,29 @@
         <div class="scenario-tag">📌 适用场景：对策建议段与动因分析</div>
         <div class="example-en"><strong>高质量例句：</strong>Authorities should establish sound regulatory mechanisms to <strong>elaborate</strong> relevant developmental priorities.</div>
         <div class="example-zh"><strong>中文对照：</strong>主管部门应当建立健全监管机制，以切实推进并落实相关的关键发展任务。</div>
+      </div>
+    </div>
+  </div>  <div id="tw-elegant" class="word-card writing-card">
+    <a href="#table-of-contents" class="card-header-link" title="点击词头反跳回主目录">
+      <div class="word-title-box">
+        <span class="word-no">15</span>
+        <span class="word-name">elegant</span>
+        <span class="word-pos">adj.</span>
+      </div>
+      <div class="card-top-right">
+        <span class="unit-origin-badge">源自 List 02 · NO.15</span>
+        <a href="红宝书 List 02 全景深度特训讲义_精排版.pdf#w-elegant" class="back-to-list-btn" title="点击跨文件跳转至 List 02 原文">🔙 穿梭回 List 02 ↗</a>
+        <span class="return-chip">🔄 回目录</span>
+      </div>
+    </a>
+    <div class="word-body">
+      <div class="field-row"><span class="field-label">🧬 词根解构：</span><div class="field-val">e- (向外) + legant (核心意符) → 语义引申为：优雅的;优美的;典雅的。</div></div>
+      <div class="field-row"><span class="field-label">🔗 核心词链：</span><div class="field-val"><span class="collocation-box">play a elegant role in development</span> (在现代社会发展中发挥重要作用)</div></div>
+      <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><span class="synonym-pill">significant</span> <span class="synonym-pill">pivotal</span></div></div>
+      <div class="example-container">
+        <div class="scenario-tag">📌 适用场景：社会现象评述与意义分析</div>
+        <div class="example-en"><strong>高质量例句：</strong>A sound institutional framework exerts a <strong>elegant</strong> influence on long-term technological and economic stability.</div>
+        <div class="example-zh"><strong>中文对照：</strong>健全的制度框架对长远的科技与经济稳定性具有极其深远的影响。</div>
       </div>
     </div>
   </div>  <div id="tw-absent" class="word-card writing-card">
@@ -17073,7 +17354,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二图表大作文（描写趋势的影响）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The widespread use of mobile phones has <strong>effected</strong> a significant change in the way people communicate with each other.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>手机的广泛使用引起了人们交流方式的重大变化。</div>
       </div>
     </div>
   </div>  <div id="tw-effective" class="word-card writing-card">
@@ -17096,7 +17377,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二书信小作文（建议信：提出解决建议）。</div>
         <div class="example-en"><strong>高质量例句：</strong>To tackle this problem, it is imperative for the authorities to implement <strong>effective</strong> policies immediately.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>为了解决这一问题，当局必须立即执行有效的政策。</div>
       </div>
     </div>
   </div>  <div id="tw-effort" class="word-card writing-card">
@@ -17119,7 +17400,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英二大作文结尾段（呼吁建议）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Only through the joint <strong>efforts</strong> of the whole society can we overcome the current difficulties.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>只有通过全社会的共同努力，我们才能克服眼前的困难。</div>
       </div>
     </div>
   </div>  <div id="tw-general" class="word-card writing-card">
@@ -17326,7 +17607,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文趋势描述。</div>
         <div class="example-en"><strong>高质量例句：</strong>The <strong>particular</strong> reason for this dramatic surge in the number of part-time students is worth analyzing.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>这种非全日制学生数量剧增的特定原因值得分析。</div>
       </div>
     </div>
   </div>  <div id="tw-partly" class="word-card writing-card">
@@ -17349,7 +17630,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文原因分析（多因一果）。</div>
         <div class="example-en"><strong>高质量例句：</strong>This phenomenon is <strong>partly</strong> attributed to the fierce competition in the domestic job market.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>这一现象部分归因于国内就业市场的激烈竞争。</div>
       </div>
     </div>
   </div>  <div id="tw-passive" class="word-card writing-card">
@@ -17372,7 +17653,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文负面现象评论（如：过度依赖手机）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Excessive reliance on digital devices makes students <strong>passive</strong> learners rather than active thinkers.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>对数字设备的过度依赖使学生变成了被动的学习者，而非主动的思考者。</div>
       </div>
     </div>
   </div>  <div id="tw-quit" class="word-card writing-card">
@@ -17395,7 +17676,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：职场类图表分析或建议信。</div>
         <div class="example-en"><strong>高质量例句：</strong>A significant proportion of employees chose to <strong>quit</strong> their stable positions in pursuit of self-realization.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>很大一部分员工选择辞去稳定的职位，以追求自我价值的实现。</div>
       </div>
     </div>
   </div>  <div id="tw-span" class="word-card writing-card">
@@ -17418,7 +17699,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表作文趋势描述（时间跨度）。</div>
         <div class="example-en"><strong>高质量例句：</strong>The survey, spanning over a decade, reveals a fundamental shift in people's consumption habits.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>这项跨越十余年的调查揭示了人们消费习惯的根本转变。</div>
       </div>
     </div>
   </div>  <div id="tw-spare" class="word-card writing-card">
@@ -17441,7 +17722,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：小作文通知（Notice）或大学生兼职情况图表分析。</div>
         <div class="example-en"><strong>高质量例句：</strong>College students are encouraged to engage in social practices during their <strong>spare</strong> time.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>鼓励大学生利用课余时间参加社会实践活动。</div>
       </div>
     </div>
   </div>  <div id="tw-range" class="word-card writing-card">
@@ -17556,7 +17837,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表大作文对比段。当描述两个群体（如城乡、男女性别）截然不同的趋势时使用。</div>
         <div class="example-en"><strong>高质量例句：</strong>The percentage of rural students increased significantly; <strong>meanwhile</strong> , that of their urban counterparts witnessed a slight decline.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>农村学生的比例显著增加；与此同时，城市学生的比例则出现了轻微下降。</div>
       </div>
     </div>
   </div>  <div id="tw-opinion" class="word-card writing-card">
@@ -17579,7 +17860,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：小作文（建议信/投诉信/告示）。</div>
         <div class="example-en"><strong>高质量例句：</strong>I am writing to voice my <strong>opinions</strong> concerning the current library services on campus.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>我写这封信是为了表达我对目前校园图书馆服务的看法。</div>
       </div>
     </div>
   </div>  <div id="tw-oppose" class="word-card writing-card">
@@ -17602,7 +17883,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：社会争议话题类大作文（如分析某些社会现象的负面影响及表态）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Many critics are firmly <strong>opposed</strong> to the commercialization of traditional culture.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>许多批评者坚定反对传统文化的商业化。本批次深度特训结束。 建议考生重点记忆 opponent 在阅读中的立场识别功能，以及 means 和 measure 在写作对策段的高频用法。</div>
       </div>
     </div>
   </div>  <div id="tw-scope" class="word-card writing-card">
@@ -17671,7 +17952,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 英语二小作文（建议信/倡议书末尾，呼吁采取行动）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Therefore, I <strong>urge</strong> the relevant departments to take effective measures to improve the current situation.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>因此，我强烈呼吁相关部门采取有效措施来改善现状。</div>
       </div>
     </div>
   </div>  <div id="tw-worthy" class="word-card writing-card">
@@ -17694,7 +17975,7 @@
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：适用题型： 写作末尾总结（强调社会美德、传统文化的重要性）。</div>
         <div class="example-en"><strong>高质量例句：</strong>Such a traditional virtue is <strong>worthy</strong> of being inherited and carried forward by all of us.</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-zh"><strong>中文对照：</strong>这种传统美德值得我们所有人去继承和发扬。</div>
       </div>
     </div>
   </div>  <div id="tw-temper" class="word-card writing-card">
@@ -17739,8 +18020,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：be likely to -> 提分词： be inclined to - 白话词：trend -> 提分词： inclination</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二图表大作文（描述趋势：...呈现增长趋势）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing tendency to take part-time jobs for diverse reasons. - 译： 如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing tendency to take part-time jobs for diverse reasons.</div>
+        <div class="example-zh"><strong>中文对照：</strong>如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
       </div>
     </div>
   </div>  <div id="tw-tendency" class="word-card writing-card">
@@ -17762,8 +18043,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：be likely to -> 提分词： be inclined to - 白话词：trend -> 提分词： inclination</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二图表大作文（描述趋势：...呈现增长趋势）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing <strong>tendency</strong> to take part-time jobs for diverse reasons. - 译： 如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>As is illustrated in the chart, college students show a growing <strong>tendency</strong> to take part-time jobs for diverse reasons.</div>
+        <div class="example-zh"><strong>中文对照：</strong>如图表所示，大学生由于各种原因，呈现出日益增长的兼职倾向。</div>
       </div>
     </div>
   </div>  <div id="tw-term" class="word-card writing-card">
@@ -17785,8 +18066,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：language -> 提分词： terminology (专业术语) - 白话词：period -> 提分词： duration (时长/期限)</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：图表大作文（结论预测：从长远来看）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>In the long <strong>term</strong> , the optimization of industrial structure will exert a profound impact on job satisfaction. - 译： 从长远来看，产业结构的优化将对工作满意度产生深远影响。 4. testify (NO.57) (v.)</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>In the long <strong>term</strong> , the optimization of industrial structure will exert a profound impact on job satisfaction.</div>
+        <div class="example-zh"><strong>中文对照：</strong>从长远来看，产业结构的优化将对工作满意度产生深远影响。</div>
       </div>
     </div>
   </div>  <div id="tw-trace" class="word-card writing-card">
@@ -17808,8 +18089,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：look for -> 提分词： pursue (追踪/追求) - 白话词：find the origin -> 提分词： date back to</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二图表作文（背景分析：追溯某现象的根源）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The root of this social phenomenon can be <strong>traced</strong> back to the rapid development of information technology. - 译： 这一社会现象的根源可以追溯到信息技术的快速发展。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>The root of this social phenomenon can be <strong>traced</strong> back to the rapid development of information technology.</div>
+        <div class="example-zh"><strong>中文对照：</strong>这一社会现象的根源可以追溯到信息技术的快速发展。</div>
       </div>
     </div>
   </div>  <div id="tw-track" class="word-card writing-card">
@@ -17831,8 +18112,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：look for -> 提分词： pursue (追踪/追求) - 白话词：find the origin -> 提分词： date back to</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二图表作文（背景分析：追溯某现象的根源）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>The root of this social phenomenon can be traced back to the rapid development of information technology. - 译： 这一社会现象的根源可以追溯到信息技术的快速发展。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>The root of this social phenomenon can be traced back to the rapid development of information technology.</div>
+        <div class="example-zh"><strong>中文对照：</strong>这一社会现象的根源可以追溯到信息技术的快速发展。</div>
       </div>
     </div>
   </div>  <div id="tw-tradition" class="word-card writing-card">
@@ -17854,8 +18135,8 @@
       <div class="field-row"><span class="field-label">🔄 同义替换：</span><div class="field-val"><div class="synonym-flow-item"><span class="syn-desc-text">白话词：habit -> 提分词： convention (常规/习俗) - 白话词：old -> 提分词： long-standing (长久以来的)</span></div></div></div>
       <div class="example-container">
         <div class="scenario-tag">📌 适用场景：英二小作文（书信：邀请参加传统节日活动）。</div>
-        <div class="example-en"><strong>高质量例句：</strong>This activity aims to promote the understanding of Chinese <strong>traditions</strong> among international students. - 译： 此次活动旨在增进留学生对中国传统文化的理解。</div>
-        <div class="example-zh"><strong>中文对照：</strong></div>
+        <div class="example-en"><strong>高质量例句：</strong>This activity aims to promote the understanding of Chinese <strong>traditions</strong> among international students.</div>
+        <div class="example-zh"><strong>中文对照：</strong>此次活动旨在增进留学生对中国传统文化的理解。</div>
       </div>
     </div>
   </div>  <div id="tw-universal" class="word-card writing-card">
