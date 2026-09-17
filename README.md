@@ -1,6 +1,12 @@
-# 考研英语红宝书 · 全景深度特训讲义站
+# 考研英语红宝书 · 全景深度特训讲义门户 (Web Portal)
 
-> 涵盖红宝书核心词汇全案深度特训、四六级常考词组与考研专题卫星讲义（电脑大屏与手机竖屏触控自适应版）。
+> 本目录为 GitHub Pages 部署仓库源码 (`git@github.com:xunyuefei/kaoyan-english.git`)。
 
-- **在线阅读地址**：[https://xunyuefei.github.io/kaoyan-english/](https://xunyuefei.github.io/kaoyan-english/)
-- **手机扫码访问**：同 Wi-Fi 下直连本地或随时随地访问云端。
+* **线上地址**：[https://xunyuefei.github.io/kaoyan-english/](https://xunyuefei.github.io/kaoyan-english/)
+* **本地服务**：`http://localhost:5220/`
+
+## 目录结构
+- `index.html`: 双端自适应单页门户
+- `content/`: 各 List 及专题精排 HTML
+- `manifest.json`: 门户全量大纲清单
+- `sync_english.js`: 增量同步与 manifest 生成器

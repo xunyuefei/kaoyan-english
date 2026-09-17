@@ -1,0 +1,25 @@
+name: 📕 English Knowledge Base Portal CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: 验证门户大纲与内容一致性
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 检验 manifest.json 与 content/ 文件可达性
+        run: |
+          node tests/test_portal_manifest.js
