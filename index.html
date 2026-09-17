@@ -1358,6 +1358,16 @@
     }
   }
 </style>
+  <!-- PWA Manifest & Icons -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon.png">
+  <meta name="theme-color" content="#881337">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="红宝书讲义">
 </head>
 <body>
 
@@ -2905,5 +2915,60 @@
   });
 })();
 </script>
+
+<!-- PWA Service Worker & Install Controller -->
+<script>
+(function() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('./sw.js', { scope: './' })
+        .then(function(reg) {
+          console.log('[PWA-English] Service Worker 注册成功，作用域:', reg.scope);
+          reg.addEventListener('updatefound', function() {
+            var newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener('statechange', function() {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                console.log('[PWA-English] 发现新版本词汇讲义，已在后台自动刷新！');
+              }
+            });
+          });
+        })
+        .catch(function(err) {
+          console.warn('[PWA-English] Service Worker 注册失败:', err);
+        });
+    });
+  }
+
+  var deferredPrompt = null;
+  var installBtn = document.getElementById('btnInstallPwa');
+
+  window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (installBtn) {
+      installBtn.style.display = 'inline-flex';
+      installBtn.addEventListener('click', function() {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function(choiceResult) {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('[PWA-English] 用户已安装到桌面！');
+          }
+          deferredPrompt = null;
+          installBtn.style.display = 'none';
+        });
+      });
+    }
+  });
+
+  window.addEventListener('appinstalled', function() {
+    console.log('[PWA-English] 考研英语讲义 PWA 安装完成！');
+    if (installBtn) installBtn.style.display = 'none';
+    deferredPrompt = null;
+  });
+})();
+</script>
+
 </body>
 </html>

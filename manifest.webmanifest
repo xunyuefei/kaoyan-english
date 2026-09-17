@@ -1,0 +1,35 @@
+{
+  "name": "考研英语红宝书 · 全景深度特训讲义站",
+  "short_name": "红宝书讲义",
+  "description": "考研英语核心词汇全案深度特训与专题卫星讲义（双端自适应沉浸阅读）",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#881337",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "books"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

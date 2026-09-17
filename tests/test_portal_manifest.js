@@ -35,3 +35,22 @@ if (missing > 0) {
 }
 
 console.log('✅ 全部已就绪单元对应 content HTML 100% 存在！测试通过！');
+console.log('\n>>> 正在执行 PWA 设施合规性检验...');
+const pwaManifestPath = path.join(rootDir, 'manifest.webmanifest');
+const swPath = path.join(rootDir, 'sw.js');
+const offlinePath = path.join(rootDir, 'offline.html');
+const iconsDir = path.join(rootDir, 'icons');
+
+if (!fs.existsSync(pwaManifestPath)) { console.error('[X] 缺少 manifest.webmanifest'); process.exit(1); }
+if (!fs.existsSync(swPath)) { console.error('[X] 缺少 sw.js'); process.exit(1); }
+if (!fs.existsSync(offlinePath)) { console.error('[X] 缺少 offline.html'); process.exit(1); }
+
+['icon-192.png', 'icon-512.png', 'icon-maskable.png', 'apple-touch-icon.png'].forEach(ic => {
+  const ip = path.join(iconsDir, ic);
+  if (!fs.existsSync(ip) || fs.statSync(ip).size < 500) {
+    console.error(`[X] 缺少有效 PWA 图标: ${ic}`);
+    process.exit(1);
+  }
+});
+console.log('✅ PWA manifest、Service Worker、离线页与全套图标 100% 合规！');
+
