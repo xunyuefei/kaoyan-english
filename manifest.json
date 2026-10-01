@@ -495,7 +495,7 @@
       "sublabel": "常考词组 · 深度精排",
       "file": "content/phrase-list-05.html",
       "type": "phrase",
-      "ready": false
+      "ready": true
     },
     {
       "id": "phrase-06",
